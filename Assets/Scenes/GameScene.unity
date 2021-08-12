@@ -611,6 +611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 239548088}
+  - component: {fileID: 239548089}
   m_Layer: 0
   m_Name: '[ Enemy Control ]'
   m_TagString: Untagged
@@ -632,6 +633,23 @@ Transform:
   m_Father: {fileID: 171676466}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &239548089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239548087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c05cf0742ed9ce4396872990aefd4e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemies:
+  - {fileID: 2123321624}
+  - {fileID: 1574159317}
+  - {fileID: 677029997}
+  - {fileID: 1578816312}
 --- !u!1 &241514084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,7 +2015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 599315111}
   m_Layer: 0
-  m_Name: EnemyUnits
+  m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3331,6 +3349,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mascot: {fileID: 1821035760}
+  _allies:
+  - {fileID: 1441210730}
+  - {fileID: 489826925}
+  - {fileID: 621786828}
+  - {fileID: 319802656}
   _cardDeck:
     _cardList:
     - requireCost: 3
@@ -3899,7 +3922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1135090244}
   m_Layer: 0
-  m_Name: FriendlyUnits
+  m_Name: Allies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

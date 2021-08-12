@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
     [SerializeField] Mascot _mascot = null;
+    [SerializeField] Entity[] _allies = null;
     [SerializeField] SkillDeck _cardDeck = null;
     List<Skill> _skillsInHand;
     public int CurrentCost { get; set; }

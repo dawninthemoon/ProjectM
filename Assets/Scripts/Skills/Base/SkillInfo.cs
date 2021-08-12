@@ -17,10 +17,12 @@ public class SkillInfo {
     public int ownerEntityID;
     public SkillType type;
     public int numOfTargets;
+    public ISkillEffect skillEffect;
 
-    public SkillInfo(int cost, int value, SkillType type) {
+    public SkillInfo(int cost, int value, SkillType type, ISkillEffect effect) {
         this.requireCost = cost;
         this.value = value;
         this.type = type;
+        this.skillEffect = effect;
     }
 }
