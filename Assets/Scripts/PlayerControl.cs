@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
     [SerializeField] CardDeck _cardDeck = null;
-    CardOrder _cardOrder;
     List<Card> _cardsInHand;
     public int CurrentCost { get; set; }
 
     public void Initialize() {
         _cardDeck.Initialize();
-        _cardOrder = GetComponent<CardOrder>();
         _cardsInHand = new List<Card>();
     }
     
@@ -26,7 +24,7 @@ public class PlayerControl : MonoBehaviour {
             _cardsInHand.Add(cardObj);
         }
 
-        _cardOrder.SetOriginOrder(_cardsInHand, 0);
-        _cardOrder.AlignCard(_cardsInHand);
+        CardManager.GetInstance().SetOrder(_cardsInHand);
+        CardManager.GetInstance().AlignCard(_cardsInHand);
     }
 }

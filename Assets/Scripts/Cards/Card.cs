@@ -12,11 +12,12 @@ public class Card : MonoBehaviour {
     CardInfo _cardInfo;
     public PRS OriginPRS { get; set; }
     public float CardWidth { get; private set; }
+    int _originOrder;
 
     public void Initialize(CardInfo info) {
         _cardInfo = info;
         transform.localScale = new Vector3(0.3f, 0.3f, 1f);
-        CardWidth = (transform.position.x - _leftTransform.position.x);
+        CardWidth = (transform.position.x - _leftTransform.position.x) * 2;
     }
 
     public void MoveTransform(PRS prs, bool useTweening, float duration = 0f) {
@@ -30,5 +31,22 @@ public class Card : MonoBehaviour {
             transform.rotation = prs.rot;
             transform.localScale = prs.scale;
         }
+    }
+
+    public void SetOrder(int order) {
+        _originOrder = order;
+        _renderer.sortingOrder = order;
+    }
+
+    public void SetMostFrontOrder(bool isEnlarge) {
+        _renderer.sortingOrder = isEnlarge ? 100 : _originOrder;
+    }
+
+    void OnMouseOver() {
+        CardManager.GetInstance().EnlargeCard(true, this);
+    }
+
+    void OnMouseExit() {
+        CardManager.GetInstance().EnlargeCard(false, this);
     }
 }
