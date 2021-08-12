@@ -14,3 +14,18 @@ public class PRS {
         scale = s;
     }
 }
+
+public static class Utility {
+    public static Vector3 GetTouchPosition() {
+        Vector3 pos = Vector3.zero;
+        #if UNITY_EDITOR
+        pos = Input.mousePosition;
+        pos = Camera.main.ScreenToWorldPoint(pos);
+        #else
+        Touch touch = Input.GetTouch(0);
+        pos = touch.position;
+        #endif
+        pos.z -= 10f;
+        return pos;
+    }
+}

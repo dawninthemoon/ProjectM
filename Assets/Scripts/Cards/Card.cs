@@ -6,16 +6,19 @@ using DG.Tweening;
 using UnityEngine.EventSystems;
 
 public class Card : MonoBehaviour {
+    [SerializeField] float _moveSpeed = 50f;
     [SerializeField] SpriteRenderer _renderer = null;
     [SerializeField] Transform _leftTransform = null;
     public SpriteRenderer SprRenderer { get { return _renderer;} }
     [SerializeField] TMP_Text _costText = null;
+    static readonly string CancelAreaName = "CardCancelArea";
     Collider2D _detectCollider = null;
     CardInfo _cardInfo;
     public PRS OriginPRS { get; set; }
     public float CardWidth { get; private set; }
     int _originOrder;
     bool _isTouching;
+    bool _isInCancelArea;
 
     public void Initialize(CardInfo info) {
         _cardInfo = info;
@@ -26,41 +29,33 @@ public class Card : MonoBehaviour {
     }
 
     public void Update() {
-        ListenInput();
+        Vector2 curTouchPos = Utility.GetTouchPosition();
+        if (_isTouching) {
+            if (_cardInfo._isTargeting) {
+                Vector3 scale = transform.localScale;
+                MoveTransform(new PRS(curTouchPos, Quaternion.identity, scale), false);
+            }
+            DetectCardArea();
+        }
+        ListenInput(curTouchPos);
     }
 
-    void ListenInput() {
+    void ListenInput(Vector2 curTouchPos) {
         #if UNITY_EDITOR
         if (Input.GetMouseButton(0)) {
-            Vector2 touchPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (Physics2D.OverlapPoint(touchPos) == _detectCollider) {
-                _isTouching = true;
-                SelectCard();
-            }
-            else if (_isTouching) {
-                DeSelectCard();
-            }
+            OnTouchMoved(curTouchPos);
         }
-        else if (_isTouching && Input.GetMouseButtonUp(0)) {
-            _isTouching = false;
-            DeSelectCard();
+        else if (Input.GetMouseButtonUp(0)) {
+            OnTouchUp();
         }
         #else
         if (Input.touchCount > 0) {
-            Touch touch = Input.GetTouch(0);
-            Vector2 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
             switch (touch.phase) {
             case TouchPhase.Moved:
-                if (Physics2D.OverlapPoint(touchPos) == _detectCollider) {
-                    _isTouching = true;
-                    SelectCard();
-                }
+                OnTouchMoved();
                 break;
             case TouchPhase.Ended:
-                if (_isTouching) {
-                    _isTouching = false;
-                    DeSelectCard();
-                }
+                OnTouchUp();
                 break;
             }
         }
@@ -89,8 +84,37 @@ public class Card : MonoBehaviour {
         _renderer.sortingOrder = isEnlarge ? 100 : _originOrder;
     }
 
+    void DetectCardArea() {
+        RaycastHit2D[] hits = Physics2D.RaycastAll(Utility.GetTouchPosition(), Vector3.forward);
+        int layer = LayerMask.NameToLayer(CancelAreaName);
+        _isInCancelArea = System.Array.Exists(hits, x => x.collider.gameObject.layer.Equals(layer));
+    }
+
+    void OnTouchMoved(Vector2 touchPos) {
+        if (Physics2D.OverlapPoint(touchPos) == _detectCollider) {
+            SelectCard();
+        }
+        else if (_isTouching) {
+            DeSelectCard();
+        }
+    }
+
+    void OnTouchUp() {
+        if (_isTouching) {
+            _isTouching = false;
+            DeSelectCard();
+
+            if (!_isInCancelArea) {
+                
+            }
+        }
+    }
+
     void SelectCard() {
-        CardManager.GetInstance().EnlargeCard(true, this);
+        if (!_isTouching) {
+            _isTouching = true;
+            CardManager.GetInstance().EnlargeCard(true, this);
+        }
     }
 
     void DeSelectCard() {

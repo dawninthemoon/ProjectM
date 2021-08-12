@@ -6,6 +6,7 @@ public class CardManager : SingletonWithMonoBehaviour<CardManager> {
     static readonly string SortingLayerName = "Cards";
     Vector3 _createPosition;
     bool _isCardMouseDown;
+    static readonly Vector3 MiddlePosition = new Vector3(0.85f, -3.56f);
 
     protected override void Awake() {
         base.Awake();
@@ -32,10 +33,7 @@ public class CardManager : SingletonWithMonoBehaviour<CardManager> {
         int cardCounts = cards.Count;
         if (cardCounts == 0) return;
         
-        Vector3 cardOrigin = new Vector3(Camera.main.pixelWidth / 1.75f, 0f);
-        cardOrigin = Camera.main.ScreenToWorldPoint(cardOrigin);
-        cardOrigin.z = 0f;
-
+        Vector3 cardOrigin = MiddlePosition;
         if (cardCounts % 2 == 0) {
             cardOrigin.x += cards[0].CardWidth;
             cardOrigin.x -= cards[0].CardWidth * 2f * (cardCounts / 2);
@@ -53,7 +51,7 @@ public class CardManager : SingletonWithMonoBehaviour<CardManager> {
 
     public void EnlargeCard(bool isEnlarge, Card card) {
         if (isEnlarge) {
-            Vector3 enLargePos = new Vector3(card.OriginPRS.pos.x, -4.8f, -10f);
+            Vector3 enLargePos = new Vector3(card.OriginPRS.pos.x, card.OriginPRS.pos.y + 1f, -10f);
             card.MoveTransform(new PRS(enLargePos, Quaternion.identity, Vector3.one * 1.3f), false);
         }
         else {

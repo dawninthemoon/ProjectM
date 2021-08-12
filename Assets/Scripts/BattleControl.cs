@@ -21,7 +21,7 @@ public class BattleControl : MonoBehaviour {
     public void StartTurn() {
         ++_turnCount;
         _playerControl.CurrentCost = 3;
-        _playerControl.DrawCard(9, true);
+        _playerControl.DrawCard(5, true);
     }
 
     public void EndTurn() {

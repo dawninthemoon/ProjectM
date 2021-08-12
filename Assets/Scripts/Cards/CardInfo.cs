@@ -6,11 +6,12 @@ using UnityEngine;
 public class CardInfo {
     public int _requireCost;
     public int _damage;
+    public bool _isTargeting;
     public int _characterID;
 
-    public CardInfo(int cost, int damage, int characterID) {
+    public CardInfo(int cost, int damage, bool isTargeting) {
         _requireCost = cost;
         _damage = damage;
-        _characterID = characterID;
+        _isTargeting = isTargeting;
     }
 }
