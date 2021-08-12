@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
+    [SerializeField] Mascot _mascot = null;
     [SerializeField] SkillDeck _cardDeck = null;
     List<Skill> _skillsInHand;
     public int CurrentCost { get; set; }
@@ -12,7 +13,8 @@ public class PlayerControl : MonoBehaviour {
         _skillsInHand = new List<Skill>();
     }
     
-    public void DrawCard(int amount, bool turnStart = false) {
+    public void DrawCard(bool turnStart = false) {
+        int amount = _mascot.GetDrawAmount();
         if (turnStart) {
             amount = Mathf.Min(amount, _cardDeck.GetDeckCount());
         }

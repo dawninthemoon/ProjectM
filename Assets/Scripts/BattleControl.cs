@@ -11,6 +11,7 @@ public class BattleControl : MonoBehaviour {
     [SerializeField] PlayerControl _playerControl = null;
     TurnInfo _currentTurn;
     int _turnCount;
+    int _currentStage;
 
     void Start() {
         _currentTurn = TurnInfo.PLAYER;
@@ -21,7 +22,7 @@ public class BattleControl : MonoBehaviour {
     public void StartTurn() {
         ++_turnCount;
         _playerControl.CurrentCost = 3;
-        _playerControl.DrawCard(5, true);
+        _playerControl.DrawCard(true);
         SkillManager.GetInstance().State = SkillState.CARD_DRAG;
     }
 
