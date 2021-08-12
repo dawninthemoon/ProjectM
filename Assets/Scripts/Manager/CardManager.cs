@@ -5,6 +5,8 @@ using UnityEngine;
 public class CardManager : SingletonWithMonoBehaviour<CardManager> {
     static readonly string SortingLayerName = "Cards";
     Vector3 _createPosition;
+    bool _isCardMouseDown;
+
     protected override void Awake() {
         base.Awake();
         var deckUI = GameObject.Find("DeckButton");
@@ -32,6 +34,7 @@ public class CardManager : SingletonWithMonoBehaviour<CardManager> {
         
         Vector3 cardOrigin = new Vector3(Camera.main.pixelWidth / 2f, 0f);
         cardOrigin = Camera.main.ScreenToWorldPoint(cardOrigin);
+        cardOrigin.x = -1.5f;
         cardOrigin.z = 0f;
 
         if (cardCounts % 2 == 0) {
@@ -58,5 +61,13 @@ public class CardManager : SingletonWithMonoBehaviour<CardManager> {
             card.MoveTransform(card.OriginPRS, false);
         }
         card.SetMostFrontOrder(isEnlarge);
+    }
+
+    public void OnCardMouseDown() {
+        _isCardMouseDown = true;
+    }
+
+    public void OnCardMouseUp() {
+        _isCardMouseDown = false;
     }
 }

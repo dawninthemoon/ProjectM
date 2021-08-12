@@ -24,7 +24,7 @@ public class PlayerControl : MonoBehaviour {
             _cardsInHand.Add(cardObj);
         }
 
-        CardManager.GetInstance().SetOrder(_cardsInHand);
         CardManager.GetInstance().AlignCard(_cardsInHand);
+        CardManager.GetInstance().SetOrder(_cardsInHand);
     }
 }

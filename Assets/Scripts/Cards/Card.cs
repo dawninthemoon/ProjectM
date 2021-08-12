@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.EventSystems;
 
 public class Card : MonoBehaviour {
     [SerializeField] SpriteRenderer _renderer = null;
@@ -17,7 +18,7 @@ public class Card : MonoBehaviour {
     public void Initialize(CardInfo info) {
         _cardInfo = info;
         transform.localScale = new Vector3(0.3f, 0.3f, 1f);
-        CardWidth = (transform.position.x - _leftTransform.position.x) * 2;
+        CardWidth = (transform.position.x - _leftTransform.position.x) * 2.5f;
     }
 
     public void MoveTransform(PRS prs, bool useTweening, float duration = 0f) {
@@ -32,7 +33,7 @@ public class Card : MonoBehaviour {
             transform.localScale = prs.scale;
         }
     }
-
+    
     public void SetOrder(int order) {
         _originOrder = order;
         _renderer.sortingOrder = order;
@@ -42,11 +43,18 @@ public class Card : MonoBehaviour {
         _renderer.sortingOrder = isEnlarge ? 100 : _originOrder;
     }
 
-    void OnMouseOver() {
+    void OnMouseDown() {
         CardManager.GetInstance().EnlargeCard(true, this);
+
+    }
+
+    void OnMouseOver() {
     }
 
     void OnMouseExit() {
+    }
+
+    void OnMouseUp() {
         CardManager.GetInstance().EnlargeCard(false, this);
     }
 }
