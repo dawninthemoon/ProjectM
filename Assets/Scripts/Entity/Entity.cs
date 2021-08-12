@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Entity : MonoBehaviour {
-    EntityInfo _info;
-
+    [SerializeField] EntityInfo _info = null;
     public void Initialize(EntityInfo info) {
         _info = info;
     }

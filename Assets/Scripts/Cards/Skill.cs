@@ -11,6 +11,7 @@ public class Skill : MonoBehaviour {
     public SpriteRenderer SprRenderer { get { return _renderer;} }
     [SerializeField] TMP_Text _costText = null;
     static readonly string CancelAreaName = "CardCancelArea";
+    static readonly float LongTouchTime = 1.5f;
     Collider2D _detectCollider = null;
     SkillInfo _cardInfo;
     public PRS OriginPRS { get; set; }
@@ -18,6 +19,7 @@ public class Skill : MonoBehaviour {
     int _originOrder;
     bool _isTouching;
     bool _isInCancelArea;
+    float _touchTimeAgo;
 
     public void Initialize(SkillInfo info) {
         _cardInfo = info;
@@ -33,6 +35,11 @@ public class Skill : MonoBehaviour {
 
         Vector2 curTouchPos = Utility.GetTouchPosition();
         if (_isTouching && (state == SkillState.CARD_DRAG)) {
+            _touchTimeAgo += Time.deltaTime;
+            if (_touchTimeAgo > LongTouchTime) {
+                
+            }
+
             SkillType type = _cardInfo.type;
             if ((type == SkillType.ENEMY_TARGET) || (type == SkillType.FRIENDLY_TARGET)) {
                 Vector3 scale = transform.localScale;
@@ -96,6 +103,10 @@ public class Skill : MonoBehaviour {
     void OnTouchMoved(Vector2 touchPos) {
         if (Physics2D.OverlapPoint(touchPos) == _detectCollider) {
             SelectCard();
+        }
+        else {
+            _isTouching = false;
+            DeSelectCard();
         }
     }
 
