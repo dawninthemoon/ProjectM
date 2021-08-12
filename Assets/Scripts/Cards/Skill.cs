@@ -97,9 +97,6 @@ public class Skill : MonoBehaviour {
         if (Physics2D.OverlapPoint(touchPos) == _detectCollider) {
             SelectCard();
         }
-        else if (_isTouching) {
-            DeSelectCard();
-        }
     }
 
     void OnTouchUp() {

@@ -13,13 +13,14 @@ public enum SkillType {
 [System.Serializable]
 public class SkillInfo {
     public int requireCost;
-    public int damage;
+    public int value;
     public int ownerEntityID;
     public SkillType type;
+    public int numOfTargets;
 
-    public SkillInfo(int cost, int damage, SkillType type) {
+    public SkillInfo(int cost, int value, SkillType type) {
         this.requireCost = cost;
-        this.damage = damage;
+        this.value = value;
         this.type = type;
     }
 }

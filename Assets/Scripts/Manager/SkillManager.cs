@@ -19,7 +19,7 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         _createPosition = deckUI.transform.position;
     }
     public Skill CreateCard(SkillInfo info) {
-        var prefab = ResourceManager.GetInstance().GetCardPrefab();
+        var prefab = ResourceManager.GetInstance().GetSkillPrefab();
         var card = Instantiate(prefab, _createPosition, Quaternion.identity);
         card.Initialize(info);
         return card;
