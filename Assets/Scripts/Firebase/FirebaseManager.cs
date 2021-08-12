@@ -12,20 +12,23 @@ namespace FBControl
             get{ return instance; }
         }
 
-        private FirebaseDBManager firebaseDBManager;
+        private FirebaseDBManager firebaseDBManager = new FirebaseDBManager();
         public FirebaseDBManager FirebaseDBManager
         {
             get{ return firebaseDBManager; }
         }
 
-        private FirebaseAuthManager firebaseAuthManager;
+        private FirebaseAuthManager firebaseAuthManager = new FirebaseAuthManager();
         public FirebaseAuthManager FirebaseAuthManager
         {
             get{ return firebaseAuthManager; }
         }
 
+        public event System.Action OnLoadConpleteEvent;
+
         public void Awake()
         {
+            DontDestroyOnLoad( this );
             instance = this;
         }
 
@@ -38,7 +41,13 @@ namespace FBControl
         {
             firebaseAuthManager.Init();
             yield return new WaitUntil( ()=> { return firebaseAuthManager.IsInit; } );
+
+            Debug.Log("Auth 로그인 완료");
             firebaseDBManager.Init();
+        
+            yield return new WaitUntil( ()=> { return firebaseDBManager.IsInit; } );
+            Debug.Log("DB INIT 완료");
+            OnLoadConpleteEvent?.Invoke();
         }
     }
 }

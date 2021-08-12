@@ -21,7 +21,8 @@ namespace FBControl
 
         private string userID;
 
-        public void Init( DatabaseReference databaseReference ) //어떤 디비에서 가져올건지  선택해야된다.
+        //샤딩한 경우 여기서 분리시키기
+        public void Init( DatabaseReference databaseReference ) 
         {
             this.databaseReference = databaseReference; 
         }
@@ -30,10 +31,10 @@ namespace FBControl
         {
             isLoaded = false;
             string userId = "";
-            // if (FirebaseManager.Instance.authMgr.User.IsAnonymous)
-            //     userId = SystemInfo.deviceUniqueIdentifier;
-            // else
-            //     userId = FirebaseManager.Instance.authMgr.User.UserId;
+            if (FirebaseManager.Instance.FirebaseAuthManager.User.IsAnonymous)
+                 userId = SystemInfo.deviceUniqueIdentifier;
+            else
+                userId = FirebaseManager.Instance.FirebaseAuthManager.User.UserId;
 
             //curUserDBReference = databaseReference.Child(USER_DATA_DB_NAME).Child(userId);
             databaseReference.GetValueAsync().ContinueWith(task =>

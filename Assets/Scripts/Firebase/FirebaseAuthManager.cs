@@ -11,7 +11,7 @@ using System.Text;
 
 namespace FBControl
 {
-    public class FirebaseAuthManager : MonoBehaviour
+    public class FirebaseAuthManager
     {
         private FirebaseAuth auth;
 
