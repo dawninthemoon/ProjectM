@@ -32,9 +32,8 @@ public class CardManager : SingletonWithMonoBehaviour<CardManager> {
         int cardCounts = cards.Count;
         if (cardCounts == 0) return;
         
-        Vector3 cardOrigin = new Vector3(Camera.main.pixelWidth / 2f, 0f);
+        Vector3 cardOrigin = new Vector3(Camera.main.pixelWidth / 1.75f, 0f);
         cardOrigin = Camera.main.ScreenToWorldPoint(cardOrigin);
-        cardOrigin.x = -1.5f;
         cardOrigin.z = 0f;
 
         if (cardCounts % 2 == 0) {
