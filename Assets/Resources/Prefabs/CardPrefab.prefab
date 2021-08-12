@@ -77,6 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f9dc2cafcfc4b488aabf91fc39c95a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _detectCollider: {fileID: 671286575982090128}
   _renderer: {fileID: 8332126644922923423}
   _leftTransform: {fileID: 45006361732652932}
   _costText: {fileID: 1390729070059783027}
