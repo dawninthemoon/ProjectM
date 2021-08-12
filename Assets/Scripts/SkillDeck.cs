@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class CardDeck {
-    [SerializeField] List<CardInfo> _cardList = null;
-    List<CardInfo> _cardsInDeck;
-    List<CardInfo> _cardsInGrave;
+public class SkillDeck {
+    [SerializeField] List<SkillInfo> _cardList = null;
+    List<SkillInfo> _cardsInDeck;
+    List<SkillInfo> _cardsInGrave;
 
     public void Initialize() {
         _cardsInDeck = _cardList.ConvertAll(o => o);
-        _cardsInGrave = new List<CardInfo>();
+        _cardsInGrave = new List<SkillInfo>();
     }
 
     public int GetDeckCount() => _cardsInDeck.Count;
 
-    public CardInfo DrawCard() {
-        CardInfo card = _cardsInDeck[0];
+    public SkillInfo DrawCard() {
+        SkillInfo card = _cardsInDeck[0];
         _cardsInDeck.RemoveAt(0);
 
         if (_cardsInDeck.Count == 0) {

@@ -5,9 +5,9 @@ using UnityEngine;
 public class ResourceManager : Singleton<ResourceManager> {
     static readonly string PrefabPath = "Prefabs/";
 
-    public Card GetCardPrefab() {
-        string path = PrefabPath + "CardPrefab";
-        var card = Resources.Load<Card>(path);
+    public Skill GetCardPrefab() {
+        string path = PrefabPath + "SkillPrefab";
+        var card = Resources.Load<Skill>(path);
         return card;
     }
 }

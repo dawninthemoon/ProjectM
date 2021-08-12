@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CardState {
+public enum SkillState {
     NOTHING,
-    OVER,
-    DRAG,
+    CARD_OVER,
+    CARD_DRAG,
 }
-public class CardManager : SingletonWithMonoBehaviour<CardManager> {
-    public CardState State { get; set; } = CardState.NOTHING;
+public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
+    public SkillState State { get; set; } = SkillState.NOTHING;
     static readonly string SortingLayerName = "Cards";
     Vector3 _createPosition;
-    bool _isCardMouseDown;
     static readonly Vector3 MiddlePosition = new Vector3(0.85f, -3.56f);
 
     protected override void Awake() {
@@ -19,14 +18,14 @@ public class CardManager : SingletonWithMonoBehaviour<CardManager> {
         var deckUI = GameObject.Find("DeckButton");
         _createPosition = deckUI.transform.position;
     }
-    public Card CreateCard(CardInfo info) {
+    public Skill CreateCard(SkillInfo info) {
         var prefab = ResourceManager.GetInstance().GetCardPrefab();
         var card = Instantiate(prefab, _createPosition, Quaternion.identity);
         card.Initialize(info);
         return card;
     }
 
-    public void SetOrder(List<Card> cards) {
+    public void SetOrder(List<Skill> cards) {
         int curOrder = 0;
         int cardCounts = cards.Count;
         for (int i = 0; i < cardCounts; ++i) {
@@ -35,7 +34,7 @@ public class CardManager : SingletonWithMonoBehaviour<CardManager> {
         }
     }
 
-    public void AlignCard(List<Card> cards) {
+    public void AlignCard(List<Skill> cards) {
         int cardCounts = cards.Count;
         if (cardCounts == 0) return;
         
@@ -55,7 +54,7 @@ public class CardManager : SingletonWithMonoBehaviour<CardManager> {
         }
     }
 
-    public void EnlargeCard(bool isEnlarge, Card card) {
+    public void EnlargeCard(bool isEnlarge, Skill card) {
         if (isEnlarge) {
             Vector3 enLargePos = new Vector3(card.OriginPRS.pos.x, card.OriginPRS.pos.y + 1f, -10f);
             card.MoveTransform(new PRS(enLargePos, Quaternion.identity, Vector3.one * 1.3f), false);
@@ -64,13 +63,5 @@ public class CardManager : SingletonWithMonoBehaviour<CardManager> {
             card.MoveTransform(card.OriginPRS, false);
         }
         card.SetMostFrontOrder(isEnlarge);
-    }
-
-    public void OnCardMouseDown() {
-        _isCardMouseDown = true;
-    }
-
-    public void OnCardMouseUp() {
-        _isCardMouseDown = false;
     }
 }
