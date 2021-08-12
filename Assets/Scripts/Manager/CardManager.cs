@@ -2,7 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CardState {
+    NOTHING,
+    OVER,
+    DRAG,
+}
 public class CardManager : SingletonWithMonoBehaviour<CardManager> {
+    public CardState State { get; set; } = CardState.NOTHING;
     static readonly string SortingLayerName = "Cards";
     Vector3 _createPosition;
     bool _isCardMouseDown;

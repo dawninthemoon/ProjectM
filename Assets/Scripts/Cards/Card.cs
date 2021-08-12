@@ -29,8 +29,11 @@ public class Card : MonoBehaviour {
     }
 
     public void Update() {
+        CardState state = CardManager.GetInstance().State;
+        if (state == CardState.NOTHING) return;
+
         Vector2 curTouchPos = Utility.GetTouchPosition();
-        if (_isTouching) {
+        if (_isTouching && (state == CardState.DRAG)) {
             if (_cardInfo._isTargeting) {
                 Vector3 scale = transform.localScale;
                 MoveTransform(new PRS(curTouchPos, Quaternion.identity, scale), false);

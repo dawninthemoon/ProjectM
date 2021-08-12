@@ -22,12 +22,13 @@ public class BattleControl : MonoBehaviour {
         ++_turnCount;
         _playerControl.CurrentCost = 3;
         _playerControl.DrawCard(5, true);
+        CardManager.GetInstance().State = CardState.DRAG;
     }
 
     public void EndTurn() {
         int curTurn = (int)_currentTurn;
         int nextTurn = (curTurn + 1) % 2;
         _currentTurn = (TurnInfo)nextTurn;
-        StartTurn();
+        CardManager.GetInstance().State = CardState.OVER;
     }
 }
