@@ -7,4 +7,8 @@ public class SoTempSkill : SOSkillEffectBase {
     public override void ExecuteSkill() {
         
     }
+
+    public override void ExecuteSkill(Entity target) {
+        
+    }
 }

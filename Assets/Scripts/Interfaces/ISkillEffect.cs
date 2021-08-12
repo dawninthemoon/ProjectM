@@ -4,4 +4,5 @@ using UnityEngine;
 
 public interface ISkillEffect {
     void ExecuteSkill();
+    void ExecuteSkill(Entity target);
 }
