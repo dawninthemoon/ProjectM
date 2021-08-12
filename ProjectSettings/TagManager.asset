@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - CardCancelArea
+  - FriendlyEntity
+  - EnemyEntity
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Cards
+    uniqueID: 1306135489
     locked: 0
   - name: UI
     uniqueID: 1804272471
