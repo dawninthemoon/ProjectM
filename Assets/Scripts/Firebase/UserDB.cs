@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Firebase;
 using Firebase.Database;
+using Boomlagoon.JSON;
 //using CodeStage.AntiCheat.ObscuredTypes;
 using System;
 
 namespace FBControl
 {
-    public class UserDB
+    public class UserDB : MonoBehaviour
     {
-        public readonly static string USER_DATA_DB_NAME = "users";
         public UserData userData;
         private DatabaseReference databaseReference;
         private bool isLoaded = false;
@@ -19,39 +19,67 @@ namespace FBControl
             get{ return isLoaded; }
         }
 
+        bool isChecked = false;
         private string userID;
 
         //샤딩한 경우 여기서 분리시키기
-        public void Init( DatabaseReference databaseReference ) 
+        public void Init( ) 
         {
-            this.databaseReference = databaseReference; 
+            userData = new UserData();
+
+            FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
+            database.SetPersistenceEnabled( false );
+            this.databaseReference = database.GetReference("/user/"+ FirebaseManager.Instance.FirebaseAuthManager.User.UserId);
+            
+            //userID =;
+            StartCoroutine( LoadDataRoutine() );
         }
 
-        public void LoadData()
+        public IEnumerator LoadDataRoutine()
         {
             isLoaded = false;
             string userId = "";
+            bool isFound = false;
             if (FirebaseManager.Instance.FirebaseAuthManager.User.IsAnonymous)
-                 userId = SystemInfo.deviceUniqueIdentifier;
+                userId = SystemInfo.deviceUniqueIdentifier;
             else
                 userId = FirebaseManager.Instance.FirebaseAuthManager.User.UserId;
 
-            //curUserDBReference = databaseReference.Child(USER_DATA_DB_NAME).Child(userId);
+            //databaseReference = databaseReference.Child(userId);
+
+            Debug.Log("TRY");
+            
             databaseReference.GetValueAsync().ContinueWith(task =>
             {
                 if (task.IsFaulted)
                 {
-                    userData = null;
-                // User.Instance.SetInitUserData(null);
+                    userData.SetDefaultData();
                 }
                 else if (task.IsCompleted)
                 {
-                    DataSnapshot snapshot = task.Result;
-                    userData = JsonUtility.FromJson<UserData>(snapshot.GetRawJsonValue());
-                    //User.Instance.SetInitUserData(snapshot.GetRawJsonValue());                
+                    if (task.Result.Exists)
+                    {
+                        DataSnapshot snapshot = task.Result;
+                        userData.SetJsonFile( JSONObject.Parse( snapshot.GetRawJsonValue() ) );
+                        Debug.Log("BTYPE");
+
+                        isFound = true;  
+                    }
                 }
-                isLoaded = true;
+
+                isChecked= true;
             });
+
+            yield return new WaitUntil( ()=>{ return isChecked; } );
+            Debug.Log("TRYb");
+
+            if( !isFound )
+            {
+                userData.SetDefaultData();
+                SaveUserData();
+            }
+
+            isLoaded = true;
         }
 
 
@@ -102,7 +130,7 @@ namespace FBControl
         ///<summary> 유저 데이터의 하위 프로퍼티 찾아서 조정 </summary>
         public void SaveChildrenData(string propertyName, object index, params string[] parents)
         {
-            DatabaseReference propertyReference = databaseReference.Child(USER_DATA_DB_NAME).Child(userID);//Child(propertyName);
+            DatabaseReference propertyReference = databaseReference.Child(userID);//Child(propertyName);
 
             for (int i = 0; i < parents.Length; ++i)
             {
@@ -117,17 +145,18 @@ namespace FBControl
         ///<summary> 유저 데이터의 하위 프로퍼티만 조정 </summary>
         public void SaveChildrenData(string propertyName, object index)
         {
-            DatabaseReference propertyReference = databaseReference.Child(USER_DATA_DB_NAME).Child(userID).Child(propertyName);
+            DatabaseReference propertyReference = databaseReference.Child(userID).Child(propertyName);
             propertyReference.SetValueAsync(index);
         }
 
         ///<summary> 유저 데이터 전체를 조정 </summary>
         public void SaveUserData()
         {
-            // string json = JsonUtility.ToJson(User.Instance.userData);
-
-            // DatabaseReference propertyReference = databaseReference.Child(USER_DATA_DB_NAME).Child(User.Instance.userData.userId);
-            // propertyReference.SetRawJsonValueAsync(json);
+            string json = userData.GetJsonFile().ToString();//JsonUtility.ToJson(User.Instance.userData);
+            
+            Debug.Log(json);
+            databaseReference.SetRawJsonValueAsync(json);
+            Debug.Log( "B0 ");
         }
 
 

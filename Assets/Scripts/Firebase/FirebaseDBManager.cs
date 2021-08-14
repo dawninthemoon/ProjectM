@@ -8,7 +8,6 @@ namespace FBControl
     public class FirebaseDBManager
     {
         private FirebaseDatabase userFirebaseDatabase = null;
-        private UserDB userDB;
 
         private bool isInit = false;
         public bool IsInit
@@ -17,13 +16,11 @@ namespace FBControl
         }
         public void Init()
         {
-            userDB = new UserDB();
 
-            userFirebaseDatabase = FirebaseDatabase.GetInstance("https://prrojectm-default-rtdb.firebaseio.com");
+            userFirebaseDatabase = FirebaseDatabase.GetInstance("https://prrojectm-default-rtdb.firebaseio.com/");
+            userFirebaseDatabase.SetPersistenceEnabled( false );
         
-            userDB.Init( userFirebaseDatabase.GetReference("user") );
         
-            isInit = true;
         }
 
         public void ReadAll( out UserData userData )

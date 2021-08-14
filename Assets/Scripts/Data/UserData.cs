@@ -24,6 +24,29 @@ public class UserData
     {
         get{ return lastLoginTime; }
     }
+
+    private int gold;
+    public int Gold
+    {
+        get{ return gold; }
+    }
+
+    private int cash;
+    public int Cash
+    {
+        get{ return cash; }
+    }
+
+    public void SetDefaultData()
+    {
+        nickName = "Normal";
+        uid = FBControl.FirebaseManager.Instance.FirebaseAuthManager.User.UserId;
+
+        lastLoginTime = DateTime.Now;
+
+        gold = 0;
+        cash = 0;
+    }
     
     public JSONObject GetJsonFile()
     {
@@ -32,6 +55,8 @@ public class UserData
         jsonResult.Add( "nickName", nickName );
         jsonResult.Add( "uid", uid );
         jsonResult.Add( "lastLoginTime", lastLoginTime.ToString() );//해외 현지화 해야함 임시 ToString();
+        jsonResult.Add( "gold", gold );
+        jsonResult.Add( "cash", cash );
         
         return jsonResult;
     }
@@ -44,5 +69,9 @@ public class UserData
             uid = jsonObject.GetString("uid");
         if( jsonObject.ContainsKey("lastLoginTime") )
             lastLoginTime = DateTime.Parse( jsonObject.GetString("lastLoginTime") );
+        if( jsonObject.ContainsKey("gold") )
+            gold = (int)jsonObject.GetNumber("gold");
+        if( jsonObject.ContainsKey("cash") )
+            cash = (int)jsonObject.GetNumber("cash");
     }
 }

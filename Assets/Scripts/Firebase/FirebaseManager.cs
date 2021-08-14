@@ -18,6 +18,8 @@ namespace FBControl
             get{ return firebaseDBManager; }
         }
 
+        [SerializeField] private UserDB userDB;
+
         private FirebaseAuthManager firebaseAuthManager = new FirebaseAuthManager();
         public FirebaseAuthManager FirebaseAuthManager
         {
@@ -43,9 +45,9 @@ namespace FBControl
             yield return new WaitUntil( ()=> { return firebaseAuthManager.IsInit; } );
 
             Debug.Log("Auth 로그인 완료");
-            firebaseDBManager.Init();
+            userDB.Init();
         
-            yield return new WaitUntil( ()=> { return firebaseDBManager.IsInit; } );
+            yield return new WaitUntil( ()=> { return userDB.IsLoaded; } );
             Debug.Log("DB INIT 완료");
             OnLoadConpleteEvent?.Invoke();
         }
