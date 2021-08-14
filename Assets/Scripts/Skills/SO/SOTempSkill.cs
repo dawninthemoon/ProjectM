@@ -4,11 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "SOTempSkill", menuName = "SkillEffect/TempSkill")]
 public class SoTempSkill : SOSkillEffectBase {
-    public override void ExecuteSkill() {
-        
-    }
-
-    public override void ExecuteSkill(Entity target) {
+    public override void ExecuteSkill(BattleControl battleControl) {
         
     }
 }
