@@ -13,63 +13,50 @@ public class Skill : MonoBehaviour {
     static readonly string CancelAreaName = "CardCancelArea";
     static readonly float LongTouchTime = 1.5f;
     Collider2D _detectCollider = null;
-    SkillInfo _cardInfo;
+    SkillInfo _skillInfo;
     public PRS OriginPRS { get; set; }
     public float CardWidth { get; private set; }
     int _originOrder;
-    bool _isTouching;
+    public bool IsTouching { get; private set; }
     bool _isInCancelArea;
     float _touchTimeAgo;
 
     public void Initialize(SkillInfo info) {
-        _cardInfo = info;
+        _skillInfo = info;
         _detectCollider = GetComponent<Collider2D>();
         transform.localScale = new Vector3(0.3f, 0.3f, 1f);
         CardWidth = (transform.position.x - _leftTransform.position.x) * 2.5f;
-        _costText.text = _cardInfo.requireCost.ToString();
+        _costText.text = _skillInfo.requireCost.ToString();
     }
 
-    public void Update() {
+    public void Progress(Vector3 curTouchPos) {
         SkillState state = SkillManager.GetInstance().State;
-        if (state == SkillState.NOTHING) return;
-
-        Vector2 curTouchPos = Utility.GetTouchPosition();
-        if (_isTouching && (state == SkillState.CARD_DRAG)) {
+        if (IsTouching && (state == SkillState.CARD_DRAG)) {
             _touchTimeAgo += Time.deltaTime;
             if (_touchTimeAgo > LongTouchTime) {
                 
             }
 
-            SkillType type = _cardInfo.type;
-            if ((type == SkillType.ENEMY_TARGET) || (type == SkillType.FRIENDLY_TARGET)) {
+            SkillType type = _skillInfo.type;
+            if ((type == SkillType.ENEMY_RANDOM) || (type == SkillType.FRIENDLY_RANDOM)) {
                 Vector3 scale = transform.localScale;
                 MoveTransform(new PRS(curTouchPos, Quaternion.identity, scale), false);
             }
             DetectCardArea();
         }
-        ListenInput(curTouchPos);
     }
 
-    void ListenInput(Vector2 curTouchPos) {
-        #if UNITY_EDITOR
-        if (Input.GetMouseButton(0)) {
-            OnTouchMoved(curTouchPos);
-        }
-        else if (Input.GetMouseButtonUp(0)) {
-            OnTouchUp();
-        }
-        #else
-        if (Input.touchCount > 0) {
-            switch (touch.phase) {
-            case TouchPhase.Moved:
-                OnTouchMoved();
-                break;
-            case TouchPhase.Ended:
-                OnTouchUp();
-                break;
-            }
-        }
-        #endif
+    public bool CanSelectTarget() {
+        SkillType type = _skillInfo.type;
+        return (type == SkillType.ENEMY_TARGET) || (type == SkillType.FRIENDLY_TARGET);
+    }
+
+    public SkillInfo GetSkillInfo() {
+        return _skillInfo;
+    }
+
+    public void UseSkill(BattleControl battleControl) {
+        _skillInfo.skillEffect?.ExecuteSkill(_skillInfo, battleControl);
     }
 
     public void MoveTransform(PRS prs, bool useTweening, float duration = 0f) {
@@ -94,41 +81,50 @@ public class Skill : MonoBehaviour {
         _renderer.sortingOrder = isEnlarge ? 100 : _originOrder;
     }
 
-    void DetectCardArea() {
+    public void DetectCardArea() {
         RaycastHit2D[] hits = Physics2D.RaycastAll(Utility.GetTouchPosition(), Vector3.forward);
         int layer = LayerMask.NameToLayer(CancelAreaName);
         _isInCancelArea = System.Array.Exists(hits, x => x.collider.gameObject.layer.Equals(layer));
     }
 
-    void OnTouchMoved(Vector2 touchPos) {
-        if (Physics2D.OverlapPoint(touchPos) == _detectCollider) {
+    public bool IsOverlapped(Vector2 pos) {
+        bool isOverlapped = (Physics2D.OverlapPoint(pos) == _detectCollider);
+        return isOverlapped;
+    }
+
+    public void OnTouchMoved(Vector2 touchPos) {
+        if (IsOverlapped(touchPos)) {
             SelectCard();
-        }
-        else {
-            _isTouching = false;
-            DeSelectCard();
         }
     }
 
-    void OnTouchUp() {
-        if (_isTouching) {
-            _isTouching = false;
+    public bool OnTouchUp() {
+        bool useSkill = false;
+        if (IsTouching) {
+            IsTouching = false;
             DeSelectCard();
 
             if (!_isInCancelArea) {
-                
+                useSkill = true;
             }
         }
+        return useSkill;
     }
 
     void SelectCard() {
-        if (!_isTouching) {
-            _isTouching = true;
+        if (!IsTouching) {
+            IsTouching = true;
             SkillManager.GetInstance().EnlargeCard(true, this);
+            if (CanSelectTarget()) {
+                SkillManager.GetInstance().SetActiveAimSprite(true);
+            }
         }
     }
 
     void DeSelectCard() {
         SkillManager.GetInstance().EnlargeCard(false, this);
+        if (CanSelectTarget()) {
+            SkillManager.GetInstance().SetActiveAimSprite(false);
+        }
     }
 }

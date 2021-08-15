@@ -498,6 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerControl: {fileID: 955291659}
+  _enemyControl: {fileID: 239548089}
 --- !u!1 &200116425
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +651,9 @@ MonoBehaviour:
   - {fileID: 1574159317}
   - {fileID: 677029997}
   - {fileID: 1578816312}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &241514084
 GameObject:
   m_ObjectHideFlags: 0
@@ -2374,7 +2378,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3357,50 +3361,59 @@ MonoBehaviour:
   _cardDeck:
     _cardList:
     - requireCost: 3
-      value: 0
+      value: 5
       ownerEntityID: 0
-      type: 2
+      type: 0
       numOfTargets: 0
+      skillEffect: {fileID: 11400000, guid: 3c92921cd00290f47bcf3c61fa05be5e, type: 2}
     - requireCost: 2
       value: 0
       ownerEntityID: 0
       type: 1
       numOfTargets: 0
+      skillEffect: {fileID: 0}
     - requireCost: 1
       value: 0
       ownerEntityID: 0
       type: 2
       numOfTargets: 0
+      skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
       ownerEntityID: 0
       type: 3
       numOfTargets: 0
+      skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
       ownerEntityID: 0
       type: 0
       numOfTargets: 0
+      skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
       ownerEntityID: 0
       type: 0
       numOfTargets: 0
+      skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
       ownerEntityID: 0
       type: 0
       numOfTargets: 0
+      skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
       ownerEntityID: 0
       type: 0
       numOfTargets: 0
+      skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
       ownerEntityID: 0
       type: 0
       numOfTargets: 0
+      skillEffect: {fileID: 0}
 --- !u!1 &975031127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4457,7 +4470,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4586,7 +4599,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -5856,7 +5869,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
