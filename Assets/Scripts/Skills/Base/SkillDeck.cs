@@ -27,4 +27,8 @@ public class SkillDeck {
 
         return card;
     }
+
+    public void SkillToGrave(SkillInfo skill) {
+        _cardsInGrave.Add(skill);
+    }
 }

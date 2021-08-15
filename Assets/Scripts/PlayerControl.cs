@@ -31,4 +31,9 @@ public class PlayerControl : MonoBehaviour {
         SkillManager.GetInstance().AlignCard(_skillsInHand);
         SkillManager.GetInstance().SetOrder(_skillsInHand);
     }
+
+    public void UseSkill(Skill skill, BattleControl battleControl) {
+        skill.UseSkill(battleControl);
+        _cardDeck.SkillToGrave(skill.GetSkillInfo());
+    }
 }

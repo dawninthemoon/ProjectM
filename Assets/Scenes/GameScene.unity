@@ -482,7 +482,6 @@ Transform:
   m_Children:
   - {fileID: 955291657}
   - {fileID: 239548088}
-  - {fileID: 1278915668}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -499,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerControl: {fileID: 955291659}
-  _aimTransform: {fileID: 1278915668}
+  _enemyControl: {fileID: 239548089}
 --- !u!1 &200116425
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +651,9 @@ MonoBehaviour:
   - {fileID: 1574159317}
   - {fileID: 677029997}
   - {fileID: 1578816312}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &241514084
 GameObject:
   m_ObjectHideFlags: 0
@@ -2376,7 +2378,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3359,50 +3361,59 @@ MonoBehaviour:
   _cardDeck:
     _cardList:
     - requireCost: 3
-      value: 0
+      value: 5
       ownerEntityID: 0
-      type: 2
+      type: 0
       numOfTargets: 0
+      skillEffect: {fileID: 11400000, guid: 3c92921cd00290f47bcf3c61fa05be5e, type: 2}
     - requireCost: 2
       value: 0
       ownerEntityID: 0
       type: 1
       numOfTargets: 0
+      skillEffect: {fileID: 0}
     - requireCost: 1
       value: 0
       ownerEntityID: 0
       type: 2
       numOfTargets: 0
+      skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
       ownerEntityID: 0
       type: 3
       numOfTargets: 0
+      skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
       ownerEntityID: 0
       type: 0
       numOfTargets: 0
+      skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
       ownerEntityID: 0
       type: 0
       numOfTargets: 0
+      skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
       ownerEntityID: 0
       type: 0
       numOfTargets: 0
+      skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
       ownerEntityID: 0
       type: 0
       numOfTargets: 0
+      skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
       ownerEntityID: 0
       type: 0
       numOfTargets: 0
+      skillEffect: {fileID: 0}
 --- !u!1 &975031127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4144,88 +4155,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271301551}
   m_CullTransparentMesh: 1
---- !u!1 &1278915666
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1278915668}
-  - component: {fileID: 1278915667}
-  m_Layer: 0
-  m_Name: Aim
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!212 &1278915667
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278915666}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1804272471
-  m_SortingLayer: 2
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 5550c9a006973734bba017253d5b0ad2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1278915668
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278915666}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.95, y: 0.32, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 171676466}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441210727
 GameObject:
   m_ObjectHideFlags: 0
@@ -4541,7 +4470,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4670,7 +4599,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -5940,7 +5869,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

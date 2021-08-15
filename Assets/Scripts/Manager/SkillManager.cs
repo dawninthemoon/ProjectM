@@ -11,12 +11,19 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
     public SkillState State { get; set; } = SkillState.NOTHING;
     static readonly string SortingLayerName = "Cards";
     Vector3 _createPosition;
+    SpriteRenderer _aimRenderer;
     static readonly Vector3 MiddlePosition = new Vector3(0.85f, -3.56f);
 
     protected override void Awake() {
         base.Awake();
         var deckUI = GameObject.Find("DeckButton");
         _createPosition = deckUI.transform.position;
+
+        _aimRenderer = gameObject.AddComponent<SpriteRenderer>();
+        SetActiveAimSprite(false);
+        _aimRenderer.sortingLayerName = "UI";
+        _aimRenderer.sortingOrder = 10;
+        _aimRenderer.sprite = ResourceManager.GetInstance().GetSprite("Sprites/Aim");
     }
     public Skill CreateCard(SkillInfo info) {
         var prefab = ResourceManager.GetInstance().GetSkillPrefab();
@@ -32,6 +39,14 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
             cards[i].SprRenderer.sortingLayerName = SortingLayerName;
             cards[i].SetOrder(++curOrder);
         }
+    }
+
+    public void SetActiveAimSprite(bool enable) {
+        _aimRenderer.gameObject.SetActive(enable);
+    }
+
+    public void SetAimPosition(Vector3 position) {
+        _aimRenderer.transform.position = position;
     }
 
     public void AlignCard(List<Skill> cards) {

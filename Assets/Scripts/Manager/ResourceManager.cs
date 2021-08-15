@@ -31,4 +31,10 @@ public class ResourceManager : Singleton<ResourceManager> {
         }
         return gameObject;
     }
+
+    public Sprite GetSprite(string path) {
+        Sprite sprite = null;
+        sprite = Resources.Load<Sprite>(path);
+        return sprite;
+    }
 }
