@@ -17,7 +17,7 @@ public class Skill : MonoBehaviour {
     public PRS OriginPRS { get; set; }
     public float CardWidth { get; private set; }
     int _originOrder;
-    bool _isTouching;
+    public bool IsTouching { get; private set; }
     bool _isInCancelArea;
     float _touchTimeAgo;
 
@@ -29,12 +29,10 @@ public class Skill : MonoBehaviour {
         _costText.text = _cardInfo.requireCost.ToString();
     }
 
-    public void Update() {
+    public bool Progress(Vector3 curTouchPos) {
+        bool selectTarget = false;
         SkillState state = SkillManager.GetInstance().State;
-        if (state == SkillState.NOTHING) return;
-
-        Vector2 curTouchPos = Utility.GetTouchPosition();
-        if (_isTouching && (state == SkillState.CARD_DRAG)) {
+        if (IsTouching && (state == SkillState.CARD_DRAG)) {
             _touchTimeAgo += Time.deltaTime;
             if (_touchTimeAgo > LongTouchTime) {
                 
@@ -42,34 +40,15 @@ public class Skill : MonoBehaviour {
 
             SkillType type = _cardInfo.type;
             if ((type == SkillType.ENEMY_TARGET) || (type == SkillType.FRIENDLY_TARGET)) {
+                selectTarget = true;
+            }
+            else {
                 Vector3 scale = transform.localScale;
                 MoveTransform(new PRS(curTouchPos, Quaternion.identity, scale), false);
             }
             DetectCardArea();
         }
-        ListenInput(curTouchPos);
-    }
-
-    void ListenInput(Vector2 curTouchPos) {
-        #if UNITY_EDITOR
-        if (Input.GetMouseButton(0)) {
-            OnTouchMoved(curTouchPos);
-        }
-        else if (Input.GetMouseButtonUp(0)) {
-            OnTouchUp();
-        }
-        #else
-        if (Input.touchCount > 0) {
-            switch (touch.phase) {
-            case TouchPhase.Moved:
-                OnTouchMoved();
-                break;
-            case TouchPhase.Ended:
-                OnTouchUp();
-                break;
-            }
-        }
-        #endif
+        return selectTarget;
     }
 
     public void MoveTransform(PRS prs, bool useTweening, float duration = 0f) {
@@ -94,36 +73,34 @@ public class Skill : MonoBehaviour {
         _renderer.sortingOrder = isEnlarge ? 100 : _originOrder;
     }
 
-    void DetectCardArea() {
+    public void DetectCardArea() {
         RaycastHit2D[] hits = Physics2D.RaycastAll(Utility.GetTouchPosition(), Vector3.forward);
         int layer = LayerMask.NameToLayer(CancelAreaName);
         _isInCancelArea = System.Array.Exists(hits, x => x.collider.gameObject.layer.Equals(layer));
     }
 
-    void OnTouchMoved(Vector2 touchPos) {
+    public void OnTouchMoved(Vector2 touchPos) {
         if (Physics2D.OverlapPoint(touchPos) == _detectCollider) {
             SelectCard();
         }
-        else {
-            _isTouching = false;
-            DeSelectCard();
-        }
     }
 
-    void OnTouchUp() {
-        if (_isTouching) {
-            _isTouching = false;
+    public bool OnTouchUp() {
+        bool useSkill = false;
+        if (IsTouching) {
+            IsTouching = false;
             DeSelectCard();
 
             if (!_isInCancelArea) {
-                
+                useSkill = true;
             }
         }
+        return useSkill;
     }
 
     void SelectCard() {
-        if (!_isTouching) {
-            _isTouching = true;
+        if (!IsTouching) {
+            IsTouching = true;
             SkillManager.GetInstance().EnlargeCard(true, this);
         }
     }

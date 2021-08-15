@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour {
     [SerializeField] Entity[] _allies = null;
     [SerializeField] SkillDeck _cardDeck = null;
     List<Skill> _skillsInHand;
+    public List<Skill> SkillsInHand { get { return _skillsInHand;} }
     public int CurrentCost { get; set; }
 
     public void Initialize() {
