@@ -54,7 +54,7 @@ public class BattleControl : MonoBehaviour {
                 if (!SelectedTarget) return;
             }
             _playerControl.UseSkill(hand[usedSkillIndex], this);
-            hand[usedSkillIndex].gameObject.SetActive(false);
+            SkillManager.GetInstance().ReturnCard(hand[usedSkillIndex]);
             hand.RemoveAt(usedSkillIndex);
             SkillManager.GetInstance().AlignCard(hand);
         }

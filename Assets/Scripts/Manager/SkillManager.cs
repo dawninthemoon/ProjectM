@@ -9,10 +9,11 @@ public enum SkillState {
 }
 public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
     public SkillState State { get; set; } = SkillState.NOTHING;
-    static readonly string SortingLayerName = "Cards";
-    Vector3 _createPosition;
-    SpriteRenderer _aimRenderer;
-    static readonly Vector3 MiddlePosition = new Vector3(0.85f, -3.56f);
+    private static readonly string SortingLayerName = "Cards";
+    private static readonly Vector3 MiddlePosition = new Vector3(0.85f, -3.56f);
+    private Vector3 _createPosition;
+    private SpriteRenderer _aimRenderer;
+    private ObjectPool<Skill> _skillObjectPool;
 
     protected override void Awake() {
         base.Awake();
@@ -24,12 +25,29 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         _aimRenderer.sortingLayerName = "UI";
         _aimRenderer.sortingOrder = 10;
         _aimRenderer.sprite = ResourceManager.GetInstance().GetSprite("Sprites/Aim");
+
+        _skillObjectPool = new ObjectPool<Skill>(
+            10,
+            CreateCard,
+            (Skill card) => card.gameObject.SetActive(true),
+            (Skill card) => card.gameObject.SetActive(false)
+        );
     }
-    public Skill CreateCard(SkillInfo info) {
+
+    private Skill CreateCard() {
         var prefab = ResourceManager.GetInstance().GetSkillPrefab();
         var card = Instantiate(prefab, _createPosition, Quaternion.identity);
+        return card;
+    }
+
+    public Skill CreateCard(SkillInfo info) {
+        Skill card = _skillObjectPool.GetObject();
         card.Initialize(info);
         return card;
+    }
+
+    public void ReturnCard(Skill card) {
+        _skillObjectPool.ReturnObject(card);
     }
 
     public void SetOrder(List<Skill> cards) {
