@@ -14,7 +14,6 @@ public enum SkillType {
 public class SkillInfo {
     public int requireCost;
     public int value;
-    public int ownerEntityID;
     public SkillType type;
     public int numOfTargets;
     public SOSkillEffectBase skillEffect;

@@ -10,21 +10,27 @@ public class BattleControl : MonoBehaviour {
 
     [SerializeField] PlayerControl _playerControl = null;
     [SerializeField] EnemyControl _enemyControl = null;
-    static readonly float LongTouchTime = 1.5f;
     public Entity SelectedTarget { get; private set; }
-    TurnInfo _currentTurn;
-    int _turnCount;
-    int _currentStage;
-    float _touchTimeAgo;
+    private static readonly float LongTouchTime = 1.5f;
+    private TurnInfo _currentTurn;
+    private int _turnCount;
+    private int _currentStage;
+    private float _touchTimeAgo;
+    private ObserverSubject<BattleUIArgs> _onSkillUsedEvent;
 
-    void Start() {
+    private void Start() {
         _currentTurn = TurnInfo.PLAYER;
         _playerControl.Initialize();
         _enemyControl.Initialize();
+        
+        _onSkillUsedEvent = new ObserverSubject<BattleUIArgs>();
+        _onSkillUsedEvent.Subscribe_And_Listen_CurrentData += GetComponent<BattleUI>().OnSkillUsed;
+
         StartTurn();
+        SetupUI();
     }
 
-    void Update() {
+    private void Update() {
         SkillState state = SkillManager.GetInstance().State;
         if (state == SkillState.NOTHING) return;
 
@@ -54,6 +60,9 @@ public class BattleControl : MonoBehaviour {
                 if (!SelectedTarget) return;
             }
             _playerControl.UseSkill(hand[usedSkillIndex], this);
+
+            SetupUI();
+
             SkillManager.GetInstance().ReturnCard(hand[usedSkillIndex]);
             hand.RemoveAt(usedSkillIndex);
             SkillManager.GetInstance().AlignCard(hand);
@@ -62,7 +71,7 @@ public class BattleControl : MonoBehaviour {
 
     public void StartTurn() {
         ++_turnCount;
-        _playerControl.CurrentCost = 3;
+        _playerControl.RefreshCost();
         _playerControl.DrawCard(true);
         SkillManager.GetInstance().State = SkillState.CARD_DRAG;
     }
@@ -74,7 +83,7 @@ public class BattleControl : MonoBehaviour {
         SkillManager.GetInstance().State = SkillState.CARD_OVER;
     }
 
-    bool ListenInput(Vector2 curTouchPos, Skill skill) {
+    private bool ListenInput(Vector2 curTouchPos, Skill skill) {
         bool canUseSkill = false;
         #if UNITY_EDITOR
         if (Input.GetMouseButton(0)) {
@@ -97,5 +106,13 @@ public class BattleControl : MonoBehaviour {
         // }
         #endif
         return canUseSkill;
+    }
+
+    private void SetupUI() {
+        float[] ally01 = _playerControl.GetFillAmounts();
+        float[] enemy01 = _enemyControl.GetFillAmounts();
+        int curCost = _playerControl.CurrentCost;
+        int maxCost = _playerControl.GetMaxCost();
+        _onSkillUsedEvent.DoNotify(new BattleUIArgs(ally01, enemy01, curCost, maxCost));
     }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Entity : MonoBehaviour {
-    [SerializeField] EntityInfo _info = null;
+    [SerializeField] private EntityInfo _info = null;
     Collider2D _detectCollider;
-    int _curHP;
+    private int _curHP;
 
     //public void Initialize(EntityInfo info) {
     public void Initialize() {
@@ -22,6 +22,9 @@ public class Entity : MonoBehaviour {
 
     public void DecreaseHP(int value) {
         _curHP = Mathf.Max(0, _curHP - value);
-        Debug.Log("(" + gameObject.name + ")'s HP: " + _curHP.ToString());
+    }
+
+    public float GetHPPercent() {
+        return (float)_curHP / _info.maxHP;
     }
 }
