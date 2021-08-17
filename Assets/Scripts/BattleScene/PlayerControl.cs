@@ -9,10 +9,12 @@ public class PlayerControl : MonoBehaviour {
     List<Skill> _skillsInHand;
     public List<Skill> SkillsInHand { get { return _skillsInHand;} }
     public int CurrentCost { get; set; }
+    private float[] _fillAmounts;
 
     public void Initialize() {
         _cardDeck.Initialize();
         _skillsInHand = new List<Skill>();
+        _fillAmounts = new float[4];
     }
     
     public void DrawCard(bool turnStart = false) {
@@ -35,5 +37,12 @@ public class PlayerControl : MonoBehaviour {
     public void UseSkill(Skill skill, BattleControl battleControl) {
         skill.UseSkill(battleControl);
         _cardDeck.SkillToGrave(skill.GetSkillInfo());
+    }
+
+    public float[] GetFillAmounts() {
+        for (int i = 0; i < _allies.Length; ++i) {
+            _fillAmounts[i] = _allies[i].GetHPPercent(); 
+        }
+        return _fillAmounts;
     }
 }

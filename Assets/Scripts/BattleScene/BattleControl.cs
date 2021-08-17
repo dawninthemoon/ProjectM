@@ -10,21 +10,29 @@ public class BattleControl : MonoBehaviour {
 
     [SerializeField] PlayerControl _playerControl = null;
     [SerializeField] EnemyControl _enemyControl = null;
-    static readonly float LongTouchTime = 1.5f;
     public Entity SelectedTarget { get; private set; }
-    TurnInfo _currentTurn;
-    int _turnCount;
-    int _currentStage;
-    float _touchTimeAgo;
+    private static readonly float LongTouchTime = 1.5f;
+    private TurnInfo _currentTurn;
+    private int _turnCount;
+    private int _currentStage;
+    private float _touchTimeAgo;
+    private ObserverSubject<float[]> _onAllyHPChangedEvent;
+    private ObserverSubject<float[]> _onEnemyHPChangedEvent;
 
-    void Start() {
+    private void Start() {
         _currentTurn = TurnInfo.PLAYER;
         _playerControl.Initialize();
         _enemyControl.Initialize();
+        
+        _onAllyHPChangedEvent = new ObserverSubject<float[]>();
+        _onEnemyHPChangedEvent = new ObserverSubject<float[]>();
+        _onAllyHPChangedEvent.Subscribe_And_Listen_CurrentData += GetComponent<BattleUI>().OnAllyHPChanged;
+        _onEnemyHPChangedEvent.Subscribe_And_Listen_CurrentData += GetComponent<BattleUI>().OnEnemyHPChanged;
+        
         StartTurn();
     }
 
-    void Update() {
+    private void Update() {
         SkillState state = SkillManager.GetInstance().State;
         if (state == SkillState.NOTHING) return;
 
@@ -54,6 +62,9 @@ public class BattleControl : MonoBehaviour {
                 if (!SelectedTarget) return;
             }
             _playerControl.UseSkill(hand[usedSkillIndex], this);
+            _onAllyHPChangedEvent.DoNotify(_playerControl.GetFillAmounts());
+            _onEnemyHPChangedEvent.DoNotify(_enemyControl.GetFillAmounts());
+
             SkillManager.GetInstance().ReturnCard(hand[usedSkillIndex]);
             hand.RemoveAt(usedSkillIndex);
             SkillManager.GetInstance().AlignCard(hand);
@@ -74,7 +85,7 @@ public class BattleControl : MonoBehaviour {
         SkillManager.GetInstance().State = SkillState.CARD_OVER;
     }
 
-    bool ListenInput(Vector2 curTouchPos, Skill skill) {
+    private bool ListenInput(Vector2 curTouchPos, Skill skill) {
         bool canUseSkill = false;
         #if UNITY_EDITOR
         if (Input.GetMouseButton(0)) {
