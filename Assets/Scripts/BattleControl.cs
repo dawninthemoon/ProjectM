@@ -84,17 +84,17 @@ public class BattleControl : MonoBehaviour {
             canUseSkill = skill.OnTouchUp();
         }
         #else
-        if (Input.touchCount > 0) {
-            switch (touch.phase) {
-            case TouchPhase.Moved:
-                skill.OnTouchMoved(curTouchPos);
-                break;
-            case TouchPhase.Ended:
-                canUseSkill = skill.OnTouchUp();
-                _aimTransform.gameObject.SetActive(false);
-                break;
-            }
-        }
+        // if (Input.touchCount > 0) {
+        //     switch (touch.phase) {
+        //     case TouchPhase.Moved:
+        //         skill.OnTouchMoved(curTouchPos);
+        //         break;
+        //     case TouchPhase.Ended:
+        //         canUseSkill = skill.OnTouchUp();
+        //         _aimTransform.gameObject.SetActive(false);
+        //         break;
+        //     }
+        // }
         #endif
         return canUseSkill;
     }
