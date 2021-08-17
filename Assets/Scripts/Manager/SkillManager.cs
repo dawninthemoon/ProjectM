@@ -37,6 +37,7 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
     private Skill CreateCard() {
         var prefab = ResourceManager.GetInstance().GetSkillPrefab();
         var card = Instantiate(prefab, _createPosition, Quaternion.identity);
+        card.gameObject.SetActive(false);
         return card;
     }
 

@@ -29,6 +29,8 @@ public class Skill : MonoBehaviour {
         _costText.text = _skillInfo.requireCost.ToString();
     }
 
+    public int GetRequireCost() => _skillInfo.requireCost;
+
     public void Progress(Vector3 curTouchPos) {
         SkillState state = SkillManager.GetInstance().State;
         if (IsTouching && (state == SkillState.CARD_DRAG)) {
@@ -47,8 +49,7 @@ public class Skill : MonoBehaviour {
     }
 
     public bool CanSelectTarget() {
-        SkillType type = _skillInfo.type;
-        return (type == SkillType.ENEMY_TARGET) || (type == SkillType.FRIENDLY_TARGET);
+        return (_skillInfo.numOfTargets > 0);
     }
 
     public SkillInfo GetSkillInfo() {
@@ -111,7 +112,7 @@ public class Skill : MonoBehaviour {
         return useSkill;
     }
 
-    void SelectCard() {
+    private void SelectCard() {
         if (!IsTouching) {
             IsTouching = true;
             SkillManager.GetInstance().EnlargeCard(true, this);
@@ -121,7 +122,7 @@ public class Skill : MonoBehaviour {
         }
     }
 
-    void DeSelectCard() {
+    private void DeSelectCard() {
         SkillManager.GetInstance().EnlargeCard(false, this);
         if (CanSelectTarget()) {
             SkillManager.GetInstance().SetActiveAimSprite(false);

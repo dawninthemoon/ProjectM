@@ -16,6 +16,13 @@ public class PlayerControl : MonoBehaviour {
         _skillsInHand = new List<Skill>();
         _fillAmounts = new float[4];
     }
+
+    public void RefreshCost() {
+        CurrentCost = _mascot.GetCostAmount();
+    }
+
+    public bool CanUseSkill(int requireCost) => (CurrentCost >= requireCost);
+    public int GetMaxCost() => _mascot.GetCostAmount();
     
     public void DrawCard(bool turnStart = false) {
         int amount = _mascot.GetDrawAmount();
@@ -35,6 +42,7 @@ public class PlayerControl : MonoBehaviour {
     }
 
     public void UseSkill(Skill skill, BattleControl battleControl) {
+        CurrentCost -= skill.GetRequireCost();
         skill.UseSkill(battleControl);
         _cardDeck.SkillToGrave(skill.GetSkillInfo());
     }

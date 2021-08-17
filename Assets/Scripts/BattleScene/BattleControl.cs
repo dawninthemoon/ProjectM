@@ -16,20 +16,18 @@ public class BattleControl : MonoBehaviour {
     private int _turnCount;
     private int _currentStage;
     private float _touchTimeAgo;
-    private ObserverSubject<float[]> _onAllyHPChangedEvent;
-    private ObserverSubject<float[]> _onEnemyHPChangedEvent;
+    private ObserverSubject<BattleUIArgs> _onSkillUsedEvent;
 
     private void Start() {
         _currentTurn = TurnInfo.PLAYER;
         _playerControl.Initialize();
         _enemyControl.Initialize();
         
-        _onAllyHPChangedEvent = new ObserverSubject<float[]>();
-        _onEnemyHPChangedEvent = new ObserverSubject<float[]>();
-        _onAllyHPChangedEvent.Subscribe_And_Listen_CurrentData += GetComponent<BattleUI>().OnAllyHPChanged;
-        _onEnemyHPChangedEvent.Subscribe_And_Listen_CurrentData += GetComponent<BattleUI>().OnEnemyHPChanged;
-        
+        _onSkillUsedEvent = new ObserverSubject<BattleUIArgs>();
+        _onSkillUsedEvent.Subscribe_And_Listen_CurrentData += GetComponent<BattleUI>().OnSkillUsed;
+
         StartTurn();
+        SetupUI();
     }
 
     private void Update() {
@@ -62,8 +60,8 @@ public class BattleControl : MonoBehaviour {
                 if (!SelectedTarget) return;
             }
             _playerControl.UseSkill(hand[usedSkillIndex], this);
-            _onAllyHPChangedEvent.DoNotify(_playerControl.GetFillAmounts());
-            _onEnemyHPChangedEvent.DoNotify(_enemyControl.GetFillAmounts());
+
+            SetupUI();
 
             SkillManager.GetInstance().ReturnCard(hand[usedSkillIndex]);
             hand.RemoveAt(usedSkillIndex);
@@ -73,7 +71,7 @@ public class BattleControl : MonoBehaviour {
 
     public void StartTurn() {
         ++_turnCount;
-        _playerControl.CurrentCost = 3;
+        _playerControl.RefreshCost();
         _playerControl.DrawCard(true);
         SkillManager.GetInstance().State = SkillState.CARD_DRAG;
     }
@@ -108,5 +106,13 @@ public class BattleControl : MonoBehaviour {
         }
         #endif
         return canUseSkill;
+    }
+
+    private void SetupUI() {
+        float[] ally01 = _playerControl.GetFillAmounts();
+        float[] enemy01 = _enemyControl.GetFillAmounts();
+        int curCost = _playerControl.CurrentCost;
+        int maxCost = _playerControl.GetMaxCost();
+        _onSkillUsedEvent.DoNotify(new BattleUIArgs(ally01, enemy01, curCost, maxCost));
     }
 }

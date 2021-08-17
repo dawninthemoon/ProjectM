@@ -447,6 +447,7 @@ MonoBehaviour:
   - {fileID: 1315815462}
   - {fileID: 1986735135}
   - {fileID: 1150665716}
+  _costText: {fileID: 975031129}
 --- !u!1 &200116425
 GameObject:
   m_ObjectHideFlags: 0
@@ -3004,57 +3005,48 @@ MonoBehaviour:
   - {fileID: 489826925}
   _cardDeck:
     _cardList:
-    - requireCost: 3
-      value: 5
-      ownerEntityID: 0
+    - requireCost: 1
+      value: 8000
       type: 0
-      numOfTargets: 0
+      numOfTargets: 1
       skillEffect: {fileID: 11400000, guid: 3c92921cd00290f47bcf3c61fa05be5e, type: 2}
     - requireCost: 2
       value: 0
-      ownerEntityID: 0
       type: 1
       numOfTargets: 0
       skillEffect: {fileID: 0}
     - requireCost: 1
       value: 0
-      ownerEntityID: 0
       type: 2
-      numOfTargets: 0
+      numOfTargets: 1
       skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
-      ownerEntityID: 0
       type: 3
       numOfTargets: 0
       skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
-      ownerEntityID: 0
+      type: 0
+      numOfTargets: 1
+      skillEffect: {fileID: 0}
+    - requireCost: 0
+      value: 0
+      type: 0
+      numOfTargets: 1
+      skillEffect: {fileID: 0}
+    - requireCost: 0
+      value: 0
       type: 0
       numOfTargets: 0
       skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
-      ownerEntityID: 0
       type: 0
       numOfTargets: 0
       skillEffect: {fileID: 0}
     - requireCost: 0
       value: 0
-      ownerEntityID: 0
-      type: 0
-      numOfTargets: 0
-      skillEffect: {fileID: 0}
-    - requireCost: 0
-      value: 0
-      ownerEntityID: 0
-      type: 0
-      numOfTargets: 0
-      skillEffect: {fileID: 0}
-    - requireCost: 0
-      value: 0
-      ownerEntityID: 0
       type: 0
       numOfTargets: 0
       skillEffect: {fileID: 0}
