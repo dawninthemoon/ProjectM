@@ -77,7 +77,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99f9dc2cafcfc4b488aabf91fc39c95a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 100
   _renderer: {fileID: 8332126644922923423}
   _leftTransform: {fileID: 45006361732652932}
   _costText: {fileID: 1390729070059783027}
@@ -232,9 +231,9 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1804272471
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: 1306135489
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &1390729070059783027
 MonoBehaviour:

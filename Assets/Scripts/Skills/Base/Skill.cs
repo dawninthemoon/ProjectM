@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 public class Skill : MonoBehaviour {
     [SerializeField] SpriteRenderer _renderer = null;
     [SerializeField] Transform _leftTransform = null;
-    public SpriteRenderer SprRenderer { get { return _renderer;} }
+    private MeshRenderer _costTextRenderer;
     [SerializeField] TMP_Text _costText = null;
     static readonly string CancelAreaName = "CardCancelArea";
     static readonly float LongTouchTime = 1.5f;
@@ -24,6 +24,7 @@ public class Skill : MonoBehaviour {
     public void Initialize(SkillInfo info) {
         _skillInfo = info;
         _detectCollider = GetComponent<Collider2D>();
+        _costTextRenderer = GetComponentInChildren<MeshRenderer>();
         transform.localScale = new Vector3(0.3f, 0.3f, 1f);
         CardWidth = (transform.position.x - _leftTransform.position.x) * 2.5f;
         _costText.text = _skillInfo.requireCost.ToString();
@@ -31,8 +32,13 @@ public class Skill : MonoBehaviour {
 
     public int GetRequireCost() => _skillInfo.requireCost;
 
-    public void Progress(Vector3 curTouchPos) {
+    public void Progress(Vector3 touchPosition) {
         SkillState state = SkillManager.GetInstance().State;
+
+        if (IsTouching && CanSelectTarget()) {
+            SkillManager.GetInstance().SetAimPosition(touchPosition);
+        }
+
         if (IsTouching && (state == SkillState.CARD_DRAG)) {
             _touchTimeAgo += Time.deltaTime;
             if (_touchTimeAgo > LongTouchTime) {
@@ -42,7 +48,7 @@ public class Skill : MonoBehaviour {
             SkillType type = _skillInfo.type;
             if ((type == SkillType.ENEMY_RANDOM) || (type == SkillType.FRIENDLY_RANDOM)) {
                 Vector3 scale = transform.localScale;
-                MoveTransform(new PRS(curTouchPos, Quaternion.identity, scale), false);
+                MoveTransform(new PRS(touchPosition, Quaternion.identity, scale), false);
             }
             DetectCardArea();
         }
@@ -73,13 +79,16 @@ public class Skill : MonoBehaviour {
         }
     }
     
-    public void SetOrder(int order) {
+    public void SetOrder(string sortingLayerName, int order) {
         _originOrder = order;
+        _renderer.sortingLayerName = sortingLayerName;
         _renderer.sortingOrder = order;
+        _costTextRenderer.sortingOrder = order + 1;
     }
 
     public void SetMostFrontOrder(bool isEnlarge) {
         _renderer.sortingOrder = isEnlarge ? 100 : _originOrder;
+        _costTextRenderer.sortingOrder = isEnlarge ? 101 : _originOrder;
     }
 
     public void DetectCardArea() {
@@ -93,39 +102,38 @@ public class Skill : MonoBehaviour {
         return isOverlapped;
     }
 
-    public void OnTouchMoved(Vector2 touchPos) {
+    public bool OnTouchMoved(Vector2 touchPos, bool isCostEnough) {
+        bool isSelected = false;
         if (IsOverlapped(touchPos)) {
-            SelectCard();
+            SkillManager.GetInstance().EnlargeCard(true, this);
+            if (!IsTouching && isCostEnough) {
+                IsTouching = true;
+                if (CanSelectTarget()) {
+                    SkillManager.GetInstance().SetActiveAimSprite(true);
+                }
+                isSelected = true;
+            }
         }
+        return isSelected;
     }
 
     public bool OnTouchUp() {
-        bool useSkill = false;
+        bool isSkillUsed = false;
         if (IsTouching) {
             IsTouching = false;
             DeSelectCard();
 
             if (!_isInCancelArea) {
-                useSkill = true;
+                isSkillUsed = true;
             }
         }
-        return useSkill;
+        return isSkillUsed;
     }
 
-    private void SelectCard() {
-        if (!IsTouching) {
-            IsTouching = true;
-            SkillManager.GetInstance().EnlargeCard(true, this);
-            if (CanSelectTarget()) {
-                SkillManager.GetInstance().SetActiveAimSprite(true);
-            }
-        }
-    }
-
-    private void DeSelectCard() {
-        SkillManager.GetInstance().EnlargeCard(false, this);
+    public void DeSelectCard() {
         if (CanSelectTarget()) {
             SkillManager.GetInstance().SetActiveAimSprite(false);
         }
+        SkillManager.GetInstance().EnlargeCard(false, this);
     }
 }
