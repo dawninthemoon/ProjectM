@@ -19,6 +19,10 @@ namespace FBControl
         }
 
         [SerializeField] private UserDB userDB;
+        public UserData UserData
+        {
+            get{ return userDB.userData; }
+        }
 
         private FirebaseAuthManager firebaseAuthManager = new FirebaseAuthManager();
         public FirebaseAuthManager FirebaseAuthManager

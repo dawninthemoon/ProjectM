@@ -122,11 +122,6 @@ namespace FBControl
             // }
         }
 
-
-
-
-
-
         ///<summary> 유저 데이터의 하위 프로퍼티 찾아서 조정 </summary>
         public void SaveChildrenData(string propertyName, object index, params string[] parents)
         {
