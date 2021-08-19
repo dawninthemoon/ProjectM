@@ -55,8 +55,7 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         int curOrder = 0;
         int cardCounts = cards.Count;
         for (int i = 0; i < cardCounts; ++i) {
-            cards[i].SprRenderer.sortingLayerName = SortingLayerName;
-            cards[i].SetOrder(++curOrder);
+            cards[i].SetOrder(SortingLayerName, ++curOrder);
         }
     }
 

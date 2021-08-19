@@ -17,6 +17,7 @@ public class BattleControl : MonoBehaviour {
     private int _currentStage;
     private float _touchTimeAgo;
     private ObserverSubject<BattleUIArgs> _onSkillUsedEvent;
+    private int _selectedSkillIndex = -1;
 
     private void Start() {
         _currentTurn = TurnInfo.PLAYER;
@@ -40,20 +41,27 @@ public class BattleControl : MonoBehaviour {
         bool canSelectTarget = false;
         int usedSkillIndex = -1;
 
-        for (int i = 0; i < handCounts; ++i) {
-            if (ListenInput(touchPosition, hand[i])) {
-                usedSkillIndex = i;
+        if (_selectedSkillIndex == -1) {
+            for (int i = 0; i < handCounts; ++i) {
+                bool isCostEnough = _playerControl.CanUseSkill(hand[i].GetRequireCost());
+
+                if (ListenTouchMoveInput(touchPosition, hand[i], isCostEnough)) {
+                    DeSelectAllSkills(handCounts, i);
+                    _selectedSkillIndex = i;
+                    break;
+                }
             }
-            hand[i].Progress(touchPosition);
-            if (hand[i].IsTouching || (usedSkillIndex != -1)) {
-                canSelectTarget = hand[i].CanSelectTarget();
-                break;
+        }
+        else {
+            Skill skill = hand[_selectedSkillIndex];
+            skill.Progress(touchPosition);
+            canSelectTarget = skill.CanSelectTarget();
+            bool isCostEnough = _playerControl.CanUseSkill(skill.GetRequireCost());
+            if (isCostEnough) {
+                usedSkillIndex = ListenTouchUpInput(touchPosition, skill);
             }
         }
 
-        if (canSelectTarget) {
-            SkillManager.GetInstance().SetAimPosition(touchPosition);
-        }
         if (usedSkillIndex != -1) {
             if (canSelectTarget) {
                 SelectedTarget = _enemyControl.GetSelectedEnemy(touchPosition);
@@ -83,29 +91,37 @@ public class BattleControl : MonoBehaviour {
         SkillManager.GetInstance().State = SkillState.CARD_OVER;
     }
 
-    private bool ListenInput(Vector2 curTouchPos, Skill skill) {
-        bool canUseSkill = false;
+    private bool ListenTouchMoveInput(Vector2 curTouchPos, Skill skill, bool isCostEnough) {
+        bool isSelected = false;
         #if UNITY_EDITOR
         if (Input.GetMouseButton(0)) {
-            skill.OnTouchMoved(curTouchPos);
+            isSelected = skill.OnTouchMoved(curTouchPos, isCostEnough);
         }
-        else if (Input.GetMouseButtonUp(0)) {
-            canUseSkill = skill.OnTouchUp();
-        }
-        #else
-        // if (Input.touchCount > 0) {
-        //     switch (touch.phase) {
-        //     case TouchPhase.Moved:
-        //         skill.OnTouchMoved(curTouchPos);
-        //         break;
-        //     case TouchPhase.Ended:
-        //         canUseSkill = skill.OnTouchUp();
-        //         _aimTransform.gameObject.SetActive(false);
-        //         break;
-        //     }
-        // }
+        /*#else
+        if (Input.touchCount > 0) {
+            switch (touch.phase) {
+            case TouchPhase.Moved:
+                skill.OnTouchMoved(curTouchPos);
+                break;
+            case TouchPhase.Ended:
+                canUseSkill = skill.OnTouchUp();
+                _aimTransform.gameObject.SetActive(false);
+                break;
+            }
+        }*/
         #endif
-        return canUseSkill;
+        return isSelected;
+    }
+
+    private int ListenTouchUpInput(Vector2 curTouchPos, Skill skill) {
+        int usedSkillIndex = -1;
+        if (Input.GetMouseButtonUp(0)) {
+            if (skill.OnTouchUp()) {
+                usedSkillIndex = _selectedSkillIndex;
+            }
+            _selectedSkillIndex = -1;
+        }
+        return usedSkillIndex;
     }
 
     private void SetupUI() {
@@ -114,5 +130,12 @@ public class BattleControl : MonoBehaviour {
         int curCost = _playerControl.CurrentCost;
         int maxCost = _playerControl.GetMaxCost();
         _onSkillUsedEvent.DoNotify(new BattleUIArgs(ally01, enemy01, curCost, maxCost));
+    }
+
+    private void DeSelectAllSkills(int handCounts, int ignoreIndex) {
+        for (int i = 0; i < handCounts; ++i) {
+            if (i == ignoreIndex) continue;
+            SkillManager.GetInstance().EnlargeCard(false, _playerControl.SkillsInHand[i]);
+        }
     }
 }

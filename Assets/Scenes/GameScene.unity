@@ -948,8 +948,8 @@ GameObject:
   - component: {fileID: 302283347}
   - component: {fileID: 302283348}
   - component: {fileID: 302283349}
-  m_Layer: 0
-  m_Name: CardArea
+  m_Layer: 6
+  m_Name: CancelArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
