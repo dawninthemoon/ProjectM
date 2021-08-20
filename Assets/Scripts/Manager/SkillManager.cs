@@ -14,9 +14,11 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
     private Vector3 _createPosition;
     private SpriteRenderer _aimRenderer;
     private ObjectPool<Skill> _skillObjectPool;
+    private Transform _cardTransform;
 
     protected override void Awake() {
         base.Awake();
+        _cardTransform = GameObject.Find("[ Cards ]").transform;
         var deckUI = GameObject.Find("DeckButton");
         _createPosition = deckUI.transform.position;
 
@@ -37,6 +39,7 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
     private Skill CreateCard() {
         var prefab = ResourceManager.GetInstance().GetSkillPrefab();
         var card = Instantiate(prefab, _createPosition, Quaternion.identity);
+        card.transform.SetParent(_cardTransform);
         card.gameObject.SetActive(false);
         return card;
     }
