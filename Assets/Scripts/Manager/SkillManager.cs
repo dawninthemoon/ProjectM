@@ -10,7 +10,7 @@ public enum SkillState {
 public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
     public SkillState State { get; set; } = SkillState.NOTHING;
     private static readonly string SortingLayerName = "Cards";
-    private static readonly Vector3 MiddlePosition = new Vector3(0.85f, -3.56f);
+    private static readonly Vector3 MiddlePosition = new Vector3(-150, 100 - 5); //card 카메라 위치값 기준
     private Vector3 _createPosition;
     private SpriteRenderer _aimRenderer;
     private ObjectPool<Skill> _skillObjectPool;
