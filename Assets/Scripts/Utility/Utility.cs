@@ -16,11 +16,11 @@ public class PRS {
 }
 
 public static class Utility {
-    public static Vector3 GetTouchPosition() {
+    public static Vector3 GetTouchPosition(Camera camera) {
         Vector3 pos = Vector3.zero;
         #if UNITY_EDITOR
         pos = Input.mousePosition;
-        pos = Camera.main.ScreenToWorldPoint(pos);
+        pos = camera.ScreenToWorldPoint(pos);
         #else
         Touch touch = Input.GetTouch(0);
         pos = touch.position;

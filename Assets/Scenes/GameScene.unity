@@ -518,6 +518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerControl: {fileID: 955291659}
   _enemyControl: {fileID: 239548089}
+  _cardCamera: {fileID: 625655753}
 --- !u!114 &171676468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2154,7 +2155,7 @@ GameObject:
   - component: {fileID: 625655753}
   m_Layer: 0
   m_Name: card camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

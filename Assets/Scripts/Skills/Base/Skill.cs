@@ -50,7 +50,7 @@ public class Skill : MonoBehaviour {
                 Vector3 scale = transform.localScale;
                 MoveTransform(new PRS(touchPosition, Quaternion.identity, scale), false);
             }
-            DetectCardArea();
+            DetectCardArea(touchPosition);
         }
     }
 
@@ -91,8 +91,8 @@ public class Skill : MonoBehaviour {
         _costTextRenderer.sortingOrder = isEnlarge ? 101 : _originOrder;
     }
 
-    public void DetectCardArea() {
-        RaycastHit2D[] hits = Physics2D.RaycastAll(Utility.GetTouchPosition(), Vector3.forward);
+    public void DetectCardArea(Vector2 touchPosition) {
+        RaycastHit2D[] hits = Physics2D.RaycastAll(touchPosition, Vector3.forward);
         int layer = LayerMask.NameToLayer(CancelAreaName);
         _isInCancelArea = System.Array.Exists(hits, x => x.collider.gameObject.layer.Equals(layer));
     }

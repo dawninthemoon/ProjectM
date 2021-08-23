@@ -10,6 +10,7 @@ public class BattleControl : MonoBehaviour {
 
     [SerializeField] PlayerControl _playerControl = null;
     [SerializeField] EnemyControl _enemyControl = null;
+    [SerializeField] Camera _cardCamera = null;
     public Entity SelectedTarget { get; private set; }
     private static readonly float LongTouchTime = 1.5f;
     private TurnInfo _currentTurn;
@@ -35,7 +36,7 @@ public class BattleControl : MonoBehaviour {
         SkillState state = SkillManager.GetInstance().State;
         if (state == SkillState.NOTHING) return;
 
-        Vector2 touchPosition = Utility.GetTouchPosition();
+        Vector2 touchPosition = Utility.GetTouchPosition(_cardCamera);
         var hand = _playerControl.SkillsInHand;
         int handCounts = hand.Count;
         bool canSelectTarget = false;
