@@ -10,6 +10,7 @@ public class Skill : MonoBehaviour {
     [SerializeField] Transform _leftTransform = null;
     private MeshRenderer _costTextRenderer;
     [SerializeField] TMP_Text _costText = null;
+    [SerializeField] LayerMask _cardMask;
     static readonly string CancelAreaName = "CardCancelArea";
     static readonly float LongTouchTime = 1.5f;
     Collider2D _detectCollider = null;
@@ -68,11 +69,13 @@ public class Skill : MonoBehaviour {
 
     public void MoveTransform(PRS prs, bool useTweening, float duration = 0f) {
         if (useTweening) {
-            transform.DOMove(prs.pos, duration);
+            transform.DOMoveX(prs.pos.x, duration);
+            transform.DOMoveY(prs.pos.y, duration);
             transform.DORotateQuaternion(prs.rot, duration);
             transform.DOScale(prs.scale, duration);
         }
         else {
+            prs.pos.z = transform.position.z;
             transform.position = prs.pos;
             transform.rotation = prs.rot;
             transform.localScale = prs.scale;
@@ -98,7 +101,7 @@ public class Skill : MonoBehaviour {
     }
 
     public bool IsOverlapped(Vector2 pos) {
-        bool isOverlapped = (Physics2D.OverlapPoint(pos) == _detectCollider);
+        bool isOverlapped = (Physics2D.OverlapPoint(pos, _cardMask) == _detectCollider);
         return isOverlapped;
     }
 

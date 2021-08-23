@@ -60,9 +60,12 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
 
     public void SetOrder(List<Skill> cards) {
         int curOrder = 0;
+        float defaultZ = 100f;
         int cardCounts = cards.Count;
         for (int i = 0; i < cardCounts; ++i) {
             cards[i].SetOrder(SortingLayerName, ++curOrder);
+            var t = cards[i].transform;
+            t.position = t.position.ChangeZPos(-curOrder + defaultZ);
         }
     }
 

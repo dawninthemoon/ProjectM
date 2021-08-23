@@ -34,8 +34,7 @@ public static class Utility {
 namespace RieslingUtils {
     public static class VectorUtility {
         public static Vector3 ChangeZPos(this Vector3 vec, float z) {
-            Vector3 newPosition = vec;
-            vec.z = z;
+            Vector3 newPosition = new Vector3(vec.x, vec.y, z);
             return newPosition;
         }
 
