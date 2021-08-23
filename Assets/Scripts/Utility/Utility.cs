@@ -15,6 +15,7 @@ public class PRS {
     }
 }
 
+
 public static class Utility {
     public static Vector3 GetTouchPosition(Camera camera) {
         Vector3 pos = Vector3.zero;
@@ -27,5 +28,19 @@ public static class Utility {
         #endif
         pos.z -= 10f;
         return pos;
+    }
+}
+
+namespace RieslingUtils {
+    public static class VectorUtility {
+        public static Vector3 ChangeZPos(this Vector3 vec, float z) {
+            Vector3 newPosition = vec;
+            vec.z = z;
+            return newPosition;
+        }
+
+        public static void ChangeZPos(this PRS prs, float z) {
+            prs.pos = prs.pos.ChangeZPos(z);
+        }
     }
 }
