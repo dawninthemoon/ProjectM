@@ -1,0 +1,74 @@
+{
+  "CharacterTemplate": [
+    {
+      "Key": 101,
+      "Name": "핑키",
+      "SubName": "마법소녀001",
+      "Class": "MagicGirl",
+      "Gender": "Asexual",
+      "Grade": 3,
+      "Rarity": false,
+      "SkillCard1Key": "",
+      "SkillCard2Key": "",
+      "SpecialCardKey": "",
+      "TurnSkillKey": "",
+      "PassiveSkillKey": ""
+    },
+    {
+      "Key": 102,
+      "Name": "마호",
+      "SubName": "마녀001",
+      "Class": "Witch",
+      "Gender": "Asexual",
+      "Grade": 3,
+      "Rarity": false,
+      "SkillCard1Key": "",
+      "SkillCard2Key": "",
+      "SpecialCardKey": "",
+      "TurnSkillKey": "",
+      "PassiveSkillKey": ""
+    },
+    {
+      "Key": 103,
+      "Name": "피존",
+      "SubName": "마법공학자001",
+      "Class": "MagicalEngineer",
+      "Gender": "Asexual",
+      "Grade": 3,
+      "Rarity": false,
+      "SkillCard1Key": "",
+      "SkillCard2Key": "",
+      "SpecialCardKey": "",
+      "TurnSkillKey": "",
+      "PassiveSkillKey": ""
+    },
+    {
+      "Key": 104,
+      "Name": "미제리",
+      "SubName": "마전사001",
+      "Class": "BattleMage",
+      "Gender": "Asexual",
+      "Grade": 3,
+      "Rarity": false,
+      "SkillCard1Key": "",
+      "SkillCard2Key": "",
+      "SpecialCardKey": "",
+      "TurnSkillKey": "",
+      "PassiveSkillKey": ""
+    },
+    {
+      "Key": 105,
+      "Name": "구스티",
+      "SubName": "마법사001",
+      "Class": "Mage",
+      "Gender": "Asexual",
+      "Grade": 3,
+      "Rarity": false,
+      "SkillCard1Key": "",
+      "SkillCard2Key": "",
+      "SpecialCardKey": "",
+      "TurnSkillKey": "",
+      "PassiveSkillKey": ""
+    }
+  ]
+}
