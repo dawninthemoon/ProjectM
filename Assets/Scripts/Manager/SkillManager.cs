@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RieslingUtils;
 
 public enum SkillState {
     NOTHING,
@@ -10,20 +11,19 @@ public enum SkillState {
 public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
     public SkillState State { get; set; } = SkillState.NOTHING;
     private static readonly string SortingLayerName = "Cards";
-    private static readonly Vector3 MiddlePosition = new Vector3( 0, 0 ); //card 카메라 위치값 기준
+    private Vector2 _middlePosition;
     private Vector3 _createPosition;
     private SpriteRenderer _aimRenderer;
     private ObjectPool<Skill> _skillObjectPool;
     private Transform _cardTransform;
 
-    protected override void Awake() {
-        base.Awake();
+    public void Initialize(Camera cardCamera) {
         _cardTransform = GameObject.Find("[ Cards ]").transform;
         var deckUI = GameObject.Find("DeckButton");
 
-        // Canvas buttonCanvas = GameObject.Find("ButtonCanvas").GetComponent<Canvas>();
-
-        _createPosition = Camera.main.ScreenToWorldPoint( deckUI.transform.position );
+        _createPosition = cardCamera.ScreenToWorldPoint(deckUI.transform.position);
+        _middlePosition = cardCamera.transform.position;
+        _middlePosition.y = -3.5f;
 
         _aimRenderer = gameObject.AddComponent<SpriteRenderer>();
         SetActiveAimSprite(false);
@@ -78,7 +78,7 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         int cardCounts = cards.Count;
         if (cardCounts == 0) return;
         
-        Vector3 cardOrigin = MiddlePosition;
+        Vector3 cardOrigin = _middlePosition;
         if (cardCounts % 2 == 0) {
             cardOrigin.x += cards[0].CardWidth;
             cardOrigin.x -= cards[0].CardWidth * 2f * (cardCounts / 2);

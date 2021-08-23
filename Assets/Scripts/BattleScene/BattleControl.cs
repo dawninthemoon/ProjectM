@@ -21,6 +21,8 @@ public class BattleControl : MonoBehaviour {
     private int _selectedSkillIndex = -1;
 
     private void Start() {
+        SkillManager.GetInstance().Initialize(_cardCamera);
+
         _currentTurn = TurnInfo.PLAYER;
         _playerControl.Initialize();
         _enemyControl.Initialize();
