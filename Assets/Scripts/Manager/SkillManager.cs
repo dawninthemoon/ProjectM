@@ -10,7 +10,7 @@ public enum SkillState {
 public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
     public SkillState State { get; set; } = SkillState.NOTHING;
     private static readonly string SortingLayerName = "Cards";
-    private static readonly Vector3 MiddlePosition = new Vector3(-150f, 100f -5f); //card 카메라 위치값 기준
+    private static readonly Vector3 MiddlePosition = new Vector3( 0, 0 ); //card 카메라 위치값 기준
     private Vector3 _createPosition;
     private SpriteRenderer _aimRenderer;
     private ObjectPool<Skill> _skillObjectPool;
@@ -20,7 +20,10 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         base.Awake();
         _cardTransform = GameObject.Find("[ Cards ]").transform;
         var deckUI = GameObject.Find("DeckButton");
-        _createPosition = deckUI.transform.position;
+
+        // Canvas buttonCanvas = GameObject.Find("ButtonCanvas").GetComponent<Canvas>();
+
+        _createPosition = Camera.main.ScreenToWorldPoint( deckUI.transform.position );
 
         _aimRenderer = gameObject.AddComponent<SpriteRenderer>();
         SetActiveAimSprite(false);

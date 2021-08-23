@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 45006361732652932}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 8332126644922923422}
   - component: {fileID: 8332126644922923423}
   - component: {fileID: 671286575982090128}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SkillPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 8557736066646363166}
   - component: {fileID: 3263332538891674488}
   - component: {fileID: 1390729070059783027}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
