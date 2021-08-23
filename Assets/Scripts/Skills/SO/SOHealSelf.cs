@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SOTempSkill", menuName = "SkillEffect/TempSkill")]
-public class SOTempSkill : SOSkillEffectBase {
+[CreateAssetMenu(fileName = "SOHealSelf", menuName = "SkillEffect/HealSelf")]
+public class SOHealSelf : SOSkillEffectBase {
     public override void ExecuteSkill(SkillInfo info, BattleControl battleControl) {
         var target = battleControl.SelectedTarget;
-        target.DecreaseHP(info.value);
+        target.IncreaseHP(info.value);
     }
 }

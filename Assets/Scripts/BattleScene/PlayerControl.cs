@@ -10,10 +10,12 @@ public class PlayerControl : MonoBehaviour {
     public List<Skill> SkillsInHand { get { return _skillsInHand;} }
     public int CurrentCost { get; set; }
     private float[] _fillAmounts;
+    private List<Entity> _allyList;
 
     public void Initialize() {
         _cardDeck.Initialize();
         _skillsInHand = new List<Skill>();
+        _allyList = new List<Entity>(4);
         _fillAmounts = new float[4];
     }
 
@@ -52,5 +54,23 @@ public class PlayerControl : MonoBehaviour {
             _fillAmounts[i] = _allies[i].GetHPPercent(); 
         }
         return _fillAmounts;
+    }
+
+    public List<Entity> GetRandomAllies(int targetCounts, Entity ignoreEntity = null) {
+        int numOfAllies = _allies.Length;
+        _allyList = _allies.ToList();
+
+        if (ignoreEntity) {
+            _allyList.Remove(ignoreEntity);
+        }
+
+        if (targetCounts < numOfAllies) {
+            int diff = numOfAllies - targetCounts;
+            for (int i = 0; i < diff; ++i) {
+                int removeIndex = Random.Range(0, _allyList.Count);
+                _allyList.RemoveAt(removeIndex);
+            }
+        }
+        return _allyList;
     }
 }

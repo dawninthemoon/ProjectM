@@ -2315,7 +2315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _info:
     entityID: 0
-    maxHP: 10
+    maxHP: 10000
     atk: 1
     heal: 0
     def: 0
@@ -3016,40 +3016,35 @@ MonoBehaviour:
       numOfTargets: 0
       skillEffect: {fileID: 0}
     - requireCost: 1
-      value: 0
+      value: 10000
+      type: 1
+      numOfTargets: 1
+      skillEffect: {fileID: 11400000, guid: 197b0e588b5363d438a6fa0b28c7a6c9, type: 2}
+    - requireCost: 1
+      value: 10000
       type: 2
       numOfTargets: 1
-      skillEffect: {fileID: 0}
-    - requireCost: 0
-      value: 0
+      skillEffect: {fileID: 11400000, guid: 8767edaa87a64724d8c8d36d6e88625d, type: 2}
+    - requireCost: 2
+      value: 15000
       type: 3
-      numOfTargets: 0
-      skillEffect: {fileID: 0}
-    - requireCost: 0
-      value: 0
-      type: 0
       numOfTargets: 1
-      skillEffect: {fileID: 0}
-    - requireCost: 0
-      value: 0
+      skillEffect: {fileID: 11400000, guid: 17d617b5efbaac0428fcee58e6ed8b64, type: 2}
+    - requireCost: 3
+      value: 6500
       type: 0
-      numOfTargets: 1
-      skillEffect: {fileID: 0}
-    - requireCost: 0
-      value: 0
-      type: 0
-      numOfTargets: 0
-      skillEffect: {fileID: 0}
-    - requireCost: 0
-      value: 0
-      type: 0
-      numOfTargets: 0
-      skillEffect: {fileID: 0}
-    - requireCost: 0
-      value: 0
-      type: 0
-      numOfTargets: 0
-      skillEffect: {fileID: 0}
+      numOfTargets: 2
+      skillEffect: {fileID: 11400000, guid: 3c92921cd00290f47bcf3c61fa05be5e, type: 2}
+    - requireCost: 4
+      value: 5000
+      type: 1
+      numOfTargets: 4
+      skillEffect: {fileID: 11400000, guid: 197b0e588b5363d438a6fa0b28c7a6c9, type: 2}
+    - requireCost: 3
+      value: 7000
+      type: 1
+      numOfTargets: 4
+      skillEffect: {fileID: 11400000, guid: 3c92921cd00290f47bcf3c61fa05be5e, type: 2}
 --- !u!1 &975031127
 GameObject:
   m_ObjectHideFlags: 0
@@ -4382,7 +4377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _info:
     entityID: 0
-    maxHP: 10
+    maxHP: 10000
     atk: 1
     heal: 0
     def: 0
@@ -4510,7 +4505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _info:
     entityID: 0
-    maxHP: 10
+    maxHP: 10000
     atk: 1
     heal: 0
     def: 0
@@ -5456,7 +5451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _info:
     entityID: 0
-    maxHP: 10
+    maxHP: 10000
     atk: 1
     heal: 0
     def: 0
