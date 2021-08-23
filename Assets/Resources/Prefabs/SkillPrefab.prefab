@@ -80,6 +80,9 @@ MonoBehaviour:
   _renderer: {fileID: 8332126644922923423}
   _leftTransform: {fileID: 45006361732652932}
   _costText: {fileID: 1390729070059783027}
+  _cardMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!212 &8332126644922923423
 SpriteRenderer:
   m_ObjectHideFlags: 0
