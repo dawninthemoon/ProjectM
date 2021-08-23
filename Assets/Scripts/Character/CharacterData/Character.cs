@@ -23,7 +23,7 @@ namespace Data
             Female
         }
 
-        public string Key;
+        public int Key;
         public string Name;
         public string SubName;
         public EClassType ClassType;

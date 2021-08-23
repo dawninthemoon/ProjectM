@@ -3,20 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.U2D;
 
-public class CharacterCard : MonoBehaviour
+namespace OutGame
 {
-    [SerializeField] private Image cardImage;
-    [SerializeField] private Sprite[] cardSprites;
-
-    [SerializeField] private Image characterImage;
-
-    [SerializeField] private TextMeshProUGUI nameText;
-    
-    public void SetCard( Data.Character character )
+    public class CharacterCard : MonoBehaviour
     {
-        cardImage.sprite = cardSprites[character.Grade - 1];
+        [SerializeField] private Image cardImage;
+        [SerializeField] private Sprite[] cardSprites;
 
-        nameText.text = character.Name;
+        [SerializeField] private Stars stars;
+
+        [SerializeField] private Image characterImage;
+        [SerializeField] private Transform characterCenter;
+
+        [SerializeField] private TextMeshProUGUI nameText;
+        
+
+        private SpriteAtlas characterAtlas;
+
+        public void Init( SpriteAtlas characterAtlas )
+        {
+            this.characterAtlas = characterAtlas;
+        }
+
+        public void SetCard( Data.Character character )
+        {
+            characterImage.sprite = characterAtlas.GetSprite( string.Format("Character_{0}", character.Key) );
+            characterImage.rectTransform.pivot = new Vector2( (float)characterImage.sprite.pivot.x / characterImage.sprite.texture.width, (float)characterImage.sprite.pivot.y / characterImage.sprite.texture.height );
+            characterImage.rectTransform.position = characterCenter.position;
+
+            nameText.text = character.Name;
+            stars.SetStar( character.Grade );
+
+        }
     }
 }

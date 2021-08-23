@@ -8,12 +8,37 @@ namespace Data
 {
     public class CharacterDataParser
     {
+        private static Character[] characterData = null;
+        public static Character[] CharacterData
+        {
+            get
+            {
+                Init();
+                return characterData;
+            }
+        }
+        
+        public static void Init()
+        {
+            string textAsset = Resources.Load("Json/character").ToString();
+
+            JSONObject jsonObject = JSONObject.Parse(textAsset);
+
+            JSONArray jsonArray = jsonObject.GetArray("CharacterTemplate");
+
+            characterData = new Character[jsonArray.Length];
+
+            for( int i = 0; i < jsonArray.Length; ++i )
+            {
+                characterData[i] = Parse( jsonArray[i].Obj );
+            }
+        }
 
         public static Character Parse( JSONObject jsonObj  )
         {
             Character character = new Character();
 
-            character.Key = jsonObj.GetString("Key");
+            character.Key = (int)jsonObj.GetNumber("Key");
             character.Name = jsonObj.GetString("Name");
             character.SubName = jsonObj.GetString("SubName");
             character.ClassType = (Character.EClassType)Enum.Parse(typeof(Character.EClassType), jsonObj.GetString("Class"));
