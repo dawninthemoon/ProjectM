@@ -51,7 +51,7 @@ public class BattleControl : MonoBehaviour {
                 bool isCostEnough = _playerControl.CanUseSkill(hand[i].GetRequireCost());
 
                 if (ListenTouchMoveInput(touchPosition, hand[i], isCostEnough)) {
-                    DeSelectAllSkills(handCounts, i);
+                    //DeSelectAllSkills(handCounts, i);
                     _selectedSkillIndex = i;
                     break;
                 }

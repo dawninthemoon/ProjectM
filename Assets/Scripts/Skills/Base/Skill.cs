@@ -118,6 +118,9 @@ public class Skill : MonoBehaviour {
                 isSelected = true;
             }
         }
+        else {
+            SkillManager.GetInstance().EnlargeCard(false, this);
+        }
         return isSelected;
     }
 
