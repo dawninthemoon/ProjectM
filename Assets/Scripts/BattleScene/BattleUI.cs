@@ -20,8 +20,10 @@ public struct BattleUIArgs {
 
 
 public class BattleUI : MonoBehaviour {
-    [SerializeField] Image[] _allyHPBarImage = null;
-    [SerializeField] Image[] _enemyHPBarImage = null;
+    [SerializeField] Image[] _allyHPBarImages = null;
+    [SerializeField] Image[] _allyHPUIImages = null;
+    [SerializeField] Image[] _allyEXPUIImages = null;
+    [SerializeField] Image[] _enemyHPBarImages = null;
     [SerializeField] TextMeshProUGUI _costText = null;
     private static readonly string SlashString = "/";
 
@@ -32,23 +34,25 @@ public class BattleUI : MonoBehaviour {
     }
 
     private void OnAllyHPChanged(float[] args) {
-        for (int i = 0; i < _allyHPBarImage.Length; ++i) {
+        for (int i = 0; i < _allyHPBarImages.Length; ++i) {
             if (args == null || args.Length <= i) {
-                SetImageFillAmount(_allyHPBarImage[i], 1f);
+                SetImageFillAmount(_allyHPBarImages[i], 1f);
+                SetImageFillAmount(_allyHPUIImages[i], 1f);
             }
             else {
-                SetImageFillAmount(_allyHPBarImage[i], args[i]);
+                SetImageFillAmount(_allyHPBarImages[i], args[i]);
+                SetImageFillAmount(_allyHPUIImages[i], args[i]);
             }   
         }
     }
 
     private void OnEnemyHPChanged(float[] args) {
-        for (int i = 0; i < _enemyHPBarImage.Length; ++i) {
+        for (int i = 0; i < _enemyHPBarImages.Length; ++i) {
             if (args == null || args.Length <= i) {
-                SetImageFillAmount( _enemyHPBarImage[i], 1f);
+                SetImageFillAmount(_enemyHPBarImages[i], 1f);
             }
             else {
-                SetImageFillAmount( _enemyHPBarImage[i], args[i]);
+                SetImageFillAmount(_enemyHPBarImages[i], args[i]);
             }   
         }
     }
