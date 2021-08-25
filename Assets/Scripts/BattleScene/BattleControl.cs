@@ -42,19 +42,15 @@ public class BattleControl : MonoBehaviour {
 
         Vector2 touchPosition = Utility.GetTouchPosition(_cardCamera);
         var hand = _playerControl.SkillsInHand;
-        int handCounts = hand.Count;
         bool canSelectTarget = false;
         int usedSkillIndex = -1;
 
         if (_selectedSkillIndex == -1) {
-            for (int i = 0; i < handCounts; ++i) {
-                bool isCostEnough = _playerControl.CanUseSkill(hand[i].GetRequireCost());
-
-                if (ListenTouchMoveInput(touchPosition, hand[i], isCostEnough)) {
-                    //DeSelectAllSkills(handCounts, i);
-                    _selectedSkillIndex = i;
-                    break;
-                }
+            if (Input.GetMouseButton(0)) {
+                OnTouchedDetected(hand, touchPosition);
+            }
+            else {
+                DeSelectAllSkills(hand.Count, -1);
             }
         }
         else {
@@ -86,22 +82,42 @@ public class BattleControl : MonoBehaviour {
         ++_turnCount;
         _playerControl.RefreshCost();
         _playerControl.DrawCard(true);
+        _onSkillUsedEvent.DoNotify(new BattleUIArgs(null, null, _playerControl.CurrentCost, _playerControl.GetMaxCost()));
         SkillManager.GetInstance().State = SkillState.CARD_DRAG;
     }
 
-    public void EndTurn() {
+    public void EndPlayerTurn() {
+        EndTurn();
+        SkillManager.GetInstance().State = SkillState.CARD_OVER;
+        StartEnemyTurn();
+    }
+
+    private void EndTurn() {
         int curTurn = (int)_currentTurn;
         int nextTurn = (curTurn + 1) % 2;
         _currentTurn = (TurnInfo)nextTurn;
-        SkillManager.GetInstance().State = SkillState.CARD_OVER;
     }
 
-    private bool ListenTouchMoveInput(Vector2 curTouchPos, Skill skill, bool isCostEnough) {
+    void StartEnemyTurn() {
+        EndTurn();
+        StartTurn();
+    }
+
+    private void OnTouchedDetected(List<Skill> hand, Vector2 touchPosition) {
+        int handCounts = hand.Count;
+        for (int i = 0; i < handCounts; ++i) {
+            bool isCostEnough = _playerControl.CanUseSkill(hand[i].GetRequireCost());
+            if (CheckSkillSelected(touchPosition, hand[i], isCostEnough)) {
+                _selectedSkillIndex = i;
+                break;
+            }
+        }
+    }
+
+    private bool CheckSkillSelected(Vector2 touchPosition, Skill skill, bool isCostEnough) {
         bool isSelected = false;
         #if UNITY_EDITOR
-        if (Input.GetMouseButton(0)) {
-            isSelected = skill.OnTouchMoved(curTouchPos, isCostEnough);
-        }
+        isSelected = skill.OnTouchMoved(touchPosition, isCostEnough);
         /*#else
         if (Input.touchCount > 0) {
             switch (touch.phase) {
