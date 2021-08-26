@@ -1041,7 +1041,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -5.525049, y: -3.2951462}
+  m_Offset: {x: 0, y: -3.2951462}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1052,7 +1052,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 28.695835, y: 3.291843}
+  m_Size: {x: 17.645737, y: 3.291843}
   m_EdgeRadius: 0
 --- !u!61 &302283349
 BoxCollider2D:
@@ -1067,7 +1067,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -5.3487177, y: 9.61812}
+  m_Offset: {x: 0, y: 3.9167404}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1078,7 +1078,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 28.492682, y: 4.854809}
+  m_Size: {x: 17.795244, y: 2.3861713}
   m_EdgeRadius: 0
 --- !u!1 &319802653
 GameObject:
@@ -1416,7 +1416,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 171676467}
         m_TargetAssemblyTypeName: BattleControl, Assembly-CSharp
-        m_MethodName: EndPlayerTurn
+        m_MethodName: EndTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3392,7 +3392,7 @@ MonoBehaviour:
       value: 7000
       type: 1
       numOfTargets: 4
-      skillEffect: {fileID: 11400000, guid: 197b0e588b5363d438a6fa0b28c7a6c9, type: 2}
+      skillEffect: {fileID: 11400000, guid: 3c92921cd00290f47bcf3c61fa05be5e, type: 2}
 --- !u!1 &975031127
 GameObject:
   m_ObjectHideFlags: 0
