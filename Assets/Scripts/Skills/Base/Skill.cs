@@ -56,7 +56,7 @@ public class Skill : MonoBehaviour {
     }
 
     public bool CanSelectTarget() {
-        return (_skillInfo.numOfTargets > 0);
+        return (_skillInfo.type == SkillType.ENEMY_TARGET) || (_skillInfo.type == SkillType.FRIENDLY_TARGET);
     }
 
     public SkillInfo GetSkillInfo() {
@@ -108,6 +108,7 @@ public class Skill : MonoBehaviour {
     public bool OnTouchMoved(Vector2 touchPos, bool isCostEnough) {
         bool isSelected = false;
         if (IsOverlapped(touchPos)) {
+            Debug.Log(_skillInfo.type);
             SkillManager.GetInstance().EnlargeCard(true, this);
             if (!IsTouching && isCostEnough) {
                 IsTouching = true;
@@ -116,6 +117,9 @@ public class Skill : MonoBehaviour {
                 }
                 isSelected = true;
             }
+        }
+        else {
+            SkillManager.GetInstance().EnlargeCard(false, this);
         }
         return isSelected;
     }

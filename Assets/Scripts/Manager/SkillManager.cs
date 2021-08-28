@@ -27,6 +27,7 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
 
         _aimRenderer = gameObject.AddComponent<SpriteRenderer>();
         SetActiveAimSprite(false);
+        _aimRenderer.gameObject.layer = LayerMask.NameToLayer("Card");
         _aimRenderer.sortingLayerName = "UI";
         _aimRenderer.sortingOrder = 10;
         _aimRenderer.sprite = ResourceManager.GetInstance().GetSprite("Sprites/Aim");

@@ -24,6 +24,10 @@ public class Entity : MonoBehaviour {
         _curHP = Mathf.Max(0, _curHP - value);
     }
 
+    public void IncreaseHP(int value) {
+        _curHP = Mathf.Min(_info.maxHP, _curHP + value);
+    }
+
     public float GetHPPercent() {
         return (float)_curHP / _info.maxHP;
     }
