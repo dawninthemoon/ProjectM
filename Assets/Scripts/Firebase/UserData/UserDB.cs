@@ -121,18 +121,22 @@ namespace FBControl
             //     PopUpManager.Instance.ShowPopUp(PopUpType.WORNING, "중복 로그인", "중복 로그인되었습니다. 게임이 종료됩니다.", () => { Application.Quit(); });
             // }
         }
+        
+        public void SetCharacter()
+        {
+            DatabaseReference propertyReference = databaseReference.Child("charData");
+            propertyReference.SetRawJsonValueAsync( userData.GetCharJsonArray().ToString() );
+        }
 
         ///<summary> 유저 데이터의 하위 프로퍼티 찾아서 조정 </summary>
-        public void SaveChildrenData(string propertyName, object index, params string[] parents)
+        public void SaveChildrenData( object index, params string[] parents )
         {
-            DatabaseReference propertyReference = databaseReference.Child(userID);//Child(propertyName);
+            DatabaseReference propertyReference = databaseReference;//Child(propertyName);
 
             for (int i = 0; i < parents.Length; ++i)
             {
                 propertyReference = propertyReference.Child(parents[i]);
             }
-
-            propertyReference = propertyReference.Child(propertyName);
 
             propertyReference.SetValueAsync(index);
         }
@@ -140,7 +144,7 @@ namespace FBControl
         ///<summary> 유저 데이터의 하위 프로퍼티만 조정 </summary>
         public void SaveChildrenData(string propertyName, object index)
         {
-            DatabaseReference propertyReference = databaseReference.Child(userID).Child(propertyName);
+            DatabaseReference propertyReference = databaseReference.Child(propertyName);
             propertyReference.SetValueAsync(index);
         }
 
@@ -149,9 +153,7 @@ namespace FBControl
         {
             string json = userData.GetJsonFile().ToString();//JsonUtility.ToJson(User.Instance.userData);
             
-            Debug.Log(json);
             databaseReference.SetRawJsonValueAsync(json);
-            Debug.Log( "B0 ");
         }
 
 

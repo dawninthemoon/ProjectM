@@ -19,6 +19,10 @@ namespace FBControl
         }
 
         [SerializeField] private UserDB userDB;
+        public UserDB UserDB
+        {
+            get{ return userDB; }
+        }
         public UserData UserData
         {
             get{ return userDB.userData; }

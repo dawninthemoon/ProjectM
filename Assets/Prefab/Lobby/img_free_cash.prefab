@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2778643106430502535}
   - component: {fileID: 2778643106430502533}
   - component: {fileID: 2778643106430502534}
+  - component: {fileID: 2297095117768123996}
   m_Layer: 5
   m_Name: tmp_text
   m_TagString: Untagged
@@ -134,6 +135,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2297095117768123996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2778643106430502552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7e4cc776a02924f8c269cfe902e72b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 2778643106430502534}
+  currencyType: 0
+  isTween: 1
 --- !u!1 &2778643106443457433
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +162,7 @@ GameObject:
   - component: {fileID: 2778643106443457414}
   - component: {fileID: 2778643106443457415}
   m_Layer: 5
-  m_Name: img_cash
+  m_Name: img_free_cash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

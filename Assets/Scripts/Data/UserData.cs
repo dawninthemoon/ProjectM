@@ -25,22 +25,16 @@ public class UserData
         get{ return lastLoginTime; }
     }
 
-    private int gold;
-    public int Gold
+    private List<UserCharacterData> charData = new List<UserCharacterData>();
+    public List<UserCharacterData> CharData
     {
-        get{ return gold; }
+        get{ return charData; }
     }
 
-    private int cash;
-    public int Cash
+    private UserCurrenyData userCurrenyData = new UserCurrenyData();
+    public UserCurrenyData UserCurrenyData
     {
-        get{ return cash; }
-    }
-
-    private Dictionary<int,int> characterDictionary = new Dictionary<int, int>();
-    public Dictionary<int,int> CharacterDictionary
-    {
-        get{ return characterDictionary; }
+        get{ return userCurrenyData; }
     }
 
     public void SetDefaultData()
@@ -50,10 +44,10 @@ public class UserData
 
         lastLoginTime = DateTime.Now;
 
-        gold = 0;
-        cash = 0;
+        userCurrenyData.Gold = 0;
+        userCurrenyData.FCash = 0;
+        userCurrenyData.PCash = 0;
     }
-    
     public JSONObject GetJsonFile()
     {
         JSONObject jsonResult = new JSONObject();
@@ -64,24 +58,25 @@ public class UserData
         jsonResult.Add( "nickName", nickName );
         jsonResult.Add( "uid", uid );
         jsonResult.Add( "lastLoginTime", lastLoginTime.ToString() );//해외 현지화 해야함 임시 ToString();
-        jsonResult.Add( "gold", gold );
-        jsonResult.Add( "cash", cash );
+        jsonResult.Add( "gold", userCurrenyData.Gold );
+        jsonResult.Add( "fCash", userCurrenyData.FCash );
+        jsonResult.Add( "pCash", userCurrenyData.PCash );
 
-        int[] charKeys = characterDictionary.Keys.ToArray();
+        jsonResult.Add( "charData", GetCharJsonArray() );
 
-        for( int i = 0; i < charKeys[i]; ++i )
+        return jsonResult;
+    }
+
+    public JSONArray GetCharJsonArray()
+    {
+        JSONArray jsonArray = new JSONArray();
+
+        for( int i = 0; i < charData.Count; ++i )
         {
-            jsonTemp.Clear();
-            
-            jsonTemp.Add( "code", charKeys[i] );
-            jsonTemp.Add( "count", characterDictionary[charKeys[i]] );
-            
-            jsonArray.Add( jsonTemp );
+            jsonArray.Add( charData[i].ToJsonObject() );
         }
 
-        jsonResult.Add( "character", jsonArray );
-        
-        return jsonResult;
+        return jsonArray;
     }
 
     public void SetJsonFile( JSONObject jsonObject )
@@ -93,21 +88,39 @@ public class UserData
         if( jsonObject.ContainsKey("lastLoginTime") )
             lastLoginTime = DateTime.Parse( jsonObject.GetString("lastLoginTime") );
         if( jsonObject.ContainsKey("gold") )
-            gold = (int)jsonObject.GetNumber("gold");
-        if( jsonObject.ContainsKey("cash") )
-            cash = (int)jsonObject.GetNumber("cash");
+            userCurrenyData.Gold = (int)jsonObject.GetNumber("gold");
+        if( jsonObject.ContainsKey("fCash") )
+            userCurrenyData.FCash = (int)jsonObject.GetNumber("fCash");
+        if( jsonObject.ContainsKey("PCash") )
+            userCurrenyData.PCash = (int)jsonObject.GetNumber("pCash");
 
-        if( jsonObject.ContainsKey("character") )
+        charData.Clear();
+
+        if( jsonObject.ContainsKey("charData") )
         {
-            JSONArray arrTemnp = jsonObject.GetArray("character");
-            JSONObject jsonObj;
-            characterDictionary.Clear();
+            JSONArray array = jsonObject.GetArray("charData");
 
-            for( int i = 0; i < arrTemnp.Length; ++i )
+            for( int i = 0; i < array.Length; ++i )
             {
-                jsonObj = arrTemnp[i].Obj;
-                characterDictionary.Add( (int)jsonObject.GetNumber("code"), (int)jsonObject.GetNumber("count") );
+                UserCharacterData dataTemp = new UserCharacterData();
+
+                dataTemp.SetJsonObject( array[i].Obj );
+                charData.Add( dataTemp );
             }
+        }
+    }
+
+    public void GetCharacter( int index )
+    {
+        UserCharacterData userCharacter = charData.Find( (x)=> x.Index == index );
+
+        if( userCharacter != null)
+        {
+        }
+        else
+        {
+            userCharacter = new UserCharacterData( index );
+            charData.Add( userCharacter );
         }
     }
 }
