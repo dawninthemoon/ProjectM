@@ -6,7 +6,7 @@ using UnityEngine;
 public class SOAttackRandom : SOSkillEffectBase {
     public override void ExecuteSkill(SkillInfo info, BattleControl battleControl) {
         var targets = battleControl.EnemyCtrl.GetRandomEnemies(info.numOfTargets);
-        foreach (Entity target in targets) {
+        foreach (BattleEntity target in targets) {
             target.DecreaseHP(info.value);
         }
     }

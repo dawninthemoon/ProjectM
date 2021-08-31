@@ -17,9 +17,9 @@ public class ResourceManager : Singleton<ResourceManager> {
         return skill;
     }
 
-    public Entity GetEntityPrefab() {
+    public BattleEntity GetEntityPrefab() {
         string path = PrefabPath + EntityPrefabName;
-        var entity = LoadPrefab(path).GetComponent<Entity>();
+        var entity = LoadPrefab(path).GetComponent<BattleEntity>();
         return entity;
     }
 

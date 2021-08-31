@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
     [SerializeField] Mascot _mascot = null;
-    [SerializeField] Entity[] _allies = null;
+    [SerializeField] BattleEntity[] _allies = null;
     [SerializeField] SkillDeck _cardDeck = null;
     List<Skill> _skillsInHand;
     public List<Skill> SkillsInHand { get { return _skillsInHand;} }
     public int CurrentCost { get; set; }
     private float[] _fillAmounts;
-    private List<Entity> _allyList;
+    private List<BattleEntity> _allyList;
 
     public void Initialize() {
         _cardDeck.Initialize();
         _skillsInHand = new List<Skill>();
-        _allyList = new List<Entity>(4);
+        _allyList = new List<BattleEntity>(4);
         _fillAmounts = new float[4];
+
+        for (int i = 0; i < _allies.Length; ++i) {
+            _allies[i].Initialize();
+        }
     }
 
     public void RefreshCost() {
@@ -56,7 +60,7 @@ public class PlayerControl : MonoBehaviour {
         return _fillAmounts;
     }
 
-    public List<Entity> GetRandomAllies(int targetCounts, Entity ignoreEntity = null) {
+    public List<BattleEntity> GetRandomAllies(int targetCounts, BattleEntity ignoreEntity = null) {
         int numOfAllies = _allies.Length;
         _allyList = _allies.ToList();
 

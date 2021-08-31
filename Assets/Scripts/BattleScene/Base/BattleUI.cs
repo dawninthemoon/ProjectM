@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using RieslingUtils;
 
 public struct BattleUIArgs {
     public float[] allyHPFillAmounts;
@@ -58,7 +59,7 @@ public class BattleUI : MonoBehaviour {
     }
 
     private void OnCostChanged(int currentCost, int maxCost) {
-        _costText.text = currentCost.ToString() + SlashString + maxCost.ToString();
+        _costText.text = StringUtils.MergeStrings(currentCost.ToString(), SlashString, maxCost.ToString());
     }
 
     private void SetImageFillAmount(Image image, float amount) {

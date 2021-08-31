@@ -6,7 +6,7 @@ using UnityEngine;
 public class SOHealRandom : SOSkillEffectBase {
     public override void ExecuteSkill(SkillInfo info, BattleControl battleControl) {
         var targets = battleControl.PlayerCtrl.GetRandomAllies(info.numOfTargets);
-        foreach (Entity target in targets) {
+        foreach (BattleEntity target in targets) {
             target.IncreaseHP(info.value);
         }
     }

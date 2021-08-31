@@ -1340,12 +1340,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c59327f501fd574cac075cb24987e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _atlas: {fileID: 0}
   _info:
     entityID: 0
-    maxHP: 10
+    maxHP: 10000
     atk: 1
     heal: 0
     def: 0
+    name: MAGICALGIRL001
 --- !u!1 &326002947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,12 +1861,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c59327f501fd574cac075cb24987e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _atlas: {fileID: 0}
   _info:
     entityID: 0
-    maxHP: 10
+    maxHP: 10000
     atk: 1
     heal: 0
     def: 0
+    name: MAGICENGINEER001
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2501,12 +2505,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c59327f501fd574cac075cb24987e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _atlas: {fileID: 0}
   _info:
     entityID: 0
-    maxHP: 10
+    maxHP: 10000
     atk: 1
     heal: 0
     def: 0
+    name: MAGE001
 --- !u!1 &625655751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2716,12 +2722,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c59327f501fd574cac075cb24987e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _atlas: {fileID: 0}
   _info:
     entityID: 0
     maxHP: 10000
     atk: 1
     heal: 0
     def: 0
+    name: 
 --- !u!61 &677029998
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4912,12 +4920,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c59327f501fd574cac075cb24987e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _atlas: {fileID: 0}
   _info:
     entityID: 0
-    maxHP: 10
+    maxHP: 10000
     atk: 1
     heal: 0
     def: 0
+    name: WITCH001
 --- !u!1 &1507249338
 GameObject:
   m_ObjectHideFlags: 0
@@ -5189,12 +5199,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c59327f501fd574cac075cb24987e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _atlas: {fileID: 0}
   _info:
     entityID: 0
     maxHP: 10000
     atk: 1
     heal: 0
     def: 0
+    name: 
 --- !u!61 &1574159318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5317,12 +5329,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c59327f501fd574cac075cb24987e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _atlas: {fileID: 0}
   _info:
     entityID: 0
     maxHP: 10000
     atk: 1
     heal: 0
     def: 0
+    name: 
 --- !u!61 &1578816313
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6642,12 +6656,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c59327f501fd574cac075cb24987e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _atlas: {fileID: 0}
   _info:
     entityID: 0
     maxHP: 10000
     atk: 1
     heal: 0
     def: 0
+    name: 
 --- !u!61 &2123321625
 BoxCollider2D:
   m_ObjectHideFlags: 0

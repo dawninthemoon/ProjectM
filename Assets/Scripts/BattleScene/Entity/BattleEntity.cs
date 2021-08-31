@@ -1,21 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D;
 
-public class Entity : MonoBehaviour {
+public class BattleEntity : MonoBehaviour {
+    [SerializeField] SpriteAtlas _atlas = null;
     [SerializeField] private EntityInfo _info = null;
     Collider2D _detectCollider;
     private int _curHP;
+    private SpriteAtlasAnimator _animator;
 
     //public void Initialize(EntityInfo info) {
     public void Initialize() {
         //_info = info;
         _curHP = _info.maxHP;
         _detectCollider = GetComponent<Collider2D>();
+        _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _info.name, "idle", true);
     }
 
     public bool IsOverlapped(Vector2 pos, LayerMask mask) {
-        var a = Physics2D.OverlapPoint(pos, mask);
         bool isOverlapped = (Physics2D.OverlapPoint(pos, mask) == _detectCollider);
         return isOverlapped;
     }

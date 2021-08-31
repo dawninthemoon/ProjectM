@@ -13,7 +13,7 @@ public class BattleControl : MonoBehaviour {
     [SerializeField] EnemyControl _enemyControl = null;
     public EnemyControl EnemyCtrl { get { return _enemyControl; } }
     [SerializeField] Camera _cardCamera = null;
-    public Entity SelectedTarget { get; private set; }
+    public BattleEntity SelectedTarget { get; private set; }
     private static readonly float LongTouchTime = 1.5f;
     private TurnInfo _currentTurn;
     private int _turnCount;

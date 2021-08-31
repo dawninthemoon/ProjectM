@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Text;
 
 [System.Serializable]
 public class PRS {
@@ -40,6 +41,20 @@ namespace RieslingUtils {
 
         public static void ChangeZPos(this PRS prs, float z) {
             prs.pos = prs.pos.ChangeZPos(z);
+        }
+    }
+
+    public static class StringUtils {
+        private static StringBuilder _stringBuilder = new StringBuilder(64);
+        public static string MergeStrings(params string[] strList) {
+            _stringBuilder.Clear();
+            foreach (string str in strList) {
+                _stringBuilder.Append(str);
+            }
+            return _stringBuilder.ToString();
+        }
+        public static string GetRandomString(params string[] stringList) {
+            return stringList[Random.Range(0, stringList.Length)];
         }
     }
 }

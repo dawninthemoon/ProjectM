@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyControl : MonoBehaviour {
-    [SerializeField] Entity[] _enemies = null;
+    [SerializeField] BattleEntity[] _enemies = null;
     [SerializeField] LayerMask _layerMask;
     private float[] _fillAmounts;
-    private List<Entity> _enemyList;
+    private List<BattleEntity> _enemyList;
 
     public void Initialize() {
+        _enemyList = new List<BattleEntity>();
+        _fillAmounts = new float[4];
+
         int enemyCounts = _enemies.Length;
         for (int i = 0; i < enemyCounts; ++i) {
             _enemies[i].Initialize();
         }
-        _fillAmounts = new float[4];
-        _enemyList = new List<Entity>();
     }
 
-    public Entity GetSelectedEnemy(Vector3 touchPos) {
-        Entity target = null;
+    public BattleEntity GetSelectedEnemy(Vector3 touchPos) {
+        BattleEntity target = null;
         int enemyCounts = _enemies.Length;
         for (int i = 0; i < enemyCounts; ++i) {
             if (_enemies[i].IsOverlapped(touchPos, _layerMask)) {
@@ -35,7 +36,7 @@ public class EnemyControl : MonoBehaviour {
         return _fillAmounts;
     }
 
-    public List<Entity> GetRandomEnemies(int targetCounts, Entity ignoreEntity = null) {
+    public List<BattleEntity> GetRandomEnemies(int targetCounts, BattleEntity ignoreEntity = null) {
         int numOfAllies = _enemies.Length;
         _enemyList = _enemies.ToList();
         
