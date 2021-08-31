@@ -37,6 +37,9 @@ public class BattleControl : MonoBehaviour {
     }
 
     private void Update() {
+        _playerControl.Progress();
+        _enemyControl.Progress();
+
         SkillState state = SkillManager.GetInstance().State;
         if (state == SkillState.NOTHING) return;
 

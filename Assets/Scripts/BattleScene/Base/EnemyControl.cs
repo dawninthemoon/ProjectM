@@ -18,6 +18,12 @@ public class EnemyControl : MonoBehaviour {
         }
     }
 
+    public void Progress() {
+        for (int i = 0; i < _enemies.Length; ++i) {
+            _enemies[i].Progress();
+        }
+    }
+
     public BattleEntity GetSelectedEnemy(Vector3 touchPos) {
         BattleEntity target = null;
         int enemyCounts = _enemies.Length;

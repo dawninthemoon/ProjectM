@@ -23,6 +23,12 @@ public class PlayerControl : MonoBehaviour {
         }
     }
 
+    public void Progress() {
+        for (int i = 0; i < _allies.Length; ++i) {
+            _allies[i].Progress();
+        }
+    }
+
     public void RefreshCost() {
         CurrentCost = _mascot.GetCostAmount();
     }

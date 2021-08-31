@@ -15,7 +15,11 @@ public class BattleEntity : MonoBehaviour {
         //_info = info;
         _curHP = _info.maxHP;
         _detectCollider = GetComponent<Collider2D>();
-        _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _info.name, "idle", true);
+        _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _info.name + "_", "IDLE", true);
+    }
+
+    public void Progress() {
+        _animator.Progress(_atlas);
     }
 
     public bool IsOverlapped(Vector2 pos, LayerMask mask) {

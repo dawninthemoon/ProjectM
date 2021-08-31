@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CharacterSpriteAtlas1
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 28ace5549bbb62349a9b60071e7f0819, type: 3}
+    - {fileID: 102900000, guid: 745455b25f50933e1899c5f8f2c88e13, type: 3}
+    totalSpriteSurfaceArea: 524288
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 19a4ae512e088614cb221fd8c367692f, type: 3}
+  - {fileID: 21300000, guid: 134a27713802e254a90c9ea7c7d48e88, type: 3}
+  - {fileID: 21300000, guid: afb2e2c1f9cae7e43a52d46601c1e618, type: 3}
+  - {fileID: 21300000, guid: 0612f032e29149a4796474ac1e138a2d, type: 3}
+  - {fileID: 21300000, guid: 9d9ad752720425440ae6914f68bfd8c4, type: 3}
+  - {fileID: 21300000, guid: a33a61d2da481bb4abca9d172b18ab80, type: 3}
+  - {fileID: 21300000, guid: e89cf21385d0dc84c9b0c594db63521d, type: 3}
+  - {fileID: 21300000, guid: 75085da33e1ad3a48b868e3b17be11c8, type: 3}
+  - {fileID: 21300000, guid: 9fd663c311383144ea7f53558a8a2600, type: 3}
+  - {fileID: 21300000, guid: 4815cb557b2adc34595d4acd4df44df4, type: 3}
+  - {fileID: 21300000, guid: ac247765f8bca9b45a1f8e188ade2248, type: 3}
+  - {fileID: 21300000, guid: 3908c99523c15694ebcf4bb159b12c01, type: 3}
+  - {fileID: 21300000, guid: 5f6abcb5a47067d43a8ca43ab29177ca, type: 3}
+  - {fileID: 21300000, guid: fb077846a786b2946937234c05001480, type: 3}
+  - {fileID: 21300000, guid: 286cfa56c034be6469b25ed5df64c11c, type: 3}
+  - {fileID: 21300000, guid: af1cd886aae4de34a8ab7887022aafcb, type: 3}
+  - {fileID: 21300000, guid: 983a36d67ec5e224495b261cc128dcb8, type: 3}
+  - {fileID: 21300000, guid: 64e95767cc760e14195c1a56dc7f486b, type: 3}
+  - {fileID: 21300000, guid: c5a344e889e38d54b868133ddb3f3cf7, type: 3}
+  - {fileID: 21300000, guid: 8d9769f8fcd71cd48a4726f940081e46, type: 3}
+  - {fileID: 21300000, guid: f9743e09124c7cd40a82f755b21e69ef, type: 3}
+  - {fileID: 21300000, guid: c0a731a9992a67b4a817f28f038f7ac1, type: 3}
+  - {fileID: 21300000, guid: 5a864ca979c77a94cb265cc19c383487, type: 3}
+  - {fileID: 21300000, guid: 65d82e6a740558f44a41751def4f7c1f, type: 3}
+  - {fileID: 21300000, guid: 9ce0a93b031360c408536eb8bcba09cb, type: 3}
+  - {fileID: 21300000, guid: 06f5445b184441643a23684c0bf64e16, type: 3}
+  - {fileID: 21300000, guid: 5e44369c883dbdd41a7183c5514bb3fe, type: 3}
+  - {fileID: 21300000, guid: 8029e7cccb44a3a449fd33345d944c81, type: 3}
+  - {fileID: 21300000, guid: 7edab5cdfd336144bbc77b40fb4ba720, type: 3}
+  - {fileID: 21300000, guid: 2cd0e61e81d78b54f9edeacfdf71e0f6, type: 3}
+  - {fileID: 21300000, guid: dcf77ccebad060d48a8d2da23334934b, type: 3}
+  - {fileID: 21300000, guid: 841c656ff1318b347ad40ad351168ac9, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - BATTLEMAGE001_LOSE5
+  - BATTLEMAGE001_DEAD6
+  - BATTLEMAGE001_IDLE3
+  - BATTLEMAGE001_WIN2
+  - BATTLEMAGE001_DEAD2
+  - BATTLEMAGE001_DEAD1
+  - BATTLEMAGE001_LOSE6
+  - BATTLEMAGE001_IDLE2
+  - BATTLEMAGE001_LOSE_LOOP1
+  - BATTLEMAGE001_ATTACK4
+  - BATTLEMAGE001_LOSE1
+  - BATTLEMAGE001_LOSE_LOOP4
+  - BATTLEMAGE001_IDLE1
+  - BATTLEMAGE001_ATTACK1
+  - BATTLEMAGE001_WIN4
+  - BATTLEMAGE001_WIN5
+  - BATTLEMAGE001_DEAD5
+  - BATTLEMAGE001_LOSE_LOOP3
+  - BATTLEMAGE001_WIN3
+  - BATTLEMAGE001_LOSE3
+  - BATTLEMAGE001_HIT2
+  - BATTLEMAGE001_DEAD4
+  - BATTLEMAGE001_WIN1
+  - BATTLEMAGE001_IDLE4
+  - BATTLEMAGE001_LOSE2
+  - BATTLEMAGE001_DEAD3
+  - BATTLEMAGE001_ATTACK2
+  - BATTLEMAGE001_HIT1
+  - BATTLEMAGE001_WIN6
+  - BATTLEMAGE001_LOSE4
+  - BATTLEMAGE001_LOSE_LOOP2
+  - BATTLEMAGE001_ATTACK3
+  m_RenderDataMap: {}
+  m_Tag: CharacterSpriteAtlas1
+  m_IsVariant: 0
