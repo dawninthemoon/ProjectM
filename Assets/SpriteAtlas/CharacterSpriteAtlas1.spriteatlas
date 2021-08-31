@@ -47,29 +47,29 @@ SpriteAtlas:
   - {fileID: 21300000, guid: a33a61d2da481bb4abca9d172b18ab80, type: 3}
   - {fileID: 21300000, guid: e89cf21385d0dc84c9b0c594db63521d, type: 3}
   - {fileID: 21300000, guid: 75085da33e1ad3a48b868e3b17be11c8, type: 3}
-  - {fileID: 21300000, guid: 9fd663c311383144ea7f53558a8a2600, type: 3}
+  - {fileID: 21300000, guid: 5cc924b3073c23c4599e271b6c89eded, type: 3}
+  - {fileID: 21300000, guid: 6e3a03e3afbfc8e41ac672b8fe47df3a, type: 3}
   - {fileID: 21300000, guid: 4815cb557b2adc34595d4acd4df44df4, type: 3}
   - {fileID: 21300000, guid: ac247765f8bca9b45a1f8e188ade2248, type: 3}
-  - {fileID: 21300000, guid: 3908c99523c15694ebcf4bb159b12c01, type: 3}
   - {fileID: 21300000, guid: 5f6abcb5a47067d43a8ca43ab29177ca, type: 3}
   - {fileID: 21300000, guid: fb077846a786b2946937234c05001480, type: 3}
   - {fileID: 21300000, guid: 286cfa56c034be6469b25ed5df64c11c, type: 3}
   - {fileID: 21300000, guid: af1cd886aae4de34a8ab7887022aafcb, type: 3}
   - {fileID: 21300000, guid: 983a36d67ec5e224495b261cc128dcb8, type: 3}
-  - {fileID: 21300000, guid: 64e95767cc760e14195c1a56dc7f486b, type: 3}
   - {fileID: 21300000, guid: c5a344e889e38d54b868133ddb3f3cf7, type: 3}
   - {fileID: 21300000, guid: 8d9769f8fcd71cd48a4726f940081e46, type: 3}
   - {fileID: 21300000, guid: f9743e09124c7cd40a82f755b21e69ef, type: 3}
   - {fileID: 21300000, guid: c0a731a9992a67b4a817f28f038f7ac1, type: 3}
   - {fileID: 21300000, guid: 5a864ca979c77a94cb265cc19c383487, type: 3}
   - {fileID: 21300000, guid: 65d82e6a740558f44a41751def4f7c1f, type: 3}
+  - {fileID: 21300000, guid: 5126650b92fa9c544bf653074973b5df, type: 3}
   - {fileID: 21300000, guid: 9ce0a93b031360c408536eb8bcba09cb, type: 3}
   - {fileID: 21300000, guid: 06f5445b184441643a23684c0bf64e16, type: 3}
   - {fileID: 21300000, guid: 5e44369c883dbdd41a7183c5514bb3fe, type: 3}
   - {fileID: 21300000, guid: 8029e7cccb44a3a449fd33345d944c81, type: 3}
   - {fileID: 21300000, guid: 7edab5cdfd336144bbc77b40fb4ba720, type: 3}
   - {fileID: 21300000, guid: 2cd0e61e81d78b54f9edeacfdf71e0f6, type: 3}
-  - {fileID: 21300000, guid: dcf77ccebad060d48a8d2da23334934b, type: 3}
+  - {fileID: 21300000, guid: 56182d4fb1699a24a9e377955f539589, type: 3}
   - {fileID: 21300000, guid: 841c656ff1318b347ad40ad351168ac9, type: 3}
   m_PackedSpriteNamesToIndex:
   - BATTLEMAGE001_LOSE5
@@ -80,29 +80,29 @@ SpriteAtlas:
   - BATTLEMAGE001_DEAD1
   - BATTLEMAGE001_LOSE6
   - BATTLEMAGE001_IDLE2
-  - BATTLEMAGE001_LOSE_LOOP1
+  - BattleMage001_LoseLoop1
+  - BattleMage001_LoseLoop4
   - BATTLEMAGE001_ATTACK4
   - BATTLEMAGE001_LOSE1
-  - BATTLEMAGE001_LOSE_LOOP4
   - BATTLEMAGE001_IDLE1
   - BATTLEMAGE001_ATTACK1
   - BATTLEMAGE001_WIN4
   - BATTLEMAGE001_WIN5
   - BATTLEMAGE001_DEAD5
-  - BATTLEMAGE001_LOSE_LOOP3
   - BATTLEMAGE001_WIN3
   - BATTLEMAGE001_LOSE3
   - BATTLEMAGE001_HIT2
   - BATTLEMAGE001_DEAD4
   - BATTLEMAGE001_WIN1
   - BATTLEMAGE001_IDLE4
+  - BattleMage001_LoseLoop3
   - BATTLEMAGE001_LOSE2
   - BATTLEMAGE001_DEAD3
   - BATTLEMAGE001_ATTACK2
   - BATTLEMAGE001_HIT1
   - BATTLEMAGE001_WIN6
   - BATTLEMAGE001_LOSE4
-  - BATTLEMAGE001_LOSE_LOOP2
+  - BattleMage001_LoseLoop2
   - BATTLEMAGE001_ATTACK3
   m_RenderDataMap: {}
   m_Tag: CharacterSpriteAtlas1
