@@ -6,7 +6,8 @@ public enum CurrencyType
 {
     FreeCash,
     PaidCash,
-    Gold
+    Gold,
+    cash
 }
 
 public class UserCurrenyData

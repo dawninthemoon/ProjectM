@@ -1,0 +1,454 @@
+{
+  "ItemTemplate": [
+    {
+      "Key": 2101001,
+      "Name": "고블린 마법사 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "pinky",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2101002,
+      "Name": "변절한 마법사 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "wichi",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2102001,
+      "Name": "고블린 마녀 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "pigeon",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2102002,
+      "Name": "사체업자 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "mijery",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2103001,
+      "Name": "고블린 불랭배 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "gusty",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2103002,
+      "Name": "암흑가문 귀족 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "pinky",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2104001,
+      "Name": "고블린 갱스터 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "wichi",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2104002,
+      "Name": "블랙기업 공학자 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "pigeon",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2105001,
+      "Name": "좀비 마법소녀 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "mijery",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2105002,
+      "Name": "오염된 마법소녀 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "gusty",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2201001,
+      "Name": "2성 마법사 A 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "pinky",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2201002,
+      "Name": "2성 마법사 B 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "wichi",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2202001,
+      "Name": "2성 마녀 A 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "pigeon",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2202002,
+      "Name": "2성 마녀 B 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "mijery",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2203001,
+      "Name": "2성 마전사 A 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "gusty",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2203002,
+      "Name": "2성 마전사 B 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "pinky",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2204001,
+      "Name": "2성 마법공학자 A 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "wichi",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2204002,
+      "Name": "2성 마법공학자 B 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "pigeon",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2205001,
+      "Name": "2성 마법 소녀 A 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "mijery",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2205002,
+      "Name": "2성 마법 소녀 B 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "gusty",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2301001,
+      "Name": "3성 마법사 A 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "pinky",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2301002,
+      "Name": "3성 마법사 B 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "wichi",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2302001,
+      "Name": "3성 마녀 A 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "pigeon",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2302002,
+      "Name": "3성 마녀 B 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "mijery",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2303001,
+      "Name": "3성 마전사 A 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "gusty",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2303002,
+      "Name": "3성 마전사 B 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "pinky",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2304001,
+      "Name": "3성 마법공학자 A 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "wichi",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2304002,
+      "Name": "3성 마법공학자 B 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "pigeon",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2305001,
+      "Name": "3성 마법 소녀 A 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "mijery",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2305002,
+      "Name": "3성 마법 소녀 B 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "gusty",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2401001,
+      "Name": "구스티 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": false,
+      "ItemIcon": "pinky",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2401002,
+      "Name": "4성 마법사 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": false,
+      "ItemIcon": "wichi",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2402001,
+      "Name": "마호 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": false,
+      "ItemIcon": "pigeon",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2402002,
+      "Name": "4성 마녀 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": false,
+      "ItemIcon": "mijery",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2403001,
+      "Name": "미제리 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": false,
+      "ItemIcon": "gusty",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2403002,
+      "Name": "4성 마전사 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": false,
+      "ItemIcon": "pinky",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2404001,
+      "Name": "피존 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": false,
+      "ItemIcon": "wichi",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2404002,
+      "Name": "4성 마법공학자 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": false,
+      "ItemIcon": "pigeon",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2405001,
+      "Name": "핑키 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": false,
+      "ItemIcon": "mijery",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2405002,
+      "Name": "4성 마법소녀 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": false,
+      "ItemIcon": "gusty",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2411001,
+      "Name": "최고 마법사 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": true,
+      "ItemIcon": "pinky",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2412001,
+      "Name": "최고 마녀 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": true,
+      "ItemIcon": "wichi",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2413001,
+      "Name": "최고 마전사 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": true,
+      "ItemIcon": "pigeon",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2414001,
+      "Name": "카샤 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": true,
+      "ItemIcon": "mijery",
+      "BackgroundIcon": "null"
+    },
+    {
+      "Key": 2415001,
+      "Name": "최고 마법소녀 영혼석",
+      "Description": "영혼석이다.",
+      "itemType": "Soul",
+      "Grade": 4,
+      "Rarity": true,
+      "ItemIcon": "gusty",
+      "BackgroundIcon": "null"
+    }
+  ]
+}

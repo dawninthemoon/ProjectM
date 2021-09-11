@@ -13,6 +13,8 @@ public class CurrencyText : TweenText
     public void Start()
     {
         FirebaseManager.Instance.UserData.UserCurrenyData.OnChangeCurrenyEvent += SetCurrencyText;
+
+        SetCurrencyText( currencyType );
     }
 
     public void OnDestroy()

@@ -122,6 +122,14 @@ namespace FBControl
             // }
         }
         
+        //캐릭터 덱 저장
+        public void SaveDeck()
+        {
+            DatabaseReference propertyReference = databaseReference.Child("deck");
+            propertyReference.SetRawJsonValueAsync( userData.GetDeckJsonArray().ToString() );
+        }
+
+        //캐릭터 정보 저장
         public void SetCharacter()
         {
             DatabaseReference propertyReference = databaseReference.Child("charData");

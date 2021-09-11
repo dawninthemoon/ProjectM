@@ -37,6 +37,13 @@ public class UserData
         get{ return userCurrenyData; }
     }
 
+    private int[] userDeckData = new int[4];
+    public int[] UserDeckData
+    {
+        get{ return userDeckData; }
+        set{ userDeckData = value;}
+    }
+
     public void SetDefaultData()
     {
         nickName = "Normal";
@@ -48,6 +55,8 @@ public class UserData
         userCurrenyData.FCash = 0;
         userCurrenyData.PCash = 0;
     }
+    
+    #region GetJson
     public JSONObject GetJsonFile()
     {
         JSONObject jsonResult = new JSONObject();
@@ -64,7 +73,21 @@ public class UserData
 
         jsonResult.Add( "charData", GetCharJsonArray() );
 
+        jsonResult.Add("deck", GetDeckJsonArray() );
+
         return jsonResult;
+    }
+
+    public JSONArray GetDeckJsonArray()
+    {
+        JSONArray jsonArray = new JSONArray();
+
+        for( int i = 0; i < userDeckData.Length; ++i )
+        {
+            jsonArray.Add( userDeckData[i] );
+        }
+
+        return jsonArray;
     }
 
     public JSONArray GetCharJsonArray()
@@ -78,6 +101,10 @@ public class UserData
 
         return jsonArray;
     }
+
+    #endregion
+
+    #region SetJson
 
     public void SetJsonFile( JSONObject jsonObject )
     {
@@ -108,6 +135,18 @@ public class UserData
                 charData.Add( dataTemp );
             }
         }
+
+        if( jsonObject.ContainsKey("deck") )
+        {
+            JSONArray array = jsonObject.GetArray("deck");
+
+            userDeckData = new int[array.Length];
+
+            for( int i = 0; i < array.Length; ++i )
+            {
+                userDeckData[i] = (int)array[i].Number;
+            }
+        }
     }
 
     public void GetCharacter( int index )
@@ -123,4 +162,6 @@ public class UserData
             charData.Add( userCharacter );
         }
     }
+
+    #endregion
 }
