@@ -12,12 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: c3653f143a8a21c4db6c5cec6e16aab5
   - enabled: 1
-    path: Assets/Scenes/Lobby.unity
+    path: Assets/Scenes/OutGameScene/Lobby.unity
     guid: af2e56b9beae80a4bb8c0ded0868485e
   - enabled: 1
-    path: Assets/Scenes/Gacha.unity
+    path: Assets/Scenes/OutGameScene/Gacha.unity
     guid: 8d54e8c1a0a15cd4e9d29117d2cd54a3
   - enabled: 1
-    path: Assets/Scenes/CharacterList.unity
+    path: Assets/Scenes/OutGameScene/CharacterList.unity
     guid: b386556630de2b64fafad4298a57e070
   m_configObjects: {}
