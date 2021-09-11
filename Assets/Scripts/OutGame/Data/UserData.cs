@@ -37,6 +37,12 @@ public class UserData
         get{ return userCurrenyData; }
     }
 
+    private UserItemDataContainer userItemDataContainer = new UserItemDataContainer();
+    public UserItemDataContainer UserItemDataContainer
+    {
+        get{ return userItemDataContainer; }
+    }
+
     private int[] userDeckData = new int[4];
     public int[] UserDeckData
     {
@@ -74,6 +80,8 @@ public class UserData
         jsonResult.Add( "charData", GetCharJsonArray() );
 
         jsonResult.Add("deck", GetDeckJsonArray() );
+
+        jsonResult.Add("itemData", userItemDataContainer.ToJsonArray() );
 
         return jsonResult;
     }
@@ -146,6 +154,11 @@ public class UserData
             {
                 userDeckData[i] = (int)array[i].Number;
             }
+        }
+
+        if( jsonObject.ContainsKey("itemData") )
+        {
+            userItemDataContainer.Parse( jsonObject.GetArray("itemData") );
         }
     }
 

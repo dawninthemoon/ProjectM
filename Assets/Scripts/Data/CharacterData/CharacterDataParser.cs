@@ -53,5 +53,12 @@ namespace Data
 
             return character;
         }
+
+        public static Character GetCharacter( int key )
+        {
+            Init();
+
+            return Array.Find( characterData, (x) => x.Key == key );
+        }
     }
 }

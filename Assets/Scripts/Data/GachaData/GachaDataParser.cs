@@ -21,11 +21,7 @@ namespace Data
         public static void Init()
         {
             string textAsset = Resources.Load("Json/gacha").ToString();
-            Debug.Log( textAsset );
-
             JSONObject jsonObject = JSONObject.Parse(textAsset);
-
-            Debug.Log( jsonObject.ToString() );
 
             JSONArray jsonArray = jsonObject.GetArray("GachaTemplate");
 
@@ -65,6 +61,12 @@ namespace Data
                 gachaData.FreeGachaValue = (int)jsonObj.GetNumber("FreeGachaValue");
 
             return gachaData;
+        }
+
+        public static GachaData GetGachaData( int gachaIndex )
+        {
+            Init();
+            return Array.Find( gachaData, (x) => x.Key == gachaIndex );
         }
     }
 }

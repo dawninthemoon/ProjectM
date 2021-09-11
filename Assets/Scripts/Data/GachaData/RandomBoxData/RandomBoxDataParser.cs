@@ -40,29 +40,68 @@ namespace Data
             return Array.Find( randomBoxData, (x)=> x.Key == index );
         } 
 
-        public static int GetRandomBoxResult( int index )
+        public static RandomBoxData GetRandomBoxResult( int index )
         {
             Init();
             RandomBoxData[] dataArray = Array.FindAll( randomBoxData, (x)=> x.Key == index );
 
             float allWeight = 0;
+            float calculateWeight = 0;
 
             for( int i = 0; i < dataArray.Length; ++i )
                 allWeight += dataArray[i].Probility;
 
             float randomValue = UnityEngine.Random.Range( 0, allWeight );
 
-            allWeight = 0;
+            calculateWeight = 0;
 
             for( int i = 0; i < dataArray.Length; ++i )
             {
-                if( allWeight >= randomValue && allWeight < randomValue + dataArray[i].Probility )
-                    return dataArray[i].RewardKey;
+                if( calculateWeight >= randomValue && calculateWeight < randomValue + dataArray[i].Probility )
+                    return dataArray[i];
 
-                allWeight += dataArray[i].Probility;
+                calculateWeight += dataArray[i].Probility;
             }
 
-            return 0;
+            return null;
+        }
+
+        public static RandomBoxData[] GetRandomBoxResultArray( int index, int count )
+        {
+            Init();
+            RandomBoxData[] result = new RandomBoxData[count];
+            
+            RandomBoxData[] dataArray = Array.FindAll( randomBoxData, (x)=> x.Key == index );
+
+            float allWeight = 0;
+            float calculateWeight = 0;
+
+            for( int i = 0; i < dataArray.Length; ++i )
+                allWeight += dataArray[i].Probility;
+
+            for( int k = 0; k < count; ++k )
+            {
+                float randomValue = UnityEngine.Random.Range( 0, (int)allWeight + 1 );
+
+                calculateWeight = 0;
+
+                Debug.Log("RNDOM : " + randomValue );
+
+                for( int i = 0; i < dataArray.Length; ++i )
+                {
+                    if( calculateWeight <= randomValue && calculateWeight + dataArray[i].Probility > randomValue )
+                    {
+                        result[k] = dataArray[i];
+                        break;
+                    }
+                    else
+                    {
+                        calculateWeight += dataArray[i].Probility;
+                    }
+                }
+            }
+
+            return result;
         }
 
         public static RandomBoxData Parse( JSONObject jsonObj  )
@@ -72,6 +111,8 @@ namespace Data
             randomBoxData.Key = (int)jsonObj.GetNumber("Key");
             randomBoxData.RewardKey = (int)jsonObj.GetNumber("RewardKey");
             randomBoxData.Probility = (float)jsonObj.GetNumber("Probility");
+            randomBoxData.Count = (int)jsonObj.GetNumber("Count");
+            randomBoxData.RewardType = (RewardType)Enum.Parse( typeof(RewardType), jsonObj.GetString("RewardType") ) ;
 
             return randomBoxData;
         }

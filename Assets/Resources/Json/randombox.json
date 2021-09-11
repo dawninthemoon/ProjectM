@@ -1,1403 +1,1963 @@
 {
   "RandomBoxTemplate": [
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1201001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1201002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1202001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1202002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1203001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1203002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1204001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1204002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1205001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1205002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1301001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1301002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1302001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1302002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1303001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1303002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1304001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1304002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1305001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1305002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1401001,
+      "Count": 1,
       "Probility": 3375
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1401002,
+      "Count": 1,
       "Probility": 3375
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1402001,
+      "Count": 1,
       "Probility": 3375
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1402002,
+      "Count": 1,
       "Probility": 3375
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1403001,
+      "Count": 1,
       "Probility": 3375
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1403002,
+      "Count": 1,
       "Probility": 3375
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1404001,
+      "Count": 1,
       "Probility": 3375
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1404002,
+      "Count": 1,
       "Probility": 3375
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1405001,
+      "Count": 1,
       "Probility": 3375
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1405002,
+      "Count": 1,
       "Probility": 3375
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1411001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1412001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1413001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1414001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Character",
       "RewardKey": 1415001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2201001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2201002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2202001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2202002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2203001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2203002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2204001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2204002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2205001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2205002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2301001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2301002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2302001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2302002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2303001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2303002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2304001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2304002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2305001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2305002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2401001,
+      "Count": 1,
       "Probility": 13500
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2401002,
+      "Count": 1,
       "Probility": 13500
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2402001,
+      "Count": 1,
       "Probility": 13500
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2402002,
+      "Count": 1,
       "Probility": 13500
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2403001,
+      "Count": 1,
       "Probility": 13500
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2403002,
+      "Count": 1,
       "Probility": 13500
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2404001,
+      "Count": 1,
       "Probility": 13500
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2404002,
+      "Count": 1,
       "Probility": 13500
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2405001,
+      "Count": 1,
       "Probility": 13500
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2405002,
+      "Count": 1,
       "Probility": 13500
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2411001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2412001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2413001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2414001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 1,
+      "Key": 10,
+      "RewardType": "Item",
       "RewardKey": 2415001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1201001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1201002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1202001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1202002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1203001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1203002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1204001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1204002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1205001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1205002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1301001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1301002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1302001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1302002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1303001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1303002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1304001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1304002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1305001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1305002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1401001,
+      "Count": 1,
       "Probility": 5907
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1401002,
+      "Count": 1,
       "Probility": 1687
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1402001,
+      "Count": 1,
       "Probility": 5907
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1402002,
+      "Count": 1,
       "Probility": 1687
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1403001,
+      "Count": 1,
       "Probility": 5907
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1403002,
+      "Count": 1,
       "Probility": 1687
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1404001,
+      "Count": 1,
       "Probility": 5907
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1404002,
+      "Count": 1,
       "Probility": 1687
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1405001,
+      "Count": 1,
       "Probility": 1687
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1405002,
+      "Count": 1,
       "Probility": 1687
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1411001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1412001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1413001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1414001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Character",
       "RewardKey": 1415001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2201001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2201002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2202001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2202002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2203001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2203002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2204001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2204002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2205001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2205002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2301001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2301002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2302001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2302002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2303001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2303002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2304001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2304002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2305001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2305002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2401001,
+      "Count": 1,
       "Probility": 23625
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2401002,
+      "Count": 1,
       "Probility": 6750
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2402001,
+      "Count": 1,
       "Probility": 23625
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2402002,
+      "Count": 1,
       "Probility": 6750
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2403001,
+      "Count": 1,
       "Probility": 23625
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2403002,
+      "Count": 1,
       "Probility": 6750
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2404001,
+      "Count": 1,
       "Probility": 23625
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2404002,
+      "Count": 1,
       "Probility": 6750
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2405001,
+      "Count": 1,
       "Probility": 6750
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2405002,
+      "Count": 1,
       "Probility": 6750
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2411001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2412001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2413001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2414001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 2,
+      "Key": 20,
+      "RewardType": "Item",
       "RewardKey": 2415001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1201001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1201002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1202001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1202002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1203001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1203002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1204001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1204002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1205001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1205002,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1301001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1301002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1302001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1302002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1303001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1303002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1304001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1304002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1305001,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1305002,
+      "Count": 1,
       "Probility": 6000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1401001,
+      "Count": 1,
       "Probility": 1875
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1401002,
+      "Count": 1,
       "Probility": 1875
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1402001,
+      "Count": 1,
       "Probility": 1875
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1402002,
+      "Count": 1,
       "Probility": 1875
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1403001,
+      "Count": 1,
       "Probility": 1875
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1403002,
+      "Count": 1,
       "Probility": 1875
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1404001,
+      "Count": 1,
       "Probility": 1875
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1404002,
+      "Count": 1,
       "Probility": 1875
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1405001,
+      "Count": 1,
       "Probility": 16875
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1405002,
+      "Count": 1,
       "Probility": 1875
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1411001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1412001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1413001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1414001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Character",
       "RewardKey": 1415001,
+      "Count": 1,
       "Probility": 1250
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2201001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2201002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2202001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2202002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2203001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2203002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2204001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2204002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2205001,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2205002,
+      "Count": 1,
       "Probility": 40000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2301001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2301002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2302001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2302002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2303001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2303002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2304001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2304002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2305001,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2305002,
+      "Count": 1,
       "Probility": 24000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2401001,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2401002,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2402001,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2402002,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2403001,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2403002,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2404001,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2404002,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2405001,
+      "Count": 1,
       "Probility": 67500
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2405002,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2411001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2412001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2413001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2414001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 3,
+      "Key": 30,
+      "RewardType": "Item",
       "RewardKey": 2415001,
+      "Count": 1,
       "Probility": 5000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1201001,
+      "Count": 1,
       "Probility": 20000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1201002,
+      "Count": 1,
       "Probility": 20000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1202001,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1202002,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1203001,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1203002,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1204001,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1204002,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1205001,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1205002,
+      "Count": 1,
       "Probility": 7500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1301001,
+      "Count": 1,
       "Probility": 12000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1301002,
+      "Count": 1,
       "Probility": 12000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1302001,
+      "Count": 1,
       "Probility": 4500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1302002,
+      "Count": 1,
       "Probility": 4500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1303001,
+      "Count": 1,
       "Probility": 4500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1303002,
+      "Count": 1,
       "Probility": 4500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1304001,
+      "Count": 1,
       "Probility": 4500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1304002,
+      "Count": 1,
       "Probility": 4500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1305001,
+      "Count": 1,
       "Probility": 4500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1305002,
+      "Count": 1,
       "Probility": 4500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1401001,
+      "Count": 1,
       "Probility": 6750
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1401002,
+      "Count": 1,
       "Probility": 6750
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1402001,
+      "Count": 1,
       "Probility": 2532
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1402002,
+      "Count": 1,
       "Probility": 2532
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1403001,
+      "Count": 1,
       "Probility": 2532
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1403002,
+      "Count": 1,
       "Probility": 2532
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1404001,
+      "Count": 1,
       "Probility": 2532
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1404002,
+      "Count": 1,
       "Probility": 2532
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1405001,
+      "Count": 1,
       "Probility": 2532
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1405002,
+      "Count": 1,
       "Probility": 2532
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1411001,
+      "Count": 1,
       "Probility": 2500
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1412001,
+      "Count": 1,
       "Probility": 938
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1413001,
+      "Count": 1,
       "Probility": 938
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1414001,
+      "Count": 1,
       "Probility": 938
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Character",
       "RewardKey": 1415001,
+      "Count": 1,
       "Probility": 938
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2201001,
+      "Count": 1,
       "Probility": 80000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2201002,
+      "Count": 1,
       "Probility": 80000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2202001,
+      "Count": 1,
       "Probility": 30000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2202002,
+      "Count": 1,
       "Probility": 30000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2203001,
+      "Count": 1,
       "Probility": 30000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2203002,
+      "Count": 1,
       "Probility": 30000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2204001,
+      "Count": 1,
       "Probility": 30000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2204002,
+      "Count": 1,
       "Probility": 30000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2205001,
+      "Count": 1,
       "Probility": 30000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2205002,
+      "Count": 1,
       "Probility": 30000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2301001,
+      "Count": 1,
       "Probility": 48000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2301002,
+      "Count": 1,
       "Probility": 48000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2302001,
+      "Count": 1,
       "Probility": 18000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2302002,
+      "Count": 1,
       "Probility": 18000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2303001,
+      "Count": 1,
       "Probility": 18000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2303002,
+      "Count": 1,
       "Probility": 18000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2304001,
+      "Count": 1,
       "Probility": 18000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2304002,
+      "Count": 1,
       "Probility": 18000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2305001,
+      "Count": 1,
       "Probility": 18000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2305002,
+      "Count": 1,
       "Probility": 18000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2401001,
+      "Count": 1,
       "Probility": 27000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2401002,
+      "Count": 1,
       "Probility": 27000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2402001,
+      "Count": 1,
       "Probility": 10125
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2402002,
+      "Count": 1,
       "Probility": 10125
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2403001,
+      "Count": 1,
       "Probility": 10125
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2403002,
+      "Count": 1,
       "Probility": 10125
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2404001,
+      "Count": 1,
       "Probility": 10125
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2404002,
+      "Count": 1,
       "Probility": 10125
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2405001,
+      "Count": 1,
       "Probility": 10125
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2405002,
+      "Count": 1,
       "Probility": 10125
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2411001,
+      "Count": 1,
       "Probility": 10000
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2412001,
+      "Count": 1,
       "Probility": 3750
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2413001,
+      "Count": 1,
       "Probility": 3750
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2414001,
+      "Count": 1,
       "Probility": 3750
     },
     {
-      "Key": 4,
+      "Key": 40,
+      "RewardType": "Item",
       "RewardKey": 2415001,
+      "Count": 1,
       "Probility": 3750
     }
   ]

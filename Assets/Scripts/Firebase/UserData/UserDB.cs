@@ -148,6 +148,18 @@ namespace FBControl
 
             propertyReference.SetValueAsync(index);
         }
+        
+        public void SaveChildrenJsonData( string index, params string[] parents )
+        {
+            DatabaseReference propertyReference = databaseReference;//Child(propertyName);
+
+            for (int i = 0; i < parents.Length; ++i)
+            {
+                propertyReference = propertyReference.Child(parents[i]);
+            }
+
+            propertyReference.SetRawJsonValueAsync(index);
+        }
 
         ///<summary> 유저 데이터의 하위 프로퍼티만 조정 </summary>
         public void SaveChildrenData(string propertyName, object index)
@@ -206,7 +218,6 @@ namespace FBControl
         {
             return PlayerPrefs.GetInt(propertyName, 0);
         }
-
         public string GetLocalStringData(string propertyName)
         {
             return PlayerPrefs.GetString(propertyName, "");
