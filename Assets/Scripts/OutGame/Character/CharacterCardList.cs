@@ -18,17 +18,20 @@ namespace OutGame
 
         public void Init()
         {
+            List<UserCharacterData> userCharData = FBControl.FirebaseManager.Instance.UserData.CharData;
+
             for( int i = 0; i < characterCardPool.Length; ++i )
             {
                 characterCardPool[i].Init( characterAtlas );
 
-                if( i >= CharacterDataParser.CharacterData.Length )
+                if( i >= userCharData.Count )
                     characterCardPool[i].gameObject.SetActive( false );
                 else
                 {
                     characterCardPool[i].gameObject.SetActive( true );
 
-                    characterCardPool[i].SetCard( CharacterDataParser.CharacterData[i] );
+                    Debug.Log(userCharData[i].Index );
+                    characterCardPool[i].SetCard( CharacterDataParser.GetCharacter( userCharData[i].Index ) );
                 }
             }
         }
