@@ -31,7 +31,7 @@ namespace OutGame
                     characterCardPool[i].gameObject.SetActive( true );
 
                     Debug.Log(userCharData[i].Index );
-                    characterCardPool[i].SetCard( CharacterDataParser.GetCharacter( userCharData[i].Index ) );
+                    characterCardPool[i].SetCard( CharacterDataParser.Instance.GetCharacter( userCharData[i].Index ) );
                 }
             }
         }

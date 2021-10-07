@@ -1,0 +1,949 @@
+{
+  "SpiritTemplate": [
+    {
+      "Key": 2400001,
+      "Name": "화룡",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_RedDragon"
+    },
+    {
+      "Key": 2400002,
+      "Name": "리치",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_TheLich"
+    },
+    {
+      "Key": 2400003,
+      "Name": "전설3",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_TheLich"
+    },
+    {
+      "Key": 2400004,
+      "Name": "전설4",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_TheLich"
+    },
+    {
+      "Key": 2400005,
+      "Name": "전설5",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_TheLich"
+    },
+    {
+      "Key": 2400006,
+      "Name": "전설6",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_TheLich"
+    },
+    {
+      "Key": 2400007,
+      "Name": "전설7",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_TheLich"
+    },
+    {
+      "Key": 2400008,
+      "Name": "전설8",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_TheLich"
+    },
+    {
+      "Key": 2400009,
+      "Name": "전설9",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_TheLich"
+    },
+    {
+      "Key": 2400010,
+      "Name": "전설10",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_TheLich"
+    },
+    {
+      "Key": 2400011,
+      "Name": "전설11",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_TheLich"
+    },
+    {
+      "Key": 2400012,
+      "Name": "전설12",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_TheLich"
+    },
+    {
+      "Key": 2400013,
+      "Name": "전설13",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_TheLich"
+    },
+    {
+      "Key": 2400014,
+      "Name": "전설14",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_TheLich"
+    },
+    {
+      "Key": 2400015,
+      "Name": "전설15",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Legendary_TheLich"
+    },
+    {
+      "Key": 2300001,
+      "Name": "고양이 암살자",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_Catssassin"
+    },
+    {
+      "Key": 2300002,
+      "Name": "물고기 왕",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_FishKing"
+    },
+    {
+      "Key": 2300003,
+      "Name": "고블린 마법사",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_GoblinMage"
+    },
+    {
+      "Key": 2300004,
+      "Name": "하피 저격수",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_HarpyStrike"
+    },
+    {
+      "Key": 2300005,
+      "Name": "밤 올빼미",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_NightClock"
+    },
+    {
+      "Key": 2300006,
+      "Name": "슬라임 기사",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_SlimeKnight"
+    },
+    {
+      "Key": 2300007,
+      "Name": "슬라임 마녀",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_SlimeMage"
+    },
+    {
+      "Key": 2300008,
+      "Name": "슬라임 공주",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_SlimePrincess"
+    },
+    {
+      "Key": 2300009,
+      "Name": "생쥐 기사",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_TeaSpoonKnight"
+    },
+    {
+      "Key": 2300010,
+      "Name": "이상한 토끼",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300011,
+      "Name": "서사11",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300012,
+      "Name": "서사12",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300013,
+      "Name": "서사13",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300014,
+      "Name": "서사14",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300015,
+      "Name": "서사15",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300016,
+      "Name": "서사16",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300017,
+      "Name": "서사17",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300018,
+      "Name": "서사18",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300019,
+      "Name": "서사19",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300020,
+      "Name": "서사20",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300021,
+      "Name": "서사21",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300022,
+      "Name": "서사22",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300023,
+      "Name": "서사23",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300024,
+      "Name": "서사24",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300025,
+      "Name": "서사25",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300026,
+      "Name": "서사26",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300027,
+      "Name": "서사27",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300028,
+      "Name": "서사28",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300029,
+      "Name": "서사29",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2300030,
+      "Name": "서사30",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Epic_WanderingRabbit"
+    },
+    {
+      "Key": 2200001,
+      "Name": "개구리 마녀",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_FrogWitch"
+    },
+    {
+      "Key": 2200002,
+      "Name": "하피 배달부",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_HarpyDelivery"
+    },
+    {
+      "Key": 2200003,
+      "Name": "가죽 신발 속 쥐",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_LeatherBootMouse"
+    },
+    {
+      "Key": 2200004,
+      "Name": "도마뱀 꼬마",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_LizardBoy"
+    },
+    {
+      "Key": 2200005,
+      "Name": "리퍼",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_Reaper"
+    },
+    {
+      "Key": 2200006,
+      "Name": "안아줘요",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_SheepHug"
+    },
+    {
+      "Key": 2200007,
+      "Name": "곰방대 정령",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_SmokingWisp"
+    },
+    {
+      "Key": 2200008,
+      "Name": "슬리임 마법사",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_StaffSlime"
+    },
+    {
+      "Key": 2200009,
+      "Name": "슬라임 검사",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_SwordSlime"
+    },
+    {
+      "Key": 2200010,
+      "Name": "희귀10",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_FrogWitch"
+    },
+    {
+      "Key": 2200011,
+      "Name": "희귀11",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_HarpyDelivery"
+    },
+    {
+      "Key": 2200012,
+      "Name": "희귀12",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_LeatherBootMouse"
+    },
+    {
+      "Key": 2200013,
+      "Name": "희귀13",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_LizardBoy"
+    },
+    {
+      "Key": 2200014,
+      "Name": "희귀14",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_Reaper"
+    },
+    {
+      "Key": 2200015,
+      "Name": "희귀15",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_FrogWitch"
+    },
+    {
+      "Key": 2200016,
+      "Name": "희귀16",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_HarpyDelivery"
+    },
+    {
+      "Key": 2200017,
+      "Name": "희귀17",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_LeatherBootMouse"
+    },
+    {
+      "Key": 2200018,
+      "Name": "희귀18",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_LizardBoy"
+    },
+    {
+      "Key": 2200019,
+      "Name": "희귀19",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_Reaper"
+    },
+    {
+      "Key": 2200020,
+      "Name": "희귀20",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_SheepHug"
+    },
+    {
+      "Key": 2200021,
+      "Name": "희귀21",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_SmokingWisp"
+    },
+    {
+      "Key": 2200022,
+      "Name": "희귀22",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_StaffSlime"
+    },
+    {
+      "Key": 2200023,
+      "Name": "희귀23",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_SwordSlime"
+    },
+    {
+      "Key": 2200024,
+      "Name": "희귀24",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_LizardBoy"
+    },
+    {
+      "Key": 2200025,
+      "Name": "희귀25",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_Reaper"
+    },
+    {
+      "Key": 2200026,
+      "Name": "희귀26",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_SheepHug"
+    },
+    {
+      "Key": 2200027,
+      "Name": "희귀27",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_SmokingWisp"
+    },
+    {
+      "Key": 2200028,
+      "Name": "희귀28",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_StaffSlime"
+    },
+    {
+      "Key": 2200029,
+      "Name": "희귀29",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_SwordSlime"
+    },
+    {
+      "Key": 2200030,
+      "Name": "희귀30",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Rare_StaffSlime"
+    },
+    {
+      "Key": 2100001,
+      "Name": "바람새",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_BirdWind"
+    },
+    {
+      "Key": 2100002,
+      "Name": "파란 버섯",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_BlueMush"
+    },
+    {
+      "Key": 2100003,
+      "Name": "페어리",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_Fairy"
+    },
+    {
+      "Key": 2100004,
+      "Name": "보자기 유령",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_GhostC"
+    },
+    {
+      "Key": 2100005,
+      "Name": "우는 금붕어",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_GoldfishGirl"
+    },
+    {
+      "Key": 2100006,
+      "Name": "도마뱀 꼬마",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_LizardBoy"
+    },
+    {
+      "Key": 2100007,
+      "Name": "돌벌래",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_RockBeetle"
+    },
+    {
+      "Key": 2100008,
+      "Name": "슬라임",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_Slime"
+    },
+    {
+      "Key": 2100009,
+      "Name": "눈벌래",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_SnowBeetle"
+    },
+    {
+      "Key": 2100010,
+      "Name": "눈사람",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_Snowman"
+    },
+    {
+      "Key": 2100011,
+      "Name": "바람벌래",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_WindBeetle"
+    },
+    {
+      "Key": 2100012,
+      "Name": "위습",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_Wisp"
+    },
+    {
+      "Key": 2100013,
+      "Name": "일반13",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_Fairy"
+    },
+    {
+      "Key": 2100014,
+      "Name": "일반14",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_GhostC"
+    },
+    {
+      "Key": 2100015,
+      "Name": "일반15",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_GoldfishGirl"
+    },
+    {
+      "Key": 2100016,
+      "Name": "일반16",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_LizardBoy"
+    },
+    {
+      "Key": 2100017,
+      "Name": "일반17",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_RockBeetle"
+    },
+    {
+      "Key": 2100018,
+      "Name": "일반18",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_Slime"
+    },
+    {
+      "Key": 2100019,
+      "Name": "일반19",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_SnowBeetle"
+    },
+    {
+      "Key": 2100020,
+      "Name": "일반20",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_Snowman"
+    },
+    {
+      "Key": 2100021,
+      "Name": "일반21",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_WindBeetle"
+    },
+    {
+      "Key": 2100022,
+      "Name": "일반22",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_Wisp"
+    },
+    {
+      "Key": 2100023,
+      "Name": "일반23",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_GoldfishGirl"
+    },
+    {
+      "Key": 2100024,
+      "Name": "일반24",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_LizardBoy"
+    },
+    {
+      "Key": 2100025,
+      "Name": "일반25",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_RockBeetle"
+    },
+    {
+      "Key": 2100026,
+      "Name": "일반26",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_Slime"
+    },
+    {
+      "Key": 2100027,
+      "Name": "일반27",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_SnowBeetle"
+    },
+    {
+      "Key": 2100028,
+      "Name": "일반28",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_Snowman"
+    },
+    {
+      "Key": 2100029,
+      "Name": "일반29",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_WindBeetle"
+    },
+    {
+      "Key": 2100030,
+      "Name": "일반30",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": "",
+      "PassiveSkillKey": "",
+      "IconName": "Spirits_Normal_Wisp"
+    }
+  ]
+}

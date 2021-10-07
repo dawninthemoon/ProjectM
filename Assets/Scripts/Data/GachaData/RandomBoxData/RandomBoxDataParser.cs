@@ -6,19 +6,9 @@ using System;
 
 namespace Data
 {
-    public class RandomBoxDataParser
+    public class RandomBoxDataParser : PublicDataParseBase<RandomBoxDataParser, RandomBoxData>
     {
-        private static RandomBoxData[] randomBoxData = null;
-        public static RandomBoxData[] RandomBoxData
-        {
-            get
-            {
-                Init();
-                return randomBoxData;
-            }
-        }
-        
-        public static void Init()
+        protected override void Init()
         {
             string textAsset = Resources.Load("Json/randombox").ToString();
 
@@ -26,24 +16,23 @@ namespace Data
 
             JSONArray jsonArray = jsonObject.GetArray("RandomBoxTemplate");
 
-            randomBoxData = new RandomBoxData[jsonArray.Length];
+            data = new RandomBoxData[jsonArray.Length];
 
             for( int i = 0; i < jsonArray.Length; ++i )
             {
-                randomBoxData[i] = Parse( jsonArray[i].Obj );
+                data[i] = new RandomBoxData();
+                data[i].Parse( jsonArray[i].Obj );
             }
         }
 
-        public static RandomBoxData GetRandomBoxData( int index )
+        public RandomBoxData GetRandomBoxData( int index )
         {
-            Init();
-            return Array.Find( randomBoxData, (x)=> x.Key == index );
+            return Array.Find( data, (x)=> x.Key == index );
         } 
 
-        public static RandomBoxData GetRandomBoxResult( int index )
+        public RandomBoxData GetRandomBoxResult( int index )
         {
-            Init();
-            RandomBoxData[] dataArray = Array.FindAll( randomBoxData, (x)=> x.Key == index );
+            RandomBoxData[] dataArray = Array.FindAll( data, (x)=> x.Key == index );
 
             float allWeight = 0;
             float calculateWeight = 0;
@@ -66,12 +55,11 @@ namespace Data
             return null;
         }
 
-        public static RandomBoxData[] GetRandomBoxResultArray( int index, int count )
+        public RandomBoxData[] GetRandomBoxResultArray( int index, int count )
         {
-            Init();
             RandomBoxData[] result = new RandomBoxData[count];
             
-            RandomBoxData[] dataArray = Array.FindAll( randomBoxData, (x)=> x.Key == index );
+            RandomBoxData[] dataArray = Array.FindAll( data, (x)=> x.Key == index );
 
             float allWeight = 0;
             float calculateWeight = 0;
@@ -102,19 +90,6 @@ namespace Data
             }
 
             return result;
-        }
-
-        public static RandomBoxData Parse( JSONObject jsonObj  )
-        {
-            RandomBoxData randomBoxData = new RandomBoxData();
-
-            randomBoxData.Key = (int)jsonObj.GetNumber("Key");
-            randomBoxData.RewardKey = (int)jsonObj.GetNumber("RewardKey");
-            randomBoxData.Probility = (float)jsonObj.GetNumber("Probility");
-            randomBoxData.Count = (int)jsonObj.GetNumber("Count");
-            randomBoxData.RewardType = (RewardType)Enum.Parse( typeof(RewardType), jsonObj.GetString("RewardType") ) ;
-
-            return randomBoxData;
         }
     }
 }

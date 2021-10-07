@@ -9,7 +9,7 @@ namespace Data
     {
         Soul
     }
-    public class ItemData
+    public class ItemData : PublicDataBase
     {
         public int Key;
         public string Name;
@@ -20,7 +20,7 @@ namespace Data
         public string ItemIcon;
         public string BackgroundIcon;
     
-        public void Parse( JSONObject jsonObject )
+        public override void Parse( JSONObject jsonObject )
         {
             Key = (int)jsonObject.GetNumber( "Key" );
             Name = jsonObject.GetString( "Name" );

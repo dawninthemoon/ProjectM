@@ -7,23 +7,23 @@ public class GachaLogic
 {
     public RandomBoxData Gacha( int index )
     {
-        GachaData gachaData = GachaDataParser.GachaData[ index ];
+        GachaData gachaData = GachaDataParser.Instance.Data[ index ];
 
-        RandomBoxData data = RandomBoxDataParser.GetRandomBoxResult( gachaData.RandomBoxKey );
+        RandomBoxData data = RandomBoxDataParser.Instance.GetRandomBoxResult( gachaData.RandomBoxKey );
 
         return data;
     }
 
     public RandomBoxData Gacha( GachaData gachaData )
     {
-        RandomBoxData data = RandomBoxDataParser.GetRandomBoxResult( gachaData.RandomBoxKey );
+        RandomBoxData data = RandomBoxDataParser.Instance.GetRandomBoxResult( gachaData.RandomBoxKey );
 
         return data;
     }
 
     public RandomBoxData[] Gacha( GachaData gachaData, int count )
     {
-        RandomBoxData[] data = RandomBoxDataParser.GetRandomBoxResultArray( gachaData.RandomBoxKey, count );
+        RandomBoxData[] data = RandomBoxDataParser.Instance.GetRandomBoxResultArray( gachaData.RandomBoxKey, count );
 
         return data;
     }

@@ -6,21 +6,9 @@ using System;
 
 namespace Data
 {
-    public class SkillDataParser : MonoBehaviour
+    public class SkillDataParser : PublicDataParseBase<SkillDataParser, SkillData>
     {
-        private static SkillData[] skillData = null;
-        public static SkillData[] SkillData
-        {
-            get
-            { 
-                if( skillData == null )
-                    Init();
-
-                return skillData;
-            }
-        }   
-
-        public static void Init()
+        protected override void Init()
         {
             string textAsset = Resources.Load("Json/skill").ToString();
 
@@ -28,20 +16,18 @@ namespace Data
 
             JSONArray jsonArray = jsonObject.GetArray("SkillTemplate");
 
-            skillData = new SkillData[jsonArray.Length];
+            data = new SkillData[jsonArray.Length];
 
             for( int i = 0; i < jsonArray.Length; ++i )
             {
-                skillData[i] = new SkillData();
-                skillData[i].Parse( jsonArray[i].Obj );
+                data[i] = new SkillData();
+                data[i].Parse( jsonArray[i].Obj );
             }
         }
 
-        public static SkillData GetSkillData( int key )
+        public SkillData GetSkillData( int key )
         {
-            Init();
-            
-            return Array.Find( skillData, (x) => x.Key == key );
+            return Array.Find( data, (x) => x.Key == key );
         }
     }
 }

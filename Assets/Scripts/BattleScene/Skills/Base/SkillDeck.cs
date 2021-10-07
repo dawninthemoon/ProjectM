@@ -11,7 +11,7 @@ public class SkillDeck {
     public void Initialize() {
         _cardsInDeck = new List<SkillData>(17);
         for (int key = 1; key <= 17; ++key) {
-            _cardsInDeck.Add(Data.SkillDataParser.GetSkillData(key));
+            _cardsInDeck.Add(Data.SkillDataParser.Instance.GetSkillData(key));
         }
         _cardsInGrave = new List<SkillData>();
     }

@@ -36,7 +36,7 @@ namespace Data
         RandomHeal
     }
 
-    public class SkillData
+    public class SkillData : PublicDataBase
     {
         public int Key;
         public string Name;
@@ -51,7 +51,7 @@ namespace Data
         public int HealTypeValue;
         public int HealRatio;
     
-        public void Parse( JSONObject jsonObject )
+        public override void Parse( JSONObject jsonObject )
         {
             Key = (int)jsonObject.GetNumber( "Key" );
             Name = jsonObject.GetString( "Name" );

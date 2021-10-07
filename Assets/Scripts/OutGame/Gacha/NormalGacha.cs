@@ -22,7 +22,7 @@ public class NormalGacha : MonoBehaviour
 
     public void Init()
     {
-        gachaData = GachaDataParser.GetGachaData( gachaIndex );
+        gachaData = GachaDataParser.Instance.GetGachaData( gachaIndex );
     }
 
     public void OneceGacha()

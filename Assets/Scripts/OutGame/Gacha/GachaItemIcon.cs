@@ -15,11 +15,11 @@ public class GachaItemIcon : MonoBehaviour
         switch( randomBoxData.RewardType )
         {
             case RewardType.Character:
-                Character character = CharacterDataParser.GetCharacter( randomBoxData.RewardKey );
+                Character character = CharacterDataParser.Instance.GetCharacter( randomBoxData.RewardKey );
                 nameText.text = character.Name;
             break;
             case RewardType.Item:
-                ItemData item = ItemDataParser.GetItemData( randomBoxData.RewardKey );
+                ItemData item = ItemDataParser.Instance.GetItemData( randomBoxData.RewardKey );
                 nameText.text = item.Name;
             break;
         }

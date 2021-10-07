@@ -6,21 +6,9 @@ using System;
 
 namespace Data
 {
-    public class ItemDataParser
+    public class ItemDataParser : PublicDataParseBase<ItemDataParser, ItemData>
     {
-        private static ItemData[] itemData = null;
-        public static ItemData[] ItemData
-        {
-            get
-            { 
-                if( itemData == null )
-                    Init();
-
-                return itemData;
-            }
-        }   
-
-        public static void Init()
+        protected override void Init()
         {
             string textAsset = Resources.Load("Json/item").ToString();
 
@@ -28,20 +16,18 @@ namespace Data
 
             JSONArray jsonArray = jsonObject.GetArray("ItemTemplate");
 
-            itemData = new ItemData[jsonArray.Length];
+            data = new ItemData[jsonArray.Length];
 
             for( int i = 0; i < jsonArray.Length; ++i )
             {
-                itemData[i] = new ItemData();
-                itemData[i].Parse( jsonArray[i].Obj );
+                data[i] = new ItemData();
+                data[i].Parse( jsonArray[i].Obj );
             }
         }
 
-        public static ItemData GetItemData( int key )
+        public ItemData GetItemData( int key )
         {
-            Init();
-            
-            return Array.Find( itemData, (x) => x.Key == key );
+            return Array.Find( data, (x) => x.Key == key );
         }
     }
 }
