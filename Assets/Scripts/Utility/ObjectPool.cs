@@ -2,8 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-public class ObjectPool<T> 
-{
+public class ObjectPool<T> {
     public delegate T ObjectCreateDelegate();
     ObjectCreateDelegate _createObjectCallback;
     Action<T> _onObjectActiveCallback;
@@ -20,7 +19,7 @@ public class ObjectPool<T>
         _createObjectCallback = createObjCallback;
         _onObjectActiveCallback = onObjectActive;
         _onObjectDisableCallback = onObjectDisable;
-        Initalize();
+        Initialize();
     }
 
     private T CreateObject() {
@@ -28,7 +27,7 @@ public class ObjectPool<T>
         return pooledObject;
     }
 
-    private void Initalize() {
+    private void Initialize() {
         _freeList = new List<T>(_size);
         _usedList = new List<T>(_size);
  

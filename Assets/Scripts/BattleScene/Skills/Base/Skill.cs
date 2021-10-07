@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using DG.Tweening;
 using UnityEngine.EventSystems;
+using Data;
 
 public class Skill : MonoBehaviour {
     [SerializeField] SpriteRenderer _renderer = null;
@@ -14,7 +15,7 @@ public class Skill : MonoBehaviour {
     static readonly string CancelAreaName = "CardCancelArea";
     static readonly float LongTouchTime = 1.5f;
     Collider2D _detectCollider = null;
-    SkillInfo _skillInfo;
+    SkillData _skillData;
     public PRS OriginPRS { get; set; }
     public float CardWidth { get; private set; }
     int _originOrder;
@@ -22,16 +23,16 @@ public class Skill : MonoBehaviour {
     bool _isInCancelArea;
     float _touchTimeAgo;
 
-    public void Initialize(SkillInfo info) {
-        _skillInfo = info;
+    public void Initialize(SkillData data) {
+        _skillData = data;
         _detectCollider = GetComponent<Collider2D>();
         _costTextRenderer = GetComponentInChildren<MeshRenderer>();
         transform.localScale = new Vector3(0.3f, 0.3f, 1f);
         CardWidth = (transform.position.x - _leftTransform.position.x) * 2.5f;
-        _costText.text = _skillInfo.requireCost.ToString();
+        _costText.text = _skillData.Cost.ToString();
     }
 
-    public int GetRequireCost() => _skillInfo.requireCost;
+    public int GetRequireCost() => _skillData.Cost;
 
     public void Progress(Vector3 touchPosition) {
         SkillState state = SkillManager.GetInstance().State;
@@ -46,8 +47,7 @@ public class Skill : MonoBehaviour {
                 
             }
 
-            SkillType type = _skillInfo.type;
-            if ((type == SkillType.ENEMY_RANDOM) || (type == SkillType.FRIENDLY_RANDOM)) {
+            if (_skillData.CastType == CastType.NoneCast) {
                 Vector3 scale = transform.localScale;
                 MoveTransform(new PRS(touchPosition, Quaternion.identity, scale), false);
             }
@@ -56,15 +56,15 @@ public class Skill : MonoBehaviour {
     }
 
     public bool CanSelectTarget() {
-        return (_skillInfo.type == SkillType.ENEMY_TARGET) || (_skillInfo.type == SkillType.FRIENDLY_TARGET);
+        return (_skillData.CastType != CastType.NoneCast);
     }
 
-    public SkillInfo GetSkillInfo() {
-        return _skillInfo;
+    public SkillData GetSkillInfo() {
+        return _skillData;
     }
 
     public void UseSkill(BattleControl battleControl) {
-        _skillInfo.skillEffect?.ExecuteSkill(_skillInfo, battleControl);
+        //_skillInfo.skillEffect?.ExecuteSkill(_skillInfo, battleControl);
     }
 
     public void MoveTransform(PRS prs, bool useTweening, float duration = 0f) {
@@ -108,7 +108,7 @@ public class Skill : MonoBehaviour {
     public bool OnTouchMoved(Vector2 touchPos, bool isCostEnough) {
         bool isSelected = false;
         if (IsOverlapped(touchPos)) {
-            Debug.Log(_skillInfo.type);
+            Debug.Log(_skillData.Name);
             SkillManager.GetInstance().EnlargeCard(true, this);
             if (!IsTouching && isCostEnough) {
                 IsTouching = true;

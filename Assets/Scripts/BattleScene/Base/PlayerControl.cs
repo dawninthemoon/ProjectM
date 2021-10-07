@@ -16,7 +16,7 @@ public class PlayerControl : MonoBehaviour {
         _cardDeck.Initialize();
         _skillsInHand = new List<Skill>();
         _allyList = new List<BattleEntity>(4);
-        _fillAmounts = new float[4];
+        _fillAmounts = new float[3];
 
         for (int i = 0; i < _allies.Length; ++i) {
             _allies[i].Initialize();
@@ -44,8 +44,8 @@ public class PlayerControl : MonoBehaviour {
 
         var cardManager = SkillManager.GetInstance();
         for (int i = 0; i < amount; ++i) {
-            SkillInfo cardInfo = _cardDeck.DrawCard();
-            Skill cardObj = cardManager.CreateCard(cardInfo);
+            Data.SkillData skillData = _cardDeck.DrawCard();
+            Skill cardObj = cardManager.CreateCard(skillData);
             _skillsInHand.Add(cardObj);
         }
 

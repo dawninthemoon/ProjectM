@@ -3,5 +3,5 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public interface ISkillEffect {
-    void ExecuteSkill(SkillInfo info, BattleControl battleControl);
+    void ExecuteSkill(Data.SkillData info, BattleControl battleControl);
 }

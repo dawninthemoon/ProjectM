@@ -8,15 +8,15 @@ public class BattleControl : MonoBehaviour {
         ENEMY
     }
 
-    [SerializeField] PlayerControl _playerControl = null;
+    [SerializeField] private PlayerControl _playerControl = null;
     public PlayerControl PlayerCtrl { get { return _playerControl; }}
-    [SerializeField] EnemyControl _enemyControl = null;
-    public EnemyControl EnemyCtrl { get { return _enemyControl; } }
+    [SerializeField] private MonsterControl _enemyControl = null;
+    public MonsterControl EnemyCtrl { get { return _enemyControl; } }
     [SerializeField] Camera _cardCamera = null;
     public BattleEntity SelectedTarget { get; private set; }
     private static readonly float LongTouchTime = 1.5f;
     private TurnInfo _currentTurn;
-    private int _turnCount;
+    private int _turnCount = 0;
     private int _currentStage;
     private float _touchTimeAgo;
     private ObserverSubject<BattleUIArgs> _onSkillUsedEvent;
@@ -39,6 +39,8 @@ public class BattleControl : MonoBehaviour {
     private void Update() {
         _playerControl.Progress();
         _enemyControl.Progress();
+
+        if (_currentTurn == TurnInfo.ENEMY) return;
 
         SkillState state = SkillManager.GetInstance().State;
         if (state == SkillState.NOTHING) return;
@@ -87,9 +89,15 @@ public class BattleControl : MonoBehaviour {
 
     public void StartTurn() {
         ++_turnCount;
-        _playerControl.RefreshCost();
-        _playerControl.DrawCard(true);
-        SkillManager.GetInstance().State = SkillState.CARD_DRAG;
+
+        if (_currentTurn == TurnInfo.PLAYER) {
+            _playerControl.RefreshCost();
+            _playerControl.DrawCard(true);
+            SkillManager.GetInstance().State = SkillState.CARD_DRAG;
+        }
+        else {
+            EndTurn();
+        }
     }
 
     public void EndTurn() {
@@ -97,6 +105,9 @@ public class BattleControl : MonoBehaviour {
         int nextTurn = (curTurn + 1) % 2;
         _currentTurn = (TurnInfo)nextTurn;
         SkillManager.GetInstance().State = SkillState.CARD_OVER;
+
+        //Data.CharacterDataParser
+        StartTurn();
     }
 
     private bool ListenTouchMoveInput(Vector2 curTouchPos, Skill skill, bool isCostEnough) {

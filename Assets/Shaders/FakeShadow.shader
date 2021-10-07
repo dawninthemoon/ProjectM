@@ -19,7 +19,6 @@ Shader "Sprites/FakeShadow"
 			"RenderType"="Transparent" 
 			"PreviewType"="Plane"
 			"CanUseSpriteAtlas"="True"
-            "DisableBatching"="True"
 		}
 
 		Cull Off
@@ -58,7 +57,8 @@ Shader "Sprites/FakeShadow"
 			{
 				v2f OUT;
 
-                IN.vertex += float4(_Tilt,_Height,0,0) * (IN.texcoord.y);
+				float factor = saturate(IN.vertex.y);
+                IN.vertex += float4(_Tilt,_Height,0,0) * (factor);
 
 				OUT.vertex = UnityObjectToClipPos(IN.vertex);
 				OUT.texcoord = IN.texcoord;
@@ -88,21 +88,9 @@ Shader "Sprites/FakeShadow"
 
 			fixed4 frag(v2f IN) : SV_Target
 			{
-                float4 col = 0;
-                for(float i = -2; i < 2; ++i)
-                {
-                    for(float j = -2; j < 2; ++j)
-                    {
-                        col += tex2D(_MainTex, IN.texcoord + float2(i,j) * _BlurFactor)* IN.color;
-                    }
-                }
-                //divide the sum of values by the amount of samples
-                col = col / 16;
-                return col;
-				// fixed4 c = SampleSpriteTexture (IN.texcoord) * IN.color;
-				// c.rgb *= c.a;
-                
-				// return c;
+                fixed4 c = SampleSpriteTexture (IN.texcoord) * IN.color;
+            	c.rgb *= c.a;
+            	return c;
 			}
 		ENDCG
 		}

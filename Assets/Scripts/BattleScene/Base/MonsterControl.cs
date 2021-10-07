@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyControl : MonoBehaviour {
+public class MonsterControl : MonoBehaviour {
     [SerializeField] BattleEntity[] _enemies = null;
     [SerializeField] LayerMask _layerMask;
     private float[] _fillAmounts;
