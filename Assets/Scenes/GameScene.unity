@@ -529,22 +529,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ea077dfc3e0a84a810a04d7f856991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _allyHPBarImages:
-  - {fileID: 1906439117}
-  - {fileID: 1271301553}
-  - {fileID: 1693348050}
-  _allyHPUIImages:
-  - {fileID: 2102902277}
-  - {fileID: 1088927042}
-  - {fileID: 574798550}
-  _allyEXPUIImages:
-  - {fileID: 777256475}
-  - {fileID: 619720118}
-  - {fileID: 1790048921}
-  _enemyHPBarImages:
-  - {fileID: 1757257622}
-  - {fileID: 1315815462}
-  - {fileID: 1986735135}
+  _allyHPBarImages: []
+  _allyHPUIImages: []
+  _allyEXPUIImages: []
+  _enemyHPBarImages: []
   _costText: {fileID: 975031129}
 --- !u!1 &200116425
 GameObject:
@@ -3426,13 +3414,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layerMask:
     serializedVersion: 2
-    m_Bits: 128
-  _characterKeys: 6172140071991400514b1400
+    m_Bits: 0
+  _characterKeys: 000000000000000000000000
   _mascot: {fileID: 1821035760}
-  _initialPosition:
-  - {x: -11.1, y: -4.81, z: -4.81}
-  - {x: -14.52, y: -4.81, z: 2.89}
-  - {x: -15.4, y: -4.81, z: -0.21}
+  _initialPosition: []
 --- !u!1 &1161494391
 GameObject:
   m_ObjectHideFlags: 0
@@ -4330,7 +4315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _info:
     speed: 1
-    startDraw: 4
+    startDraw: 0
     draw: 3
     cost: 5
 --- !u!1 &1848535433
