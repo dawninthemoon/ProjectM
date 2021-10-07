@@ -6,14 +6,14 @@ namespace Data
 {
     public class Character
     {
-        public enum EStatType {
-            AttackPower,
-            BaseHP,
-            CurrentHP,
-            DefencePower,
-            Critical,
-            CriticalDamage,
-            Shield
+        public class ChracterStat {
+            public int AttackPower;
+            public int BaseHP;
+            public int CurrentHP;
+            public int DefencePower;
+            public int Critical;
+            public int CriticalDamage;
+            public int Shield;
         }
 
         public enum EClassType
