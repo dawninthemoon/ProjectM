@@ -101,7 +101,9 @@ public class Skill : MonoBehaviour {
     }
 
     public bool IsOverlapped(Vector2 pos) {
-        bool isOverlapped = (Physics2D.OverlapPoint(pos, _cardMask) == _detectCollider);
+        bool isOverlapped = false;
+
+        isOverlapped = (Physics2D.OverlapPoint(pos, _cardMask) == _detectCollider);
         return isOverlapped;
     }
 

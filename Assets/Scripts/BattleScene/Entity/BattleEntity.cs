@@ -23,7 +23,16 @@ public class BattleEntity : MonoBehaviour {
     }
 
     public bool IsOverlapped(Vector2 pos, LayerMask mask) {
-        bool isOverlapped = (Physics2D.OverlapPoint(pos, mask) == _detectCollider);
+        bool isOverlapped = false;// = (Physics2D.OverlapPoint(pos, mask) == _detectCollider);
+        RaycastHit raycastHit;
+        Ray screenRay = Camera.main.ScreenPointToRay( Input.mousePosition);
+        Debug.DrawRay(screenRay.origin,screenRay.direction, Color.cyan, 4);
+
+        if( Physics.Raycast( screenRay, out raycastHit, 100, mask) )
+        {
+            isOverlapped = true;
+            Debug.Log( raycastHit.transform.gameObject.name );
+        }
         return isOverlapped;
     }
 
