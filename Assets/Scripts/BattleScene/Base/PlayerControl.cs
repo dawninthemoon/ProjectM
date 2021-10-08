@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
+    [SerializeField] private int[] _characterKeys = null;
     [SerializeField] private Mascot _mascot = null;
     [SerializeField] private Vector3[] _initialPosition = null;
     private CharacterEntity[] _allies = null;
@@ -13,18 +14,18 @@ public class PlayerControl : MonoBehaviour {
     private float[] _fillAmounts;
     private static readonly string CharacterEntityPrefabPath = "CharacterEntityPrefab/";
 
-    public void Initialize(int[] characterKeys) {
-        int characterCounts = characterKeys.Length;
+    public void Initialize() {
+        int characterCounts = _characterKeys.Length;
         _allies = new CharacterEntity[characterCounts];
         for (int i = 0; i < characterCounts; ++i) {
-            int key = characterKeys[i];
+            int key = _characterKeys[i];
             var characterData = Data.CharacterDataParser.Instance.GetCharacter(key);
             var characterStatData = Data.CharacterStatDataParser.Instance.GetCharacterStat(characterData.Key);
             
             string prefabName = characterData.SubName;
             var prefab = ResourceManager.GetInstance().GetEntityPrefab(CharacterEntityPrefabPath + prefabName);
             _allies[i] = Instantiate(prefab, _initialPosition[i], Quaternion.identity) as CharacterEntity;
-            
+
             _allies[i].transform.SetParent(transform);
             _allies[i].Initialize(characterData, characterStatData);
         }

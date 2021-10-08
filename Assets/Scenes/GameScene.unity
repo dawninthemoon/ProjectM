@@ -479,8 +479,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 171676466}
-  - component: {fileID: 171676468}
   - component: {fileID: 171676467}
+  - component: {fileID: 171676468}
   m_Layer: 0
   m_Name: '[ Battle Control ]'
   m_TagString: Untagged
@@ -514,7 +514,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 926091ac89dca86429c9cd2b6fa8110e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterKeys: 6172140071991400514b1400
   _playerControl: {fileID: 1135090245}
   _enemyControl: {fileID: 599315112}
   _cardCamera: {fileID: 625655753}
@@ -3537,6 +3536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85af829071bfb7449aa26ca1278be5b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _characterKeys: 6172140071991400514b1400
   _mascot: {fileID: 1821035760}
   _initialPosition:
   - {x: -11.1, y: -4.81, z: -4.81}

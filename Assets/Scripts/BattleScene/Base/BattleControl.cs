@@ -8,7 +8,6 @@ public class BattleControl : MonoBehaviour {
         ENEMY
     }
 
-    [SerializeField] private int[] _characterKeys = null;
     [SerializeField] private PlayerControl _playerControl = null;
     public PlayerControl PlayerCtrl { get { return _playerControl; }}
     [SerializeField] private MonsterControl _enemyControl = null;
@@ -27,7 +26,7 @@ public class BattleControl : MonoBehaviour {
         SkillManager.GetInstance().Initialize(_cardCamera);
 
         _currentTurn = TurnInfo.PLAYER;
-        _playerControl.Initialize(_characterKeys);
+        _playerControl.Initialize();
         _enemyControl.Initialize();
         
         _onSkillUsedEvent = new ObserverSubject<BattleUIArgs>();
