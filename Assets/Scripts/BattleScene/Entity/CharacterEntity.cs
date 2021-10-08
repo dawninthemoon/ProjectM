@@ -5,7 +5,9 @@ using UnityEngine;
 public class CharacterEntity : BattleEntity {
     [SerializeField] private int _key = 0;
     private Data.Character _characterData;
+    public Data.Character CharacterData { get { return _characterData; } }
     private Data.CharacterStat _characterStatData;
+    public Data.CharacterStat CharacterStatData { get { return _characterStatData; } }
 
     public void Initialize(Data.Character characterData, Data.CharacterStat characterStatData) {
         _characterData = characterData;

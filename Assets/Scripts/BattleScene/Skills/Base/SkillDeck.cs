@@ -5,21 +5,26 @@ using Data;
 
 [System.Serializable]
 public class SkillDeck {
-    List<SkillData> _cardsInDeck;
-    List<SkillData> _cardsInGrave;
+    List<SkillInfo> _cardsInDeck;
+    List<SkillInfo> _cardsInGrave;
 
-    public void Initialize() {
-        _cardsInDeck = new List<SkillData>(17);
-        /*for (int key = 1; key <= 17; ++key) {
-            _cardsInDeck.Add(Data.SkillDataParser.Instance.GetSkillData(key));
-        }*/
-        _cardsInGrave = new List<SkillData>();
+    public void Initialize(List<KeyValuePair<int, int>> skillKeyPairList) {
+        int skillCounts = skillKeyPairList.Count;
+        _cardsInDeck = new List<SkillInfo>(skillCounts);
+
+        foreach (var pair in skillKeyPairList) {
+            SkillData skillData = Data.SkillDataParser.Instance.GetSkillData(pair.Key);
+            SkillInfo skillInfo = new SkillInfo(skillData, pair.Value);
+            _cardsInDeck.Add(skillInfo);
+        }
+
+        _cardsInGrave = new List<SkillInfo>();
     }
 
     public int GetDeckCount() => _cardsInDeck.Count;
 
-    public SkillData DrawCard() {
-        SkillData card = _cardsInDeck[0];
+    public SkillInfo DrawCard() {
+        SkillInfo card = _cardsInDeck[0];
         _cardsInDeck.RemoveAt(0);
 
         if (_cardsInDeck.Count == 0) {
@@ -31,7 +36,7 @@ public class SkillDeck {
         return card;
     }
 
-    public void SkillToGrave(SkillData skill) {
+    public void SkillToGrave(SkillInfo skill) {
         _cardsInGrave.Add(skill);
     }
 }

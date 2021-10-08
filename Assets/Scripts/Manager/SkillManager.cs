@@ -48,7 +48,7 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         return card;
     }
 
-    public Skill CreateCard(Data.SkillData skillData) {
+    public Skill CreateCard(Data.SkillInfo skillData) {
         Skill card = _skillObjectPool.GetObject();
         card.transform.position = _createPosition;
         card.Initialize(skillData);

@@ -5,6 +5,16 @@ using Boomlagoon.JSON;
 
 namespace Data
 {
+    public struct SkillInfo {
+        public SkillData SkillData;
+        public int CharacterKey;
+
+        public SkillInfo(SkillData skillData, int characterKey) {
+            SkillData = skillData;
+            CharacterKey = characterKey;
+        }
+    }
+
     public enum SkillType
     {
         NormalSkill,
@@ -56,13 +66,13 @@ namespace Data
             Key = (int)jsonObject.GetNumber( "Key" );
             Name = jsonObject.GetString( "Name" );
             IconKey = jsonObject.GetString( "IconKey" );
-            SkillType = (SkillType)System.Enum.Parse( typeof( SkillType ), jsonObject.GetString( "SkillType" ) );
+            SkillType = (SkillType)(int)jsonObject.GetNumber("SkillType");//(SkillType)System.Enum.Parse( typeof( SkillType ), jsonObject.GetString( "SkillType" ) );
             Cost = (int)jsonObject.GetNumber( "Cost" );
-            CastType = (CastType)System.Enum.Parse( typeof( CastType ), jsonObject.GetString( "CastType" ) );
-            AttackType = (AttackType)System.Enum.Parse( typeof( AttackType ), jsonObject.GetString( "AttackType" ) );
+            CastType = (CastType)(int)jsonObject.GetNumber("CastType");//(CastType)System.Enum.Parse( typeof( CastType ), jsonObject.GetString( "CastType" ) );
+            AttackType = (AttackType)(int)jsonObject.GetNumber("AttackType");//(AttackType)System.Enum.Parse( typeof( AttackType ), jsonObject.GetString( "AttackType" ) );
             AttackTypeValue = (int)jsonObject.GetNumber( "AttackTypeValue" );
             AttackRatio = (int)jsonObject.GetNumber( "AttackRatio" );
-            HealType = (HealType)System.Enum.Parse( typeof( HealType ), jsonObject.GetString( "HealType" ) );
+            HealType = (HealType)(int)jsonObject.GetNumber("HealType");//(HealType)System.Enum.Parse( typeof( HealType ), jsonObject.GetString( "HealType" ) );
             HealTypeValue = (int)jsonObject.GetNumber( "HealTypeValue" );
             HealRatio = (int)jsonObject.GetNumber( "HealRatio" );
         }

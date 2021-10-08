@@ -10,29 +10,29 @@ public class Skill : MonoBehaviour {
     [SerializeField] SpriteRenderer _renderer = null;
     [SerializeField] Transform _leftTransform = null;
     private MeshRenderer _costTextRenderer;
-    [SerializeField] TMP_Text _costText = null;
-    [SerializeField] LayerMask _cardMask;
-    static readonly string CancelAreaName = "CardCancelArea";
-    static readonly float LongTouchTime = 1.5f;
-    Collider2D _detectCollider = null;
-    SkillData _skillData;
+    [SerializeField] private TMP_Text _costText = null;
+    [SerializeField] private LayerMask _cardMask;
+    private static readonly string CancelAreaName = "CardCancelArea";
+    private static readonly float LongTouchTime = 1.5f;
+    private Collider2D _detectCollider = null;
+    private SkillInfo _skillInfo;
     public PRS OriginPRS { get; set; }
     public float CardWidth { get; private set; }
-    int _originOrder;
+    private int _originOrder;
     public bool IsTouching { get; private set; }
-    bool _isInCancelArea;
-    float _touchTimeAgo;
+    private bool _isInCancelArea;
+    private float _touchTimeAgo;
 
-    public void Initialize(SkillData data) {
-        _skillData = data;
+    public void Initialize(SkillInfo info) {
+        _skillInfo = info;
         _detectCollider = GetComponent<Collider2D>();
         _costTextRenderer = GetComponentInChildren<MeshRenderer>();
         transform.localScale = new Vector3(0.3f, 0.3f, 1f);
         CardWidth = (transform.position.x - _leftTransform.position.x) * 2.5f;
-        _costText.text = _skillData.Cost.ToString();
+        _costText.text = _skillInfo.SkillData.Cost.ToString();
     }
 
-    public int GetRequireCost() => _skillData.Cost;
+    public int GetRequireCost() => _skillInfo.SkillData.Cost;
 
     public void Progress(Vector3 touchPosition) {
         SkillState state = SkillManager.GetInstance().State;
@@ -47,7 +47,7 @@ public class Skill : MonoBehaviour {
                 
             }
 
-            if (_skillData.CastType == CastType.NoneCast) {
+            if (_skillInfo.SkillData.CastType == CastType.NoneCast) {
                 Vector3 scale = transform.localScale;
                 MoveTransform(new PRS(touchPosition, Quaternion.identity, scale), false);
             }
@@ -56,11 +56,11 @@ public class Skill : MonoBehaviour {
     }
 
     public bool CanSelectTarget() {
-        return (_skillData.CastType != CastType.NoneCast);
+        return (_skillInfo.SkillData.CastType != CastType.NoneCast);
     }
 
-    public SkillData GetSkillInfo() {
-        return _skillData;
+    public SkillInfo GetSkillInfo() {
+        return _skillInfo;
     }
 
     public void UseSkill(BattleControl battleControl) {
@@ -69,8 +69,8 @@ public class Skill : MonoBehaviour {
     }
 
     private void DoAttack(BattleControl battleControl) {
-        int damage = MathUtils.GetPerTenThousand(_skillData.AttackRatio);
-        switch (_skillData.AttackType) {
+        int damage = MathUtils.GetPerTenThousand(_skillInfo.SkillData.AttackRatio);
+        switch (_skillInfo.SkillData.AttackType) {
         case AttackType.SingleAttack:
             AttackTarget(battleControl.SelectedTarget, damage);
             break;
@@ -88,8 +88,8 @@ public class Skill : MonoBehaviour {
     }
 
     private void DoHeal(BattleControl battleControl) {
-        int healAmount = MathUtils.GetPerTenThousand(_skillData.HealRatio);
-        switch (_skillData.HealType) {
+        int healAmount = MathUtils.GetPerTenThousand(_skillInfo.SkillData.HealRatio);
+        switch (_skillInfo.SkillData.HealType) {
         case HealType.SingleHeal:
             HealTarget(battleControl.SelectedTarget, healAmount);
             break;
@@ -149,7 +149,7 @@ public class Skill : MonoBehaviour {
     public bool OnTouchMoved(Vector2 touchPos, bool isCostEnough) {
         bool isSelected = false;
         if (IsOverlapped(touchPos)) {
-            Debug.Log(_skillData.Name);
+            Debug.Log(_skillInfo.SkillData.Name);
             SkillManager.GetInstance().EnlargeCard(true, this);
             if (!IsTouching && isCostEnough) {
                 IsTouching = true;

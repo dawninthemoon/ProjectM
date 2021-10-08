@@ -36,8 +36,8 @@
       "Gender": "Female",
       "Grade": 3,
       "Rarity": false,
-      "SkillCard1Key": 23000010,
-      "SkillCard2Key": 23000020,
+      "SkillCard1Key": "23000010",
+      "SkillCard2Key": "23000020",
       "SpecialCardKey": null,
       "TurnSkillKey": null,
       "PassiveSkillKey": null
@@ -50,8 +50,8 @@
       "Gender": "Female",
       "Grade": 3,
       "Rarity": false,
-      "SkillCard1Key": 24000010,
-      "SkillCard2Key": 24000020,
+      "SkillCard1Key": "24000010",
+      "SkillCard2Key": "24000020",
       "SpecialCardKey": null,
       "TurnSkillKey": null,
       "PassiveSkillKey": null
@@ -64,8 +64,8 @@
       "Gender": "Female",
       "Grade": 3,
       "Rarity": false,
-      "SkillCard1Key": 23000080,
-      "SkillCard2Key": 22000070,
+      "SkillCard1Key": "23000080",
+      "SkillCard2Key": "22000070",
       "SpecialCardKey": null,
       "TurnSkillKey": null,
       "PassiveSkillKey": null
