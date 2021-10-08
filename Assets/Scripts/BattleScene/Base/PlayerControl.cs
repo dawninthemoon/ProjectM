@@ -3,22 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
-    [SerializeField] Mascot _mascot = null;
-    [SerializeField] CharacterEntity[] _allies = null;
-    [SerializeField] SkillDeck _cardDeck = null;
-    List<Skill> _skillsInHand;
+    [SerializeField] private Mascot _mascot = null;
+    [SerializeField] private Vector3[] _initialPosition = null;
+    private CharacterEntity[] _allies = null;
+    [SerializeField] private SkillDeck _cardDeck = null;
+    private List<Skill> _skillsInHand;
     public List<Skill> SkillsInHand { get { return _skillsInHand;} }
     public int CurrentCost { get; set; }
     private float[] _fillAmounts;
+    private static readonly string CharacterEntityPrefabPath = "CharacterEntityPrefab/";
 
-    public void Initialize() {
+    public void Initialize(int[] characterKeys) {
+        int characterCounts = characterKeys.Length;
+        _allies = new CharacterEntity[characterCounts];
+        for (int i = 0; i < characterCounts; ++i) {
+            int key = characterKeys[i];
+            var characterData = Data.CharacterDataParser.Instance.GetCharacter(key);
+            var characterStatData = Data.CharacterStatDataParser.Instance.GetCharacterStat(characterData.Key);
+            
+            string prefabName = characterData.SubName;
+            var prefab = ResourceManager.GetInstance().GetEntityPrefab(CharacterEntityPrefabPath + prefabName);
+            _allies[i] = Instantiate(prefab, _initialPosition[i], Quaternion.identity) as CharacterEntity;
+            
+            _allies[i].transform.SetParent(transform);
+            _allies[i].Initialize(characterData, characterStatData);
+        }
+
         _cardDeck.Initialize();
         _skillsInHand = new List<Skill>();
         _fillAmounts = new float[3];
-
-        for (int i = 0; i < _allies.Length; ++i) {
-            _allies[i].Initialize();
-        }
     }
 
     public void Progress() {

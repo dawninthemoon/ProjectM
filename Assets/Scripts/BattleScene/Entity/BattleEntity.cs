@@ -9,8 +9,6 @@ public abstract class BattleEntity : MonoBehaviour {
     protected int _curHP;
     protected SpriteAtlasAnimator _animator;
 
-    public abstract void Initialize();
-
     public void Progress() {
         _animator.Progress(_atlas);
     }

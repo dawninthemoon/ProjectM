@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ResourceManager : Singleton<ResourceManager> {
-    static readonly string PrefabPath = "Prefabs/";
-    static readonly string SkillPrefabName = "SkillPrefab";
-    static readonly string EntityPrefabName = "EntityPrefab";
+    private static readonly string PrefabPath = "Prefabs/";
+    private static readonly string SkillPrefabName = "SkillPrefab";
     Dictionary<string, GameObject> _cachedPrefabs;
     public ResourceManager() {
         _cachedPrefabs = new Dictionary<string, GameObject>();
@@ -17,8 +16,8 @@ public class ResourceManager : Singleton<ResourceManager> {
         return skill;
     }
 
-    public BattleEntity GetEntityPrefab() {
-        string path = PrefabPath + EntityPrefabName;
+    public BattleEntity GetEntityPrefab(string name) {
+        string path = PrefabPath + name;
         var entity = LoadPrefab(path).GetComponent<BattleEntity>();
         return entity;
     }

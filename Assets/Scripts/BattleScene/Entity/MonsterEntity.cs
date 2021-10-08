@@ -9,7 +9,7 @@ public class MonsterEntity : BattleEntity {
     private Data.MonsterStat _monsterStatData;
     public Data.MonsterStat MonsterStatData { get { return _monsterStatData; } }
 
-    public override void Initialize() {
+    public void Initialize() {
         _monsterData = Data.MonsterDataParser.Instance.GetMonster(1);
         _monsterStatData = Data.MonsterStatDataParser.Instance.GetMonsterStat(_monsterData.Key);
 

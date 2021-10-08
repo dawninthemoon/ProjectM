@@ -7,9 +7,9 @@ public class CharacterEntity : BattleEntity {
     private Data.Character _characterData;
     private Data.CharacterStat _characterStatData;
 
-    public override void Initialize() {
-        _characterData = Data.CharacterDataParser.Instance.GetCharacter(_key);
-        _characterStatData = Data.CharacterStatDataParser.Instance.GetCharacterStat(_characterData.Key);
+    public void Initialize(Data.Character characterData, Data.CharacterStat characterStatData) {
+        _characterData = characterData;
+        _characterStatData = characterStatData;
 
         _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _characterData.SubName + "_", "IDLE", true, 0.5f);
         _maxHP = _characterStatData.BaseHP;
