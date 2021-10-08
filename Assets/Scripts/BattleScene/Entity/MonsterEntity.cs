@@ -13,7 +13,7 @@ public class MonsterEntity : BattleEntity {
         _monsterData = Data.MonsterDataParser.Instance.GetMonster(1);
         _monsterStatData = Data.MonsterStatDataParser.Instance.GetMonsterStat(_monsterData.Key);
 
-        _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _monsterData.Name + "_", "IDLE", true);
+        _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _monsterData.Name + "_", "IDLE", true, 0.5f);
         _maxHP = _monsterStatData.BaseHP;
         _curHP = _maxHP;
     }

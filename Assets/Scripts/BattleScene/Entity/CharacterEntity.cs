@@ -11,7 +11,7 @@ public class CharacterEntity : BattleEntity {
         _characterData = Data.CharacterDataParser.Instance.GetCharacter(_key);
         _characterStatData = Data.CharacterStatDataParser.Instance.GetCharacterStat(_characterData.Key);
 
-        _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _characterData.SubName + "_", "IDLE", true);
+        _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _characterData.SubName + "_", "IDLE", true, 0.5f);
         _maxHP = _characterStatData.BaseHP;
         _curHP = _maxHP;
     }
