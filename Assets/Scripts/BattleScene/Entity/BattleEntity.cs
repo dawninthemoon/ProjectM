@@ -38,4 +38,6 @@ public abstract class BattleEntity : MonoBehaviour {
     public float GetHPPercent() {
         return (float)_curHP / _maxHP;
     }
+
+    public abstract float GetFinalDefence();
 }

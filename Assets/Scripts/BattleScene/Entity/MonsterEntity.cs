@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RieslingUtils;
 
 public class MonsterEntity : BattleEntity {
     private Data.Monster _monsterData;
@@ -16,5 +17,10 @@ public class MonsterEntity : BattleEntity {
         _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _monsterData.Name + "_", "IDLE", true, 0.5f);
         _maxHP = _monsterStatData.BaseHP;
         _curHP = _maxHP;
+    }
+
+    public override float GetFinalDefence() {
+        float defence = 1f + MathUtils.GetPercent(_monsterStatData.DefencePower);
+        return defence;
     }
 }

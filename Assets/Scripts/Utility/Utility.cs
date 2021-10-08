@@ -59,8 +59,16 @@ namespace RieslingUtils {
     }
 
     public static class MathUtils {
-        public static int GetPerTenThousand(int value) {
-            return Mathf.RoundToInt(value / 10000f);
+        public static float GetPerTenThousand(int value) {
+            return value / 10000f;
+        }
+
+        public static float GetPerTenThousandWithRound(int value) {
+            return Mathf.Round(value / 10000f);
+        }
+
+        public static float GetPercent(int value) {
+            return value / 100f;
         }
     }
 }

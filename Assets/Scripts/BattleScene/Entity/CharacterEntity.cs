@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RieslingUtils;
 
 public class CharacterEntity : BattleEntity {
     [SerializeField] private int _key = 0;
@@ -16,5 +17,10 @@ public class CharacterEntity : BattleEntity {
         _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _characterData.SubName + "_", "IDLE", true, 0.5f);
         _maxHP = _characterStatData.BaseHP;
         _curHP = _maxHP;
+    }
+
+    public override float GetFinalDefence() {
+        float defence = 1f + MathUtils.GetPercent(_characterStatData.DefencePower);
+        return defence;
     }
 }

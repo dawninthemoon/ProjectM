@@ -69,16 +69,36 @@ public class Skill : MonoBehaviour {
     }
 
     private void DoAttack(BattleControl battleControl) {
-        int damage = MathUtils.GetPerTenThousand(_skillInfo.SkillData.AttackRatio);
-        switch (_skillInfo.SkillData.AttackType) {
+        CharacterStat stat = CharacterStatDataParser.Instance.GetCharacterStat(_skillInfo.CharacterKey);
+
+        var data = _skillInfo.SkillData;
+        float criticalDamage = MathUtils.GetPerTenThousand(stat.CriticalDamage);
+        float baseDamage = stat.AttackPower * (1f + criticalDamage);
+        int targetCounts = data.AttackTypeValue;
+        var selectedTarget = battleControl.SelectedTarget;
+        int finalDamage;
+
+        switch (data.AttackType) {
         case AttackType.SingleAttack:
-            AttackTarget(battleControl.SelectedTarget, damage);
+            finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
+            AttackTarget(selectedTarget, finalDamage);
             break;
         case AttackType.SideTurnAttack:
-            break;
         case AttackType.MultiAttack:
+            if (data.AttackType == AttackType.SideTurnAttack) {
+                finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
+                AttackTarget(selectedTarget, finalDamage);
+            }
+            var enemies = battleControl.EnemyCtrl.GetRandomEnemies(targetCounts, selectedTarget);
+            foreach (var e in enemies) {
+                finalDamage = Mathf.FloorToInt(baseDamage / e.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
+                AttackTarget(e, finalDamage);
+            }
             break;
         case AttackType.RandomAttack:
+            var enemy = battleControl.EnemyCtrl.GetRandomEnemies(1);
+            finalDamage = Mathf.FloorToInt(baseDamage / enemy[0].GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
+            AttackTarget(enemy[0], finalDamage);
             break;
         }
 
@@ -88,16 +108,29 @@ public class Skill : MonoBehaviour {
     }
 
     private void DoHeal(BattleControl battleControl) {
-        int healAmount = MathUtils.GetPerTenThousand(_skillInfo.SkillData.HealRatio);
+        CharacterStat stat = CharacterStatDataParser.Instance.GetCharacterStat(_skillInfo.CharacterKey);
+
+        var data = _skillInfo.SkillData;
+        float baseHeal = MathUtils.GetPerTenThousand(data.HealRatio);
+        int targetCounts = _skillInfo.SkillData.HealTypeValue;
+        var selectedTarget = battleControl.SelectedTarget;
+        int finalHeal = 1;
+
         switch (_skillInfo.SkillData.HealType) {
         case HealType.SingleHeal:
-            HealTarget(battleControl.SelectedTarget, healAmount);
+            finalHeal = Mathf.FloorToInt(baseHeal / selectedTarget.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
+            HealTarget(selectedTarget, finalHeal);
             break;
         case HealType.SideTurnHeal:
-            break;
         case HealType.MultiHeal:
+            var characters = battleControl.PlayerCtrl.GetRandomAllies(targetCounts, selectedTarget);
+            foreach (var ch in characters) {
+                HealTarget(ch, finalHeal);
+            }
             break;
         case HealType.RandomHeal:
+            var character = battleControl.PlayerCtrl.GetRandomAllies(1);
+            HealTarget(character[0], finalHeal);
             break;
         }
 
