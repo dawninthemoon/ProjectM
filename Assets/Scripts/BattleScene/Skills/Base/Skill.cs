@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
-using UnityEngine.EventSystems;
 using Data;
+using RieslingUtils;
 
 public class Skill : MonoBehaviour {
     [SerializeField] SpriteRenderer _renderer = null;
@@ -64,7 +64,46 @@ public class Skill : MonoBehaviour {
     }
 
     public void UseSkill(BattleControl battleControl) {
-        //_skillInfo.skillEffect?.ExecuteSkill(_skillInfo, battleControl);
+        DoAttack(battleControl);
+        DoHeal(battleControl);
+    }
+
+    private void DoAttack(BattleControl battleControl) {
+        int damage = MathUtils.GetPerTenThousand(_skillData.AttackRatio);
+        switch (_skillData.AttackType) {
+        case AttackType.SingleAttack:
+            AttackTarget(battleControl.SelectedTarget, damage);
+            break;
+        case AttackType.SideTurnAttack:
+            break;
+        case AttackType.MultiAttack:
+            break;
+        case AttackType.RandomAttack:
+            break;
+        }
+
+        void AttackTarget(BattleEntity entity, int amount) {
+            entity.DecreaseHP(amount);
+        }
+    }
+
+    private void DoHeal(BattleControl battleControl) {
+        int healAmount = MathUtils.GetPerTenThousand(_skillData.HealRatio);
+        switch (_skillData.HealType) {
+        case HealType.SingleHeal:
+            HealTarget(battleControl.SelectedTarget, healAmount);
+            break;
+        case HealType.SideTurnHeal:
+            break;
+        case HealType.MultiHeal:
+            break;
+        case HealType.RandomHeal:
+            break;
+        }
+
+        void HealTarget(BattleEntity target, int amount) {
+            target.IncreaseHP(amount);
+        }
     }
 
     public void MoveTransform(PRS prs, bool useTweening, float duration = 0f) {

@@ -5,18 +5,30 @@ using Boomlagoon.JSON;
 
 namespace Data
 {
+    public class CharacterStat : PublicDataBase {
+        public int Key;
+        public int AttackPower;
+        public int BaseHP;
+        public int CurrentHP;
+        public int DefencePower;
+        public int Critical;
+        public int CriticalDamage;
+        public int Shield;
+
+        public override void Parse(JSONObject jsonObject) {
+            Key = (int)jsonObject.GetNumber("Key");
+            AttackPower = (int)jsonObject.GetNumber("AttackPower");
+            BaseHP = (int)jsonObject.GetNumber("BaseHP");
+            CurrentHP = (int)jsonObject.GetNumber("CurrentHP");
+            DefencePower = (int)jsonObject.GetNumber("DefencePower");
+            Critical = (int)jsonObject.GetNumber("Critical");
+            CriticalDamage = (int)jsonObject.GetNumber("CriticalDamage");
+            Shield = (int)jsonObject.GetNumber("Shield");
+        }
+    }
+
     public class Character : PublicDataBase
     {
-        public class ChracterStat {
-            public int AttackPower;
-            public int BaseHP;
-            public int CurrentHP;
-            public int DefencePower;
-            public int Critical;
-            public int CriticalDamage;
-            public int Shield;
-        }
-
         public enum EClassType
         {
             None,

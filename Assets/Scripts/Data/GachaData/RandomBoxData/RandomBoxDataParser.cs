@@ -8,21 +8,9 @@ namespace Data
 {
     public class RandomBoxDataParser : PublicDataParseBase<RandomBoxDataParser, RandomBoxData>
     {
-        protected override void Init()
-        {
-            string textAsset = Resources.Load("Json/randombox").ToString();
-
-            JSONObject jsonObject = JSONObject.Parse(textAsset);
-
-            JSONArray jsonArray = jsonObject.GetArray("RandomBoxTemplate");
-
-            data = new RandomBoxData[jsonArray.Length];
-
-            for( int i = 0; i < jsonArray.Length; ++i )
-            {
-                data[i] = new RandomBoxData();
-                data[i].Parse( jsonArray[i].Obj );
-            }
+        public RandomBoxDataParser() {
+            assetPath = "Json/randombox";
+            templateName = "RandomBoxTemplate";
         }
 
         public RandomBoxData GetRandomBoxData( int index )

@@ -663,7 +663,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 485, y: -243}
+  m_AnchoredPosition: {x: 368, y: -291}
   m_SizeDelta: {x: 100, y: 47.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &206302417
@@ -1211,7 +1211,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 319802654}
-  - component: {fileID: 319802656}
   - component: {fileID: 319802655}
   m_Layer: 7
   m_Name: Char_2
@@ -1286,26 +1285,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &319802656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319802653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c59327f501fd574cac075cb24987e19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _atlas: {fileID: 4343727234628468602, guid: ddfcf37373eb0f14b9934b80c9749dd2, type: 2}
-  _info:
-    entityID: 0
-    maxHP: 10000
-    atk: 1
-    heal: 0
-    def: 0
-    name: MAGICALGIRL001
 --- !u!1 &326002947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,7 +1711,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 489826923}
-  - component: {fileID: 489826925}
   - component: {fileID: 489826924}
   m_Layer: 7
   m_Name: Char_3
@@ -1807,26 +1785,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &489826925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489826922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c59327f501fd574cac075cb24987e19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _atlas: {fileID: 4343727234628468602, guid: ddfcf37373eb0f14b9934b80c9749dd2, type: 2}
-  _info:
-    entityID: 0
-    maxHP: 10000
-    atk: 1
-    heal: 0
-    def: 0
-    name: MAGICENGINEER001
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,7 +2034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 581968818}
   m_Layer: 5
-  m_Name: EnemyInfo3
+  m_Name: MonsterInfo3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2099,7 +2057,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1316, y: -437}
+  m_AnchoredPosition: {x: 1193, y: -349}
   m_SizeDelta: {x: 100, y: 47.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &599315110
@@ -2339,7 +2297,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 621786826}
-  - component: {fileID: 621786828}
   - component: {fileID: 621786827}
   m_Layer: 7
   m_Name: Char_1
@@ -2414,26 +2371,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &621786828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 621786825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c59327f501fd574cac075cb24987e19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _atlas: {fileID: 4343727234628468602, guid: ddfcf37373eb0f14b9934b80c9749dd2, type: 2}
-  _info:
-    entityID: 0
-    maxHP: 10000
-    atk: 1
-    heal: 0
-    def: 0
-    name: MAGE001
 --- !u!1 &625655751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,7 +2496,7 @@ GameObject:
   - component: {fileID: 677029996}
   - component: {fileID: 677029998}
   m_Layer: 8
-  m_Name: Char_2
+  m_Name: GOBLIN002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2619,7 +2556,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 91b70f4d94a6d264b8f1d3fd2f7bbbb5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 276191a7eab0ab443846c808b4d85881, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2639,17 +2576,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 677029994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c59327f501fd574cac075cb24987e19, type: 3}
+  m_Script: {fileID: 11500000, guid: db666775d606e7347a0674cd24471296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _atlas: {fileID: 4343727234628468602, guid: 1762b80f0ae7c3e49bd08d0ad11ad91d, type: 2}
-  _info:
-    entityID: 0
-    maxHP: 10000
-    atk: 1
-    heal: 0
-    def: 0
-    name: GOBLIN002
+  _atlas: {fileID: 4343727234628468602, guid: b051f71b4e421ad499eae9f7d7d3cc35, type: 2}
 --- !u!65 &677029998
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2662,7 +2592,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 0.2}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0.1, y: 2, z: 0.1}
 --- !u!1 &678224989
 GameObject:
   m_ObjectHideFlags: 0
@@ -3429,9 +3359,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mascot: {fileID: 1821035760}
   _allies:
-  - {fileID: 621786828}
-  - {fileID: 319802656}
-  - {fileID: 489826925}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &975031127
 GameObject:
   m_ObjectHideFlags: 0
@@ -3576,7 +3506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 991081654}
   m_Layer: 5
-  m_Name: EnemyInfo
+  m_Name: MonsterInfo1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3599,7 +3529,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1512, y: -273}
+  m_AnchoredPosition: {x: 1512, y: -368}
   m_SizeDelta: {x: 100, y: 47.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1022302573
@@ -4052,7 +3982,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 293, y: -159}
+  m_AnchoredPosition: {x: 277, y: -239}
   m_SizeDelta: {x: 100, y: 47.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1135090243
@@ -4495,7 +4425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38.999985, y: 20}
+  m_AnchoredPosition: {x: 43, y: 20}
   m_SizeDelta: {x: 120, y: 20}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1315815462
@@ -4649,7 +4579,7 @@ GameObject:
   - component: {fileID: 1578816311}
   - component: {fileID: 1578816313}
   m_Layer: 8
-  m_Name: Char_3
+  m_Name: GOBLIN003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4709,7 +4639,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 276191a7eab0ab443846c808b4d85881, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a68e61e4aaabee94ea9d7b9c2789c189, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4729,43 +4659,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1578816309}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c59327f501fd574cac075cb24987e19, type: 3}
+  m_Script: {fileID: 11500000, guid: db666775d606e7347a0674cd24471296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _atlas: {fileID: 4343727234628468602, guid: 1762b80f0ae7c3e49bd08d0ad11ad91d, type: 2}
-  _info:
-    entityID: 0
-    maxHP: 10000
-    atk: 1
-    heal: 0
-    def: 0
-    name: GOBLIN003
---- !u!61 &1578816313
-BoxCollider2D:
+  _atlas: {fileID: 4343727234628468602, guid: b051f71b4e421ad499eae9f7d7d3cc35, type: 2}
+--- !u!65 &1578816313
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578816309}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.41688848, y: 1.3523452}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.25}
-    oldSize: {x: 8, y: 8}
-    newSize: {x: 8, y: 8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.787725, y: 2.8283963}
-  m_EdgeRadius: 0
+  m_Size: {x: 4, y: 4, z: 0.2}
+  m_Center: {x: 0.1, y: 2, z: 0.1}
 --- !u!1 &1636819464
 GameObject:
   m_ObjectHideFlags: 0
@@ -4776,7 +4686,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1636819465}
   m_Layer: 5
-  m_Name: EnemyInfo2
+  m_Name: MonsterInfo2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4799,7 +4709,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1320, y: -189}
+  m_AnchoredPosition: {x: 1347, y: -397}
   m_SizeDelta: {x: 100, y: 47.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1693348048
@@ -5097,7 +5007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 289, y: -407}
+  m_AnchoredPosition: {x: 135, y: -296}
   m_SizeDelta: {x: 100, y: 47.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1821035757
@@ -5783,7 +5693,7 @@ GameObject:
   - component: {fileID: 2123321623}
   - component: {fileID: 2123321625}
   m_Layer: 8
-  m_Name: Char_1
+  m_Name: GOBLIN001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5863,17 +5773,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2123321621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c59327f501fd574cac075cb24987e19, type: 3}
+  m_Script: {fileID: 11500000, guid: db666775d606e7347a0674cd24471296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _atlas: {fileID: 4343727234628468602, guid: 1762b80f0ae7c3e49bd08d0ad11ad91d, type: 2}
-  _info:
-    entityID: 0
-    maxHP: 10000
-    atk: 1
-    heal: 0
-    def: 0
-    name: GOBLIN001
+  _atlas: {fileID: 4343727234628468602, guid: b051f71b4e421ad499eae9f7d7d3cc35, type: 2}
 --- !u!65 &2123321625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5886,7 +5789,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4, y: 4, z: 0.2}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0.1, y: 2, z: 0.1}
 --- !u!1 &2134154022
 GameObject:
   m_ObjectHideFlags: 0
@@ -5897,7 +5800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2134154023}
   m_Layer: 5
-  m_Name: EnemyInfo
+  m_Name: MonsterInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -57,4 +57,10 @@ namespace RieslingUtils {
             return stringList[Random.Range(0, stringList.Length)];
         }
     }
+
+    public static class MathUtils {
+        public static int GetPerTenThousand(int value) {
+            return Mathf.RoundToInt(value / 10000f);
+        }
+    }
 }

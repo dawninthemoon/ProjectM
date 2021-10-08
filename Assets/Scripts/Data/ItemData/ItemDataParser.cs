@@ -8,21 +8,9 @@ namespace Data
 {
     public class ItemDataParser : PublicDataParseBase<ItemDataParser, ItemData>
     {
-        protected override void Init()
-        {
-            string textAsset = Resources.Load("Json/item").ToString();
-
-            JSONObject jsonObject = JSONObject.Parse(textAsset);
-
-            JSONArray jsonArray = jsonObject.GetArray("ItemTemplate");
-
-            data = new ItemData[jsonArray.Length];
-
-            for( int i = 0; i < jsonArray.Length; ++i )
-            {
-                data[i] = new ItemData();
-                data[i].Parse( jsonArray[i].Obj );
-            }
+        public ItemDataParser() {
+            assetPath = "Json/item";
+            templateName = "ItemTemplate";
         }
 
         public ItemData GetItemData( int key )

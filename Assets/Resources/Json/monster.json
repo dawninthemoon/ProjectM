@@ -1,0 +1,5 @@
+{"MonsterTemplate": [
+    {"Key":1,"Name":"GOBLIN001","Grade":"Normal","Level":1,"MonsterPrefab":"GOBLIN001","Skill":null,"StatOverrideID":null},
+    {"Key":2,"Name":"GOBLIN002","Grade":"Normal","Level":1,"MonsterPrefab":"GOBLIN002","Skill":null,"StatOverrideID":null},
+    {"Key":3,"Name":"GOBLIN003","Grade":"Normal","Level":1,"MonsterPrefab":"GOBLIN003","Skill":null,"StatOverrideID":null}
+]}

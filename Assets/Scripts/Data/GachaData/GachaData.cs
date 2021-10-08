@@ -5,7 +5,7 @@ using Boomlagoon.JSON;
 
 namespace Data
 {
-    public class GachaData
+    public class GachaData : PublicDataBase
     {
         public int Key;
         public string Name;
@@ -22,7 +22,7 @@ namespace Data
         public int FreeGachaType;
         public int FreeGachaValue;
 
-        public void Parse( JSONObject jsonObj  )
+        public override void Parse( JSONObject jsonObj )
         {
             Key = (int)jsonObj.GetNumber("Key");
             Name = jsonObj.GetString("Name");
