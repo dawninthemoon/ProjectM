@@ -5,7 +5,8 @@ using Boomlagoon.JSON;
 
 namespace Data {
     public class MonsterStat : PublicDataBase {
-        public int Key;
+        public int Grade;
+        public int Level;
         public int AttackPower;
         public int BaseHP;
         public int DefencePower;
@@ -14,7 +15,8 @@ namespace Data {
         public int Shield;
 
         public override void Parse(JSONObject jsonObj) {
-            Key = (int)jsonObj.GetNumber("Key");
+            Grade = (int)jsonObj.GetNumber("Grade");
+            Level = (int)jsonObj.GetNumber("Level");
             AttackPower = (int)jsonObj.GetNumber("AttackPower");
             BaseHP = (int)jsonObj.GetNumber("BaseHP");
             DefencePower = (int)jsonObj.GetNumber("DefencePower");
@@ -33,7 +35,7 @@ namespace Data {
 
         public int Key;
         public string Name;
-        public EGradeType Grade;
+        public EGradeType MonsterGrade;
         public int Level;
         public string MonsterPrefab;
         public string[] Skill;
@@ -42,7 +44,7 @@ namespace Data {
         public override void Parse(JSONObject jsonObj) {
             Key = (int)jsonObj.GetNumber("Key");
             Name = jsonObj.GetString("Name");
-            Grade = (EGradeType)System.Enum.Parse(typeof(EGradeType), jsonObj.GetString("Grade"));
+            MonsterGrade = (EGradeType)(int)jsonObj.GetNumber("MonsterGrade"); //(EGradeType)System.Enum.Parse(typeof(EGradeType), jsonObj.GetString("MonsterGrade"));
             Level = (int)jsonObj.GetNumber("Level");
             MonsterPrefab = jsonObj.GetString("MonsterPrefab");
             StatOverrideID = jsonObj.GetString("StatOverrideID");

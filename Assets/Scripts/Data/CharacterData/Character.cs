@@ -7,23 +7,21 @@ namespace Data
 {
     public class CharacterStat : PublicDataBase {
         public int Key;
+        public int Grade;
         public int AttackPower;
         public int BaseHP;
-        public int CurrentHP;
         public int DefencePower;
         public int Critical;
         public int CriticalDamage;
-        public int Shield;
 
         public override void Parse(JSONObject jsonObject) {
             Key = (int)jsonObject.GetNumber("Key");
+            Grade = (int)jsonObject.GetNumber("Grade");
             AttackPower = (int)jsonObject.GetNumber("AttackPower");
             BaseHP = (int)jsonObject.GetNumber("BaseHP");
-            CurrentHP = (int)jsonObject.GetNumber("CurrentHP");
             DefencePower = (int)jsonObject.GetNumber("DefencePower");
             Critical = (int)jsonObject.GetNumber("Critical");
             CriticalDamage = (int)jsonObject.GetNumber("CriticalDamage");
-            Shield = (int)jsonObject.GetNumber("Shield");
         }
     }
 
@@ -32,10 +30,10 @@ namespace Data
         public enum EClassType
         {
             None,
+            Guardian,
+            Warrior,
+            Shooter,
             Mage,
-            Witch,
-            BattleMage,
-            MagicalEngineer,
             MagicGirl
         }
 

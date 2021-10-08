@@ -1,5 +1,14 @@
-{"MonsterStatTemplate": [
-    {"Key":1,"AttackPower":10000,"BaseHP":10000,"DefencePower":100,"Critical":10,"CriticalDamage":15000,"Shield":1},
-    {"Key":2,"AttackPower":10000,"BaseHP":10000,"DefencePower":100,"Critical":10,"CriticalDamage":15000,"Shield":1},
-    {"Key":3,"AttackPower":10000,"BaseHP":10000,"DefencePower":100,"Critical":10,"CriticalDamage":15000,"Shield":1}
-]}
+{
+  "MonsterStat": [
+    {
+      "Grade": 1,
+      "Level": 1,
+      "AttackPower": 10000,
+      "BaseHP": 10000,
+      "DefencePower": 10000,
+      "Critical": 10,
+      "CriticalDamage": 15000,
+      "Shield": 10
+    }
+  ]
+}

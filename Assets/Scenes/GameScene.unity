@@ -1211,6 +1211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 319802654}
+  - component: {fileID: 319802656}
   - component: {fileID: 319802655}
   m_Layer: 7
   m_Name: Char_2
@@ -1285,6 +1286,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &319802656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319802653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0718d33b5f2dfb47b869b5c17ca2ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _atlas: {fileID: 4343727234628468602, guid: ddfcf37373eb0f14b9934b80c9749dd2, type: 2}
+  _key: 1350001
 --- !u!1 &326002947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,6 +1726,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 489826923}
+  - component: {fileID: 489826925}
   - component: {fileID: 489826924}
   m_Layer: 7
   m_Name: Char_3
@@ -1785,6 +1801,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &489826925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489826922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0718d33b5f2dfb47b869b5c17ca2ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _atlas: {fileID: 4343727234628468602, guid: ddfcf37373eb0f14b9934b80c9749dd2, type: 2}
+  _key: 1330001
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2297,6 +2327,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 621786826}
+  - component: {fileID: 621786828}
   - component: {fileID: 621786827}
   m_Layer: 7
   m_Name: Char_1
@@ -2371,6 +2402,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &621786828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621786825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0718d33b5f2dfb47b869b5c17ca2ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _atlas: {fileID: 4343727234628468602, guid: ddfcf37373eb0f14b9934b80c9749dd2, type: 2}
+  _key: 1340001
 --- !u!1 &625655751
 GameObject:
   m_ObjectHideFlags: 0
@@ -3359,9 +3404,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mascot: {fileID: 1821035760}
   _allies:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 621786828}
+  - {fileID: 319802656}
+  - {fileID: 489826925}
 --- !u!1 &975031127
 GameObject:
   m_ObjectHideFlags: 0

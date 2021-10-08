@@ -8,12 +8,12 @@ namespace Data {
     public class MonsterStatDataParser : PublicDataParseBase<MonsterStatDataParser, MonsterStat> {
         public MonsterStatDataParser() {
             assetPath = "Json/monsterStat";
-            templateName = "MonsterStatTemplate";
+            templateName = "MonsterStat";
         }
 
-        public MonsterStat GetMonsterStat(int key)
+        public MonsterStat GetMonsterStat(int grade)
         {
-            return Array.Find(data, (x) => x.Key == key );
+            return Array.Find(data, (x) => x.Grade == grade );
         }
     }
 
@@ -21,7 +21,7 @@ namespace Data {
 
         public MonsterDataParser() {
             assetPath = "Json/monster";
-            templateName = "MonsterTemplate";
+            templateName = "Monster";
         }
 
         public Monster GetMonster(int key)

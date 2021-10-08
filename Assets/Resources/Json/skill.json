@@ -1,242 +1,1433 @@
 {
-  "SkillTemplate": [
-    {
-      "Key": 1,
-      "Name": "단일 공격1",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 1,
-      "CastType": "EmemyCast",
-      "AttackType": "SingleAttack",
-      "AttackTypeValue": 1,
-      "AttackRatio": 1000,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
+  "CharacterTemplate": {
+    "1310001": {
+      "Name": "미제리",
+      "SubName": null,
+      "Class": "Guardian",
+      "#비고": 1,
+      "Gender": "Female",
+      "Grade": 3,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
     },
-    {
-      "Key": 2,
-      "Name": "단일 공격2",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 2,
-      "CastType": "EmemyCast",
-      "AttackType": "SingleAttack",
-      "AttackTypeValue": 1,
-      "AttackRatio": 1000,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
+    "1320001": {
+      "Name": "냉병기 방패캐",
+      "SubName": null,
+      "Class": "Warrior",
+      "#비고": 1,
+      "Gender": "Female",
+      "Grade": 3,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
     },
-    {
-      "Key": 3,
-      "Name": "단일 공격3",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 1,
-      "CastType": "EmemyCast",
-      "AttackType": "SingleAttack",
-      "AttackTypeValue": 1,
-      "AttackRatio": 1000,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
+    "1330001": {
+      "Name": "피존",
+      "SubName": "MAGICENGINEER001",
+      "Class": "Shooter",
+      "#비고": 1,
+      "Gender": "Female",
+      "Grade": 3,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
     },
-    {
-      "Key": 4,
-      "Name": "단일 공격4",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 1,
-      "CastType": "EmemyCast",
-      "AttackType": "SingleAttack",
-      "AttackTypeValue": 1,
-      "AttackRatio": 1000,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
+    "1340001": {
+      "Name": "구스티",
+      "SubName": "MAGE001",
+      "Class": "Mage",
+      "#비고": 1,
+      "Gender": "Female",
+      "Grade": 3,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
     },
-    {
-      "Key": 5,
-      "Name": "단일 공격5",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 3,
-      "CastType": "EmemyCast",
-      "AttackType": "SingleAttack",
-      "AttackTypeValue": 1,
-      "AttackRatio": 1000,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
+    "1350001": {
+      "Name": "핑키",
+      "SubName": "MAGICALGIRL001",
+      "Class": "MagicGirl",
+      "#비고": 1,
+      "Gender": "Female",
+      "Grade": 3,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
     },
-    {
-      "Key": 6,
-      "Name": "단일 공격6",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 2,
-      "CastType": "EmemyCast",
-      "AttackType": "SingleAttack",
-      "AttackTypeValue": 1,
-      "AttackRatio": 1000,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
+    "1410001": {
+      "Name": "탱커",
+      "SubName": null,
+      "Class": "Guardian",
+      "#비고": 1,
+      "Gender": "Female",
+      "Grade": 4,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
     },
-    {
-      "Key": 7,
-      "Name": "단일 공격7",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 1,
-      "CastType": "EmemyCast",
-      "AttackType": "SingleAttack",
-      "AttackTypeValue": 1,
-      "AttackRatio": 1000,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
+    "1420001": {
+      "Name": "직검 기사캐",
+      "SubName": null,
+      "Class": "Warrior",
+      "#비고": 1,
+      "Gender": "Female",
+      "Grade": 4,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
     },
-    {
-      "Key": 8,
-      "Name": "단일 공격8",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 1,
-      "CastType": "EmemyCast",
-      "AttackType": "SingleAttack",
-      "AttackTypeValue": 1,
-      "AttackRatio": 1000,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
+    "1430001": {
+      "Name": "카샤",
+      "SubName": null,
+      "Class": "Shooter",
+      "#비고": 1,
+      "Gender": "Female",
+      "Grade": 4,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
     },
-    {
-      "Key": 9,
-      "Name": "단일 공격9",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 2,
-      "CastType": "EmemyCast",
-      "AttackType": "SingleAttack",
-      "AttackTypeValue": 1,
-      "AttackRatio": 1000,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
+    "1440001": {
+      "Name": "다래",
+      "SubName": null,
+      "Class": "Mage",
+      "#비고": 1,
+      "Gender": "Female",
+      "Grade": 4,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
     },
-    {
-      "Key": 10,
-      "Name": "단일 공격10",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 1,
-      "CastType": "EmemyCast",
-      "AttackType": "SingleAttack",
-      "AttackTypeValue": 1,
-      "AttackRatio": 1000,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
-    },
-    {
-      "Key": 11,
-      "Name": "광역 딜 1",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 4,
-      "CastType": "NoneCast",
-      "AttackType": "MultiAttack",
-      "AttackTypeValue": 3,
-      "AttackRatio": 650,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
-    },
-    {
-      "Key": 12,
-      "Name": "광역 딜 2",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 2,
-      "CastType": "NoneCast",
-      "AttackType": "MultiAttack",
-      "AttackTypeValue": 3,
-      "AttackRatio": 750,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
-    },
-    {
-      "Key": 13,
-      "Name": "광역 딜 3",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 3,
-      "CastType": "NoneCast",
-      "AttackType": "MultiAttack",
-      "AttackTypeValue": 3,
-      "AttackRatio": 750,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
-    },
-    {
-      "Key": 14,
-      "Name": "광역 딜 4",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 3,
-      "CastType": "NoneCast",
-      "AttackType": "MultiAttack",
-      "AttackTypeValue": 1,
-      "AttackRatio": 750,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
-    },
-    {
-      "Key": 15,
-      "Name": "광역 딜 5",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 3,
-      "CastType": "NoneCast",
-      "AttackType": "MultiAttack",
-      "AttackTypeValue": 2,
-      "AttackRatio": 750,
-      "HealType": "None",
-      "HealTypeValue": 0,
-      "HealRatio": 0
-    },
-    {
-      "Key": 16,
-      "Name": "자기 힐 턴스킬",
-      "IconKey": "",
-      "SkillType": "TurnSkill",
-      "Cost": 1,
-      "CastType": "NoneCast",
-      "AttackType": "None",
-      "AttackTypeValue": 0,
-      "AttackRatio": 0,
-      "HealType": "SingleHeal",
-      "HealTypeValue": 0,
-      "HealRatio": 0
-    },
-    {
-      "Key": 17,
-      "Name": "팀 전체 힐",
-      "IconKey": "",
-      "SkillType": "NormalSkill",
-      "Cost": 3,
-      "CastType": "TeamCast",
-      "AttackType": "None",
-      "AttackTypeValue": 0,
-      "AttackRatio": 0,
-      "HealType": "MultiHeal",
-      "HealTypeValue": 0,
-      "HealRatio": 0
+    "1450001": {
+      "Name": "마법소녀",
+      "SubName": null,
+      "Class": "MagicGirl",
+      "#비고": 1,
+      "Gender": "Female",
+      "Grade": 4,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
     }
-  ]
+  },
+  "CharacterStatTemplate": {
+    "1310001": {
+      "Grade": 3,
+      "Level": 1,
+      "AttackPower": 10000,
+      "BaseHP": 10000,
+      "DefencePower": 10000,
+      "Critical": 10,
+      "CriticalDamage": 15000
+    },
+    "1320001": {
+      "Grade": 3,
+      "Level": 1,
+      "AttackPower": 10000,
+      "BaseHP": 10000,
+      "DefencePower": 10000,
+      "Critical": 10,
+      "CriticalDamage": 15000
+    },
+    "1330001": {
+      "Grade": 3,
+      "Level": 1,
+      "AttackPower": 10000,
+      "BaseHP": 10000,
+      "DefencePower": 10000,
+      "Critical": 10,
+      "CriticalDamage": 15000
+    },
+    "1340001": {
+      "Grade": 3,
+      "Level": 1,
+      "AttackPower": 10000,
+      "BaseHP": 10000,
+      "DefencePower": 10000,
+      "Critical": 10,
+      "CriticalDamage": 15000
+    },
+    "1350001": {
+      "Grade": 3,
+      "Level": 1,
+      "AttackPower": 10000,
+      "BaseHP": 10000,
+      "DefencePower": 10000,
+      "Critical": 10,
+      "CriticalDamage": 15000
+    },
+    "1410001": {
+      "Grade": 4,
+      "Level": 1,
+      "AttackPower": 10000,
+      "BaseHP": 10000,
+      "DefencePower": 10000,
+      "Critical": 10,
+      "CriticalDamage": 15000
+    },
+    "1420001": {
+      "Grade": 4,
+      "Level": 1,
+      "AttackPower": 10000,
+      "BaseHP": 10000,
+      "DefencePower": 10000,
+      "Critical": 10,
+      "CriticalDamage": 15000
+    },
+    "1430001": {
+      "Grade": 4,
+      "Level": 1,
+      "AttackPower": 10000,
+      "BaseHP": 10000,
+      "DefencePower": 10000,
+      "Critical": 10,
+      "CriticalDamage": 15000
+    },
+    "1440001": {
+      "Grade": 4,
+      "Level": 1,
+      "AttackPower": 10000,
+      "BaseHP": 10000,
+      "DefencePower": 10000,
+      "Critical": 10,
+      "CriticalDamage": 15000
+    },
+    "1450001": {
+      "Grade": 4,
+      "Level": 1,
+      "AttackPower": 10000,
+      "BaseHP": 10000,
+      "DefencePower": 10000,
+      "Critical": 10,
+      "CriticalDamage": 15000
+    }
+  },
+  "SpiritTemplate": {
+    "2100001": {
+      "Name": "바람새",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_BirdWind",
+      "#비고": 1
+    },
+    "2100002": {
+      "Name": "파란 버섯",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_BlueMush",
+      "#비고": 2
+    },
+    "2100003": {
+      "Name": "페어리",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Fairy",
+      "#비고": 3
+    },
+    "2100004": {
+      "Name": "보자기 유령",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_GhostC",
+      "#비고": 4
+    },
+    "2100005": {
+      "Name": "우는 금붕어",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_GoldfishGirl",
+      "#비고": 5
+    },
+    "2100006": {
+      "Name": "도마뱀 꼬마",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_LizardBoy",
+      "#비고": 6
+    },
+    "2100007": {
+      "Name": "돌벌래",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_RockBeetle",
+      "#비고": 7
+    },
+    "2100008": {
+      "Name": "슬라임",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Slime",
+      "#비고": 8
+    },
+    "2100009": {
+      "Name": "눈벌래",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_SnowBeetle",
+      "#비고": 9
+    },
+    "2100010": {
+      "Name": "눈사람",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Snowman",
+      "#비고": 10
+    },
+    "2100011": {
+      "Name": "바람벌래",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_WindBeetle",
+      "#비고": 11
+    },
+    "2100012": {
+      "Name": "위습",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Wisp",
+      "#비고": 12
+    },
+    "2100013": {
+      "Name": "일반13",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Fairy",
+      "#비고": 13
+    },
+    "2100014": {
+      "Name": "일반14",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_GhostC",
+      "#비고": 14
+    },
+    "2100015": {
+      "Name": "일반15",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_GoldfishGirl",
+      "#비고": 15
+    },
+    "2100016": {
+      "Name": "일반16",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_LizardBoy",
+      "#비고": 16
+    },
+    "2100017": {
+      "Name": "일반17",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_RockBeetle",
+      "#비고": 17
+    },
+    "2100018": {
+      "Name": "일반18",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Slime",
+      "#비고": 18
+    },
+    "2100019": {
+      "Name": "일반19",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_SnowBeetle",
+      "#비고": 19
+    },
+    "2100020": {
+      "Name": "일반20",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Snowman",
+      "#비고": 20
+    },
+    "2100021": {
+      "Name": "일반21",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_WindBeetle",
+      "#비고": 21
+    },
+    "2100022": {
+      "Name": "일반22",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Wisp",
+      "#비고": 22
+    },
+    "2100023": {
+      "Name": "일반23",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_GoldfishGirl",
+      "#비고": 23
+    },
+    "2100024": {
+      "Name": "일반24",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_LizardBoy",
+      "#비고": 24
+    },
+    "2100025": {
+      "Name": "일반25",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_RockBeetle",
+      "#비고": 25
+    },
+    "2100026": {
+      "Name": "일반26",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Slime",
+      "#비고": 26
+    },
+    "2100027": {
+      "Name": "일반27",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_SnowBeetle",
+      "#비고": 27
+    },
+    "2100028": {
+      "Name": "일반28",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Snowman",
+      "#비고": 28
+    },
+    "2100029": {
+      "Name": "일반29",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_WindBeetle",
+      "#비고": 29
+    },
+    "2100030": {
+      "Name": "일반30",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Wisp",
+      "#비고": 30
+    },
+    "2200001": {
+      "Name": "개구리 마녀",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_FrogWitch",
+      "#비고": 1
+    },
+    "2200002": {
+      "Name": "하피 배달부",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_HarpyDelivery",
+      "#비고": 2
+    },
+    "2200003": {
+      "Name": "가죽 신발 속 쥐",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_LeatherBootMouse",
+      "#비고": 3
+    },
+    "2200004": {
+      "Name": "도마뱀 꼬마",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_LizardBoy",
+      "#비고": 4
+    },
+    "2200005": {
+      "Name": "리퍼",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_Reaper",
+      "#비고": 5
+    },
+    "2200006": {
+      "Name": "안아줘요",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_SheepHug",
+      "#비고": 6
+    },
+    "2200007": {
+      "Name": "곰방대 정령",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_SmokingWisp",
+      "#비고": 7
+    },
+    "2200008": {
+      "Name": "슬리임 마법사",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_StaffSlime",
+      "#비고": 8
+    },
+    "2200009": {
+      "Name": "슬라임 검사",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_SwordSlime",
+      "#비고": 9
+    },
+    "2200010": {
+      "Name": "희귀10",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_FrogWitch",
+      "#비고": 10
+    },
+    "2200011": {
+      "Name": "희귀11",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_HarpyDelivery",
+      "#비고": 11
+    },
+    "2200012": {
+      "Name": "희귀12",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_LeatherBootMouse",
+      "#비고": 12
+    },
+    "2200013": {
+      "Name": "희귀13",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_LizardBoy",
+      "#비고": 13
+    },
+    "2200014": {
+      "Name": "희귀14",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_Reaper",
+      "#비고": 14
+    },
+    "2200015": {
+      "Name": "희귀15",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_FrogWitch",
+      "#비고": 15
+    },
+    "2200016": {
+      "Name": "희귀16",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_HarpyDelivery",
+      "#비고": 16
+    },
+    "2200017": {
+      "Name": "희귀17",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_LeatherBootMouse",
+      "#비고": 17
+    },
+    "2200018": {
+      "Name": "희귀18",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_LizardBoy",
+      "#비고": 18
+    },
+    "2200019": {
+      "Name": "희귀19",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_Reaper",
+      "#비고": 19
+    },
+    "2200020": {
+      "Name": "희귀20",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_SheepHug",
+      "#비고": 20
+    },
+    "2200021": {
+      "Name": "희귀21",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_SmokingWisp",
+      "#비고": 21
+    },
+    "2200022": {
+      "Name": "희귀22",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_StaffSlime",
+      "#비고": 22
+    },
+    "2200023": {
+      "Name": "희귀23",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_SwordSlime",
+      "#비고": 23
+    },
+    "2200024": {
+      "Name": "희귀24",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_LizardBoy",
+      "#비고": 24
+    },
+    "2200025": {
+      "Name": "희귀25",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_Reaper",
+      "#비고": 25
+    },
+    "2200026": {
+      "Name": "희귀26",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_SheepHug",
+      "#비고": 26
+    },
+    "2200027": {
+      "Name": "희귀27",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_SmokingWisp",
+      "#비고": 27
+    },
+    "2200028": {
+      "Name": "희귀28",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_StaffSlime",
+      "#비고": 28
+    },
+    "2200029": {
+      "Name": "희귀29",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_SwordSlime",
+      "#비고": 29
+    },
+    "2200030": {
+      "Name": "희귀30",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_StaffSlime",
+      "#비고": 30
+    },
+    "2300001": {
+      "Name": "고양이 암살자",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_Catssassin",
+      "#비고": 1
+    },
+    "2300002": {
+      "Name": "물고기 왕",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_FishKing",
+      "#비고": 2
+    },
+    "2300003": {
+      "Name": "고블린 마법사",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_GoblinMage",
+      "#비고": 3
+    },
+    "2300004": {
+      "Name": "하피 저격수",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_HarpyStrike",
+      "#비고": 4
+    },
+    "2300005": {
+      "Name": "밤 올빼미",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_NightClock",
+      "#비고": 5
+    },
+    "2300006": {
+      "Name": "슬라임 기사",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_SlimeKnight",
+      "#비고": 6
+    },
+    "2300007": {
+      "Name": "슬라임 마녀",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_SlimeMage",
+      "#비고": 7
+    },
+    "2300008": {
+      "Name": "슬라임 공주",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_SlimePrincess",
+      "#비고": 8
+    },
+    "2300009": {
+      "Name": "생쥐 기사",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_TeaSpoonKnight",
+      "#비고": 9
+    },
+    "2300010": {
+      "Name": "이상한 토끼",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 10
+    },
+    "2300011": {
+      "Name": "서사11",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 11
+    },
+    "2300012": {
+      "Name": "서사12",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 12
+    },
+    "2300013": {
+      "Name": "서사13",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 13
+    },
+    "2300014": {
+      "Name": "서사14",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 14
+    },
+    "2300015": {
+      "Name": "서사15",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 15
+    },
+    "2300016": {
+      "Name": "서사16",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 16
+    },
+    "2300017": {
+      "Name": "서사17",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 17
+    },
+    "2300018": {
+      "Name": "서사18",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 18
+    },
+    "2300019": {
+      "Name": "서사19",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 19
+    },
+    "2300020": {
+      "Name": "서사20",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 20
+    },
+    "2300021": {
+      "Name": "서사21",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 21
+    },
+    "2300022": {
+      "Name": "서사22",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 22
+    },
+    "2300023": {
+      "Name": "서사23",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 23
+    },
+    "2300024": {
+      "Name": "서사24",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 24
+    },
+    "2300025": {
+      "Name": "서사25",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 25
+    },
+    "2300026": {
+      "Name": "서사26",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 26
+    },
+    "2300027": {
+      "Name": "서사27",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 27
+    },
+    "2300028": {
+      "Name": "서사28",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 28
+    },
+    "2300029": {
+      "Name": "서사29",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 29
+    },
+    "2300030": {
+      "Name": "서사30",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_WanderingRabbit",
+      "#비고": 30
+    },
+    "2400001": {
+      "Name": "화룡",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_RedDragon",
+      "#비고": 1
+    },
+    "2400002": {
+      "Name": "리치",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich",
+      "#비고": 2
+    },
+    "2400003": {
+      "Name": "전설3",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich",
+      "#비고": 3
+    },
+    "2400004": {
+      "Name": "전설4",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich",
+      "#비고": 4
+    },
+    "2400005": {
+      "Name": "전설5",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich",
+      "#비고": 5
+    },
+    "2400006": {
+      "Name": "전설6",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich",
+      "#비고": 6
+    },
+    "2400007": {
+      "Name": "전설7",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich",
+      "#비고": 7
+    },
+    "2400008": {
+      "Name": "전설8",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich",
+      "#비고": 8
+    },
+    "2400009": {
+      "Name": "전설9",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich",
+      "#비고": 9
+    },
+    "2400010": {
+      "Name": "전설10",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich",
+      "#비고": 10
+    },
+    "2400011": {
+      "Name": "전설11",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich",
+      "#비고": 11
+    },
+    "2400012": {
+      "Name": "전설12",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich",
+      "#비고": 12
+    },
+    "2400013": {
+      "Name": "전설13",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich",
+      "#비고": 13
+    },
+    "2400014": {
+      "Name": "전설14",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich",
+      "#비고": 14
+    },
+    "2400015": {
+      "Name": "전설15",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich",
+      "#비고": 15
+    }
+  },
+  "SkillTemplate": {
+    "21000090": {
+      "Name": "(눈벌래) 눈눈",
+      "IconKey": "Spirits_Normal_SnowBeetle",
+      "SkillType": 0,
+      "Cost": 1,
+      "CastType": 1,
+      "#비고": "단일 회복",
+      "AttackType": 0,
+      "AttackTypeValue": 0,
+      "AttackRatio": 0,
+      "HealType": 1,
+      "HealTypeValue": 0,
+      "HealRatio": 220
+    },
+    "22000060": {
+      "Name": "(안아줘요) 안아줄게요",
+      "IconKey": "Spirits_Rare_SheepHug",
+      "SkillType": 0,
+      "Cost": 3,
+      "CastType": 1,
+      "#비고": "콤보 회복",
+      "AttackType": 0,
+      "AttackTypeValue": 0,
+      "AttackRatio": 0,
+      "HealType": 3,
+      "HealTypeValue": 1,
+      "HealRatio": 180
+    },
+    "22000070": {
+      "Name": "(곰방대 정령) 담배피기",
+      "IconKey": "Spirits_Rare_SmokingWisp",
+      "SkillType": 0,
+      "Cost": 2,
+      "CastType": 1,
+      "#비고": "단일 회복",
+      "AttackType": 4,
+      "AttackTypeValue": 1,
+      "AttackRatio": 150,
+      "HealType": 1,
+      "HealTypeValue": 0,
+      "HealRatio": 240
+    },
+    "23000010": {
+      "Name": "(고양이 암살자) 두번 찌르기",
+      "IconKey": "Spirits_Epic_Catssassin",
+      "SkillType": 0,
+      "Cost": 3,
+      "CastType": 0,
+      "#비고": "회복 안함",
+      "AttackType": 3,
+      "AttackTypeValue": 1,
+      "AttackRatio": 140,
+      "HealType": 0,
+      "HealTypeValue": 0,
+      "HealRatio": 0
+    },
+    "23000020": {
+      "Name": "(물고기 왕) 물의 축복",
+      "IconKey": "Spirits_Epic_FishKing",
+      "SkillType": 0,
+      "Cost": 5,
+      "CastType": 2,
+      "#비고": "광역 회복",
+      "AttackType": 0,
+      "AttackTypeValue": 0,
+      "AttackRatio": 0,
+      "HealType": 2,
+      "HealTypeValue": 0,
+      "HealRatio": 300
+    },
+    "23000030": {
+      "Name": "(고블린 마법사) 파이어볼",
+      "IconKey": "Spirits_Epic_GoblinMage",
+      "SkillType": 0,
+      "Cost": 5,
+      "CastType": 0,
+      "#비고": "회복 안함",
+      "AttackType": 4,
+      "AttackTypeValue": 2,
+      "AttackRatio": 240,
+      "HealType": 0,
+      "HealTypeValue": 0,
+      "HealRatio": 0
+    },
+    "23000040": {
+      "Name": "(하피 저격수) 스나이핑",
+      "IconKey": "Spirits_Epic_HarpyStrike",
+      "SkillType": 0,
+      "Cost": 4,
+      "CastType": 0,
+      "#비고": "회복 안함",
+      "AttackType": 1,
+      "AttackTypeValue": 0,
+      "AttackRatio": 350,
+      "HealType": 0,
+      "HealTypeValue": 0,
+      "HealRatio": 0
+    },
+    "23000050": {
+      "Name": "(밤 올빼미) 나이트클록",
+      "IconKey": "Spirits_Epic_NightClock",
+      "SkillType": 0,
+      "Cost": 3,
+      "CastType": 0,
+      "#비고": "무작위 회복",
+      "AttackType": 3,
+      "AttackTypeValue": 1,
+      "AttackRatio": 120,
+      "HealType": 4,
+      "HealTypeValue": 2,
+      "HealRatio": 120
+    },
+    "23000060": {
+      "Name": "(슬라임 기사) 투구쪼개기",
+      "IconKey": "Spirits_Epic_SlimeKnight",
+      "SkillType": 0,
+      "Cost": 2,
+      "CastType": 0,
+      "#비고": "회복 안함",
+      "AttackType": 1,
+      "AttackTypeValue": 0,
+      "AttackRatio": 180,
+      "HealType": 0,
+      "HealTypeValue": 0,
+      "HealRatio": 0
+    },
+    "23000070": {
+      "Name": "(슬라임 마녀) 매직 미사일",
+      "IconKey": "Spirits_Epic_SlimeMage",
+      "SkillType": 0,
+      "Cost": 2,
+      "CastType": 0,
+      "#비고": "회복 안함",
+      "AttackType": 3,
+      "AttackTypeValue": 1,
+      "AttackRatio": 150,
+      "HealType": 0,
+      "HealTypeValue": 0,
+      "HealRatio": 0
+    },
+    "23000080": {
+      "Name": "(슬라임 공주) 블레싱",
+      "IconKey": "Spirits_Epic_SlimePrincess",
+      "SkillType": 0,
+      "Cost": 4,
+      "CastType": 1,
+      "#비고": "단일 회복",
+      "AttackType": 0,
+      "AttackTypeValue": 0,
+      "AttackRatio": 0,
+      "HealType": 1,
+      "HealTypeValue": 2,
+      "HealRatio": 350
+    },
+    "23000090": {
+      "Name": "(생쥐 기사) 더블 스래쉬",
+      "IconKey": "Spirits_Epic_TeaSpoonKnight",
+      "SkillType": 0,
+      "Cost": 3,
+      "CastType": 0,
+      "#비고": "회복 안함",
+      "AttackType": 4,
+      "AttackTypeValue": 2,
+      "AttackRatio": 180,
+      "HealType": 0,
+      "HealTypeValue": 0,
+      "HealRatio": 0
+    },
+    "23000100": {
+      "Name": "(이상한 토끼) 토끼펀치",
+      "IconKey": "Spirits_Epic_WanderingRabbit",
+      "SkillType": 0,
+      "Cost": 1,
+      "CastType": 0,
+      "#비고": "회복 안함",
+      "AttackType": 1,
+      "AttackTypeValue": 0,
+      "AttackRatio": 220,
+      "HealType": 0,
+      "HealTypeValue": 0,
+      "HealRatio": 0
+    },
+    "24000010": {
+      "Name": "(화룡) 파이어 브레스",
+      "IconKey": "Spirits_Legendary_RedDragon",
+      "SkillType": 0,
+      "Cost": 5,
+      "CastType": 2,
+      "#비고": "회복 안함",
+      "AttackType": 2,
+      "AttackTypeValue": 0,
+      "AttackRatio": 300,
+      "HealType": 0,
+      "HealTypeValue": 0,
+      "HealRatio": 0
+    },
+    "24000020": {
+      "Name": "(리치) 리치 터치",
+      "IconKey": "Spirits_Legendary_TheLich",
+      "SkillType": 0,
+      "Cost": 4,
+      "CastType": 2,
+      "#비고": "무작위 회복",
+      "AttackType": 2,
+      "AttackTypeValue": 0,
+      "AttackRatio": 220,
+      "HealType": 4,
+      "HealTypeValue": 2,
+      "HealRatio": 120
+    }
+  },
+  "참고타입": {
+    "None": {
+      "GenderType": "Asexual",
+      "CastType": 0,
+      "AttackType": 0,
+      "HealType": 0
+    },
+    "Guardian": {
+      "GenderType": "Male",
+      "CastType": 1,
+      "AttackType": 1,
+      "HealType": 1
+    },
+    "Warrior": {
+      "GenderType": "Female",
+      "CastType": 2,
+      "AttackType": 2,
+      "HealType": 2
+    },
+    "Shooter": {
+      "GenderType": null,
+      "CastType": null,
+      "AttackType": 3,
+      "HealType": 3
+    },
+    "Mage": {
+      "GenderType": null,
+      "CastType": null,
+      "AttackType": 4,
+      "HealType": 4
+    },
+    "MagicGirl": {
+      "GenderType": null,
+      "CastType": null,
+      "AttackType": null,
+      "HealType": null
+    }
+  }
 }

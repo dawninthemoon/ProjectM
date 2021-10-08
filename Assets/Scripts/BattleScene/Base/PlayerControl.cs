@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
     [SerializeField] Mascot _mascot = null;
-    [SerializeField] BattleEntity[] _allies = null;
+    [SerializeField] CharacterEntity[] _allies = null;
     [SerializeField] SkillDeck _cardDeck = null;
     List<Skill> _skillsInHand;
     public List<Skill> SkillsInHand { get { return _skillsInHand;} }
     public int CurrentCost { get; set; }
     private float[] _fillAmounts;
-    private List<BattleEntity> _allyList;
 
     public void Initialize() {
         _cardDeck.Initialize();
         _skillsInHand = new List<Skill>();
-        _allyList = new List<BattleEntity>(4);
         _fillAmounts = new float[3];
 
         for (int i = 0; i < _allies.Length; ++i) {
@@ -66,21 +64,21 @@ public class PlayerControl : MonoBehaviour {
         return _fillAmounts;
     }
 
-    public List<BattleEntity> GetRandomAllies(int targetCounts, BattleEntity ignoreEntity = null) {
+    public List<CharacterEntity> GetRandomAllies(int targetCounts, BattleEntity ignoreEntity = null) {
         int numOfAllies = _allies.Length;
-        _allyList = _allies.ToList();
+        var allyList = _allies.ToList();
 
         if (ignoreEntity) {
-            _allyList.Remove(ignoreEntity);
+            allyList.Remove(ignoreEntity as CharacterEntity);
         }
 
         if (targetCounts < numOfAllies) {
             int diff = numOfAllies - targetCounts;
             for (int i = 0; i < diff; ++i) {
-                int removeIndex = Random.Range(0, _allyList.Count);
-                _allyList.RemoveAt(removeIndex);
+                int removeIndex = Random.Range(0, allyList.Count);
+                allyList.RemoveAt(removeIndex);
             }
         }
-        return _allyList;
+        return allyList;
     }
 }

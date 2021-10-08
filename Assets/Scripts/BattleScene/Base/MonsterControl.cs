@@ -6,10 +6,8 @@ public class MonsterControl : MonoBehaviour {
     [SerializeField] MonsterEntity[] _enemies = null;
     [SerializeField] LayerMask _layerMask;
     private float[] _fillAmounts;
-    private List<MonsterEntity> _enemyList;
 
     public void Initialize() {
-        _enemyList = new List<MonsterEntity>();
         _fillAmounts = new float[4];
 
         int enemyCounts = _enemies.Length;
@@ -44,19 +42,19 @@ public class MonsterControl : MonoBehaviour {
 
     public List<MonsterEntity> GetRandomEnemies(int targetCounts, BattleEntity ignoreEntity = null) {
         int numOfAllies = _enemies.Length;
-        _enemyList = _enemies.ToList();
+        var enemyList = _enemies.ToList();
         
         if (ignoreEntity) {
-            _enemyList.Remove(ignoreEntity as MonsterEntity);
+            enemyList.Remove(ignoreEntity as MonsterEntity);
         }
 
         if (targetCounts < numOfAllies) {
             int diff = numOfAllies - targetCounts;
             for (int i = 0; i < diff; ++i) {
-                int removeIndex = Random.Range(0, _enemyList.Count);
-                _enemyList.RemoveAt(removeIndex);
+                int removeIndex = Random.Range(0, enemyList.Count);
+                enemyList.RemoveAt(removeIndex);
             }
         }
-        return _enemyList;
+        return enemyList;
     }
 }
