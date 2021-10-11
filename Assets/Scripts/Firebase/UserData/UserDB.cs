@@ -136,6 +136,13 @@ namespace FBControl
             propertyReference.SetRawJsonValueAsync( userData.GetCharJsonArray().ToString() );
         }
 
+        public void SetSpilitData()
+        {
+            DatabaseReference propertyReference = databaseReference.Child("spiritData");
+            propertyReference.SetRawJsonValueAsync( userData.UserSpiritDataList.ToJsonObject().ToString() );
+        }
+      
+      
         ///<summary> 유저 데이터의 하위 프로퍼티 찾아서 조정 </summary>
         public void SaveChildrenData( object index, params string[] parents )
         {

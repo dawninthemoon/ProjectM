@@ -8,12 +8,24 @@ namespace Data
     public class SpiritData : PublicDataBase
     {
         private int key;
+        public int Key
+        {
+            get{ return key; }
+        }
         private string name;
+        public string Name
+        {
+            get{ return name; }
+        }
         private Character.EClassType eClassType;
         private int grade;
         private string skillCard1Key;
         private string passiveSkillKey;
         private string iconName;
+        public string IconName
+        {
+            get{ return iconName; }
+        }
 
         public override void Parse(JSONObject jsonObject)
         {

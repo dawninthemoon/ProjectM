@@ -29,9 +29,9 @@ namespace OutGame
 
         public void SetCard( Data.Character character )
         {
-            characterImage.sprite = characterAtlas.GetSprite( string.Format("Character_{0}", character.Key) );
-            characterImage.rectTransform.pivot = new Vector2( (float)characterImage.sprite.pivot.x / characterImage.sprite.texture.width, (float)characterImage.sprite.pivot.y / characterImage.sprite.texture.height );
-            characterImage.rectTransform.position = characterCenter.position;
+            //characterImage.sprite = characterAtlas.GetSprite( string.Format("Character_{0}", character.Key) );
+            //characterImage.rectTransform.pivot = new Vector2( (float)characterImage.sprite.pivot.x / characterImage.sprite.texture.width, (float)characterImage.sprite.pivot.y / characterImage.sprite.texture.height );
+            //characterImage.rectTransform.position = characterCenter.position;
 
             nameText.text = character.Name;
             stars.SetStar( character.Grade );

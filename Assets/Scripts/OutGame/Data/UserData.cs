@@ -43,6 +43,15 @@ public class UserData
         get{ return userItemDataContainer; }
     }
 
+    private UserSpiritDataList userSpiritDataList = new UserSpiritDataList();
+    public UserSpiritDataList UserSpiritDataList
+    {
+        get
+        { 
+            return userSpiritDataList; 
+        }
+    }
+
     private int[] userDeckData = new int[4];
     public int[] UserDeckData
     {
@@ -82,6 +91,8 @@ public class UserData
         jsonResult.Add("deck", GetDeckJsonArray() );
 
         jsonResult.Add("itemData", userItemDataContainer.ToJsonArray() );
+
+        jsonResult.Add("spiritData", userSpiritDataList.ToJsonObject() );
 
         return jsonResult;
     }
@@ -157,9 +168,10 @@ public class UserData
         }
 
         if( jsonObject.ContainsKey("itemData") )
-        {
             userItemDataContainer.Parse( jsonObject.GetArray("itemData") );
-        }
+
+        if( jsonObject.ContainsKey("spiritData") )
+            userSpiritDataList.SetJsonObject( jsonObject.GetArray("spiritData") );
     }
 
     public void GetCharacter( int index )
