@@ -10,10 +10,18 @@ public class SpiritIcon : MonoBehaviour
     public void SetSpirit( int index )
     {
         spritIcon.sprite = SpiritIconSpriteControl.Instance.GetSpiritSprite( index );
+        spritIcon.color = Color.white;
+    }
+
+    public void SetNull()
+    {
+        spritIcon.sprite = null;
+        spritIcon.color = Color.clear;
     }
 
     public void SetSpirit( Data.SpiritData spiritData )
     {
         spritIcon.sprite = SpiritIconSpriteControl.Instance.GetSpiritSprite( spiritData.Key );
+        spritIcon.color = Color.white;
     }
 }

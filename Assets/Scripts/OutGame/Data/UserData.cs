@@ -52,7 +52,7 @@ public class UserData
         }
     }
 
-    private int[] userDeckData = new int[4];
+    private int[] userDeckData = new int[3];
     public int[] UserDeckData
     {
         get{ return userDeckData; }

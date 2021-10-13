@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Boomlagoon.JSON;
+using FBControl;
 
 public class UserSpiritData
 {
@@ -35,6 +36,7 @@ public class UserSpiritData
 
 public class UserSpiritDataList
 {
+    private static readonly string USER_SPIRIT_FORMAT = "{0}_SLOT_USER_SPIRIT";
     private List<UserSpiritData> data = new List<UserSpiritData>();
     public List<UserSpiritData> Data
     {
@@ -60,5 +62,29 @@ public class UserSpiritDataList
 
             data.Add( spilitData );
         }
+    }
+
+    public void SetLevel( int index, int level )
+    {
+        for( int i = 0; i < data.Count; ++i )
+        {
+            if( data[i].Index == index )
+            {
+                data[i].Lv = level;
+                FBControl.FirebaseManager.Instance.UserDB.SaveChildrenData( level, "spiritData", i.ToString(), "Lv" );
+                break;
+            }
+        }
+
+    }
+
+    public void SetUserSlot( int index, int spilitIndex )
+    {
+        FirebaseManager.Instance.UserDB.SaveLocalData( string.Format(USER_SPIRIT_FORMAT, index), spilitIndex );
+    }
+    
+    public int GetUserSlot( int index )
+    {
+        return FirebaseManager.Instance.UserDB.GetLocalIntigerData( string.Format(USER_SPIRIT_FORMAT, index) );
     }
 }

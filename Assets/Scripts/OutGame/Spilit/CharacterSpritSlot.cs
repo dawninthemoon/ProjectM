@@ -19,6 +19,11 @@ public class CharacterSpritSlot : MonoBehaviour
         spiritIcon.SetSpirit( spiritData );
     }
 
+    public void SetNull()
+    {
+        spiritIcon.SetNull();
+    }
+
     public void ActiveButton()
     {
         button.gameObject.SetActive( true );
