@@ -46,7 +46,7 @@ SpriteAtlas:
     - {fileID: 102900000, guid: c45f7da686ae96a46b9accd6b2de4752, type: 3}
     - {fileID: 102900000, guid: 06d72497c8942e54d9dc40317d892312, type: 3}
     - {fileID: 102900000, guid: 547f28d6efeaefc4184a11ec6c07171c, type: 3}
-    totalSpriteSurfaceArea: 1572864
+    totalSpriteSurfaceArea: 1523712
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -84,7 +84,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 6f1a7894a76b3de44b4cfc844f71f189, type: 3}
   - {fileID: 21300000, guid: 7b469ad499e2a2f4aa743771efd182c5, type: 3}
   - {fileID: 21300000, guid: f0fe1cd4882808d4e82356563369b611, type: 3}
-  - {fileID: 21300000, guid: a16f6315d7b290d4483927975a09fdcc, type: 3}
   - {fileID: 21300000, guid: feed6725072c26a4eb5ead243c3a5422, type: 3}
   - {fileID: 21300000, guid: 355febf5224aeb845be69ce3c5bed948, type: 3}
   - {fileID: 21300000, guid: 731aec06b434c3243850a049d69c43f3, type: 3}
@@ -105,7 +104,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 409d5589bc396fe409c9f6bf031fb120, type: 3}
   - {fileID: 21300000, guid: d268ac99d0fc0b547a7d98ab22352454, type: 3}
   - {fileID: 21300000, guid: 3df80eb9c6ada284989c7e615c00bb67, type: 3}
-  - {fileID: 21300000, guid: a646e1c96233a3447b85889e6172ec22, type: 3}
   - {fileID: 21300000, guid: 143a6ce94eb9d7f41932ab981ff54539, type: 3}
   - {fileID: 21300000, guid: c334d04af3765424f90d989bb17e5f1a, type: 3}
   - {fileID: 21300000, guid: 0295184a556f08049bfd13b14c39441f, type: 3}
@@ -129,7 +127,6 @@ SpriteAtlas:
   - {fileID: 21300000, guid: b961658c7c73be74cbd149517641c65f, type: 3}
   - {fileID: 21300000, guid: 09ba66bc7c97f40438d5746ccea8a8f0, type: 3}
   - {fileID: 21300000, guid: cf39e0fc569381b47a839c2f782d5e41, type: 3}
-  - {fileID: 21300000, guid: 49c7c5fc3a87e6d47a19582470e4be81, type: 3}
   - {fileID: 21300000, guid: 87a16f1d6b3034d4c9c9c259628083e5, type: 3}
   - {fileID: 21300000, guid: 259e023de79114d42bd9d293a5ea9e38, type: 3}
   - {fileID: 21300000, guid: 27d5457d49ab08c48ad23d2ef3482d4f, type: 3}
@@ -181,7 +178,6 @@ SpriteAtlas:
   - MAGICALGIRL001_HIT1
   - MAGICALGIRL001_IDLE3
   - MagicalGirl001_LoseLoop3
-  - MAGICENGINEER001_IDLE2
   - MAGICALGIRL001_IDLE2
   - MAGE001_LOSE6
   - MAGICALGIRL001_DEAD4
@@ -202,7 +198,6 @@ SpriteAtlas:
   - MAGE001_LOSE5
   - MAGICALGIRL001_LOSE1
   - MAGE001_HIT2
-  - MAGE001_IDLE1
   - MAGICENGINEER001_LOSE1
   - MAGICALGIRL001_WIN2
   - MAGICALGIRL001_ATTACK1
@@ -226,7 +221,6 @@ SpriteAtlas:
   - MAGE001_HIT1
   - MAGICENGINEER001_LOSE3
   - MAGICENGINEER001_IDLE1
-  - MAGICALGIRL001_IDLE1
   - MAGICALGIRL001_DEAD6
   - MAGE001_WIN3
   - MAGICENGINEER001_ATTACK4

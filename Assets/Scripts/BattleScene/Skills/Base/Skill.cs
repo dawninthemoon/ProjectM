@@ -9,6 +9,7 @@ using RieslingUtils;
 public class Skill : MonoBehaviour {
     [SerializeField] SpriteRenderer _renderer = null;
     [SerializeField] SpriteRenderer _iconRenderer = null;
+    [SerializeField] SpriteRenderer _characterIconRenderer = null;
     [SerializeField] Transform _leftTransform = null;
     private MeshRenderer _costTextRenderer;
     [SerializeField] private TMP_Text _costText = null;
@@ -32,6 +33,9 @@ public class Skill : MonoBehaviour {
         CardWidth = (transform.position.x - _leftTransform.position.x) * 2.5f;
         _costText.text = _skillInfo.SkillData.Cost.ToString();
         _iconRenderer.sprite = ResourceManager.GetInstance().GetSprite("SkillIcon/" + _skillInfo.SkillData.IconKey);
+
+        string characterSubName = Data.CharacterDataParser.Instance.GetCharacter(info.CharacterKey).SubName;
+        _characterIconRenderer.sprite = ResourceManager.GetInstance().GetSprite(characterSubName);
     }
 
     public int GetRequireCost() => _skillInfo.SkillData.Cost;
@@ -179,17 +183,17 @@ public class Skill : MonoBehaviour {
         _originOrder = order;
 
         _renderer.sortingLayerName = sortingLayerName;
-        _iconRenderer.sortingLayerName = sortingLayerName;
+        _iconRenderer.sortingLayerName = _characterIconRenderer.sortingLayerName =  sortingLayerName;
 
         _renderer.sortingOrder = order;
-        _iconRenderer.sortingOrder = order + 1;
+        _iconRenderer.sortingOrder = _characterIconRenderer.sortingOrder = order + 1;
 
         _costTextRenderer.sortingOrder = order + 2;
     }
 
     public void SetMostFrontOrder(bool isEnlarge) {
         _renderer.sortingOrder = isEnlarge ? 100 : _originOrder;
-        _iconRenderer.sortingOrder = isEnlarge ? 101 : _originOrder + 1;
+        _iconRenderer.sortingOrder = _characterIconRenderer.sortingOrder = isEnlarge ? 101 : _originOrder + 1;
         _costTextRenderer.sortingOrder = isEnlarge ? 102 : _originOrder + 2;
     }
 
