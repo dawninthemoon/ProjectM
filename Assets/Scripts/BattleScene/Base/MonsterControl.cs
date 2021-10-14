@@ -14,7 +14,7 @@ public class MonsterControl : MonoBehaviour {
 
         int enemyCounts = _currentMonsters.Count;
         for (int i = 0; i < enemyCounts; ++i) {
-            _currentMonsters[i].Initialize();
+            _currentMonsters[i].Initialize(i);
         }
     }
 
@@ -40,7 +40,8 @@ public class MonsterControl : MonoBehaviour {
             _fillAmounts[i] = 0f;
         }
         for (int i = 0; i <  _currentMonsters.Count; ++i) {
-            _fillAmounts[i] =  _currentMonsters[i].GetHPPercent(); 
+            var monster = _currentMonsters[i];
+            _fillAmounts[monster.Order] = monster.GetHPPercent(); 
         }
         return _fillAmounts;
     }
