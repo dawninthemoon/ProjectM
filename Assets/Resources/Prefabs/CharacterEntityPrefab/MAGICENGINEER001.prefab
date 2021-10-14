@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2493137851520596583}
   - component: {fileID: 2493137851520596577}
   - component: {fileID: 2493137851520596576}
+  - component: {fileID: 6971885756237871995}
   m_Layer: 7
   m_Name: MAGICENGINEER001
   m_TagString: Untagged
@@ -98,6 +99,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &6971885756237871995
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493137851520596582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4, z: 0.2}
+  m_Center: {x: 0.1, y: 2, z: 0.1}
 --- !u!1 &2493137852665286020
 GameObject:
   m_ObjectHideFlags: 0

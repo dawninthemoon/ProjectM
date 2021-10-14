@@ -4,6 +4,7 @@ using UnityEngine;
 using KeyPair = System.Collections.Generic.KeyValuePair<int, int>;
 
 public class PlayerControl : MonoBehaviour {
+    [SerializeField] private LayerMask _layerMask;
     [SerializeField] private int[] _characterKeys = null;
     [SerializeField] private Mascot _mascot = null;
     [SerializeField] private Vector3[] _initialPosition = null;
@@ -99,21 +100,57 @@ public class PlayerControl : MonoBehaviour {
         return _fillAmounts;
     }
 
-    public List<CharacterEntity> GetRandomAllies(int targetCounts, BattleEntity ignoreEntity = null) {
+    public CharacterEntity GetSelectedCharacter(Vector3 touchPos) {
+        CharacterEntity target = null;
+        int enemyCounts = _characters.Length;
+        for (int i = 0; i < enemyCounts; ++i) {
+            if (_characters[i].IsOverlapped(touchPos, _layerMask)) {
+                target = _characters[i];
+            }
+        }
+        return target;
+    }
+
+    public List<CharacterEntity> GetCharacterByOrder(int targetCounts, BattleEntity ignoreEntity = null) {
         int numOfAllies = _characters.Length;
-        var allyList = _characters.ToList();
+        int startIndex = 0;
+        List<CharacterEntity> characterList = new List<CharacterEntity>();
+        
+        for (int i = 0; i < numOfAllies; ++i) {
+            if (ignoreEntity == _characters[i]) {
+                startIndex = i;
+                break;
+            }
+        }
+
+        for (int i = startIndex; i < targetCounts; i = (i + 1) % numOfAllies) {
+            if (_characters[i] == ignoreEntity) break;
+            characterList.Add(_characters[i]);
+            
+        }
+
+        return characterList;
+    }
+
+    public List<CharacterEntity> GetAllCharacters() {
+        return _characters.ToList();
+    }
+
+    public List<CharacterEntity> GetRandomCharacter(int targetCounts, BattleEntity ignoreEntity = null) {
+        int numOfAllies = _characters.Length;
+        var characterList = _characters.ToList();
 
         if (ignoreEntity) {
-            allyList.Remove(ignoreEntity as CharacterEntity);
+            characterList.Remove(ignoreEntity as CharacterEntity);
         }
 
         if (targetCounts < numOfAllies) {
-            int diff = numOfAllies - targetCounts;
+            int diff = Mathf.Max(0, numOfAllies - targetCounts);
             for (int i = 0; i < diff; ++i) {
-                int removeIndex = Random.Range(0, allyList.Count);
-                allyList.RemoveAt(removeIndex);
+                int removeIndex = Random.Range(0, characterList.Count);
+                characterList.RemoveAt(removeIndex);
             }
         }
-        return allyList;
+        return characterList;
     }
 }

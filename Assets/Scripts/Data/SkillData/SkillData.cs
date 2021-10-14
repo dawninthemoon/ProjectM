@@ -34,7 +34,7 @@ namespace Data
         None,
         SingleAttack,
         MultiAttack,
-        SideTurnAttack, // 대상과 대상보다 순서가 1 많거나 적은 몬스터(CastType이 0이어야 함)
+        ComboAttack, // 대상과 대상보다 순서가 1 많거나 적은 몬스터(CastType이 0이어야 함)
         RandomAttack
     }
     public enum HealType
@@ -42,7 +42,7 @@ namespace Data
         None,
         SingleHeal,
         MultiHeal,
-        SideTurnHeal,
+        ComboHeal,
         RandomHeal
     }
 

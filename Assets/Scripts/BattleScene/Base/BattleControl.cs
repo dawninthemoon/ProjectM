@@ -75,6 +75,9 @@ public class BattleControl : MonoBehaviour {
         if (usedSkillIndex != -1) {
             if (canSelectTarget) {
                 SelectedTarget = _enemyControl.GetSelectedEnemy(touchPosition);
+                if (!SelectedTarget) {
+                    SelectedTarget = _playerControl.GetSelectedCharacter(touchPosition);
+                }
                 if (!SelectedTarget) return;
             }
             _playerControl.UseSkill(hand[usedSkillIndex], this);

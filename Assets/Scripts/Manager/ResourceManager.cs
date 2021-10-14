@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ResourceManager : Singleton<ResourceManager> {
+    private static readonly string SpritePath = "Sprites/";
     private static readonly string PrefabPath = "Prefabs/";
     private static readonly string SkillPrefabName = "SkillPrefab";
     Dictionary<string, GameObject> _cachedPrefabs;
@@ -33,7 +34,7 @@ public class ResourceManager : Singleton<ResourceManager> {
 
     public Sprite GetSprite(string path) {
         Sprite sprite = null;
-        sprite = Resources.Load<Sprite>(path);
+        sprite = Resources.Load<Sprite>(SpritePath + path);
         return sprite;
     }
 }

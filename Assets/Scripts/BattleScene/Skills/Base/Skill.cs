@@ -8,6 +8,7 @@ using RieslingUtils;
 
 public class Skill : MonoBehaviour {
     [SerializeField] SpriteRenderer _renderer = null;
+    [SerializeField] SpriteRenderer _iconRenderer = null;
     [SerializeField] Transform _leftTransform = null;
     private MeshRenderer _costTextRenderer;
     [SerializeField] private TMP_Text _costText = null;
@@ -30,6 +31,7 @@ public class Skill : MonoBehaviour {
         transform.localScale = new Vector3(0.3f, 0.3f, 1f);
         CardWidth = (transform.position.x - _leftTransform.position.x) * 2.5f;
         _costText.text = _skillInfo.SkillData.Cost.ToString();
+        _iconRenderer.sprite = ResourceManager.GetInstance().GetSprite("SkillIcon/" + _skillInfo.SkillData.IconKey);
     }
 
     public int GetRequireCost() => _skillInfo.SkillData.Cost;
@@ -83,20 +85,26 @@ public class Skill : MonoBehaviour {
             finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
             AttackTarget(selectedTarget, finalDamage);
             break;
-        case AttackType.SideTurnAttack:
-        case AttackType.MultiAttack:
-            if (data.AttackType == AttackType.SideTurnAttack) {
+        case AttackType.ComboAttack:
+            if (data.AttackType == AttackType.ComboAttack) {
                 finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
                 AttackTarget(selectedTarget, finalDamage);
             }
-            var enemies = battleControl.EnemyCtrl.GetRandomEnemies(targetCounts, selectedTarget);
+            var eList = battleControl.EnemyCtrl.GetMonsterByOrder(targetCounts, selectedTarget);
+            foreach (var e in eList) {
+                finalDamage = Mathf.FloorToInt(baseDamage / e.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
+                AttackTarget(e, finalDamage);
+            }
+            break;
+        case AttackType.MultiAttack:
+            var enemies = battleControl.EnemyCtrl.GetAllMonsters();
             foreach (var e in enemies) {
                 finalDamage = Mathf.FloorToInt(baseDamage / e.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
                 AttackTarget(e, finalDamage);
             }
             break;
         case AttackType.RandomAttack:
-            var enemy = battleControl.EnemyCtrl.GetRandomEnemies(1);
+            var enemy = battleControl.EnemyCtrl.GetRandomMonsters(targetCounts, selectedTarget);
             finalDamage = Mathf.FloorToInt(baseDamage / enemy[0].GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
             AttackTarget(enemy[0], finalDamage);
             break;
@@ -111,25 +119,29 @@ public class Skill : MonoBehaviour {
         CharacterStat stat = CharacterStatDataParser.Instance.GetCharacterStat(_skillInfo.CharacterKey);
 
         var data = _skillInfo.SkillData;
-        float baseHeal = MathUtils.GetPerTenThousand(data.HealRatio);
         int targetCounts = _skillInfo.SkillData.HealTypeValue;
         var selectedTarget = battleControl.SelectedTarget;
-        int finalHeal = 1;
+        int finalHeal = (int)MathUtils.GetPercent(data.HealRatio) * stat.AttackPower;
 
         switch (_skillInfo.SkillData.HealType) {
         case HealType.SingleHeal:
-            finalHeal = Mathf.FloorToInt(baseHeal / selectedTarget.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
+            Debug.Log(finalHeal);
             HealTarget(selectedTarget, finalHeal);
             break;
-        case HealType.SideTurnHeal:
+        case HealType.ComboHeal:
+            var cList = battleControl.PlayerCtrl.GetCharacterByOrder(targetCounts, selectedTarget);
+            foreach (var ch in cList) {
+                HealTarget(ch, finalHeal);
+            }
+            break;
         case HealType.MultiHeal:
-            var characters = battleControl.PlayerCtrl.GetRandomAllies(targetCounts, selectedTarget);
+            var characters = battleControl.PlayerCtrl.GetRandomCharacter(targetCounts, selectedTarget);
             foreach (var ch in characters) {
                 HealTarget(ch, finalHeal);
             }
             break;
         case HealType.RandomHeal:
-            var character = battleControl.PlayerCtrl.GetRandomAllies(1);
+            var character = battleControl.PlayerCtrl.GetAllCharacters();
             HealTarget(character[0], finalHeal);
             break;
         }
@@ -156,14 +168,20 @@ public class Skill : MonoBehaviour {
     
     public void SetOrder(string sortingLayerName, int order) {
         _originOrder = order;
+
         _renderer.sortingLayerName = sortingLayerName;
+        _iconRenderer.sortingLayerName = sortingLayerName;
+
         _renderer.sortingOrder = order;
-        _costTextRenderer.sortingOrder = order + 1;
+        _iconRenderer.sortingOrder = order + 1;
+
+        _costTextRenderer.sortingOrder = order + 2;
     }
 
     public void SetMostFrontOrder(bool isEnlarge) {
         _renderer.sortingOrder = isEnlarge ? 100 : _originOrder;
-        _costTextRenderer.sortingOrder = isEnlarge ? 101 : _originOrder;
+        _iconRenderer.sortingOrder = isEnlarge ? 101 : _originOrder;
+        _costTextRenderer.sortingOrder = isEnlarge ? 102 : _originOrder;
     }
 
     public void DetectCardArea(Vector2 touchPosition) {
