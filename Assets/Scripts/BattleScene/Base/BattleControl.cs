@@ -95,9 +95,13 @@ public class BattleControl : MonoBehaviour {
             SkillManager.GetInstance().State = SkillState.CARD_DRAG;
         }
         else {
-            _enemyControl.UseSkill(this);
-            EndTurn();
+            StartCoroutine(StartEnemyTurn());
         }
+    }
+
+    private IEnumerator StartEnemyTurn() {
+        yield return _enemyControl.UseSkill(this);
+        EndTurn();
     }
 
     public void OnTurnEndButtonClicked() {

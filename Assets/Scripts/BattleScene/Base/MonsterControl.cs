@@ -44,7 +44,9 @@ public class MonsterControl : MonoBehaviour {
         return target;
     }
 
-    public void UseSkill(BattleControl battleControl) {
+    public IEnumerator UseSkill(BattleControl battleControl) {
+        WaitForSeconds attackTime = new WaitForSeconds(1f);
+
         foreach (MonsterEntity monster in _currentMonsters) {
             Data.SkillData skillData = monster.GetCurrentSkillData();
             if (skillData == null) continue;
@@ -53,11 +55,16 @@ public class MonsterControl : MonoBehaviour {
             int grade = (int)Data.MonsterDataParser.Instance.GetMonster(skillInfo.CharacterKey).Level;
             Data.MonsterStat stat = Data.MonsterStatDataParser.Instance.GetMonsterStat(grade);
 
-            string name = Data.MonsterDataParser.Instance.GetMonster(skillInfo.CharacterKey).Name;
-            Debug.Log(name + "이 " + skillInfo.SkillData.Name + "을 사용!");
-
             DoAttack(battleControl, skillInfo, stat);
             DoHeal(battleControl, skillInfo, stat);
+
+            string name = Data.MonsterDataParser.Instance.GetMonster(skillInfo.CharacterKey).Name;
+            Debug.Log(name + "이 " + skillInfo.SkillData.Name + "을 사용!");
+            monster.ChangeAnimationState("ATTACK");
+
+            yield return attackTime;
+
+            monster.ChangeAnimationState("IDLE");
         }
     }
 
