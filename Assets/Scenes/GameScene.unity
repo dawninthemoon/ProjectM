@@ -4330,7 +4330,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _info:
     speed: 1
-    draw: 5
+    startDraw: 4
+    draw: 3
     cost: 5
 --- !u!1 &1848535433
 GameObject:

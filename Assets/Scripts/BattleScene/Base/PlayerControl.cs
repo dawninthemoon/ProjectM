@@ -82,7 +82,7 @@ public class PlayerControl : MonoBehaviour {
     public void DrawCard(bool turnStart = false) {
         int amount = _mascot.GetDrawAmount();
         if (turnStart) {
-            amount = Mathf.Min(amount, _cardDeck.GetDeckCount());
+            amount = Mathf.Min(_mascot.GetDrawAmount() + _mascot.GetStartDrawAmount(), _cardDeck.GetDeckCount());
         }
 
         var cardManager = SkillManager.GetInstance();
