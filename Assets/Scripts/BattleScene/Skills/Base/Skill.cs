@@ -118,6 +118,9 @@ public class Skill : MonoBehaviour {
 
         void AttackTarget(BattleEntity entity, int amount) {
             entity.DecreaseHP(amount);
+            if (entity.CurHP <= 0) {
+                battleControl.EnemyCtrl.RemoveMonster(entity as MonsterEntity);
+            }
         }
     }
 

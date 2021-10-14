@@ -106,7 +106,6 @@ public class BattleControl : MonoBehaviour {
         _currentTurn = (TurnInfo)nextTurn;
         SkillManager.GetInstance().State = SkillState.CARD_OVER;
 
-        //Data.CharacterDataParser
         StartTurn();
     }
 

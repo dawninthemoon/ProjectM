@@ -7,6 +7,7 @@ public abstract class BattleEntity : MonoBehaviour {
     [SerializeField] private SpriteAtlas _atlas = null;
     protected int _maxHP;
     protected int _curHP;
+    public int CurHP { get { return _curHP; } }
     protected SpriteAtlasAnimator _animator;
 
     public void Progress() {
