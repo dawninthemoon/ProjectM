@@ -3,18 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MonsterControl : MonoBehaviour {
-    [SerializeField] MonsterEntity[] _monsters = null;
+    [SerializeField] private int[] _monsterKeys = null;
+    [SerializeField] private Vector3[] _initialPosition = null;
     [SerializeField] LayerMask _layerMask;
     private List<MonsterEntity> _currentMonsters;
     private float[] _fillAmounts;
+    private static readonly string MonsterPreafabPath = "MonsterEntityPrefab/";
 
     public void Initialize() {
         _fillAmounts = new float[4];
-        _currentMonsters = _monsters.ToList();
 
-        int enemyCounts = _currentMonsters.Count;
-        for (int i = 0; i < enemyCounts; ++i) {
-            _currentMonsters[i].Initialize(i);
+        int monsterCounts = _monsterKeys.Length;
+        _currentMonsters = new List<MonsterEntity>(monsterCounts);
+
+        for (int i = 0; i < monsterCounts; ++i) {
+            var monsterData = Data.MonsterDataParser.Instance.GetMonster(_monsterKeys[i]);
+            var prefab = ResourceManager.GetInstance().GetEntityPrefab(MonsterPreafabPath + monsterData.MonsterPrefab);
+
+            BattleEntity monster = Instantiate(prefab, _initialPosition[i], Quaternion.identity);
+            _currentMonsters.Add(monster as MonsterEntity);
+            _currentMonsters[i].Initialize(_monsterKeys[i], i);
         }
     }
 

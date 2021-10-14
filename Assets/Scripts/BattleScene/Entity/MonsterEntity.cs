@@ -11,9 +11,9 @@ public class MonsterEntity : BattleEntity {
     public Data.MonsterStat MonsterStatData { get { return _monsterStatData; } }
     public int Order { get; private set; }
 
-    public void Initialize(int order) {
-        _monsterData = Data.MonsterDataParser.Instance.GetMonster(1);
-        _monsterStatData = Data.MonsterStatDataParser.Instance.GetMonsterStat(_monsterData.Key);
+    public void Initialize(int key, int order) {
+        _monsterData = Data.MonsterDataParser.Instance.GetMonster(key);
+        _monsterStatData = Data.MonsterStatDataParser.Instance.GetMonsterStat(_monsterData.Level);
 
         _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _monsterData.Name + "_", "IDLE", true, 0.5f);
         _maxHP = _monsterStatData.BaseHP / 10;
