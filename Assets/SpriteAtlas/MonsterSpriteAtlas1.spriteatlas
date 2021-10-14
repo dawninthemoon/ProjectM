@@ -102,41 +102,41 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 5ce3f2ef57c60024c834836ae5a26b78, type: 3}
   m_PackedSpriteNamesToIndex:
   - GOBLIN002_DEAD4
-  - Goblin003_Dead2
+  - GOBLIN003_Dead2
   - GOBLIN002_IDLE4
   - GOBLIN002_DEAD5
   - GOBLIN002_ATTACK1
   - GOBLIN002_HIT1
-  - Goblin003_Dead4
-  - Goblin003_Dead3
-  - Goblin003_Idle4
+  - GOBLIN003_Dead4
+  - GOBLIN003_Dead3
+  - GOBLIN003_Idle4
   - GOBLIN001_DEAD6
-  - Goblin003_Attack4
+  - GOBLIN003_Attack4
   - GOBLIN001_DEAD4
-  - Goblin003_Hit2
-  - Goblin003_Idle1
+  - GOBLIN003_Hit2
+  - GOBLIN003_Idle1
   - GOBLIN001_IDLE2
   - GOBLIN002_IDLE2
   - GOBLIN002_ATTACK2
   - GOBLIN001_ATTACK2
-  - Goblin003_Idle3
+  - GOBLIN003_Idle3
   - GOBLIN002_ATTACK3
   - GOBLIN001_DEAD3
   - GOBLIN002_ATTACK4
   - GOBLIN002_IDLE1
   - GOBLIN002_DEAD6
-  - Goblin003_Dead6
-  - Goblin003_Attack3
+  - GOBLIN003_Dead6
+  - GOBLIN003_Attack3
   - GOBLIN001_HIT1
   - GOBLIN002_DEAD1
-  - Goblin003_Hit1
-  - Goblin003_Dead1
+  - GOBLIN003_Hit1
+  - GOBLIN003_Dead1
   - GOBLIN001_IDLE3
-  - Goblin003_Attack1
-  - Goblin003_Attack2
+  - GOBLIN003_Attack1
+  - GOBLIN003_Attack2
   - GOBLIN001_DEAD2
   - GOBLIN002_DEAD2
-  - Goblin003_Idle2
+  - GOBLIN003_Idle2
   - GOBLIN001_ATTACK3
   - GOBLIN002_IDLE3
   - GOBLIN002_DEAD3
@@ -148,7 +148,7 @@ SpriteAtlas:
   - GOBLIN001_IDLE4
   - GOBLIN001_DEAD5
   - GOBLIN001_DEAD1
-  - Goblin003_Dead5
+  - GOBLIN003_Dead5
   m_RenderDataMap: {}
   m_Tag: MonsterSpriteAtlas1
   m_IsVariant: 0

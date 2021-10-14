@@ -29,6 +29,14 @@ public class BattleUI : MonoBehaviour {
     private static readonly string SlashString = "/";
 
     public void OnSkillUsed(BattleUIArgs args) {
+        foreach (var ui in _allyHPBarImages) {
+            ui.transform.parent.gameObject.SetActive(true);
+        }
+        foreach (var ui in _enemyHPBarImages) {
+            ui.transform.parent.gameObject.SetActive(true);
+        }
+
+
         OnAllyHPChanged(args.allyHPFillAmounts);
         OnEnemyHPChanged(args.enemyHPFillAmounts);
         OnCostChanged(args.currentCost, args.maxCost);
