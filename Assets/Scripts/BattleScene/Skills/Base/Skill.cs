@@ -88,30 +88,30 @@ public class Skill : MonoBehaviour {
 
         switch (data.AttackType) {
         case AttackType.SingleAttack:
-            finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
+            finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
             AttackTarget(selectedTarget, finalDamage);
             break;
         case AttackType.ComboAttack:
             if (data.AttackType == AttackType.ComboAttack) {
-                finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
+                finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
                 AttackTarget(selectedTarget, finalDamage);
             }
             var eList = battleControl.EnemyCtrl.GetMonsterByOrder(targetCounts, selectedTarget);
             foreach (var e in eList) {
-                finalDamage = Mathf.FloorToInt(baseDamage / e.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
+                finalDamage = Mathf.FloorToInt(baseDamage / e.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
                 AttackTarget(e, finalDamage);
             }
             break;
         case AttackType.MultiAttack:
             var enemies = battleControl.EnemyCtrl.GetAllMonsters();
             foreach (var e in enemies) {
-                finalDamage = Mathf.FloorToInt(baseDamage / e.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
+                finalDamage = Mathf.FloorToInt(baseDamage / e.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
                 AttackTarget(e, finalDamage);
             }
             break;
         case AttackType.RandomAttack:
             var enemy = battleControl.EnemyCtrl.GetRandomMonsters(targetCounts, selectedTarget);
-            finalDamage = Mathf.FloorToInt(baseDamage / enemy[0].GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
+            finalDamage = Mathf.FloorToInt(baseDamage / enemy[0].GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
             AttackTarget(enemy[0], finalDamage);
             break;
         }
@@ -130,7 +130,7 @@ public class Skill : MonoBehaviour {
         var data = _skillInfo.SkillData;
         int targetCounts = _skillInfo.SkillData.HealTypeValue;
         var selectedTarget = battleControl.SelectedTarget;
-        int finalHeal = (int)MathUtils.GetPercent(data.HealRatio) * stat.AttackPower;
+        int finalHeal = (int)MathUtils.GetPerTenThousand(data.HealRatio) * stat.AttackPower;
 
         switch (_skillInfo.SkillData.HealType) {
         case HealType.SingleHeal:
