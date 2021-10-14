@@ -406,7 +406,7 @@
       "Description": "영혼석이다.",
       "itemType": "Soul",
       "Grade": 4,
-      "Rarity": true,
+      "Rarity": false,
       "ItemIcon": "pinky",
       "BackgroundIcon": "null"
     },
@@ -416,7 +416,7 @@
       "Description": "영혼석이다.",
       "itemType": "Soul",
       "Grade": 4,
-      "Rarity": true,
+      "Rarity": false,
       "ItemIcon": "wichi",
       "BackgroundIcon": "null"
     },
@@ -426,7 +426,7 @@
       "Description": "영혼석이다.",
       "itemType": "Soul",
       "Grade": 4,
-      "Rarity": true,
+      "Rarity": false,
       "ItemIcon": "pigeon",
       "BackgroundIcon": "null"
     },
@@ -436,7 +436,7 @@
       "Description": "영혼석이다.",
       "itemType": "Soul",
       "Grade": 4,
-      "Rarity": true,
+      "Rarity": false,
       "ItemIcon": "mijery",
       "BackgroundIcon": "null"
     },
@@ -446,9 +446,529 @@
       "Description": "영혼석이다.",
       "itemType": "Soul",
       "Grade": 4,
-      "Rarity": true,
+      "Rarity": false,
       "ItemIcon": "gusty",
       "BackgroundIcon": "null"
+    },
+    {
+      "Key": 21001,
+      "Name": "BirdSlime",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_BirdSlime",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21002,
+      "Name": "BlueMush",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_BlueMush",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21003,
+      "Name": "Charko",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_Charko",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21004,
+      "Name": "Fairy",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_Fairy",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21005,
+      "Name": "GhostA",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_GhostA",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21006,
+      "Name": "GhostB",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_GhostB",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21007,
+      "Name": "GhostC",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_GhostC",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21008,
+      "Name": "GoldfishGirl",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_GoldfishGirl",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21009,
+      "Name": "GreenMush",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_GreenMush",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21010,
+      "Name": "Koakuma",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_Koakuma",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21011,
+      "Name": "NightWatch",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_NightWatch",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21012,
+      "Name": "Octopus",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_Octopus",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21013,
+      "Name": "RedMush",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_RedMush",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21014,
+      "Name": "RockBeetle",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_RockBeetle",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21015,
+      "Name": "SeaKnight",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_SeaKnight",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21016,
+      "Name": "Slime",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_Slime",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21017,
+      "Name": "SnowBeetle",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_SnowBeetle",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21018,
+      "Name": "Snowbird",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_Snowbird",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21019,
+      "Name": "WanderingMouse",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_WanderingMouse",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21020,
+      "Name": "WindBeetle",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_WindBeetle",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 21021,
+      "Name": "Wisp",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 1,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Normal_Wisp",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22001,
+      "Name": "CandleGirl",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_CandleGirl",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22002,
+      "Name": "FrogNovice",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_FrogNovice",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22003,
+      "Name": "HamsterWizard",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_HamsterWizard",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22004,
+      "Name": "HarpyDelivery",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_HarpyDelivery",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22005,
+      "Name": "LizardMan",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_LizardMan",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22006,
+      "Name": "MushroomGirl",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_MushroomGirl",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22007,
+      "Name": "NightClock",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_NightClock",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22008,
+      "Name": "PotionWorm",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_PotionWorm",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22009,
+      "Name": "Reaper",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_Reaper",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22010,
+      "Name": "Scarecrow",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_Scarecrow",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22011,
+      "Name": "SlimePrincess",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_SlimePrincess",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22012,
+      "Name": "SmokingWisp",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_SmokingWisp",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22013,
+      "Name": "Squidrok",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_Squidrok",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22014,
+      "Name": "StaffSlime",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_StaffSlime",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22015,
+      "Name": "SwordSlime",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_SwordSlime",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22016,
+      "Name": "WatchDog",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_WatchDog",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 22017,
+      "Name": "WoodenGirl",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 2,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Rare_WoodenGirl",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 23001,
+      "Name": "Catssassin",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Epic_Catssassin",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 23002,
+      "Name": "DeciduousWitch",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Epic_DeciduousWitch",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 23003,
+      "Name": "FishKing",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Epic_FishKing",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 23004,
+      "Name": "GoblinMage",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Epic_GoblinMage",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 23005,
+      "Name": "HarpyStrike",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Epic_HarpyStrike",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 23006,
+      "Name": "LambStorm",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Epic_LambStorm",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 23007,
+      "Name": "Shakkk",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Epic_Shakkk",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 23008,
+      "Name": "SlimeKnight",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Epic_SlimeKnight",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 23009,
+      "Name": "SlimeMage",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Epic_SlimeMage",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 23010,
+      "Name": "TeatimeKnight",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 3,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Epic_TeatimeKnight",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 24001,
+      "Name": "HarpyQueen",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 4,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Legendary_HarpyQueen",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 24002,
+      "Name": "Salamander",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 4,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Legendary_Salamander",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 24003,
+      "Name": "SisterAgatha",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 4,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Legendary_SisterAgatha",
+      "BackgroundIcon": ""
+    },
+    {
+      "Key": 24004,
+      "Name": "TheLich",
+      "Description": "",
+      "itemType": "Spirit",
+      "Grade": 4,
+      "Rarity": false,
+      "ItemIcon": "Spirits_Legendary_TheLich",
+      "BackgroundIcon": ""
     }
   ]
 }

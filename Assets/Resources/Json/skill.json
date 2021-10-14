@@ -9,7 +9,7 @@
       "CastType": 2,
       "AttackType": 2,
       "AttackTypeValue": 0,
-      "AttackRatio": 300,
+      "AttackRatio": 30000,
       "HealType": 0,
       "HealTypeValue": 0,
       "HealRatio": 0
@@ -23,10 +23,10 @@
       "CastType": 2,
       "AttackType": 2,
       "AttackTypeValue": 0,
-      "AttackRatio": 220,
+      "AttackRatio": 22000,
       "HealType": 4,
       "HealTypeValue": 2,
-      "HealRatio": 120
+      "HealRatio": 12000
     },
     {
       "Key": 23000010,
@@ -37,7 +37,7 @@
       "CastType": 0,
       "AttackType": 3,
       "AttackTypeValue": 1,
-      "AttackRatio": 140,
+      "AttackRatio": 14000,
       "HealType": 0,
       "HealTypeValue": 0,
       "HealRatio": 0
@@ -54,7 +54,7 @@
       "AttackRatio": 0,
       "HealType": 2,
       "HealTypeValue": 0,
-      "HealRatio": 300
+      "HealRatio": 30000
     },
     {
       "Key": 23000030,
@@ -65,7 +65,7 @@
       "CastType": 0,
       "AttackType": 4,
       "AttackTypeValue": 2,
-      "AttackRatio": 240,
+      "AttackRatio": 24000,
       "HealType": 0,
       "HealTypeValue": 0,
       "HealRatio": 0
@@ -79,7 +79,7 @@
       "CastType": 0,
       "AttackType": 1,
       "AttackTypeValue": 0,
-      "AttackRatio": 350,
+      "AttackRatio": 35000,
       "HealType": 0,
       "HealTypeValue": 0,
       "HealRatio": 0
@@ -93,10 +93,10 @@
       "CastType": 0,
       "AttackType": 3,
       "AttackTypeValue": 1,
-      "AttackRatio": 120,
+      "AttackRatio": 12000,
       "HealType": 4,
       "HealTypeValue": 2,
-      "HealRatio": 120
+      "HealRatio": 12000
     },
     {
       "Key": 23000060,
@@ -107,7 +107,7 @@
       "CastType": 0,
       "AttackType": 1,
       "AttackTypeValue": 0,
-      "AttackRatio": 180,
+      "AttackRatio": 18000,
       "HealType": 0,
       "HealTypeValue": 0,
       "HealRatio": 0
@@ -121,7 +121,7 @@
       "CastType": 0,
       "AttackType": 3,
       "AttackTypeValue": 1,
-      "AttackRatio": 150,
+      "AttackRatio": 15000,
       "HealType": 0,
       "HealTypeValue": 0,
       "HealRatio": 0
@@ -138,7 +138,7 @@
       "AttackRatio": 0,
       "HealType": 1,
       "HealTypeValue": 2,
-      "HealRatio": 350
+      "HealRatio": 35000
     },
     {
       "Key": 23000090,
@@ -149,7 +149,7 @@
       "CastType": 0,
       "AttackType": 4,
       "AttackTypeValue": 2,
-      "AttackRatio": 180,
+      "AttackRatio": 18000,
       "HealType": 0,
       "HealTypeValue": 0,
       "HealRatio": 0
@@ -163,7 +163,7 @@
       "CastType": 0,
       "AttackType": 1,
       "AttackTypeValue": 0,
-      "AttackRatio": 220,
+      "AttackRatio": 22000,
       "HealType": 0,
       "HealTypeValue": 0,
       "HealRatio": 0
@@ -180,7 +180,7 @@
       "AttackRatio": 0,
       "HealType": 3,
       "HealTypeValue": 1,
-      "HealRatio": 180
+      "HealRatio": 18000
     },
     {
       "Key": 22000070,
@@ -191,10 +191,10 @@
       "CastType": 1,
       "AttackType": 4,
       "AttackTypeValue": 1,
-      "AttackRatio": 150,
+      "AttackRatio": 15000,
       "HealType": 1,
       "HealTypeValue": 0,
-      "HealRatio": 240
+      "HealRatio": 24000
     },
     {
       "Key": 21000090,
@@ -208,7 +208,91 @@
       "AttackRatio": 0,
       "HealType": 1,
       "HealTypeValue": 0,
-      "HealRatio": 220
+      "HealRatio": 22000
+    },
+    {
+      "Key": 101,
+      "Name": "고블린 총격",
+      "IconKey": null,
+      "SkillType": 0,
+      "Cost": 0,
+      "CastType": 0,
+      "AttackType": 1,
+      "AttackTypeValue": 0,
+      "AttackRatio": 10000,
+      "HealType": 0,
+      "HealTypeValue": 0,
+      "HealRatio": 0
+    },
+    {
+      "Key": 102,
+      "Name": "고블린 더블샷",
+      "IconKey": null,
+      "SkillType": 0,
+      "Cost": 3,
+      "CastType": 0,
+      "AttackType": 4,
+      "AttackTypeValue": 2,
+      "AttackRatio": 8000,
+      "HealType": 0,
+      "HealTypeValue": 0,
+      "HealRatio": 0
+    },
+    {
+      "Key": 201,
+      "Name": "고블린 타격",
+      "IconKey": null,
+      "SkillType": 0,
+      "Cost": 0,
+      "CastType": 0,
+      "AttackType": 1,
+      "AttackTypeValue": 0,
+      "AttackRatio": 10000,
+      "HealType": 0,
+      "HealTypeValue": 0,
+      "HealRatio": 0
+    },
+    {
+      "Key": 202,
+      "Name": "고블린 강타",
+      "IconKey": null,
+      "SkillType": 0,
+      "Cost": 2,
+      "CastType": 0,
+      "AttackType": 1,
+      "AttackTypeValue": 0,
+      "AttackRatio": 15000,
+      "HealType": 0,
+      "HealTypeValue": 0,
+      "HealRatio": 0
+    },
+    {
+      "Key": 301,
+      "Name": "고블린 마법 공격",
+      "IconKey": null,
+      "SkillType": 0,
+      "Cost": 0,
+      "CastType": 0,
+      "AttackType": 1,
+      "AttackTypeValue": 0,
+      "AttackRatio": 10000,
+      "HealType": 0,
+      "HealTypeValue": 0,
+      "HealRatio": 0
+    },
+    {
+      "Key": 302,
+      "Name": "고블린 광역 공격",
+      "IconKey": null,
+      "SkillType": 0,
+      "Cost": 4,
+      "CastType": 2,
+      "AttackType": 2,
+      "AttackTypeValue": 0,
+      "AttackRatio": 12000,
+      "HealType": 0,
+      "HealTypeValue": 0,
+      "HealRatio": 0
     }
   ]
 }
