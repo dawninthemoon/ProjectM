@@ -45,6 +45,10 @@ public class MonsterEntity : BattleEntity {
         Order = order;
     }
 
+    public void ChangeAnimationState(string state) {
+        _animator.ChangeAnimation(state);
+    }
+
     public override float GetFinalDefence() {
         float defence = 1f + MathUtils.GetPercent(_monsterStatData.DefencePower);
         return defence;
