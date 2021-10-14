@@ -25,11 +25,20 @@ public class PlayerControl : MonoBehaviour {
             CreateCharacterEntity(i);
 
             var parser = Data.SkillDataParser.Instance;
+            
+            var keys = _characters[i].SkillCardKeys;
+            foreach (string key in keys) {
+                AddSkillInfo(skillInfoList, key, _characterKeys[i]);
+            }
+
+            /*
+            여러 스킬 테스트를 위해 잠시 사용하지 않음
             string skillKey1 = _characters[i].CharacterData.SkillCard1Key;
             string skillKey2 = _characters[i].CharacterData.SkillCard2Key;
 
             AddSkillInfo(skillInfoList, _characters[i].CharacterData.SkillCard1Key, _characterKeys[i]);
             AddSkillInfo(skillInfoList, _characters[i].CharacterData.SkillCard2Key, _characterKeys[i]);
+            */
         }
 
         _cardDeck.Initialize(skillInfoList);

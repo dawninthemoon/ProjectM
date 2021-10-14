@@ -129,7 +129,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _atlas: {fileID: 4343727234628468602, guid: ddfcf37373eb0f14b9934b80c9749dd2, type: 2}
-  _key: 1340001
+  _skillCardKeys:
+  - 24000010
+  - 24000020
+  - 23000010
 --- !u!212 &6424231541124998108
 SpriteRenderer:
   m_ObjectHideFlags: 0
