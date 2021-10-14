@@ -1221,7 +1221,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 171676467}
         m_TargetAssemblyTypeName: BattleControl, Assembly-CSharp
-        m_MethodName: EndTurn
+        m_MethodName: OnTurnEndButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

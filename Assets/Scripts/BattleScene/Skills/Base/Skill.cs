@@ -38,6 +38,7 @@ public class Skill : MonoBehaviour {
         _characterIconRenderer.sprite = ResourceManager.GetInstance().GetSprite(characterSubName);
     }
 
+    public SkillInfo GetSkillInfo() => _skillInfo;
     public int GetRequireCost() => _skillInfo.SkillData.Cost;
 
     public void Progress(Vector3 touchPosition) {
@@ -65,103 +66,10 @@ public class Skill : MonoBehaviour {
         return (_skillInfo.SkillData.CastType != CastType.NoneCast);
     }
 
-    public SkillInfo GetSkillInfo() {
-        return _skillInfo;
-    }
-
-    public void UseSkill(BattleControl battleControl) {
-        DoAttack(battleControl);
-        DoHeal(battleControl);
-    }
-
     public bool IsCharacterTarget() {
         var data = _skillInfo.SkillData;
         bool isCharacterTarget = (data.HealType == Data.HealType.SingleHeal) || (data.HealType == Data.HealType.ComboHeal);
         return isCharacterTarget;
-    }
-
-    private void DoAttack(BattleControl battleControl) {
-        CharacterStat stat = CharacterStatDataParser.Instance.GetCharacterStat(_skillInfo.CharacterKey);
-
-        var data = _skillInfo.SkillData;
-        float criticalDamage = MathUtils.GetPerTenThousand(stat.CriticalDamage);
-        float baseDamage = stat.AttackPower * (1f + criticalDamage);
-        int targetCounts = data.AttackTypeValue;
-        var selectedTarget = battleControl.SelectedTarget;
-        int finalDamage;
-
-        switch (data.AttackType) {
-        case AttackType.SingleAttack:
-            finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-            AttackTarget(selectedTarget, finalDamage);
-            break;
-        case AttackType.ComboAttack:
-            if (data.AttackType == AttackType.ComboAttack) {
-                finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-                AttackTarget(selectedTarget, finalDamage);
-            }
-            var eList = battleControl.EnemyCtrl.GetMonsterByOrder(targetCounts, selectedTarget);
-            foreach (var e in eList) {
-                finalDamage = Mathf.FloorToInt(baseDamage / e.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-                AttackTarget(e, finalDamage);
-            }
-            break;
-        case AttackType.MultiAttack:
-            var enemies = battleControl.EnemyCtrl.GetAllMonsters();
-            foreach (var e in enemies) {
-                finalDamage = Mathf.FloorToInt(baseDamage / e.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-                AttackTarget(e, finalDamage);
-            }
-            break;
-        case AttackType.RandomAttack:
-            var enemy = battleControl.EnemyCtrl.GetRandomMonsters(targetCounts, selectedTarget);
-            finalDamage = Mathf.FloorToInt(baseDamage / enemy[0].GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-            AttackTarget(enemy[0], finalDamage);
-            break;
-        }
-
-        void AttackTarget(BattleEntity entity, int amount) {
-            entity.DecreaseHP(amount);
-            if (entity.CurHP <= 0) {
-                battleControl.EnemyCtrl.RemoveMonster(entity as MonsterEntity);
-            }
-        }
-    }
-
-    private void DoHeal(BattleControl battleControl) {
-        CharacterStat stat = CharacterStatDataParser.Instance.GetCharacterStat(_skillInfo.CharacterKey);
-
-        var data = _skillInfo.SkillData;
-        int targetCounts = _skillInfo.SkillData.HealTypeValue;
-        var selectedTarget = battleControl.SelectedTarget;
-        int finalHeal = (int)MathUtils.GetPerTenThousand(data.HealRatio) * stat.AttackPower;
-
-        switch (_skillInfo.SkillData.HealType) {
-        case HealType.SingleHeal:
-            Debug.Log(finalHeal);
-            HealTarget(selectedTarget, finalHeal);
-            break;
-        case HealType.ComboHeal:
-            var cList = battleControl.PlayerCtrl.GetCharacterByOrder(targetCounts, selectedTarget);
-            foreach (var ch in cList) {
-                HealTarget(ch, finalHeal);
-            }
-            break;
-        case HealType.MultiHeal:
-            var characters = battleControl.PlayerCtrl.GetRandomCharacter(targetCounts, selectedTarget);
-            foreach (var ch in characters) {
-                HealTarget(ch, finalHeal);
-            }
-            break;
-        case HealType.RandomHeal:
-            var character = battleControl.PlayerCtrl.GetAllCharacters();
-            HealTarget(character[0], finalHeal);
-            break;
-        }
-
-        void HealTarget(BattleEntity target, int amount) {
-            target.IncreaseHP(amount);
-        }
     }
 
     public void MoveTransform(PRS prs, bool useTweening, float duration = 0f) {

@@ -14,7 +14,6 @@ public class BattleControl : MonoBehaviour {
     public MonsterControl EnemyCtrl { get { return _enemyControl; } }
     [SerializeField] Camera _cardCamera = null;
     public BattleEntity SelectedTarget { get; private set; }
-    private static readonly float LongTouchTime = 1.5f;
     private TurnInfo _currentTurn;
     private int _turnCount = 0;
     private int _currentStage;
@@ -96,8 +95,14 @@ public class BattleControl : MonoBehaviour {
             SkillManager.GetInstance().State = SkillState.CARD_DRAG;
         }
         else {
+            _enemyControl.UseSkill(this);
             EndTurn();
         }
+    }
+
+    public void OnTurnEndButtonClicked() {
+        if (_currentTurn == TurnInfo.ENEMY) return;
+        EndTurn();
     }
 
     public void EndTurn() {

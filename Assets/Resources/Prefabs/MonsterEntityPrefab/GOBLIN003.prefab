@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _atlas: {fileID: 4343727234628468602, guid: b051f71b4e421ad499eae9f7d7d3cc35, type: 2}
+  _skillKeys: 24f45e0114366e019a6f4001
 --- !u!212 &91996022576752847
 SpriteRenderer:
   m_ObjectHideFlags: 0
