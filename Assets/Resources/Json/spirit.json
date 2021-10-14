@@ -1,0 +1,472 @@
+{
+  "SpiritTemplate": [
+    {
+      "Key": 21001,
+      "Name": "BirdSlime",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_BirdSlime"
+    },
+    {
+      "Key": 21002,
+      "Name": "BlueMush",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_BlueMush"
+    },
+    {
+      "Key": 21003,
+      "Name": "Charko",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Charko"
+    },
+    {
+      "Key": 21004,
+      "Name": "Fairy",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Fairy"
+    },
+    {
+      "Key": 21005,
+      "Name": "GhostA",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_GhostA"
+    },
+    {
+      "Key": 21006,
+      "Name": "GhostB",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_GhostB"
+    },
+    {
+      "Key": 21007,
+      "Name": "GhostC",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_GhostC"
+    },
+    {
+      "Key": 21008,
+      "Name": "GoldfishGirl",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_GoldfishGirl"
+    },
+    {
+      "Key": 21009,
+      "Name": "GreenMush",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_GreenMush"
+    },
+    {
+      "Key": 21010,
+      "Name": "Koakuma",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Koakuma"
+    },
+    {
+      "Key": 21011,
+      "Name": "NightWatch",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_NightWatch"
+    },
+    {
+      "Key": 21012,
+      "Name": "Octopus",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Octopus"
+    },
+    {
+      "Key": 21013,
+      "Name": "RedMush",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_RedMush"
+    },
+    {
+      "Key": 21014,
+      "Name": "RockBeetle",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_RockBeetle"
+    },
+    {
+      "Key": 21015,
+      "Name": "SeaKnight",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_SeaKnight"
+    },
+    {
+      "Key": 21016,
+      "Name": "Slime",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Slime"
+    },
+    {
+      "Key": 21017,
+      "Name": "SnowBeetle",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_SnowBeetle"
+    },
+    {
+      "Key": 21018,
+      "Name": "Snowbird",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Snowbird"
+    },
+    {
+      "Key": 21019,
+      "Name": "WanderingMouse",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_WanderingMouse"
+    },
+    {
+      "Key": 21020,
+      "Name": "WindBeetle",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_WindBeetle"
+    },
+    {
+      "Key": 21021,
+      "Name": "Wisp",
+      "Class": "None",
+      "Grade": 1,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Normal_Wisp"
+    },
+    {
+      "Key": 22001,
+      "Name": "CandleGirl",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_CandleGirl"
+    },
+    {
+      "Key": 22002,
+      "Name": "FrogNovice",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_FrogNovice"
+    },
+    {
+      "Key": 22003,
+      "Name": "HamsterWizard",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_HamsterWizard"
+    },
+    {
+      "Key": 22004,
+      "Name": "HarpyDelivery",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_HarpyDelivery"
+    },
+    {
+      "Key": 22005,
+      "Name": "LizardMan",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_LizardMan"
+    },
+    {
+      "Key": 22006,
+      "Name": "MushroomGirl",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_MushroomGirl"
+    },
+    {
+      "Key": 22007,
+      "Name": "NightClock",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_NightClock"
+    },
+    {
+      "Key": 22008,
+      "Name": "PotionWorm",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_PotionWorm"
+    },
+    {
+      "Key": 22009,
+      "Name": "Reaper",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_Reaper"
+    },
+    {
+      "Key": 22010,
+      "Name": "Scarecrow",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_Scarecrow"
+    },
+    {
+      "Key": 22011,
+      "Name": "SlimePrincess",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_SlimePrincess"
+    },
+    {
+      "Key": 22012,
+      "Name": "SmokingWisp",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_SmokingWisp"
+    },
+    {
+      "Key": 22013,
+      "Name": "Squidrok",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_Squidrok"
+    },
+    {
+      "Key": 22014,
+      "Name": "StaffSlime",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_StaffSlime"
+    },
+    {
+      "Key": 22015,
+      "Name": "SwordSlime",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_SwordSlime"
+    },
+    {
+      "Key": 22016,
+      "Name": "WatchDog",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_WatchDog"
+    },
+    {
+      "Key": 22017,
+      "Name": "WoodenGirl",
+      "Class": "None",
+      "Grade": 2,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Rare_WoodenGirl"
+    },
+    {
+      "Key": 23001,
+      "Name": "Catssassin",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_Catssassin"
+    },
+    {
+      "Key": 23002,
+      "Name": "DeciduousWitch",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_DeciduousWitch"
+    },
+    {
+      "Key": 23003,
+      "Name": "FishKing",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_FishKing"
+    },
+    {
+      "Key": 23004,
+      "Name": "GoblinMage",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_GoblinMage"
+    },
+    {
+      "Key": 23005,
+      "Name": "HarpyStrike",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_HarpyStrike"
+    },
+    {
+      "Key": 23006,
+      "Name": "LambStorm",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_LambStorm"
+    },
+    {
+      "Key": 23007,
+      "Name": "Shakkk",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_Shakkk"
+    },
+    {
+      "Key": 23008,
+      "Name": "SlimeKnight",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_SlimeKnight"
+    },
+    {
+      "Key": 23009,
+      "Name": "SlimeMage",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_SlimeMage"
+    },
+    {
+      "Key": 23010,
+      "Name": "TeatimeKnight",
+      "Class": "None",
+      "Grade": 3,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Epic_TeatimeKnight"
+    },
+    {
+      "Key": 24001,
+      "Name": "HarpyQueen",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_HarpyQueen"
+    },
+    {
+      "Key": 24002,
+      "Name": "Salamander",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_Salamander"
+    },
+    {
+      "Key": 24003,
+      "Name": "SisterAgatha",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_SisterAgatha"
+    },
+    {
+      "Key": 24004,
+      "Name": "TheLich",
+      "Class": "None",
+      "Grade": 4,
+      "SkillCard1Key": null,
+      "PassiveSkillKey": null,
+      "IconName": "Spirits_Legendary_TheLich"
+    }
+  ]
+}

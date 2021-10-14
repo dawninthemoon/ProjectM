@@ -1,0 +1,64 @@
+{
+  "CharacterStatTemplate": [
+    {
+      "Key": 101,
+      "Grade": 1,
+      "Level": 1,
+      "AttackPower": 14,
+      "BaseHP": 50,
+      "DefencePower": 65,
+      "Critical": 1000,
+      "CriticalDamage": 15000
+    },
+    {
+      "Key": 102,
+      "Grade": 1,
+      "Level": 1,
+      "AttackPower": 14,
+      "BaseHP": 45,
+      "DefencePower": 28,
+      "Critical": 1000,
+      "CriticalDamage": 15000
+    },
+    {
+      "Key": 103,
+      "Grade": 1,
+      "Level": 1,
+      "AttackPower": 18,
+      "BaseHP": 43,
+      "DefencePower": 23,
+      "Critical": 1000,
+      "CriticalDamage": 15000
+    },
+    {
+      "Key": 104,
+      "Grade": 1,
+      "Level": 1,
+      "AttackPower": 16,
+      "BaseHP": 46,
+      "DefencePower": 13,
+      "Critical": 1000,
+      "CriticalDamage": 15000
+    },
+    {
+      "Key": 105,
+      "Grade": 1,
+      "Level": 1,
+      "AttackPower": 15,
+      "BaseHP": 47,
+      "DefencePower": 36,
+      "Critical": 1000,
+      "CriticalDamage": 15000
+    },
+    {
+      "Key": 106,
+      "Grade": 1,
+      "Level": 1,
+      "AttackPower": 16,
+      "BaseHP": 46,
+      "DefencePower": 48,
+      "Critical": 1000,
+      "CriticalDamage": 15000
+    }
+  ]
+}

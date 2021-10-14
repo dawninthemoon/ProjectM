@@ -1,0 +1,368 @@
+{
+  "RandomBoxTemplate": [
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21001,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21002,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21003,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21004,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21005,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21006,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21007,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21008,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21009,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21010,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21011,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21012,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21013,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21014,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21015,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21016,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21017,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21018,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21019,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21020,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 21021,
+      "Count": 1,
+      "Probility": 599991
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22001,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22002,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22003,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22004,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22005,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22006,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22007,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22008,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22009,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22010,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22011,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22012,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22013,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22014,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22015,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22016,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 22017,
+      "Count": 1,
+      "Probility": 330004
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 23001,
+      "Count": 1,
+      "Probility": 64000
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 23002,
+      "Count": 1,
+      "Probility": 64000
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 23003,
+      "Count": 1,
+      "Probility": 64000
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 23004,
+      "Count": 1,
+      "Probility": 64000
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 23005,
+      "Count": 1,
+      "Probility": 64000
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 23006,
+      "Count": 1,
+      "Probility": 64000
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 23007,
+      "Count": 1,
+      "Probility": 64000
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 23008,
+      "Count": 1,
+      "Probility": 64000
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 23009,
+      "Count": 1,
+      "Probility": 64000
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 23010,
+      "Count": 1,
+      "Probility": 64000
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 24001,
+      "Count": 1,
+      "Probility": 6000
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 24002,
+      "Count": 1,
+      "Probility": 6000
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 24003,
+      "Count": 1,
+      "Probility": 6000
+    },
+    {
+      "Key": 10,
+      "RewardType": "Item",
+      "RewardKey": 24004,
+      "Count": 1,
+      "Probility": 6000
+    }
+  ]
+}

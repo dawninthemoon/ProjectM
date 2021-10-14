@@ -1,0 +1,88 @@
+{
+  "CharacterTemplate": [
+    {
+      "Key": 101,
+      "Name": "미제리",
+      "SubName": "BATTLEMAGE001",
+      "Class": "Guardian",
+      "Gender": "Female",
+      "Grade": 1,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
+    },
+    {
+      "Key": 102,
+      "Name": "피존",
+      "SubName": "MAGICENGINEER001",
+      "Class": "Shooter",
+      "Gender": "Female",
+      "Grade": 1,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
+    },
+    {
+      "Key": 103,
+      "Name": "구스티",
+      "SubName": "MAGE001",
+      "Class": "Mage",
+      "Gender": "Female",
+      "Grade": 1,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
+    },
+    {
+      "Key": 104,
+      "Name": "핑키",
+      "SubName": "MAGICALGIRL001",
+      "Class": "MagicGirl",
+      "Gender": "Female",
+      "Grade": 1,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
+    },
+    {
+      "Key": 105,
+      "Name": "카샤",
+      "SubName": "MAGICENGINEER002",
+      "Class": "Shooter",
+      "Gender": "Female",
+      "Grade": 1,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
+    },
+    {
+      "Key": 106,
+      "Name": "마호",
+      "SubName": "WITCH001",
+      "Class": "MagicGirl",
+      "Gender": "Female",
+      "Grade": 1,
+      "Rarity": false,
+      "SkillCard1Key": null,
+      "SkillCard2Key": null,
+      "SpecialCardKey": null,
+      "TurnSkillKey": null,
+      "PassiveSkillKey": null
+    }
+  ]
+}

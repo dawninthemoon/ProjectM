@@ -1,0 +1,14 @@
+{
+  "MonsterStat": [
+    {
+      "Grade": 1,
+      "Level": 1,
+      "AttackPower": 20,
+      "BaseHP": 50,
+      "DefencePower": 10,
+      "Critical": 1000,
+      "CriticalDamage": 15000,
+      "Shield": 0
+    }
+  ]
+}
