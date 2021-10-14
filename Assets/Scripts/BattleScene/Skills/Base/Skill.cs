@@ -70,6 +70,12 @@ public class Skill : MonoBehaviour {
         DoHeal(battleControl);
     }
 
+    public bool IsCharacterTarget() {
+        var data = _skillInfo.SkillData;
+        bool isCharacterTarget = (data.HealType == Data.HealType.SingleHeal) || (data.HealType == Data.HealType.ComboHeal);
+        return isCharacterTarget;
+    }
+
     private void DoAttack(BattleControl battleControl) {
         CharacterStat stat = CharacterStatDataParser.Instance.GetCharacterStat(_skillInfo.CharacterKey);
 
@@ -180,8 +186,8 @@ public class Skill : MonoBehaviour {
 
     public void SetMostFrontOrder(bool isEnlarge) {
         _renderer.sortingOrder = isEnlarge ? 100 : _originOrder;
-        _iconRenderer.sortingOrder = isEnlarge ? 101 : _originOrder;
-        _costTextRenderer.sortingOrder = isEnlarge ? 102 : _originOrder;
+        _iconRenderer.sortingOrder = isEnlarge ? 101 : _originOrder + 1;
+        _costTextRenderer.sortingOrder = isEnlarge ? 102 : _originOrder + 2;
     }
 
     public void DetectCardArea(Vector2 touchPosition) {

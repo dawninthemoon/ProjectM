@@ -74,10 +74,7 @@ public class BattleControl : MonoBehaviour {
 
         if (usedSkillIndex != -1) {
             if (canSelectTarget) {
-                SelectedTarget = _enemyControl.GetSelectedEnemy(touchPosition);
-                if (!SelectedTarget) {
-                    SelectedTarget = _playerControl.GetSelectedCharacter(touchPosition);
-                }
+                SetSkillTarget(hand[usedSkillIndex], touchPosition);
                 if (!SelectedTarget) return;
             }
             _playerControl.UseSkill(hand[usedSkillIndex], this);
@@ -111,6 +108,16 @@ public class BattleControl : MonoBehaviour {
 
         //Data.CharacterDataParser
         StartTurn();
+    }
+
+    private void SetSkillTarget(Skill skill, Vector2 touchPosition) {
+        
+        if (skill.IsCharacterTarget()) {
+            SelectedTarget = _playerControl.GetSelectedCharacter(touchPosition);
+        }
+        else {
+            SelectedTarget = _enemyControl.GetSelectedEnemy(touchPosition);
+        }
     }
 
     private bool ListenTouchMoveInput(Vector2 curTouchPos, Skill skill, bool isCostEnough) {
