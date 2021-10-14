@@ -53,26 +53,17 @@ public class MonsterEntity : BattleEntity {
     public Data.SkillData GetCurrentSkillData() {
         int startIndex = _skillIndex;
 
-        Data.SkillData skillData = null;
-
-        int numOfSkills = _skillStatus.Length;
-        for (int i = 0; i < numOfSkills; ++i) {
-            _skillStatus[i].remainTurnCount -= 1;
-        }
-
         while (true) {
             if (_skillStatus[_skillIndex].remainTurnCount > 0) {
-                _skillIndex = (_skillIndex + 1) % numOfSkills;
+                ++_skillIndex;
             }
             else {
-                skillData = _skillStatus[_skillIndex].skillData;
                 break;
             }
 
-            if (_skillIndex == startIndex) break;
+            if (_skillIndex == startIndex) return null;
         }
 
-        _skillIndex = (_skillIndex + 1) % numOfSkills;
-        return skillData;
+        return _skillStatus[_skillIndex++].skillData;
     }
 }
