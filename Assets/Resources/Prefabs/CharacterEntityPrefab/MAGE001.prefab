@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 6424231541124998109}
   - component: {fileID: 6424231541124998107}
   - component: {fileID: 6424231541124998108}
+  - component: {fileID: 5771137668798949012}
   m_Layer: 7
   m_Name: MAGE001
   m_TagString: Untagged
@@ -128,7 +129,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _atlas: {fileID: 4343727234628468602, guid: ddfcf37373eb0f14b9934b80c9749dd2, type: 2}
-  _key: 1340001
+  _skillCardKeys:
+  - 24000010
+  - 24000020
+  - 23000010
 --- !u!212 &6424231541124998108
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -180,3 +184,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &5771137668798949012
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6424231541124998110}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4, z: 0.2}
+  m_Center: {x: 0.1, y: 2, z: 0.1}

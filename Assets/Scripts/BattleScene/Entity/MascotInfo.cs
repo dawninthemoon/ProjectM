@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class MascotInfo {
     public int speed;
+    public int startDraw;
     public int draw;
     public int cost;
 }

@@ -101,53 +101,53 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 26fdc1efb5e605948abc0ac680a4e3fe, type: 3}
   - {fileID: 21300000, guid: 5ce3f2ef57c60024c834836ae5a26b78, type: 3}
   m_PackedSpriteNamesToIndex:
-  - GOBLIN002_DEAD4
+  - Goblin002_Dead4
   - Goblin003_Dead2
-  - GOBLIN002_IDLE4
-  - GOBLIN002_DEAD5
-  - GOBLIN002_ATTACK1
-  - GOBLIN002_HIT1
+  - Goblin002_Idle4
+  - Goblin002_Dead5
+  - Goblin002_Attack1
+  - Goblin002_Hit1
   - Goblin003_Dead4
   - Goblin003_Dead3
   - Goblin003_Idle4
-  - GOBLIN001_DEAD6
+  - Goblin001_Dead6
   - Goblin003_Attack4
-  - GOBLIN001_DEAD4
+  - Goblin001_Dead4
   - Goblin003_Hit2
   - Goblin003_Idle1
-  - GOBLIN001_IDLE2
-  - GOBLIN002_IDLE2
-  - GOBLIN002_ATTACK2
-  - GOBLIN001_ATTACK2
+  - Goblin001_Idle2
+  - Goblin002_Idle2
+  - Goblin002_Attack2
+  - Goblin001_Attack2
   - Goblin003_Idle3
-  - GOBLIN002_ATTACK3
-  - GOBLIN001_DEAD3
-  - GOBLIN002_ATTACK4
-  - GOBLIN002_IDLE1
-  - GOBLIN002_DEAD6
+  - Goblin002_Attack3
+  - Goblin001_Dead3
+  - Goblin002_Attack4
+  - Goblin002_Idle1
+  - Goblin002_Dead6
   - Goblin003_Dead6
   - Goblin003_Attack3
-  - GOBLIN001_HIT1
-  - GOBLIN002_DEAD1
+  - Goblin001_Hit1
+  - Goblin002_Dead1
   - Goblin003_Hit1
   - Goblin003_Dead1
-  - GOBLIN001_IDLE3
+  - Goblin001_Idle3
   - Goblin003_Attack1
   - Goblin003_Attack2
-  - GOBLIN001_DEAD2
-  - GOBLIN002_DEAD2
+  - Goblin001_Dead2
+  - Goblin002_Dead2
   - Goblin003_Idle2
-  - GOBLIN001_ATTACK3
-  - GOBLIN002_IDLE3
-  - GOBLIN002_DEAD3
-  - GOBLIN001_ATTACK1
-  - GOBLIN002_HIT2
-  - GOBLIN001_IDLE1
-  - GOBLIN001_ATTACK4
-  - GOBLIN001_HIT2
-  - GOBLIN001_IDLE4
-  - GOBLIN001_DEAD5
-  - GOBLIN001_DEAD1
+  - Goblin001_Attack3
+  - Goblin002_Idle3
+  - Goblin002_Dead3
+  - Goblin001_Attack1
+  - Goblin002_Hit2
+  - Goblin001_Idle1
+  - Goblin001_Attack4
+  - Goblin001_Hit2
+  - Goblin001_Idle4
+  - Goblin001_Dead5
+  - Goblin001_Dead1
   - Goblin003_Dead5
   m_RenderDataMap: {}
   m_Tag: MonsterSpriteAtlas1
