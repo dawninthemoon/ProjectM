@@ -273,6 +273,7 @@ MonoBehaviour:
   packageList:
   - ProductType: 0
     ProductID: projectm_cash_100
+  recipteChecker: {fileID: 0}
 --- !u!4 &988161511
 Transform:
   m_ObjectHideFlags: 0
@@ -798,7 +799,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
