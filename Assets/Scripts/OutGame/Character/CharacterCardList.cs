@@ -29,8 +29,6 @@ namespace OutGame
                 else
                 {
                     characterCardPool[i].gameObject.SetActive( true );
-
-                    Debug.Log(userCharData[i].Index );
                     characterCardPool[i].SetCard( CharacterDataParser.Instance.GetCharacter( userCharData[i].Index ) );
                 }
             }

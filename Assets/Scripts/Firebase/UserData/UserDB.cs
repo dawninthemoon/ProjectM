@@ -121,13 +121,6 @@ namespace FBControl
             //     PopUpManager.Instance.ShowPopUp(PopUpType.WORNING, "중복 로그인", "중복 로그인되었습니다. 게임이 종료됩니다.", () => { Application.Quit(); });
             // }
         }
-        
-        //캐릭터 덱 저장
-        public void SaveDeck()
-        {
-            DatabaseReference propertyReference = databaseReference.Child("deck");
-            propertyReference.SetRawJsonValueAsync( userData.GetDeckJsonArray().ToString() );
-        }
 
         //캐릭터 정보 저장
         public void SetCharacter()

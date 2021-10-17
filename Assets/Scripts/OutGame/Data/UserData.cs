@@ -52,11 +52,24 @@ public class UserData
         }
     }
 
-    private int[] userDeckData = new int[3];
-    public int[] UserDeckData
+    private int currentCharacter = 101;
+    public int CurrentCharacter
     {
-        get{ return userDeckData; }
-        set{ userDeckData = value;}
+        get
+        {
+            currentCharacter = FBControl.FirebaseManager.Instance.UserDB.GetLocalIntigerData("CurChar");
+
+            if (currentCharacter == 0)
+                currentCharacter = 101;
+
+            return currentCharacter;
+        }
+        set
+        {
+            FBControl.FirebaseManager.Instance.UserDB.SaveLocalData("CurChar", value);
+
+            currentCharacter = value;
+        }
     }
 
     public void SetDefaultData()
@@ -88,26 +101,13 @@ public class UserData
 
         jsonResult.Add( "charData", GetCharJsonArray() );
 
-        jsonResult.Add("deck", GetDeckJsonArray() );
-
         jsonResult.Add("itemData", userItemDataContainer.ToJsonArray() );
 
         jsonResult.Add("spiritData", userSpiritDataList.ToJsonObject() );
 
         return jsonResult;
     }
-
-    public JSONArray GetDeckJsonArray()
-    {
-        JSONArray jsonArray = new JSONArray();
-
-        for( int i = 0; i < userDeckData.Length; ++i )
-        {
-            jsonArray.Add( userDeckData[i] );
-        }
-
-        return jsonArray;
-    }
+    
 
     public JSONArray GetCharJsonArray()
     {
@@ -152,18 +152,6 @@ public class UserData
 
                 dataTemp.SetJsonObject( array[i].Obj );
                 charData.Add( dataTemp );
-            }
-        }
-
-        if( jsonObject.ContainsKey("deck") )
-        {
-            JSONArray array = jsonObject.GetArray("deck");
-
-            userDeckData = new int[array.Length];
-
-            for( int i = 0; i < array.Length; ++i )
-            {
-                userDeckData[i] = (int)array[i].Number;
             }
         }
 
