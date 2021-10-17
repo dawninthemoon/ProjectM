@@ -180,6 +180,7 @@ public class UserData
 
         if( userCharacter != null)
         {
+            userCharacter.Lv += 1;
         }
         else
         {
