@@ -7,6 +7,7 @@ public abstract class BattleEntity : MonoBehaviour {
     [SerializeField] private SpriteAtlas _atlas = null;
     protected int _maxHP;
     protected int _curHP;
+    public int CurHP { get { return _curHP; } }
     protected SpriteAtlasAnimator _animator;
 
     public void Progress() {
@@ -16,13 +17,10 @@ public abstract class BattleEntity : MonoBehaviour {
     public bool IsOverlapped(Vector2 pos, LayerMask mask) {
         bool isOverlapped = false;
         RaycastHit raycastHit;
-        Ray screenRay = Camera.main.ScreenPointToRay( Input.mousePosition);
-        Debug.DrawRay(screenRay.origin,screenRay.direction, Color.cyan, 4);
+        Ray screenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if( Physics.Raycast( screenRay, out raycastHit, 100, mask) )
-        {
+        if (Physics.Raycast( screenRay, out raycastHit, 100, mask)) {
             isOverlapped = true;
-            Debug.Log( raycastHit.transform.gameObject.name );
         }
         return isOverlapped;
     }

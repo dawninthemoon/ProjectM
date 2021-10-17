@@ -4,7 +4,8 @@ using UnityEngine;
 using RieslingUtils;
 
 public class CharacterEntity : BattleEntity {
-    [SerializeField] private int _key = 0;
+    [SerializeField] private string[] _skillCardKeys = null;
+    public string[] SkillCardKeys { get { return _skillCardKeys; } }
     private Data.Character _characterData;
     public Data.Character CharacterData { get { return _characterData; } }
     private Data.CharacterStat _characterStatData;
@@ -14,7 +15,7 @@ public class CharacterEntity : BattleEntity {
         _characterData = characterData;
         _characterStatData = characterStatData;
 
-        _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _characterData.SubName + "_", "IDLE", true, 0.5f);
+        _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _characterData.SubName + "_", "IDLE", true);
         _maxHP = _characterStatData.BaseHP;
         _curHP = _maxHP;
     }

@@ -14,7 +14,6 @@ public class BattleControl : MonoBehaviour {
     public MonsterControl EnemyCtrl { get { return _enemyControl; } }
     [SerializeField] Camera _cardCamera = null;
     public BattleEntity SelectedTarget { get; private set; }
-    private static readonly float LongTouchTime = 1.5f;
     private TurnInfo _currentTurn;
     private int _turnCount = 0;
     private int _currentStage;
@@ -74,7 +73,7 @@ public class BattleControl : MonoBehaviour {
 
         if (usedSkillIndex != -1) {
             if (canSelectTarget) {
-                SelectedTarget = _enemyControl.GetSelectedEnemy(touchPosition);
+                SetSkillTarget(hand[usedSkillIndex], touchPosition);
                 if (!SelectedTarget) return;
             }
             _playerControl.UseSkill(hand[usedSkillIndex], this);
@@ -96,8 +95,18 @@ public class BattleControl : MonoBehaviour {
             SkillManager.GetInstance().State = SkillState.CARD_DRAG;
         }
         else {
-            EndTurn();
+            StartCoroutine(StartEnemyTurn());
         }
+    }
+
+    private IEnumerator StartEnemyTurn() {
+        yield return _enemyControl.UseSkill(this);
+        EndTurn();
+    }
+
+    public void OnTurnEndButtonClicked() {
+        if (_currentTurn == TurnInfo.ENEMY) return;
+        EndTurn();
     }
 
     public void EndTurn() {
@@ -106,8 +115,17 @@ public class BattleControl : MonoBehaviour {
         _currentTurn = (TurnInfo)nextTurn;
         SkillManager.GetInstance().State = SkillState.CARD_OVER;
 
-        //Data.CharacterDataParser
         StartTurn();
+    }
+
+    private void SetSkillTarget(Skill skill, Vector2 touchPosition) {
+        
+        if (skill.IsCharacterTarget()) {
+            SelectedTarget = _playerControl.GetSelectedCharacter(touchPosition);
+        }
+        else {
+            SelectedTarget = _enemyControl.GetSelectedEnemy(touchPosition);
+        }
     }
 
     private bool ListenTouchMoveInput(Vector2 curTouchPos, Skill skill, bool isCostEnough) {

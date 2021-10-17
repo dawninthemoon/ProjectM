@@ -8,6 +8,8 @@ using RieslingUtils;
 
 public class Skill : MonoBehaviour {
     [SerializeField] SpriteRenderer _renderer = null;
+    [SerializeField] SpriteRenderer _iconRenderer = null;
+    [SerializeField] SpriteRenderer _characterIconRenderer = null;
     [SerializeField] Transform _leftTransform = null;
     private MeshRenderer _costTextRenderer;
     [SerializeField] private TMP_Text _costText = null;
@@ -30,8 +32,13 @@ public class Skill : MonoBehaviour {
         transform.localScale = new Vector3(0.3f, 0.3f, 1f);
         CardWidth = (transform.position.x - _leftTransform.position.x) * 2.5f;
         _costText.text = _skillInfo.SkillData.Cost.ToString();
+        _iconRenderer.sprite = ResourceManager.GetInstance().GetSprite("SkillIcon/" + _skillInfo.SkillData.IconKey);
+
+        string characterSubName = Data.CharacterDataParser.Instance.GetCharacter(info.CharacterKey).SubName;
+        _characterIconRenderer.sprite = ResourceManager.GetInstance().GetSprite(characterSubName);
     }
 
+    public SkillInfo GetSkillInfo() => _skillInfo;
     public int GetRequireCost() => _skillInfo.SkillData.Cost;
 
     public void Progress(Vector3 touchPosition) {
@@ -59,84 +66,10 @@ public class Skill : MonoBehaviour {
         return (_skillInfo.SkillData.CastType != CastType.NoneCast);
     }
 
-    public SkillInfo GetSkillInfo() {
-        return _skillInfo;
-    }
-
-    public void UseSkill(BattleControl battleControl) {
-        DoAttack(battleControl);
-        DoHeal(battleControl);
-    }
-
-    private void DoAttack(BattleControl battleControl) {
-        CharacterStat stat = CharacterStatDataParser.Instance.GetCharacterStat(_skillInfo.CharacterKey);
-
+    public bool IsCharacterTarget() {
         var data = _skillInfo.SkillData;
-        float criticalDamage = MathUtils.GetPerTenThousand(stat.CriticalDamage);
-        float baseDamage = stat.AttackPower * (1f + criticalDamage);
-        int targetCounts = data.AttackTypeValue;
-        var selectedTarget = battleControl.SelectedTarget;
-        int finalDamage;
-
-        switch (data.AttackType) {
-        case AttackType.SingleAttack:
-            finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
-            AttackTarget(selectedTarget, finalDamage);
-            break;
-        case AttackType.SideTurnAttack:
-        case AttackType.MultiAttack:
-            if (data.AttackType == AttackType.SideTurnAttack) {
-                finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
-                AttackTarget(selectedTarget, finalDamage);
-            }
-            var enemies = battleControl.EnemyCtrl.GetRandomEnemies(targetCounts, selectedTarget);
-            foreach (var e in enemies) {
-                finalDamage = Mathf.FloorToInt(baseDamage / e.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
-                AttackTarget(e, finalDamage);
-            }
-            break;
-        case AttackType.RandomAttack:
-            var enemy = battleControl.EnemyCtrl.GetRandomEnemies(1);
-            finalDamage = Mathf.FloorToInt(baseDamage / enemy[0].GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
-            AttackTarget(enemy[0], finalDamage);
-            break;
-        }
-
-        void AttackTarget(BattleEntity entity, int amount) {
-            entity.DecreaseHP(amount);
-        }
-    }
-
-    private void DoHeal(BattleControl battleControl) {
-        CharacterStat stat = CharacterStatDataParser.Instance.GetCharacterStat(_skillInfo.CharacterKey);
-
-        var data = _skillInfo.SkillData;
-        float baseHeal = MathUtils.GetPerTenThousand(data.HealRatio);
-        int targetCounts = _skillInfo.SkillData.HealTypeValue;
-        var selectedTarget = battleControl.SelectedTarget;
-        int finalHeal = 1;
-
-        switch (_skillInfo.SkillData.HealType) {
-        case HealType.SingleHeal:
-            finalHeal = Mathf.FloorToInt(baseHeal / selectedTarget.GetFinalDefence() * MathUtils.GetPercent(data.AttackRatio));
-            HealTarget(selectedTarget, finalHeal);
-            break;
-        case HealType.SideTurnHeal:
-        case HealType.MultiHeal:
-            var characters = battleControl.PlayerCtrl.GetRandomAllies(targetCounts, selectedTarget);
-            foreach (var ch in characters) {
-                HealTarget(ch, finalHeal);
-            }
-            break;
-        case HealType.RandomHeal:
-            var character = battleControl.PlayerCtrl.GetRandomAllies(1);
-            HealTarget(character[0], finalHeal);
-            break;
-        }
-
-        void HealTarget(BattleEntity target, int amount) {
-            target.IncreaseHP(amount);
-        }
+        bool isCharacterTarget = (data.HealType == Data.HealType.SingleHeal) || (data.HealType == Data.HealType.ComboHeal);
+        return isCharacterTarget;
     }
 
     public void MoveTransform(PRS prs, bool useTweening, float duration = 0f) {
@@ -156,14 +89,20 @@ public class Skill : MonoBehaviour {
     
     public void SetOrder(string sortingLayerName, int order) {
         _originOrder = order;
+
         _renderer.sortingLayerName = sortingLayerName;
+        _iconRenderer.sortingLayerName = _characterIconRenderer.sortingLayerName =  sortingLayerName;
+
         _renderer.sortingOrder = order;
-        _costTextRenderer.sortingOrder = order + 1;
+        _iconRenderer.sortingOrder = _characterIconRenderer.sortingOrder = order + 1;
+
+        _costTextRenderer.sortingOrder = order + 2;
     }
 
     public void SetMostFrontOrder(bool isEnlarge) {
         _renderer.sortingOrder = isEnlarge ? 100 : _originOrder;
-        _costTextRenderer.sortingOrder = isEnlarge ? 101 : _originOrder;
+        _iconRenderer.sortingOrder = _characterIconRenderer.sortingOrder = isEnlarge ? 101 : _originOrder + 1;
+        _costTextRenderer.sortingOrder = isEnlarge ? 102 : _originOrder + 2;
     }
 
     public void DetectCardArea(Vector2 touchPosition) {

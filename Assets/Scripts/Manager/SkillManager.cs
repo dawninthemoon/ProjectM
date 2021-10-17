@@ -30,7 +30,7 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         _aimRenderer.gameObject.layer = LayerMask.NameToLayer("Card");
         _aimRenderer.sortingLayerName = "UI";
         _aimRenderer.sortingOrder = 10;
-        _aimRenderer.sprite = ResourceManager.GetInstance().GetSprite("Sprites/Aim");
+        _aimRenderer.sprite = ResourceManager.GetInstance().GetSprite("Aim");
 
         _skillObjectPool = new ObjectPool<Skill>(
             10,
@@ -64,7 +64,8 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         float defaultZ = 100f;
         int cardCounts = cards.Count;
         for (int i = 0; i < cardCounts; ++i) {
-            cards[i].SetOrder(SortingLayerName, ++curOrder);
+            cards[i].SetOrder(SortingLayerName, curOrder);
+            curOrder += 3;
             var t = cards[i].transform;
             t.position = t.position.ChangeZPos(-curOrder + defaultZ);
         }

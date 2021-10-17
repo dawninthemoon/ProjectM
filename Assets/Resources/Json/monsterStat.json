@@ -3,12 +3,12 @@
     {
       "Grade": 1,
       "Level": 1,
-      "AttackPower": 10000,
-      "BaseHP": 10000,
-      "DefencePower": 10000,
-      "Critical": 10,
+      "AttackPower": 20,
+      "BaseHP": 50,
+      "DefencePower": 10,
+      "Critical": 1000,
       "CriticalDamage": 15000,
-      "Shield": 10
+      "Shield": 0
     }
   ]
 }
