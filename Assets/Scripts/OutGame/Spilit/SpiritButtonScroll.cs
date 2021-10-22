@@ -3,26 +3,60 @@ using System.Collections.Generic;
 using UnityEngine;
 using PolyAndCode.UI;
 using FBControl;
+using UnityEngine.UI;
+using Data;
 
-public class SpiritButtonScroll : MonoBehaviour, IRecyclableScrollRectDataSource
+public class SpiritButtonScroll : MonoBehaviour
 {
-    [SerializeField] private RecyclableScrollRect recyclableScrollRect;
+    [SerializeField] private ScrollRect scrollRect;
     [SerializeField] private SpiritInfoUI spilitInfoUI;
 
-    public void Awake()
+    [SerializeField] private Transform haveTransform;
+    [SerializeField] private Transform lockTransform;
+
+    [SerializeField] private SpiritButton[] spiritButtonPool;
+
+    public void Start()
     {
-        recyclableScrollRect.DataSource = this;
+        Init();
     }
 
-    public int GetItemCount()
+    public void Init()
     {
-        return FirebaseManager.Instance.UserData.UserSpiritDataList.Data.Count;
+        SpiritData[] spiritDatas = SpiritDataParser.Instance.Data;
+        List<UserSpiritData> userSpiritData = FirebaseManager.Instance.UserData.UserSpiritDataList.Data;
+
+        for( int i =0; i < spiritDatas.Length; ++i )
+        {
+            SpiritButton button = Pool();
+
+            if( button == null )
+                return;
+                
+            button.gameObject.SetActive( true );
+            button.Init( spiritDatas[i].Key, spilitInfoUI );
+
+            if( userSpiritData.Find( (x)=>{ return x.Index == spiritDatas[i].Key;} ) != null )
+            {
+                button.transform.parent = haveTransform;
+            }   
+            else
+            {
+                button.transform.parent = lockTransform;
+            } 
+        }
     }
 
-    public void SetCell( ICell cell, int index )
+    public SpiritButton Pool()
     {
-        //Casting to the implemented Cell
-        var item = cell as SpiritButton;
-        item.Init( FirebaseManager.Instance.UserData.UserSpiritDataList.Data[index].Index, spilitInfoUI );
+        for( int i =0 ; i <spiritButtonPool.Length; ++i )
+        {
+            if( !spiritButtonPool[i].gameObject.activeSelf )
+            {
+                return spiritButtonPool[i];
+            }
+        }
+
+        return null;
     }
 }

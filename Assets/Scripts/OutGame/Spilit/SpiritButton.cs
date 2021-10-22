@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PolyAndCode.UI;
 
-public class SpiritButton : MonoBehaviour, ICell
+public class SpiritButton : MonoBehaviour
 {
     [SerializeField] private SpiritIcon spilitIcon;
     private SpiritInfoUI spilitInfoUI;
