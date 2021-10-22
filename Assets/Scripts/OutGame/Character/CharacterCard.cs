@@ -10,6 +10,8 @@ namespace OutGame
     public class CharacterCard : MonoBehaviour
     {
         [SerializeField] private Image cardImage;
+        [SerializeField] private NativeSizeImage nativeSizeImage;
+
         [SerializeField] private Sprite[] cardSprites;
 
         [SerializeField] private Stars stars;
@@ -31,10 +33,20 @@ namespace OutGame
         {
             if( character == null )
                 return;
-                
-            characterImage.sprite = characterAtlas.GetSprite( string.Format("Character_{0}", character.Key) );
-            characterImage.rectTransform.pivot = new Vector2( (float)characterImage.sprite.pivot.x / characterImage.sprite.texture.width, (float)characterImage.sprite.pivot.y / characterImage.sprite.texture.height );
-            characterImage.rectTransform.position = characterCenter.position;
+
+            characterImage.sprite = ResourceManager.GetInstance().GetSprite(string.Format("Standing/Character_{0}", character.Key));
+            //characterImage.sprite = characterAtlas.GetSprite(  );
+
+            if (characterImage.sprite != null)
+            {
+                Sprite targetSprite = characterImage.sprite;
+                characterImage.rectTransform.pivot = new Vector2( (float)targetSprite.pivot.x / targetSprite.texture.width , (float)targetSprite.pivot.y / targetSprite.texture.height);
+            }
+
+            characterImage.transform.localPosition = Vector3.zero;
+            nativeSizeImage.SetNativeSize();
+
+            //characterImage.rectTransform.position = characterCenter.position;
 
             nameText.text = character.Name;
             stars.SetStar( character.Grade );
