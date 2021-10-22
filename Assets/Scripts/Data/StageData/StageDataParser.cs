@@ -11,5 +11,10 @@ namespace Data
             assetPath = "Json/stage";
             templateName = "StageTemplate";
         }
+
+        public StageData[] GetStageData( int stage )
+        {
+            return System.Array.FindAll( data, (x) => { return x.Stage == stage; } );
+        }
     }
 }

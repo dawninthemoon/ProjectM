@@ -319,7 +319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_AnchorMax.x
@@ -857,7 +857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1239,7 +1239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1942,7 +1942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7693b635fb54b4f97b1f86c39d5428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: GameScene
+  sceneName: StageList
 --- !u!1001 &3905085057017092879
 PrefabInstance:
   m_ObjectHideFlags: 0

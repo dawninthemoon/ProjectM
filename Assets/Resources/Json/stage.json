@@ -1,0 +1,144 @@
+{
+  "StageTemplate": [
+    {
+      "Stage": 1,
+      "SubStage": 1,
+      "#비고": null,
+      "Name": "비치의 격전지",
+      "SubName": "비취의 습격 1",
+      "Thumbnail": null,
+      "FirstRewardType": "FCash",
+      "FirstRewardCount": 300
+    },
+    {
+      "Stage": 1,
+      "SubStage": 2,
+      "#비고": null,
+      "Name": "비치의 격전지",
+      "SubName": "비취의 습격 2",
+      "Thumbnail": null,
+      "FirstRewardType": "FCash",
+      "FirstRewardCount": 300
+    },
+    {
+      "Stage": 1,
+      "SubStage": 3,
+      "#비고": null,
+      "Name": "비치의 격전지",
+      "SubName": "비취의 습격 3",
+      "Thumbnail": null,
+      "FirstRewardType": "FCash",
+      "FirstRewardCount": 300
+    },
+    {
+      "Stage": 1,
+      "SubStage": 4,
+      "#비고": null,
+      "Name": "비치의 격전지",
+      "SubName": "비취의 습격 4",
+      "Thumbnail": null,
+      "FirstRewardType": "FCash",
+      "FirstRewardCount": 300
+    },
+    {
+      "Stage": 1,
+      "SubStage": 5,
+      "#비고": null,
+      "Name": "비치의 격전지",
+      "SubName": "비취의 습격 5",
+      "Thumbnail": null,
+      "FirstRewardType": "FCash",
+      "FirstRewardCount": 300
+    },
+    {
+      "Stage": 1,
+      "SubStage": 6,
+      "#비고": null,
+      "Name": "비치의 격전지",
+      "SubName": "비취의 습격 6",
+      "Thumbnail": null,
+      "FirstRewardType": "FCash",
+      "FirstRewardCount": 300
+    },
+    {
+      "Stage": 1,
+      "SubStage": 7,
+      "#비고": null,
+      "Name": "비치의 격전지",
+      "SubName": "비취의 습격 7",
+      "Thumbnail": null,
+      "FirstRewardType": "FCash",
+      "FirstRewardCount": 300
+    },
+    {
+      "Stage": 2,
+      "SubStage": 1,
+      "#비고": null,
+      "Name": "고블린 군락",
+      "SubName": "고블린의 교미 생태계",
+      "Thumbnail": null,
+      "FirstRewardType": "FCash",
+      "FirstRewardCount": 300
+    },
+    {
+      "Stage": 2,
+      "SubStage": 2,
+      "#비고": null,
+      "Name": "고블린 군락",
+      "SubName": "고블린의 교미 생태계",
+      "Thumbnail": null,
+      "FirstRewardType": "FCash",
+      "FirstRewardCount": 300
+    },
+    {
+      "Stage": 2,
+      "SubStage": 3,
+      "#비고": null,
+      "Name": "고블린 군락",
+      "SubName": "고블린의 교미 생태계",
+      "Thumbnail": null,
+      "FirstRewardType": "FCash",
+      "FirstRewardCount": 300
+    },
+    {
+      "Stage": 2,
+      "SubStage": 4,
+      "#비고": null,
+      "Name": "고블린 군락",
+      "SubName": "고블린의 교미 생태계",
+      "Thumbnail": null,
+      "FirstRewardType": "FCash",
+      "FirstRewardCount": 300
+    },
+    {
+      "Stage": 2,
+      "SubStage": 5,
+      "#비고": null,
+      "Name": "고블린 군락",
+      "SubName": "고블린의 교미 생태계",
+      "Thumbnail": null,
+      "FirstRewardType": "FCash",
+      "FirstRewardCount": 300
+    },
+    {
+      "Stage": 2,
+      "SubStage": 6,
+      "#비고": null,
+      "Name": "고블린 군락",
+      "SubName": "고블린의 교미 생태계",
+      "Thumbnail": null,
+      "FirstRewardType": "FCash",
+      "FirstRewardCount": 300
+    },
+    {
+      "Stage": 2,
+      "SubStage": 7,
+      "#비고": null,
+      "Name": "고블린 군락",
+      "SubName": "고블린의 교미 생태계",
+      "Thumbnail": null,
+      "FirstRewardType": "FCash",
+      "FirstRewardCount": 300
+    }
+  ]
+}
