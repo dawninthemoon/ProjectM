@@ -19,7 +19,7 @@ public class SpiritButton : MonoBehaviour
 
     public void OnClick()
     {
-        spilitInfoUI.gameObject.SetActive( true );
+        spilitInfoUI.SetActive();
         spilitInfoUI.SetInfo( Data.SpiritDataParser.Instance.GetSpiritData( spritIndex ) );
     }
 }

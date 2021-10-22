@@ -13,6 +13,9 @@ public class SpiritInfoUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private Image icon;
     [SerializeField] private Image expSlider;
+
+    public event System.Action OnActiveEvent;
+    public event System.Action OnDisableEvent;
     
     private SpiritData spiritData;
     private UserSpiritData userSpiritData;
@@ -20,6 +23,7 @@ public class SpiritInfoUI : MonoBehaviour
     public void SetInfo( SpiritData spiritData )
     {
         this.spiritData = spiritData;
+
         nameText.text = spiritData.Name;
         icon.sprite = SpiritIconSpriteControl.Instance.GetSpiritSprite( spiritData.Key );
 
@@ -28,6 +32,20 @@ public class SpiritInfoUI : MonoBehaviour
         SetLevelText();
 
         expSlider.fillAmount = userSpiritData.Exp / 100f;
+    }
+
+    public void SetActive()
+    {
+        OnActiveEvent?.Invoke();
+        gameObject.SetActive( true );
+        TopUIBackButton.Instance.AddCallback( () => { this.SetDisable(); } );
+    }
+
+    public void SetDisable()
+    {
+        OnDisableEvent?.Invoke();
+        gameObject.SetActive( false );
+        TopUIBackButton.Instance.PopCallback();
     }
 
     public void SetLevelText()

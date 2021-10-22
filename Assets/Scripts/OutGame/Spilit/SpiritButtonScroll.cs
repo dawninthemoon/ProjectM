@@ -8,7 +8,6 @@ using Data;
 
 public class SpiritButtonScroll : MonoBehaviour
 {
-    [SerializeField] private ScrollRect scrollRect;
     [SerializeField] private SpiritInfoUI spilitInfoUI;
 
     [SerializeField] private Transform haveTransform;
@@ -19,6 +18,25 @@ public class SpiritButtonScroll : MonoBehaviour
     public void Start()
     {
         Init();
+
+        spilitInfoUI.OnDisableEvent += SetActive;
+        spilitInfoUI.OnActiveEvent += SetDisable;
+    }
+
+    public void OnDestroy()
+    {
+        spilitInfoUI.OnDisableEvent -= SetActive;
+        spilitInfoUI.OnActiveEvent -= SetDisable;
+    }
+
+    public void SetActive()
+    {
+        gameObject.SetActive( true );
+    }
+
+    public void SetDisable()
+    {
+        gameObject.SetActive( false );
     }
 
     public void Init()
@@ -43,7 +61,7 @@ public class SpiritButtonScroll : MonoBehaviour
             else
             {
                 button.transform.parent = lockTransform;
-            } 
+            }
         }
     }
 
