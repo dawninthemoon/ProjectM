@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class UserStaminaData
 {
-    private int maxStamina;
-
+    private int maxStamina = 50;
+    public int MaxStamina
+    {
+        get { return maxStamina; }
+    }
     private int stamina;
     public int Stamina
     {
@@ -21,5 +20,15 @@ public class UserStaminaData
     public UserStaminaData( int stamina )
     {
         this.stamina = stamina;
+    }
+
+    public void AddStamina( int addCount )
+    {
+        stamina += addCount;
+
+        if (stamina <= 0)
+            stamina = 0;
+
+        FBControl.FirebaseManager.Instance.UserDB.SaveChildrenData("stamina", this.stamina);
     }
 }

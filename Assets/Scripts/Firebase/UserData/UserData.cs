@@ -58,6 +58,12 @@ public class UserData
         }
     }
 
+    private UserGrowStoneData userGrowStoneData = new UserGrowStoneData();
+    public UserGrowStoneData UserGrowStoneData
+    {
+        get { return userGrowStoneData;  }
+    }
+
     private int currentCharacter = 101;
     public int CurrentCharacter
     {
@@ -90,6 +96,7 @@ public class UserData
         userCurrenyData.PCash = 0;
 
         userStaminaData = new UserStaminaData(10);
+        userGrowStoneData.SetDefaultData();
     }
     
     #region GetJson
@@ -113,6 +120,8 @@ public class UserData
         jsonResult.Add("itemData", userItemDataContainer.ToJsonArray() );
 
         jsonResult.Add("spiritData", userSpiritDataList.ToJsonObject() );
+
+        userGrowStoneData.SetJsonData(jsonResult);
 
         return jsonResult;
     }
@@ -150,6 +159,8 @@ public class UserData
             userCurrenyData.PCash = (int)jsonObject.GetNumber("pCash");
         if( jsonObject.ContainsKey("stamina"))
             userStaminaData.Stamina = (int)jsonObject.GetNumber("stamina");
+
+        userGrowStoneData.GetJsonData(jsonObject);
 
         charData.Clear();
 

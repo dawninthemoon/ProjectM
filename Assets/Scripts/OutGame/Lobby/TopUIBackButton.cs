@@ -10,13 +10,13 @@ public class TopUIBackButton : MonoBehaviour
         get{ return instance; }
     }
 
-    private Stack<System.Action> OnClickCallback = new Stack<System.Action>();
+    private Stack<System.Action> OnClickCallbackStack = new Stack<System.Action>();
 
     public void Awake()
     {
         if (instance != null)
         {
-            instance.OnClickCallback.Clear();
+            instance.OnClickCallbackStack.Clear();
             instance.gameObject.SetActive(false);
             return;
         }
@@ -37,7 +37,7 @@ public class TopUIBackButton : MonoBehaviour
 
     public void AddCallback( System.Action action )
     {
-        OnClickCallback.Push( action );
+        OnClickCallbackStack.Push( action );
         //Debug.Log( "Push: "+OnClickCallback.Count );
         
         gameObject.SetActive( true );
@@ -45,15 +45,15 @@ public class TopUIBackButton : MonoBehaviour
 
     public void PopCallback()
     {
-        OnClickCallback.Pop();
+        OnClickCallbackStack.Pop();
         //Debug.Log( "POP: "+OnClickCallback.Count );
         
-        if( OnClickCallback.Count == 0 )
+        if( OnClickCallbackStack.Count == 0 )
             gameObject.SetActive( false );
     }
 
     public void OnClick()
     {
-        OnClickCallback.Peek()?.Invoke();
+        OnClickCallbackStack.Peek()?.Invoke();
     }
 }

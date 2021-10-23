@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FirebaseManager = FBControl.FirebaseManager;
+using FBControl;
 
 public class CurrencyText : TweenText
 {
