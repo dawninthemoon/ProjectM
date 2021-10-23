@@ -25,6 +25,12 @@ public class UserData
         get{ return lastLoginTime; }
     }
 
+    private UserStaminaData userStaminaData = new UserStaminaData();
+    public UserStaminaData UserStaminaData
+    {
+        get { return userStaminaData;  }
+    }
+
     private List<UserCharacterData> charData = new List<UserCharacterData>();
     public List<UserCharacterData> CharData
     {
@@ -82,6 +88,8 @@ public class UserData
         userCurrenyData.Gold = 0;
         userCurrenyData.FCash = 0;
         userCurrenyData.PCash = 0;
+
+        userStaminaData = new UserStaminaData(10);
     }
     
     #region GetJson
@@ -98,6 +106,7 @@ public class UserData
         jsonResult.Add( "gold", userCurrenyData.Gold );
         jsonResult.Add( "fCash", userCurrenyData.FCash );
         jsonResult.Add( "pCash", userCurrenyData.PCash );
+        jsonResult.Add("stamina", userStaminaData.Stamina);
 
         jsonResult.Add( "charData", GetCharJsonArray() );
 
@@ -139,6 +148,8 @@ public class UserData
             userCurrenyData.FCash = (int)jsonObject.GetNumber("fCash");
         if( jsonObject.ContainsKey("PCash") )
             userCurrenyData.PCash = (int)jsonObject.GetNumber("pCash");
+        if( jsonObject.ContainsKey("stamina"))
+            userStaminaData.Stamina = (int)jsonObject.GetNumber("stamina");
 
         charData.Clear();
 

@@ -14,8 +14,12 @@ public class TopUIBackButton : MonoBehaviour
 
     public void Awake()
     {
-        if( instance != null )
+        if (instance != null)
+        {
+            instance.OnClickCallback.Clear();
+            instance.gameObject.SetActive(false);
             return;
+        }
         SetInstance();
     }
 
