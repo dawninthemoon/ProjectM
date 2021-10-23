@@ -12,9 +12,14 @@ namespace Data
             templateName = "StageTemplate";
         }
 
-        public StageData[] GetStageData( int stage )
+        public StageData[] FindAllStage( int stage )
         {
             return System.Array.FindAll( data, (x) => { return x.Stage == stage; } );
+        }
+
+        public StageData FindStage( int stage )
+        {
+            return System.Array.Find(data, (x) => { return x.Stage == stage; });
         }
     }
 }

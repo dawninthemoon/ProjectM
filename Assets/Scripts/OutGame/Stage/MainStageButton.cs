@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MainStageButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private TextMeshProUGUI titleText;
+
+    private System.Action<int> onClickCallback;
+
+    private int stageIndex = 0;
+
+    public void Init( System.Action<int> onClickCallback, Data.StageData stageData )
     {
-        
+        this.stageIndex = stageData.Stage;
+        this.onClickCallback = onClickCallback;
+        titleText.text = string.Format("{0}\n-제 {1} 스테이지", stageData.Name, stageData.Stage );
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnClick()
     {
-        
+        onClickCallback?.Invoke(stageIndex);
     }
 }

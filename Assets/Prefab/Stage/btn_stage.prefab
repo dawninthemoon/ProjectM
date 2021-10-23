@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 2687640837862146579}
   - component: {fileID: 2687640837862146580}
   - component: {fileID: 2687640837862146581}
+  - component: {fileID: 7031613475859835219}
   m_Layer: 5
   m_Name: btn_stage
   m_TagString: Untagged
@@ -332,7 +333,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2687640837862146580}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7031613475859835219}
+        m_TargetAssemblyTypeName: SubStageButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7031613475859835219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2687640837862146583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39915244577f9734f97dc29f105966fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainStageText: {fileID: 2687640838894793127}
+  subStageText: {fileID: 2687640837732778221}
 --- !u!1 &2687640838035452941
 GameObject:
   m_ObjectHideFlags: 0

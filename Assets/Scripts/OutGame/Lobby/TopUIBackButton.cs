@@ -16,9 +16,13 @@ public class TopUIBackButton : MonoBehaviour
     {
         if( instance != null )
             return;
+        SetInstance();
+    }
 
+    private void SetInstance()
+    {
         instance = this;
-        gameObject.SetActive( false );
+        gameObject.SetActive(false);
     }
 
     public void OnDestroy()

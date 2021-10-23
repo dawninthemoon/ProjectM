@@ -18,20 +18,28 @@ namespace Data
             get{ return subStage; }
         }
         private string name;
+        public string Name
+        {
+            get { return name; }
+        }
         private string subName;
+        public string SubName
+        {
+            get { return subName; }
+        }
         private string thumbnail;
         private string firstRewardType;
         private int firstRewarCount;
 
         public override void Parse(JSONObject jsonObject)
         {
-            stage = (int)jsonObject.GetNumber("stage");
-            subStage = (int)jsonObject.GetNumber("subStage");
+            stage = (int)jsonObject.GetNumber("Stage");
+            subStage = (int)jsonObject.GetNumber("SubStage");
             name = jsonObject.GetString("Name");
-            subName = jsonObject.GetString("subName");
-            thumbnail = jsonObject.GetString("thumbnail");
-            firstRewardType = jsonObject.GetString("firstRewardType");
-            firstRewarCount = (int)jsonObject.GetNumber("firstRewarCount");
+            subName = jsonObject.GetString("SubName");
+            thumbnail = jsonObject.GetString("Thumbnail");
+            firstRewardType = jsonObject.GetString("FirstRewardType");
+            firstRewarCount = (int)jsonObject.GetNumber("FirstRewardCount");
         }
     }
 }
