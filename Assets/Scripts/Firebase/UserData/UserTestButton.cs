@@ -34,6 +34,9 @@ public class UserTestButton : MonoBehaviour
         FBControl.FirebaseManager.Instance.UserDB.SetCharacter();
         FBControl.FirebaseManager.Instance.UserDB.SetSpilitData();
 
+        for( int i =0 ;  i  < UserGrowStoneData.GROW_STONE_COUNT; ++i )
+            FBControl.FirebaseManager.Instance.UserData.UserGrowStoneData.AddStone( i, 100 );
+
         FBControl.FirebaseManager.Instance.UserData.UserCurrenyData.Gold += 100;
     }
 }

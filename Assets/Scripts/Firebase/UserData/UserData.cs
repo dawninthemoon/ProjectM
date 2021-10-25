@@ -113,13 +113,13 @@ public class UserData
         jsonResult.Add( "gold", userCurrenyData.Gold );
         jsonResult.Add( "fCash", userCurrenyData.FCash );
         jsonResult.Add( "pCash", userCurrenyData.PCash );
-        jsonResult.Add("stamina", userStaminaData.Stamina);
+        jsonResult.Add( "stamina", userStaminaData.Stamina);
 
         jsonResult.Add( "charData", GetCharJsonArray() );
 
-        jsonResult.Add("itemData", userItemDataContainer.ToJsonArray() );
+        jsonResult.Add( "itemData", userItemDataContainer.ToJsonArray() );
 
-        jsonResult.Add("spiritData", userSpiritDataList.ToJsonObject() );
+        jsonResult.Add( "spiritData", userSpiritDataList.ToJsonObject() );
 
         userGrowStoneData.SetJsonData(jsonResult);
 
