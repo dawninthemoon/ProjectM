@@ -101,10 +101,24 @@ public class PlayerControl : MonoBehaviour {
         CurrentCost -= skill.GetRequireCost();
 
         Data.SkillInfo skillInfo = skill.GetSkillInfo();
+        ApplyAnimation(skillInfo);
+
         DoAttack(battleControl, skillInfo);
         DoHeal(battleControl, skillInfo);
 
         _cardDeck.SkillToGrave(skill.GetSkillInfo());
+    }
+
+    private void ApplyAnimation(Data.SkillInfo skillInfo) {
+        var casterData = Data.CharacterDataParser.Instance.GetCharacter(skillInfo.CharacterKey);
+        CharacterEntity caster = null;
+        for (int i = 0; i < _characters.Length; ++i) {
+            if (_characters[i].KeyEquals(casterData.Key)) {
+                caster = _characters[i];
+                break;
+            }
+        }
+        caster.ChangeAnimation("Attack", false, () => caster.ChangeAnimation("Idle", true));
     }
 
     private void DoAttack(BattleControl battleControl, Data.SkillInfo skillInfo) {
