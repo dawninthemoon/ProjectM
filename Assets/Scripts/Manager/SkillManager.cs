@@ -23,7 +23,7 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
 
         _createPosition = cardCamera.ScreenToWorldPoint(deckUI.transform.position);
         _middlePosition = cardCamera.transform.position;
-        _middlePosition.y = -3.5f;
+        _middlePosition.y = -3.1f;
 
         _aimRenderer = gameObject.AddComponent<SpriteRenderer>();
         SetActiveAimSprite(false);
@@ -83,19 +83,20 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         int cardCounts = cards.Count;
         if (cardCounts == 0) return;
         
+        float padding = 1.5f;
         Vector3 cardOrigin = _middlePosition;
         if (cardCounts % 2 == 0) {
             cardOrigin.x += cards[0].CardWidth;
-            cardOrigin.x -= cards[0].CardWidth * 2f * (cardCounts / 2);
+            cardOrigin.x -= cards[0].CardWidth * padding * (cardCounts / 2);
         }
         else {
-            cardOrigin.x -= cards[0].CardWidth * 2f * (cardCounts / 2);
+            cardOrigin.x -= cards[0].CardWidth * padding * (cardCounts / 2);
         }
 
         for (int i = 0; i < cardCounts; ++i) {
             cards[i].OriginPRS = new PRS(cardOrigin, Quaternion.identity, Vector3.one);
             cards[i].MoveTransform(cards[i].OriginPRS, true, 0.7f);
-            cardOrigin.x += cards[i].CardWidth * 2f;
+            cardOrigin.x += cards[i].CardWidth * padding;
         }
     }
 

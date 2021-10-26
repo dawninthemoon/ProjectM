@@ -34,7 +34,7 @@ public class SpriteAtlasAnimator {
     public void Progress(SpriteAtlas atlas) {
         _indexTimer += Time.deltaTime * _animatonSpeed;
         if (_indexTimer > _defaultSpeed) {
-            _indexTimer = 0f;
+            _indexTimer -= _defaultSpeed;
             var currentFrame = GetSprite();
             if (currentFrame == null) {
                 if (_loop) {
