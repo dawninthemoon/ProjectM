@@ -15,7 +15,7 @@ public class PlayerControl : MonoBehaviour {
     public List<Skill> SkillsInHand { get { return _skillsInHand;} }
     public int CurrentCost { get; set; }
     private float[] _fillAmounts;
-    private static readonly string CharacterEntityPrefabPath = "CharacterEntityPrefab/";
+    private static readonly string CharacterEntityPrefabPath = "CharacterEntityPrefab";
 
     public void Initialize() {
         int characterCounts = _characterKeys.Length;
@@ -24,22 +24,15 @@ public class PlayerControl : MonoBehaviour {
 
         for (int i = 0; i < characterCounts; ++i) {
             CreateCharacterEntity(i);
-
             var parser = Data.SkillDataParser.Instance;
-            
-            var keys = _characters[i].SkillCardKeys;
+
+            string skillKey1 = _characters[i].CharacterData.SkillCard1Key;
+            skillKey1 = skillKey1.TrimStart('[');
+            skillKey1 = skillKey1.TrimEnd(']');
+            var keys = skillKey1.Split(',');
             foreach (string key in keys) {
                 AddSkillInfo(skillInfoList, key, _characterKeys[i]);
             }
-
-            /*
-            여러 스킬 테스트를 위해 잠시 사용하지 않음
-            string skillKey1 = _characters[i].CharacterData.SkillCard1Key;
-            string skillKey2 = _characters[i].CharacterData.SkillCard2Key;
-
-            AddSkillInfo(skillInfoList, _characters[i].CharacterData.SkillCard1Key, _characterKeys[i]);
-            AddSkillInfo(skillInfoList, _characters[i].CharacterData.SkillCard2Key, _characterKeys[i]);
-            */
         }
 
         _cardDeck.Initialize(skillInfoList);
@@ -59,8 +52,7 @@ public class PlayerControl : MonoBehaviour {
         var characterData = Data.CharacterDataParser.Instance.GetCharacter(key);
         var characterStatData = Data.CharacterStatDataParser.Instance.GetCharacterStat(characterData.Key);
         
-        string prefabName = characterData.SubName;
-        var prefab = ResourceManager.GetInstance().GetEntityPrefab(CharacterEntityPrefabPath + prefabName);
+        var prefab = ResourceManager.GetInstance().GetEntityPrefab(CharacterEntityPrefabPath);
         _characters[index] = Instantiate(prefab, _initialPosition[index], Quaternion.identity) as CharacterEntity;
 
         _characters[index].transform.SetParent(transform);
