@@ -42,14 +42,561 @@ SpriteAtlas:
       enableTightPacking: 1
     secondaryTextureSettings: {}
     variantMultiplier: 1
-    packables: []
-    totalSpriteSurfaceArea: 0
+    packables:
+    - {fileID: 102900000, guid: 79d27e0991825f34a93deebc06544ff2, type: 3}
+    totalSpriteSurfaceArea: 16515072
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: 21300000, guid: c4a9d710a78686947943ac8f670d3108, type: 3}
+  - {fileID: 21300000, guid: 346bfc1050c61654b86b3da664544d69, type: 3}
+  - {fileID: 21300000, guid: dd430330229685f49a98f0c402683d4b, type: 3}
+  - {fileID: 21300000, guid: 82fb273015c34ac49b861c25b6f6c57e, type: 3}
+  - {fileID: 21300000, guid: be126a40b4253ec45aa5ddae43ac36e1, type: 3}
+  - {fileID: 21300000, guid: 77c23b50a7aa23846a461cd0875a1a76, type: 3}
+  - {fileID: 21300000, guid: f1b5c070a9166be49b2224433a2dcb61, type: 3}
+  - {fileID: 21300000, guid: f925b08084160e54e8a6658c38688d34, type: 3}
+  - {fileID: 21300000, guid: db0664a035b355e4ebc880fa504ca871, type: 3}
+  - {fileID: 21300000, guid: ec95fea025839d14589fa3398d2ad66b, type: 3}
+  - {fileID: 21300000, guid: ab62d1b094262cf4e857ccb69f432815, type: 3}
+  - {fileID: 21300000, guid: ae37f8b0df8240844bd198d05a1b21ef, type: 3}
+  - {fileID: 21300000, guid: 3c360ab0d43010b4189f5de2630c471f, type: 3}
+  - {fileID: 21300000, guid: 724fafb05f8b57d4fb3110108057525e, type: 3}
+  - {fileID: 21300000, guid: 60d192c0c3258774281ead8382cf9399, type: 3}
+  - {fileID: 21300000, guid: e8ba15d08e67aad4287799a3c9dc1236, type: 3}
+  - {fileID: 21300000, guid: 4252eff032389ea47a3cfe91ad82addf, type: 3}
+  - {fileID: 21300000, guid: bf47d50184b723847b24510aa1904ca1, type: 3}
+  - {fileID: 21300000, guid: 03d84511a966a4243874dff92329d03e, type: 3}
+  - {fileID: 21300000, guid: 7b45c821aa9fd5142a686a4a04a84bc6, type: 3}
+  - {fileID: 21300000, guid: 97824c21d3040034093d3d2d3df5257e, type: 3}
+  - {fileID: 21300000, guid: 608a9131f3bcaaa46b2d0c4589872aaa, type: 3}
+  - {fileID: 21300000, guid: 0b914741f427b3244a6728b22b70d957, type: 3}
+  - {fileID: 21300000, guid: 517c3841d420de64681255ac4acaaa49, type: 3}
+  - {fileID: 21300000, guid: dff04861d0ff60e40868a755b0ee44b8, type: 3}
+  - {fileID: 21300000, guid: 6efbdf91cefa9624bbb8aca72ae7c469, type: 3}
+  - {fileID: 21300000, guid: 273e24a1523d2244bb5c0ea185d35b21, type: 3}
+  - {fileID: 21300000, guid: f00c5aa195bd92a4ba80a34518cf0fae, type: 3}
+  - {fileID: 21300000, guid: 460c91b12a4484a448ec49ac584b1197, type: 3}
+  - {fileID: 21300000, guid: 36470ab190ea3eb44bc1e174442663d6, type: 3}
+  - {fileID: 21300000, guid: 1874d6c151b2edc47b82b242e3e950c9, type: 3}
+  - {fileID: 21300000, guid: 5c0036d15a97b3043899a44fb03527ee, type: 3}
+  - {fileID: 21300000, guid: 57afdfe1e11bbfc46bc70b3e7bad0701, type: 3}
+  - {fileID: 21300000, guid: 39f3bff1cb8295d4182a4359a9c6860f, type: 3}
+  - {fileID: 21300000, guid: 2ce1d3126437a1a42be6e757221d8fe2, type: 3}
+  - {fileID: 21300000, guid: fb58d552ae377c94facadbfca3709792, type: 3}
+  - {fileID: 21300000, guid: 8e0f7082cf775a84fa08fcf29476f82a, type: 3}
+  - {fileID: 21300000, guid: 9107e6820deb3b347a622d34a9c30965, type: 3}
+  - {fileID: 21300000, guid: 119e3fa2547023246954c4ed668e12fa, type: 3}
+  - {fileID: 21300000, guid: 721461e2bee79b94c8e03449b061a991, type: 3}
+  - {fileID: 21300000, guid: ba261ce2774c99d49ac8d8ce3aaad29a, type: 3}
+  - {fileID: 21300000, guid: 51f237f207558aa48b66745f752194da, type: 3}
+  - {fileID: 21300000, guid: 2aaa88f2daacb10428e649d23d719719, type: 3}
+  - {fileID: 21300000, guid: 2ed53df2d0eeb3746af55207e6406e9f, type: 3}
+  - {fileID: 21300000, guid: abb76503c1bd555428e70fd6b1c1273f, type: 3}
+  - {fileID: 21300000, guid: 0fbd9e035831e57439a9c4452ee9f563, type: 3}
+  - {fileID: 21300000, guid: 89fd70134376ef643be1dee2b6df3ff0, type: 3}
+  - {fileID: 21300000, guid: d799f013a5a128c42892905bf273769d, type: 3}
+  - {fileID: 21300000, guid: ca15dd1303fbd7e42b776bfe93ad7e53, type: 3}
+  - {fileID: 21300000, guid: 7a8e9033749a90f40bfa7cfdcec2014e, type: 3}
+  - {fileID: 21300000, guid: 2afdce3318f738047b0d7133f3d485d9, type: 3}
+  - {fileID: 21300000, guid: 320e0c63253babc4d8652285afb64176, type: 3}
+  - {fileID: 21300000, guid: 7b417373f87ff9a4ea8150e9107bd4b5, type: 3}
+  - {fileID: 21300000, guid: c7402d73c4ad66547bd2c88a3352eb99, type: 3}
+  - {fileID: 21300000, guid: 1543cf733dcc18d4ea653a70bd9f4f56, type: 3}
+  - {fileID: 21300000, guid: f81864835ee49a242b0e580ccfe13385, type: 3}
+  - {fileID: 21300000, guid: 892f2cb3a12c5674898ef7384b8805fc, type: 3}
+  - {fileID: 21300000, guid: ccdb04d38cd4aa942828ca27657f6350, type: 3}
+  - {fileID: 21300000, guid: dd7367d335139494bb18bf9cf24b859c, type: 3}
+  - {fileID: 21300000, guid: 344458d31fa23fc40b38ffe05d0707e4, type: 3}
+  - {fileID: 21300000, guid: 1ca8f6e3ada2a8f4e86941a55940db53, type: 3}
+  - {fileID: 21300000, guid: 38ba68e38f886c3458663e09d77ef52c, type: 3}
+  - {fileID: 21300000, guid: 1ba0d8f3a8a6959458c72680f16380bd, type: 3}
+  - {fileID: 21300000, guid: 67c2ebf335d0a3c408dcd8040bd52738, type: 3}
+  - {fileID: 21300000, guid: 36ea32048e88929429f3160fef3850f8, type: 3}
+  - {fileID: 21300000, guid: 5a3bb604ee4af2a4f80b638638e4c9fd, type: 3}
+  - {fileID: 21300000, guid: 906c37041ab61b9459aed66e813528a6, type: 3}
+  - {fileID: 21300000, guid: 18c3da0452645bd44aca2a3dee48c5f0, type: 3}
+  - {fileID: 21300000, guid: b5206e040af9feb478e3739d8984cccc, type: 3}
+  - {fileID: 21300000, guid: b48c8134f3c82834997395a4db816088, type: 3}
+  - {fileID: 21300000, guid: 79d6ef3469817af40988c9a01d1a95a7, type: 3}
+  - {fileID: 21300000, guid: dcb4fe44abf13064a9297ecba748b9f6, type: 3}
+  - {fileID: 21300000, guid: a9eaff44b84efa343b4069c5cb48ae05, type: 3}
+  - {fileID: 21300000, guid: 7ef68584a8845e44894cee056cb55517, type: 3}
+  - {fileID: 21300000, guid: dd0128941d59e224c87c8d8ca7828581, type: 3}
+  - {fileID: 21300000, guid: de1fb6a4ff3855344aeaf7493aa0ad0b, type: 3}
+  - {fileID: 21300000, guid: 65a4c8c40841c6b44b8c674cb4cb591f, type: 3}
+  - {fileID: 21300000, guid: 036643e44cf5d0942aa372e7770e00e8, type: 3}
+  - {fileID: 21300000, guid: c90615e4ebfa081418f3f20de4840396, type: 3}
+  - {fileID: 21300000, guid: a520c1f48ddec0c4cbdc31006598c7a5, type: 3}
+  - {fileID: 21300000, guid: 0155d1f4d4850ac43bee127181e8d5b2, type: 3}
+  - {fileID: 21300000, guid: 68f15805912384046a574a239b2a0b04, type: 3}
+  - {fileID: 21300000, guid: 39e7f415b29ff6c41bbfc0c6642d8e25, type: 3}
+  - {fileID: 21300000, guid: bb98bc25c47278e4ea7e619de84e03f9, type: 3}
+  - {fileID: 21300000, guid: c34e2d255fa5b3b45ad2b502ecfe1b3c, type: 3}
+  - {fileID: 21300000, guid: 1ae00245cfe9d7c499a4c123e9f31eeb, type: 3}
+  - {fileID: 21300000, guid: 81563c45ca5266d4da357985a1e72ad9, type: 3}
+  - {fileID: 21300000, guid: 940808556a3cc7049ba7655e413e9537, type: 3}
+  - {fileID: 21300000, guid: 9ae57d5598b61c2498ecca87369c444b, type: 3}
+  - {fileID: 21300000, guid: aba9bb75caedb6c41bdd047b84100118, type: 3}
+  - {fileID: 21300000, guid: d9fafc75113a4f34dbf5165fc062a5e0, type: 3}
+  - {fileID: 21300000, guid: 8b79f99510af6914489133b2020c7c82, type: 3}
+  - {fileID: 21300000, guid: 0ae0cb957ae0abc4bad31d874011f5b6, type: 3}
+  - {fileID: 21300000, guid: 9095cf95269f56c4f98ff1a49abf6f06, type: 3}
+  - {fileID: 21300000, guid: 8f8745a54f953664ba4121c19e40df3e, type: 3}
+  - {fileID: 21300000, guid: 7978a9b517fe00f48b4ef041af49ae85, type: 3}
+  - {fileID: 21300000, guid: a7cb35d5938befa44afb97797280c92b, type: 3}
+  - {fileID: 21300000, guid: 181873e56205c1449b229f562b1e3419, type: 3}
+  - {fileID: 21300000, guid: 5cd8a4e50f72a364598d822e272406ca, type: 3}
+  - {fileID: 21300000, guid: 63f2ea06a004b074eb2c2d2e17fcead3, type: 3}
+  - {fileID: 21300000, guid: eb2b9336690a9394e8066f1ec8118195, type: 3}
+  - {fileID: 21300000, guid: 5fbcd246f5910624ebd4dc4b5f466009, type: 3}
+  - {fileID: 21300000, guid: dcc00746366bec148a6d286684de19de, type: 3}
+  - {fileID: 21300000, guid: c8372476b23d16a489e80a5733de71b4, type: 3}
+  - {fileID: 21300000, guid: 3bc28c866f766764898cd01dc591d27e, type: 3}
+  - {fileID: 21300000, guid: 3eb81596bfc2aa648b40509a5cb78c36, type: 3}
+  - {fileID: 21300000, guid: 8c45f996e6fdd274fbe38593524dbfda, type: 3}
+  - {fileID: 21300000, guid: 8dc56ea67b0ac2b47830ee729ee1e16e, type: 3}
+  - {fileID: 21300000, guid: 3afec3c63afdc2b47bfd2fa015b82a5b, type: 3}
+  - {fileID: 21300000, guid: 4e51c8c6f20ec2249a4faa8675d23d70, type: 3}
+  - {fileID: 21300000, guid: d28acdc6c0645374492eb1482fb38b33, type: 3}
+  - {fileID: 21300000, guid: 41dabfc620a05924396a809461176a0a, type: 3}
+  - {fileID: 21300000, guid: cf534ed67b50d96438b22b136a8aa27e, type: 3}
+  - {fileID: 21300000, guid: 2a36a1e6663be674ea8c14e3059294fa, type: 3}
+  - {fileID: 21300000, guid: 51d9c3e6d425c70478e5cd59b68887ed, type: 3}
+  - {fileID: 21300000, guid: b0362be67ac33254a95c1f3746dd55a6, type: 3}
+  - {fileID: 21300000, guid: 6643a3f616b658049959c54da9fddd44, type: 3}
+  - {fileID: 21300000, guid: d600a7f6f0d6ff84298d3a2a2f246c3d, type: 3}
+  - {fileID: 21300000, guid: 2a42d107eb34cb348971625196bf43c6, type: 3}
+  - {fileID: 21300000, guid: 69106417c8a7d5e499a796f4f32c963e, type: 3}
+  - {fileID: 21300000, guid: fc8d0627776867a49af742a7c23be79e, type: 3}
+  - {fileID: 21300000, guid: dcc0e53750205a74f95f6b7887d4fcba, type: 3}
+  - {fileID: 21300000, guid: c73c2947663dc334c9c1ce200881701e, type: 3}
+  - {fileID: 21300000, guid: 5c65b957dfed16841b4b5931f1d0cc2b, type: 3}
+  - {fileID: 21300000, guid: ce5f006742008a44db28071df6704ea5, type: 3}
+  - {fileID: 21300000, guid: 530b106780811cb409fcf38e28fbf53d, type: 3}
+  - {fileID: 21300000, guid: fef9616799e33af409826dd971c11250, type: 3}
+  - {fileID: 21300000, guid: f885f877396850049af7e0695b32b218, type: 3}
+  - {fileID: 21300000, guid: aea412d7de9600844b7074bae24a8787, type: 3}
+  - {fileID: 21300000, guid: 7b2b86f7e3720894c910fc6d68e5b0f2, type: 3}
+  - {fileID: 21300000, guid: dc0ece08b6f40fc47ba875cd008aa793, type: 3}
+  - {fileID: 21300000, guid: c360334802c265b439166b3cbbe1a717, type: 3}
+  - {fileID: 21300000, guid: 10fb8c58ee6e70942920a7d9f2fbddbe, type: 3}
+  - {fileID: 21300000, guid: 783e6a6851c043c48967eacea904a33e, type: 3}
+  - {fileID: 21300000, guid: 7b868b88d1d80384b90cc55a76a8acb3, type: 3}
+  - {fileID: 21300000, guid: ac4a1498a9c2fbd4abbc02cd89e3857c, type: 3}
+  - {fileID: 21300000, guid: fb7b53d8fa9630045a623c4723a2245a, type: 3}
+  - {fileID: 21300000, guid: 934a64e84e0f73d468f42c570e89e9bc, type: 3}
+  - {fileID: 21300000, guid: 9d8981f8fa72edd4880e81644179c766, type: 3}
+  - {fileID: 21300000, guid: 0da9e0093bfd78f4fb2df22db4730408, type: 3}
+  - {fileID: 21300000, guid: 05344719c761bc44a9b50a25ebb36439, type: 3}
+  - {fileID: 21300000, guid: 10dc19199088afd4ea0b64092961ed76, type: 3}
+  - {fileID: 21300000, guid: ea67aa19c530d7a46aac151adcad8996, type: 3}
+  - {fileID: 21300000, guid: 5295f2292577ae94e965f328987908e5, type: 3}
+  - {fileID: 21300000, guid: d46c3329f46097a489ef7ad4268d3d66, type: 3}
+  - {fileID: 21300000, guid: 2a52282986882474297c104add857e5c, type: 3}
+  - {fileID: 21300000, guid: 7cee4f391dae66046b99e154df97b210, type: 3}
+  - {fileID: 21300000, guid: 7bbc338924f271a4e935e82335a4bcfe, type: 3}
+  - {fileID: 21300000, guid: 142a4399d003bd2489918ca02496e839, type: 3}
+  - {fileID: 21300000, guid: 4bcc20a91e1be2e41a63b527560f96ca, type: 3}
+  - {fileID: 21300000, guid: 2018c3b9eb5986f4988a8ae3a427493d, type: 3}
+  - {fileID: 21300000, guid: d13691c9fe3a8cb478583bc5c9e192e8, type: 3}
+  - {fileID: 21300000, guid: c3c84ac98e817ba49a8007c8770f943c, type: 3}
+  - {fileID: 21300000, guid: 4775c8d91fbf5e340bddcf4e57019cfa, type: 3}
+  - {fileID: 21300000, guid: f599e7e90153efa439fc017690596369, type: 3}
+  - {fileID: 21300000, guid: d1b8a9e98c2b4ca409a7f5228d8b9bbe, type: 3}
+  - {fileID: 21300000, guid: 456d8de949f36064d9adbd3c3396be07, type: 3}
+  - {fileID: 21300000, guid: 3f66370a2183297418d58a5b7a9b98a6, type: 3}
+  - {fileID: 21300000, guid: bd9ec80a93e81f446ab5eece445068fa, type: 3}
+  - {fileID: 21300000, guid: a198f71a7f20827479c62d7262cd90e0, type: 3}
+  - {fileID: 21300000, guid: f238df1a0c56ee4449d3f024d410bc16, type: 3}
+  - {fileID: 21300000, guid: 741f622a5c2815848aecac90eacad9e4, type: 3}
+  - {fileID: 21300000, guid: 131ee25a9b5417f4b97c27b4895a2fbf, type: 3}
+  - {fileID: 21300000, guid: 7d7f2a6a6804e36478714e63281d8b1a, type: 3}
+  - {fileID: 21300000, guid: b46cdd6a16e90f94cbabb07a88cf1fad, type: 3}
+  - {fileID: 21300000, guid: 8bcfb07a9f1450c4bab39e9992aef244, type: 3}
+  - {fileID: 21300000, guid: cfc3e27a46efbc547a7387a8c02aab3c, type: 3}
+  - {fileID: 21300000, guid: e847837a2a9e02341a6b901dee5f8363, type: 3}
+  - {fileID: 21300000, guid: 7da94d7a4b26e3c4eb08e5a13003401c, type: 3}
+  - {fileID: 21300000, guid: ce38df7a56d37944793b0966c0643dca, type: 3}
+  - {fileID: 21300000, guid: e381f28a5bf021a44b35a59f182ee6e9, type: 3}
+  - {fileID: 21300000, guid: 5a9f378abba0d9b46b134e16a8ba7998, type: 3}
+  - {fileID: 21300000, guid: 7c6e6f8af0336ec44bfa54621d80c0e1, type: 3}
+  - {fileID: 21300000, guid: 61cf7f8a7fbbce04991a29f9782b2f05, type: 3}
+  - {fileID: 21300000, guid: 47241caafad45104c80a7b4729131efb, type: 3}
+  - {fileID: 21300000, guid: 546cc5cab1d3a9c48b4af52b90b5a679, type: 3}
+  - {fileID: 21300000, guid: c926efca69309cb44b2f527bdfc2d628, type: 3}
+  - {fileID: 21300000, guid: 6bcbecdab7c2fdd45acffb9b4f5c6fe5, type: 3}
+  - {fileID: 21300000, guid: 9a82fcfa8d253724fa1a9b3398d02143, type: 3}
+  - {fileID: 21300000, guid: c438271b1ae7c6a4e80d3648dad3ae8f, type: 3}
+  - {fileID: 21300000, guid: 71a5703b29659e24f8637f1ddaff15be, type: 3}
+  - {fileID: 21300000, guid: d02a9a3b3472c164eb82459e6fd34428, type: 3}
+  - {fileID: 21300000, guid: b122fd3babdb4854ca3ecbdacc8828ec, type: 3}
+  - {fileID: 21300000, guid: f18c0f3b9a9d7c2408c136ef42924ca2, type: 3}
+  - {fileID: 21300000, guid: 8b591a4b1a1ba9646afda94dfe186745, type: 3}
+  - {fileID: 21300000, guid: 8038966b380c4534ab9a83940f73fdd1, type: 3}
+  - {fileID: 21300000, guid: a9831c6bce830784bb5c0af492010535, type: 3}
+  - {fileID: 21300000, guid: 5e9cc37b80c60564b94c740ab344e7c1, type: 3}
+  - {fileID: 21300000, guid: 04a6b57bf47810e4e918f3fe935d3b9a, type: 3}
+  - {fileID: 21300000, guid: e4f1d8ab59da45849847e93611d4ce99, type: 3}
+  - {fileID: 21300000, guid: 1f362cab9a02a6547b26072dcc110a56, type: 3}
+  - {fileID: 21300000, guid: 7f8171bb7e6c45f43b842a335b60f51d, type: 3}
+  - {fileID: 21300000, guid: dd7e03bbeef9d5149920efa73186ebaf, type: 3}
+  - {fileID: 21300000, guid: 9f2344dbac4b4db44a2f0b180f95ebfe, type: 3}
+  - {fileID: 21300000, guid: 1fb758db9c898f645a64cee557975252, type: 3}
+  - {fileID: 21300000, guid: 9bcf14fb4a5a0074b9acf8c5213c264e, type: 3}
+  - {fileID: 21300000, guid: d164d9fbba547f245b15f3caebccade7, type: 3}
+  - {fileID: 21300000, guid: d1194dfb3a3553a459154922c4a0a059, type: 3}
+  - {fileID: 21300000, guid: 9169da1cdf952fc418e9f4b0ffb6e01e, type: 3}
+  - {fileID: 21300000, guid: fc27312cd907fe24294e85940fac7c89, type: 3}
+  - {fileID: 21300000, guid: ec50f72c0945b5c49962b585847bcaf8, type: 3}
+  - {fileID: 21300000, guid: f2da4c2c212ed0b42bc59f35427bd11f, type: 3}
+  - {fileID: 21300000, guid: fd72794c654ad854d96b56e0c9a518fb, type: 3}
+  - {fileID: 21300000, guid: 4c6f2f5c479bfdc4a8d11af4bd3138aa, type: 3}
+  - {fileID: 21300000, guid: 8c63946c135078d479cd5c0ede58d980, type: 3}
+  - {fileID: 21300000, guid: b814fb6ca643781408511eeefd7fa755, type: 3}
+  - {fileID: 21300000, guid: eac3b17c6d6e36c48b557f28db596bb9, type: 3}
+  - {fileID: 21300000, guid: 0527237c51576fe4eb7ac48c8f8ae1ea, type: 3}
+  - {fileID: 21300000, guid: 4051c98c04fe56f4cb90c81f89bc8765, type: 3}
+  - {fileID: 21300000, guid: 7bbf009cc650f3d4680ca9ccb2df34ff, type: 3}
+  - {fileID: 21300000, guid: b336409c906c8e44f8c605657833e795, type: 3}
+  - {fileID: 21300000, guid: 8e8dc09c746173e4394824cc94868dc9, type: 3}
+  - {fileID: 21300000, guid: 253a349cc05dcba42a24608415c2c7b9, type: 3}
+  - {fileID: 21300000, guid: dc7dfb9ccb56bfd40b55ef7de05d8b46, type: 3}
+  - {fileID: 21300000, guid: ff6a39bcbd084c648a2254e703fbac51, type: 3}
+  - {fileID: 21300000, guid: 047ddcbcd0433b74894249df7d737bd3, type: 3}
+  - {fileID: 21300000, guid: 8ad340ec33ba6b04c98784f94b428009, type: 3}
+  - {fileID: 21300000, guid: 19ce57ec19964b044a844719bc3c7480, type: 3}
+  - {fileID: 21300000, guid: 52da30fcfe131224a84cfcf7596949d2, type: 3}
+  - {fileID: 21300000, guid: 252172fc360f1af458ed3d17f82e2828, type: 3}
+  - {fileID: 21300000, guid: a2203dfc34bb1d84ab00a02ae5725d18, type: 3}
+  - {fileID: 21300000, guid: 424d312d889d776409ea44e61cdf1c18, type: 3}
+  - {fileID: 21300000, guid: cb26ce2d5e89f8d489db5ca88c30da6d, type: 3}
+  - {fileID: 21300000, guid: 63f0a73df930ade499ec7ce58733bc75, type: 3}
+  - {fileID: 21300000, guid: 3056944d8255a7b419138247d4fd039b, type: 3}
+  - {fileID: 21300000, guid: 64b9dc8d798449b4cb74198810fa04cd, type: 3}
+  - {fileID: 21300000, guid: e79d6d8db89969d478b9fdcbd3a37fc0, type: 3}
+  - {fileID: 21300000, guid: f04ebd9dd52d4b8409b1a7b95ca5681f, type: 3}
+  - {fileID: 21300000, guid: fe018fbd5f7d50d4ebc1f9fd935073c9, type: 3}
+  - {fileID: 21300000, guid: 1e9a65ddf1837d24fa5a1f8d5c507d3d, type: 3}
+  - {fileID: 21300000, guid: 047f1addfce634344b8b9523985baa38, type: 3}
+  - {fileID: 21300000, guid: 596770edceea24c4cb4493493499be9e, type: 3}
+  - {fileID: 21300000, guid: c29213ed9e97b5249af864db83df84b2, type: 3}
+  - {fileID: 21300000, guid: beff5afd0e654894aae5c17a1397f6eb, type: 3}
+  - {fileID: 21300000, guid: 6a9a390ea30138845a71558797de7f43, type: 3}
+  - {fileID: 21300000, guid: 30ddad0e683a80b48be46eaf3cd77dc8, type: 3}
+  - {fileID: 21300000, guid: ba0de81ec789d8d4192f4d29b443d4a6, type: 3}
+  - {fileID: 21300000, guid: 9116132e2cb97b2488892c7cb6c82245, type: 3}
+  - {fileID: 21300000, guid: 4c011d2ee52f3a642a3dfa5de7108b9e, type: 3}
+  - {fileID: 21300000, guid: 254d264eeb6ddce4fa67111147aac881, type: 3}
+  - {fileID: 21300000, guid: d29a4c4e8a1a7b14ea558123fe7eb531, type: 3}
+  - {fileID: 21300000, guid: 33d00d4e217c0d84ead9c3ac2e98181d, type: 3}
+  - {fileID: 21300000, guid: 501e5d4e46e9169439b66591080ca258, type: 3}
+  - {fileID: 21300000, guid: 4d9d105ea9a69ce438fc95e9ae215a3e, type: 3}
+  - {fileID: 21300000, guid: db37925e06b86ce41b15d3dc93c93085, type: 3}
+  - {fileID: 21300000, guid: 8d6e676ec7f7e2449befd90ea6e3723f, type: 3}
+  - {fileID: 21300000, guid: cf6a0a6eebc9e3548a2de7b83f4368c4, type: 3}
+  - {fileID: 21300000, guid: 076e6d7efb86bfc4290b4a2a2a35db00, type: 3}
+  - {fileID: 21300000, guid: ad1dee7e077dcef4e92c498848b305f9, type: 3}
+  - {fileID: 21300000, guid: 6a3a488e56c017c4e8a65ac0761ed91f, type: 3}
+  - {fileID: 21300000, guid: 02762d8e45e47dc45b30477ef2ee99fd, type: 3}
+  - {fileID: 21300000, guid: 97c381cedbb0bd5428bc3e7a0630204c, type: 3}
+  - {fileID: 21300000, guid: 63b496ce994de8e48854d64666288911, type: 3}
+  - {fileID: 21300000, guid: 9f6bafce5d4db4644884500010488c48, type: 3}
+  - {fileID: 21300000, guid: 26ca3cde291f01a40948f7e163e6bb03, type: 3}
+  - {fileID: 21300000, guid: 90d746ee511f0194b982c9d85f3cec0f, type: 3}
+  - {fileID: 21300000, guid: 340c110f00011114e807a05339129e80, type: 3}
+  - {fileID: 21300000, guid: 63b83d6ffa6052e48b1156fc309ac1e7, type: 3}
+  - {fileID: 21300000, guid: b0db157fa6356684c8dffa47e1221c1a, type: 3}
+  - {fileID: 21300000, guid: 93e1d97f5ee8251458404f5d1659c526, type: 3}
+  - {fileID: 21300000, guid: 7fe72a7f74d99b441839ea17f7b04217, type: 3}
+  - {fileID: 21300000, guid: 406c3d9fd3305804c90c9df7c6632bd7, type: 3}
+  - {fileID: 21300000, guid: 39d300afe6e780d49bb0ee7bf2fba627, type: 3}
+  - {fileID: 21300000, guid: 6012baaf011f31a48a33b57f84138880, type: 3}
+  - {fileID: 21300000, guid: 0d8e55bf3305ec94c99c8d8c6937fc9d, type: 3}
+  - {fileID: 21300000, guid: d2a8aebf534030847ae7a35777d84c77, type: 3}
+  - {fileID: 21300000, guid: 9db754cfabe23bd4296664d5752e7a15, type: 3}
+  - {fileID: 21300000, guid: fede88cfeea1f524292b0353c33ac035, type: 3}
+  - {fileID: 21300000, guid: c1d86adf47878444d8869498c0281f7a, type: 3}
+  - {fileID: 21300000, guid: 7c32bedf2e933754089f22154fa7c1a8, type: 3}
+  - {fileID: 21300000, guid: 081a83efcce03eb42b974bbf92e592ae, type: 3}
+  - {fileID: 21300000, guid: b6f914ef603e39742ab28a580528543e, type: 3}
+  - {fileID: 21300000, guid: a07adfff2cea38740885b50341ad68e7, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - MagicalGirl_Pinky_Basic_Win1
+  - MagicalGirl_Pinky_Basic_Attack3
+  - MagicalGirl_Pinky_Basic_Dead1
+  - Guardian_Misery_Boxer_Hit
+  - Shooter_Pigeon_Basic_Hit
+  - Shooter_Kasha_Basic_Dead5
+  - Guardian_Misery_Boxer_Lose4
+  - Guardian_Misery_Boxer_Dead3
+  - MagicalGirl_Pinky_Basic_Lose5
+  - Shooter_Kasha_Basic_Win5
+  - Mage_Darae_Basic_LoseLoop4
+  - MagicalGirl_Pinky_Basic_Hit2
+  - Shooter_Pigeon_Basic_LoseLoop
+  - MagicalGirl_Pinky_Basic_LoseLoop
+  - MagicalGirl_Pinky_Basic_LoseLoop2
+  - Shooter_Kasha_Basic_Attack2
+  - Mage_Darae_Basic_Dead1
+  - Mage_Darae_Basic_LoseLoop
+  - Shooter_Kasha_Basic_Win6
+  - Guardian_Misery_Basic_Dead4
+  - MagicalGirl_Pinky_Basic_LoseLoop4
+  - Mage_Goosty_Basic_Win6
+  - MagicalGirl_Pinky_Basic_LoseLoop1
+  - MagicalGirl_Pinky_Basic_Win2
+  - MagicalGirl_Pinky_Basic_Lose6
+  - Guardian_Misery_Basic_Attack2
+  - Guardian_Misery_Basic_Attack3
+  - Guardian_Misery_Basic_Win3
+  - Guardian_Misery_Basic_Attack
+  - Guardian_Misery_Basic_Lose6
+  - Guardian_Misery_Boxer_Attack2
+  - Mage_Goosty_Basic_Dead
+  - Mage_Darae_Basic_Dead4
+  - MagicalGirl_Pinky_Basic_Win
+  - Shooter_Kasha_Basic_Dead
+  - Guardian_Misery_Basic_Hit2
+  - Shooter_Pigeon_Basic_Dead6
+  - Mage_Darae_Basic_Attack
+  - Guardian_Misery_Basic_LoseLoop4
+  - Guardian_Misery_Basic_Idle
+  - Guardian_Misery_Basic_Lose1
+  - Mage_Goosty_Basic_Attack1
+  - Shooter_Pigeon_Basic_Lose6
+  - Guardian_Misery_Basic_Dead
+  - Guardian_Misery_Basic_Attack1
+  - MagicalGirl_Pinky_Basic_Win5
+  - Mage_Darae_Basic_Lose2
+  - Shooter_Kasha_Basic_Idle3
+  - MagicalGirl_Pinky_Basic_Attack
+  - Shooter_Pigeon_Basic_LoseLoop3
+  - Mage_Goosty_Basic_Dead4
+  - Mage_Goosty_Basic_Dead3
+  - Shooter_Pigeon_Basic_Dead5
+  - Guardian_Misery_Basic_LoseLoop1
+  - Guardian_Misery_Boxer_Attack4
+  - Shooter_Kasha_Basic_Hit
+  - Shooter_Kasha_Basic_Hit1
+  - Guardian_Misery_Basic_Idle3
+  - Shooter_Kasha_Basic_LoseLoop2
+  - Guardian_Misery_Basic_Dead2
+  - Guardian_Misery_Basic_Lose2
+  - Guardian_Misery_Boxer_Win6
+  - Mage_Darae_Basic_Lose4
+  - Shooter_Kasha_Basic_Idle4
+  - Shooter_Kasha_Basic_Dead2
+  - MagicalGirl_Pinky_Basic_Attack2
+  - Guardian_Misery_Boxer_Idle4
+  - Guardian_Misery_Basic_Hit1
+  - Shooter_Kasha_Basic_Dead3
+  - Shooter_Pigeon_Basic_Dead4
+  - Mage_Goosty_Basic_Win
+  - MagicalGirl_Pinky_Basic_Lose4
+  - Guardian_Misery_Boxer_Win5
+  - Shooter_Kasha_Basic_Win4
+  - Mage_Darae_Basic_Idle
+  - Mage_Goosty_Basic_Lose2
+  - Guardian_Misery_Boxer_Hit1
+  - Mage_Goosty_Basic_Idle
+  - Guardian_Misery_Boxer_Attack1
+  - Shooter_Pigeon_Basic_Attack1
+  - Mage_Darae_Basic_Lose3
+  - Shooter_Pigeon_Basic_Win2
+  - Shooter_Kasha_Basic_Dead6
+  - Shooter_Pigeon_Basic_Dead2
+  - MagicalGirl_Pinky_Basic_Dead3
+  - Guardian_Misery_Boxer_Attack3
+  - Mage_Goosty_Basic_LoseLoop2
+  - Guardian_Misery_Boxer_Win2
+  - Mage_Darae_Basic_Win4
+  - Mage_Goosty_Basic_Win3
+  - Mage_Goosty_Basic_LoseLoop3
+  - MagicalGirl_Pinky_Basic_LoseLoop3
+  - Mage_Darae_Basic_Hit
+  - Guardian_Misery_Boxer_Lose5
+  - MagicalGirl_Pinky_Basic_Idle3
+  - Guardian_Misery_Basic_Idle1
+  - Shooter_Kasha_Basic_Win
+  - Guardian_Misery_Basic_Lose4
+  - Mage_Darae_Basic_Idle3
+  - Guardian_Misery_Basic_Idle2
+  - Shooter_Pigeon_Basic_Idle2
+  - Mage_Goosty_Basic_Win1
+  - Shooter_Pigeon_Basic_Idle1
+  - MagicalGirl_Pinky_Basic_Idle1
+  - Mage_Darae_Basic_Dead
+  - Shooter_Kasha_Basic_Attack
+  - Shooter_Kasha_Basic_Idle1
+  - Shooter_Pigeon_Basic_Lose3
+  - Shooter_Kasha_Basic_Idle
+  - Guardian_Misery_Basic_Lose5
+  - Guardian_Misery_Basic_Win1
+  - Mage_Darae_Basic_Win6
+  - Mage_Darae_Basic_Attack4
+  - Shooter_Pigeon_Basic_Dead3
+  - Shooter_Kasha_Basic_Lose4
+  - Guardian_Misery_Boxer_Idle3
+  - Shooter_Kasha_Basic_Win3
+  - Guardian_Misery_Boxer_LoseLoop1
+  - Guardian_Misery_Boxer_Dead5
+  - Mage_Darae_Basic_Attack3
+  - Guardian_Misery_Boxer_LoseLoop4
+  - Mage_Goosty_Basic_Hit1
+  - Guardian_Misery_Basic_Dead3
+  - Shooter_Pigeon_Basic_LoseLoop2
+  - Mage_Goosty_Basic_Lose3
+  - Shooter_Pigeon_Basic_Idle3
+  - Mage_Darae_Basic_Win
+  - Shooter_Pigeon_Basic_Lose
+  - Shooter_Pigeon_Basic_Dead
+  - Shooter_Kasha_Basic_Dead4
+  - Shooter_Pigeon_Basic_Attack2
+  - Guardian_Misery_Boxer_Dead
+  - MagicalGirl_Pinky_Basic_Win3
+  - Shooter_Pigeon_Basic_Win1
+  - Guardian_Misery_Boxer_Lose6
+  - MagicalGirl_Pinky_Basic_Hit1
+  - Mage_Darae_Basic_Lose5
+  - MagicalGirl_Pinky_Basic_Idle
+  - Guardian_Misery_Basic_Hit
+  - Mage_Goosty_Basic_Attack4
+  - Mage_Goosty_Basic_Dead2
+  - Shooter_Pigeon_Basic_Idle
+  - MagicalGirl_Pinky_Basic_Hit
+  - Mage_Goosty_Basic_Dead6
+  - Shooter_Kasha_Basic_Lose1
+  - MagicalGirl_Pinky_Basic_Lose
+  - MagicalGirl_Pinky_Basic_Lose2
+  - Mage_Darae_Basic_LoseLoop1
+  - Guardian_Misery_Basic_Win6
+  - MagicalGirl_Pinky_Basic_Idle4
+  - Shooter_Kasha_Basic_Win2
+  - Shooter_Pigeon_Basic_Win3
+  - MagicalGirl_Pinky_Basic_Win4
+  - Shooter_Pigeon_Basic_LoseLoop4
+  - Guardian_Misery_Boxer_Win
+  - Shooter_Kasha_Basic_Win1
+  - Shooter_Kasha_Basic_Lose5
+  - Mage_Goosty_Basic_Hit2
+  - Mage_Goosty_Basic_Dead1
+  - Guardian_Misery_Boxer_LoseLoop2
+  - Mage_Goosty_Basic_LoseLoop4
+  - Shooter_Kasha_Basic_Attack4
+  - Mage_Darae_Basic_Attack2
+  - Guardian_Misery_Boxer_Win4
+  - Mage_Goosty_Basic_Lose6
+  - Guardian_Misery_Basic_Win2
+  - Guardian_Misery_Basic_Dead5
+  - Shooter_Pigeon_Basic_LoseLoop1
+  - MagicalGirl_Pinky_Basic_Dead2
+  - Mage_Goosty_Basic_Idle2
+  - MagicalGirl_Pinky_Basic_Dead4
+  - Mage_Darae_Basic_Win3
+  - Shooter_Pigeon_Basic_Attack
+  - Shooter_Pigeon_Basic_Win4
+  - Shooter_Pigeon_Basic_Attack3
+  - Shooter_Pigeon_Basic_Lose2
+  - Guardian_Misery_Boxer_Dead1
+  - Mage_Darae_Basic_Idle4
+  - Mage_Darae_Basic_Win2
+  - Mage_Goosty_Basic_Idle3
+  - Guardian_Misery_Boxer_Lose3
+  - Shooter_Pigeon_Basic_Attack4
+  - Guardian_Misery_Boxer_Attack
+  - Mage_Goosty_Basic_Attack
+  - Shooter_Pigeon_Basic_Win6
+  - Mage_Goosty_Basic_Hit
+  - Mage_Goosty_Basic_Win5
+  - Shooter_Kasha_Basic_Attack3
+  - Shooter_Kasha_Basic_Lose3
+  - Shooter_Kasha_Basic_Dead1
+  - Guardian_Misery_Boxer_LoseLoop
+  - Mage_Goosty_Basic_Attack3
+  - Mage_Darae_Basic_Lose
+  - Mage_Goosty_Basic_Dead5
+  - Guardian_Misery_Boxer_Lose
+  - Shooter_Kasha_Basic_Idle2
+  - Mage_Goosty_Basic_Lose4
+  - Shooter_Pigeon_Basic_Dead1
+  - Mage_Goosty_Basic_Win4
+  - Shooter_Kasha_Basic_Hit2
+  - Mage_Goosty_Basic_LoseLoop1
+  - Guardian_Misery_Basic_Attack4
+  - Mage_Goosty_Basic_Win2
+  - Guardian_Misery_Basic_Dead1
+  - Mage_Goosty_Basic_Idle1
+  - Guardian_Misery_Basic_Win5
+  - Guardian_Misery_Boxer_Dead2
+  - MagicalGirl_Pinky_Basic_Dead
+  - Mage_Darae_Basic_Dead3
+  - Guardian_Misery_Boxer_Win1
+  - Mage_Darae_Basic_Win1
+  - Mage_Darae_Basic_Hit2
+  - MagicalGirl_Pinky_Basic_Lose3
+  - Guardian_Misery_Basic_Win4
+  - MagicalGirl_Pinky_Basic_Attack1
+  - MagicalGirl_Pinky_Basic_Attack4
+  - Shooter_Kasha_Basic_Attack1
+  - Mage_Darae_Basic_Hit1
+  - Mage_Darae_Basic_Lose6
+  - Mage_Darae_Basic_Dead6
+  - Shooter_Pigeon_Basic_Win5
+  - Guardian_Misery_Basic_Lose
+  - Guardian_Misery_Boxer_Lose1
+  - Shooter_Kasha_Basic_LoseLoop4
+  - Mage_Darae_Basic_Idle2
+  - Mage_Goosty_Basic_Idle4
+  - Shooter_Pigeon_Basic_Idle4
+  - Shooter_Kasha_Basic_LoseLoop1
+  - Guardian_Misery_Basic_LoseLoop3
+  - Mage_Goosty_Basic_Lose1
+  - Guardian_Misery_Boxer_Idle1
+  - Shooter_Pigeon_Basic_Hit1
+  - MagicalGirl_Pinky_Basic_Lose1
+  - Guardian_Misery_Boxer_Idle
+  - Shooter_Kasha_Basic_Lose2
+  - Shooter_Pigeon_Basic_Lose5
+  - Shooter_Pigeon_Basic_Hit2
+  - Mage_Darae_Basic_Dead2
+  - Mage_Darae_Basic_Dead5
+  - Mage_Goosty_Basic_Lose5
+  - Shooter_Kasha_Basic_LoseLoop3
+  - Guardian_Misery_Boxer_Idle2
+  - Shooter_Kasha_Basic_Lose
+  - Guardian_Misery_Basic_Lose3
+  - Mage_Darae_Basic_LoseLoop3
+  - Mage_Goosty_Basic_Attack2
+  - Shooter_Pigeon_Basic_Win
+  - Guardian_Misery_Basic_Dead6
+  - Guardian_Misery_Boxer_Win3
+  - MagicalGirl_Pinky_Basic_Dead6
+  - Guardian_Misery_Basic_Win
+  - Guardian_Misery_Boxer_Hit2
+  - Mage_Darae_Basic_Lose1
+  - MagicalGirl_Pinky_Basic_Win6
+  - Mage_Darae_Basic_LoseLoop2
+  - Shooter_Kasha_Basic_LoseLoop
+  - MagicalGirl_Pinky_Basic_Idle2
+  - Guardian_Misery_Boxer_LoseLoop3
+  - Guardian_Misery_Basic_Idle4
+  - Guardian_Misery_Basic_LoseLoop2
+  - Mage_Goosty_Basic_Lose
+  - Mage_Darae_Basic_Idle1
+  - Shooter_Kasha_Basic_Lose6
+  - MagicalGirl_Pinky_Basic_Dead5
+  - Guardian_Misery_Basic_LoseLoop
+  - Guardian_Misery_Boxer_Dead6
+  - Mage_Darae_Basic_Win5
+  - Guardian_Misery_Boxer_Lose2
+  - Mage_Darae_Basic_Attack1
+  - Guardian_Misery_Boxer_Dead4
+  - Mage_Goosty_Basic_LoseLoop
+  - Shooter_Pigeon_Basic_Lose4
+  - Shooter_Pigeon_Basic_Lose1
   m_RenderDataMap: {}
   m_Tag: CharacterSpriteAtlas1
   m_IsVariant: 0

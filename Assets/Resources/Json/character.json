@@ -3,7 +3,7 @@
     {
       "Key": 101,
       "Name": "미제리",
-      "SubName": "BATTLEMAGE001",
+      "SubName": "Guardian_Misery_Basic",
       "Class": "Guardian",
       "Gender": "Female",
       "Grade": 1,
@@ -31,7 +31,7 @@
     {
       "Key": 103,
       "Name": "구스티",
-      "SubName": "MAGE001",
+      "SubName": "Mage_Goosty_Basic",
       "Class": "Mage",
       "Gender": "Female",
       "Grade": 1,
@@ -45,7 +45,7 @@
     {
       "Key": 104,
       "Name": "핑키",
-      "SubName": "MAGICALGIRL001",
+      "SubName": "MagicalGirl_Pinky_Basic",
       "Class": "MagicGirl",
       "Gender": "Female",
       "Grade": 1,

@@ -3415,9 +3415,12 @@ MonoBehaviour:
   _layerMask:
     serializedVersion: 2
     m_Bits: 0
-  _characterKeys: 000000000000000000000000
+  _characterKeys: 650000006700000068000000
   _mascot: {fileID: 1821035760}
-  _initialPosition: []
+  _initialPosition:
+  - {x: -12.19, y: -4.66, z: -1.86}
+  - {x: -15.73, y: -4.66, z: -5.06}
+  - {x: -16.09, y: -4.66, z: 2.74}
 --- !u!1 &1161494391
 GameObject:
   m_ObjectHideFlags: 0

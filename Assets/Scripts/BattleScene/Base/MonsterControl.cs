@@ -45,8 +45,6 @@ public class MonsterControl : MonoBehaviour {
     }
 
     public IEnumerator UseSkill(BattleControl battleControl) {
-        WaitForSeconds attackTime = new WaitForSeconds(1f);
-
         foreach (MonsterEntity monster in _currentMonsters) {
             Data.SkillData skillData = monster.GetCurrentSkillData();
             if (skillData == null) continue;
@@ -60,11 +58,13 @@ public class MonsterControl : MonoBehaviour {
 
             string name = Data.MonsterDataParser.Instance.GetMonster(skillInfo.CharacterKey).Name;
             Debug.Log(name + "이 " + skillInfo.SkillData.Name + "을 사용!");
-            monster.ChangeAnimationState("ATTACK");
+            monster.ChangeAnimationState("Attack");
 
-            yield return attackTime;
+            while (!monster.IsAnimationEnd) {
+                yield return null;
+            }
 
-            monster.ChangeAnimationState("IDLE");
+            monster.ChangeAnimationState("Idle", true);
         }
     }
 

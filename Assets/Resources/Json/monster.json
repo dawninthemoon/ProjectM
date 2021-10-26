@@ -2,28 +2,28 @@
   "Monster": [
     {
       "Key": 1,
-      "Name": "GOBLIN001",
+      "Name": "Goblin001",
       "MonsterGrade": 1,
       "Level": 1,
-      "MonsterPrefab": "GOBLIN001",
+      "MonsterPrefab": "Goblin001",
       "Skill": null,
       "StatOverrideID": null
     },
     {
       "Key": 2,
-      "Name": "GOBLIN002",
+      "Name": "Goblin002",
       "MonsterGrade": 1,
       "Level": 1,
-      "MonsterPrefab": "GOBLIN002",
+      "MonsterPrefab": "Goblin002",
       "Skill": null,
       "StatOverrideID": null
     },
     {
       "Key": 3,
-      "Name": "GOBLIN003",
+      "Name": "Goblin003",
       "MonsterGrade": 1,
       "Level": 1,
-      "MonsterPrefab": "GOBLIN003",
+      "MonsterPrefab": "Goblin003",
       "Skill": null,
       "StatOverrideID": null
     }

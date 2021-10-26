@@ -25,13 +25,14 @@ public class MonsterEntity : BattleEntity {
     public int Order { get; private set; }
     public int Key { get; private set; }
     private int _skillIndex = 0;
+    public bool IsAnimationEnd { get; private set; }
 
     public void Initialize(int key, int order) {
         Key = key;
         _monsterData = Data.MonsterDataParser.Instance.GetMonster(key);
         _monsterStatData = Data.MonsterStatDataParser.Instance.GetMonsterStat(_monsterData.Level);
 
-        _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _monsterData.Name + "_", "IDLE", true, 0.5f);
+        _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _monsterData.Name + "_", "Idle", true, 0.5f);
         _maxHP = _monsterStatData.BaseHP / 10;
         _curHP = _maxHP;
 
@@ -45,13 +46,18 @@ public class MonsterEntity : BattleEntity {
         Order = order;
     }
 
-    public void ChangeAnimationState(string state) {
-        _animator.ChangeAnimation(state);
+    public void ChangeAnimationState(string state, bool loop = false) {
+        IsAnimationEnd = false;
+        _animator.ChangeAnimation(state, loop, 1f, OnAnimationEnd);
     }
 
     public override float GetFinalDefence() {
         float defence = 1f + MathUtils.GetPercent(_monsterStatData.DefencePower);
         return defence;
+    }
+
+    public void OnAnimationEnd() {
+        IsAnimationEnd = true;
     }
 
     public Data.SkillData GetCurrentSkillData() {

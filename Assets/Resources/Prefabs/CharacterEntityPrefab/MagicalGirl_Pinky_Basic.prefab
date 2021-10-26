@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1272587173542685723}
   - component: {fileID: 8099901512421330098}
   m_Layer: 7
-  m_Name: MAGICALGIRL001
+  m_Name: MagicalGirl_Pinky_Basic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -15,7 +15,7 @@ public class CharacterEntity : BattleEntity {
         _characterData = characterData;
         _characterStatData = characterStatData;
 
-        _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _characterData.SubName + "_", "IDLE", true);
+        _animator = new SpriteAtlasAnimator(GetComponent<SpriteRenderer>(), _characterData.SubName + "_", "Idle", true);
         _maxHP = _characterStatData.BaseHP;
         _curHP = _maxHP;
     }

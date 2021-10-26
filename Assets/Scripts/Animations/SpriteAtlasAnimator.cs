@@ -10,7 +10,7 @@ public class SpriteAtlasAnimator {
     string _prefix;
     float _indexTimer = 0f;
     int _spriteIndex = 1;
-    string _animationName;
+    public string AnimationName { get; private set; }
     bool _loop;
     public int SpriteIndex { set { _spriteIndex = value; } get { return _spriteIndex; } }
     OnAnimationEnd _animationEndCallback;
@@ -26,7 +26,7 @@ public class SpriteAtlasAnimator {
         _indexTimer = _defaultSpeed;
         _spriteIndex = 1;
         _animatonSpeed = speed;
-        _animationName = name;
+        AnimationName = name;
         _loop = loop;
         _animationEndCallback = callback;
     }
@@ -53,7 +53,7 @@ public class SpriteAtlasAnimator {
         }
 
         Sprite GetSprite() {
-            string spriteName = RieslingUtils.StringUtils.MergeStrings(_prefix, _animationName, _spriteIndex.ToString());
+            string spriteName = RieslingUtils.StringUtils.MergeStrings(_prefix, AnimationName, _spriteIndex.ToString());
             var currentFrame = atlas.GetSprite(spriteName);
             return currentFrame;
         }
