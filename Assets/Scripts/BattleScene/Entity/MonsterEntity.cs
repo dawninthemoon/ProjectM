@@ -46,9 +46,9 @@ public class MonsterEntity : BattleEntity {
         Order = order;
     }
 
-    public void ChangeAnimationState(string state, bool loop = false) {
+    public void ChangeAnimationState(string state, bool loop = false, SpriteAtlasAnimator.OnAnimationEnd callback = null) {
         IsAnimationEnd = false;
-        _animator.ChangeAnimation(state, loop, 0.5f, OnAnimationEnd);
+        _animator.ChangeAnimation(state, loop, 0.5f, callback ?? OnAnimationEnd);
     }
 
     public override float GetFinalDefence() {
@@ -56,7 +56,7 @@ public class MonsterEntity : BattleEntity {
         return defence;
     }
 
-    public void OnAnimationEnd() {
+    private void OnAnimationEnd() {
         IsAnimationEnd = true;
     }
 
@@ -75,5 +75,17 @@ public class MonsterEntity : BattleEntity {
         }
 
         return _skillStatus[_skillIndex++].skillData;
+    }
+
+    public override void DecreaseHP(int value) {
+        base.DecreaseHP(value);
+        ChangeAnimationState("Hit", false, ChangeToIdle);
+    }
+
+    private void ChangeToIdle() {
+        if (_curHP <= 0) {
+            CanRemoveEntity = true;
+        }
+        ChangeAnimationState("Idle", true);
     }
 }

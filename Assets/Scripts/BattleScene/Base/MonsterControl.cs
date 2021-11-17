@@ -29,6 +29,11 @@ public class MonsterControl : MonoBehaviour {
 
     public void Progress() {
         for (int i = 0; i < _currentMonsters.Count; ++i) {
+            if (_currentMonsters[i].CanRemoveEntity) {
+                StartCoroutine(RemoveMonster(_currentMonsters[i]));
+                --i;
+                continue;
+            }
             _currentMonsters[i].Progress();
         }
     }
@@ -44,7 +49,7 @@ public class MonsterControl : MonoBehaviour {
         return target;
     }
 
-    public IEnumerator UseSkill(BattleControl battleControl) {
+    public IEnumerator UseSkill(BattleControl battleControl, System.Action uiSetupCallback) {
         foreach (MonsterEntity monster in _currentMonsters) {
             Data.SkillData skillData = monster.GetCurrentSkillData();
             if (skillData == null) continue;
@@ -59,6 +64,8 @@ public class MonsterControl : MonoBehaviour {
             string name = Data.MonsterDataParser.Instance.GetMonster(skillInfo.CharacterKey).Name;
             Debug.Log(name + "이 " + skillInfo.SkillData.Name + "을 사용!");
             monster.ChangeAnimationState("Attack");
+
+            uiSetupCallback.Invoke();
 
             while (!monster.IsAnimationEnd) {
                 yield return null;
@@ -203,7 +210,14 @@ public class MonsterControl : MonoBehaviour {
         return enemyList;
     }
 
-    public void RemoveMonster(MonsterEntity monster) {
+    public IEnumerator RemoveMonster(MonsterEntity monster) {
+        monster.CanRemoveEntity = false;
+        monster.ChangeAnimationState("Dead");
+
+        while (!monster.IsAnimationEnd) {
+            yield return null;
+        }
+
         _currentMonsters.Remove(monster);
         monster.gameObject.SetActive(false);
     }

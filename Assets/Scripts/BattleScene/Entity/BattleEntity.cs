@@ -8,12 +8,12 @@ public abstract class BattleEntity : MonoBehaviour {
     protected int _maxHP;
     protected int _curHP;
     public int CurHP { get { return _curHP; } }
+    public bool CanRemoveEntity { get; set; }
     protected SpriteAtlasAnimator _animator;
 
     public void Progress() {
         _animator.Progress(_atlas);
     }
-
     public bool IsOverlapped(Vector2 pos, LayerMask mask) {
         bool isOverlapped = false;
         RaycastHit raycastHit;
@@ -25,11 +25,11 @@ public abstract class BattleEntity : MonoBehaviour {
         return isOverlapped;
     }
 
-    public void DecreaseHP(int value) {
+    public virtual void DecreaseHP(int value) {
         _curHP = Mathf.Max(0, _curHP - value);
     }
 
-    public void IncreaseHP(int value) {
+    public virtual void IncreaseHP(int value) {
         _curHP = Mathf.Min(_maxHP, _curHP + value);
     }
 

@@ -9,7 +9,7 @@ public class PlayerControl : MonoBehaviour {
     [SerializeField] private int[] _characterKeys = null;
     [SerializeField] private Mascot _mascot = null;
     [SerializeField] private Vector3[] _initialPosition = null;
-    private CharacterEntity[] _characters = null;
+    private List<CharacterEntity> _currentCharacters;
     [SerializeField] private SkillDeck _cardDeck = null;
     private List<Skill> _skillsInHand;
     public List<Skill> SkillsInHand { get { return _skillsInHand;} }
@@ -18,15 +18,15 @@ public class PlayerControl : MonoBehaviour {
     private static readonly string CharacterEntityPrefabPath = "CharacterEntityPrefab";
 
     public void Initialize() {
+        _currentCharacters = new List<CharacterEntity>();
         int characterCounts = _characterKeys.Length;
-        _characters = new CharacterEntity[characterCounts];
         List<KeyPair> skillInfoList = new List<KeyPair>();
 
         for (int i = 0; i < characterCounts; ++i) {
             CreateCharacterEntity(i);
             var parser = Data.SkillDataParser.Instance;
 
-            string skillKey1 = _characters[i].CharacterData.SkillCard1Key;
+            string skillKey1 = _currentCharacters[i].CharacterData.SkillCard1Key;
             skillKey1 = skillKey1.TrimStart('[');
             skillKey1 = skillKey1.TrimEnd(']');
             var keys = skillKey1.Split(',');
@@ -53,15 +53,20 @@ public class PlayerControl : MonoBehaviour {
         var characterStatData = Data.CharacterStatDataParser.Instance.GetCharacterStat(characterData.Key);
         
         var prefab = ResourceManager.GetInstance().GetEntityPrefab(CharacterEntityPrefabPath);
-        _characters[index] = Instantiate(prefab, _initialPosition[index], Quaternion.identity) as CharacterEntity;
+        _currentCharacters.Add(Instantiate(prefab, _initialPosition[index], Quaternion.identity) as CharacterEntity);
 
-        _characters[index].transform.SetParent(transform);
-        _characters[index].Initialize(characterData, characterStatData);
+        _currentCharacters[index].transform.SetParent(transform);
+        _currentCharacters[index].Initialize(characterData, characterStatData);
     }
 
     public void Progress() {
-        for (int i = 0; i < _characters.Length; ++i) {
-            _characters[i].Progress();
+        for (int i = 0; i < _currentCharacters.Count; ++i) {
+             if (_currentCharacters[i].CanRemoveEntity) {
+                StartCoroutine(RemoveCharacter(_currentCharacters[i]));
+                --i;
+                continue;
+            }
+            _currentCharacters[i].Progress();
         }
     }
 
@@ -104,13 +109,13 @@ public class PlayerControl : MonoBehaviour {
     private void ApplyAnimation(Data.SkillInfo skillInfo) {
         var casterData = Data.CharacterDataParser.Instance.GetCharacter(skillInfo.CharacterKey);
         CharacterEntity caster = null;
-        for (int i = 0; i < _characters.Length; ++i) {
-            if (_characters[i].KeyEquals(casterData.Key)) {
-                caster = _characters[i];
+        for (int i = 0; i < _currentCharacters.Count; ++i) {
+            if (_currentCharacters[i].KeyEquals(casterData.Key)) {
+                caster = _currentCharacters[i];
                 break;
             }
         }
-        caster.ChangeAnimation("Attack", false, () => caster.ChangeAnimation("Idle", true));
+        caster.ChangeAnimationState("Attack", false, () => caster.ChangeAnimationState("Idle", true));
     }
 
     private void DoAttack(BattleControl battleControl, Data.SkillInfo skillInfo) {
@@ -155,9 +160,6 @@ public class PlayerControl : MonoBehaviour {
 
         void AttackTarget(BattleEntity entity, int amount) {
             entity.DecreaseHP(amount);
-            if (entity.CurHP <= 0) {
-                battleControl.EnemyCtrl.RemoveMonster(entity as MonsterEntity);
-            }
         }
     }
 
@@ -197,38 +199,38 @@ public class PlayerControl : MonoBehaviour {
     }
 
     public float[] GetFillAmounts() {
-        for (int i = 0; i < _characters.Length; ++i) {
-            _fillAmounts[i] = _characters[i].GetHPPercent(); 
+        for (int i = 0; i < _currentCharacters.Count; ++i) {
+            _fillAmounts[i] = _currentCharacters[i].GetHPPercent(); 
         }
         return _fillAmounts;
     }
 
     public CharacterEntity GetSelectedCharacter(Vector3 touchPos) {
         CharacterEntity target = null;
-        int enemyCounts = _characters.Length;
+        int enemyCounts = _currentCharacters.Count;
         for (int i = 0; i < enemyCounts; ++i) {
-            if (_characters[i].IsOverlapped(touchPos, _layerMask)) {
-                target = _characters[i];
+            if (_currentCharacters[i].IsOverlapped(touchPos, _layerMask)) {
+                target = _currentCharacters[i];
             }
         }
         return target;
     }
 
     public List<CharacterEntity> GetCharacterByOrder(int targetCounts, BattleEntity ignoreEntity = null) {
-        int numOfAllies = _characters.Length;
+        int numOfAllies = _currentCharacters.Count;
         int startIndex = 0;
         List<CharacterEntity> characterList = new List<CharacterEntity>();
         
         for (int i = 0; i < numOfAllies; ++i) {
-            if (ignoreEntity == _characters[i]) {
+            if (ignoreEntity == _currentCharacters[i]) {
                 startIndex = i;
                 break;
             }
         }
 
         for (int i = startIndex; i < targetCounts; i = (i + 1) % numOfAllies) {
-            if (_characters[i] == ignoreEntity) break;
-            characterList.Add(_characters[i]);
+            if (_currentCharacters[i] == ignoreEntity) break;
+            characterList.Add(_currentCharacters[i]);
             
         }
 
@@ -236,12 +238,12 @@ public class PlayerControl : MonoBehaviour {
     }
 
     public List<CharacterEntity> GetAllCharacters() {
-        return _characters.ToList();
+        return _currentCharacters;
     }
 
     public List<CharacterEntity> GetRandomCharacters(int targetCounts, BattleEntity ignoreEntity = null) {
-        int numOfAllies = _characters.Length;
-        var characterList = _characters.ToList();
+        int numOfAllies = _currentCharacters.Count;
+        var characterList = _currentCharacters.ToList();
 
         if (ignoreEntity) {
             characterList.Remove(ignoreEntity as CharacterEntity);
@@ -257,7 +259,15 @@ public class PlayerControl : MonoBehaviour {
         return characterList;
     }
 
-    public void RemoveCharacter(CharacterEntity character) {
+    public IEnumerator RemoveCharacter(CharacterEntity character) {
+        character.CanRemoveEntity = false;
+        character.ChangeAnimationState("Dead");
 
+        while (!character.IsAnimationEnd) {
+            yield return null;
+        }
+
+        _currentCharacters.Remove(character);
+        character.gameObject.SetActive(false);
     }
 }

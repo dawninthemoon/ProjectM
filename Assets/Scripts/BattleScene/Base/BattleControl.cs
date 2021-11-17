@@ -100,7 +100,7 @@ public class BattleControl : MonoBehaviour {
     }
 
     private IEnumerator StartEnemyTurn() {
-        yield return _enemyControl.UseSkill(this);
+        yield return _enemyControl.UseSkill(this, SetupUI);
         EndTurn();
     }
 

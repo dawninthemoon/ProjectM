@@ -9,6 +9,7 @@ public class CharacterEntity : BattleEntity {
     private Data.CharacterStat _characterStatData;
     public Data.CharacterStat CharacterStatData { get { return _characterStatData; } }
     private static readonly float AnimationSpeed = 0.5f;
+    public bool IsAnimationEnd { get; private set; }
 
     public void Initialize(Data.Character characterData, Data.CharacterStat characterStatData) {
         _characterData = characterData;
@@ -24,11 +25,27 @@ public class CharacterEntity : BattleEntity {
         return defence;
     }
 
-    public void ChangeAnimation(string state, bool loop = false, SpriteAtlasAnimator.OnAnimationEnd callback = null) {
-        _animator.ChangeAnimation(state, loop, AnimationSpeed, callback);
+    public void ChangeAnimationState(string state, bool loop = false, SpriteAtlasAnimator.OnAnimationEnd callback = null) {
+        _animator.ChangeAnimation(state, loop, AnimationSpeed, callback ?? OnAnimationEnd);
+    }
+
+    private void OnAnimationEnd() {
+        IsAnimationEnd = true;
     }
 
     public bool KeyEquals(int key) {
         return _characterData.Key == key;
+    }
+
+    public override void DecreaseHP(int value) {
+        base.DecreaseHP(value);
+        ChangeAnimationState("Hit", false, ChangeToIdle);
+    }
+
+    public void ChangeToIdle() {
+        if (_curHP <= 0) {
+            CanRemoveEntity = true;
+        }
+        ChangeAnimationState("Idle", true);
     }
 }

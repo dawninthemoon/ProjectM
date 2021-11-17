@@ -35,7 +35,6 @@ public class BattleUI : MonoBehaviour {
             ui.transform.parent.gameObject.SetActive(true);
         }
 
-
         OnAllyHPChanged(args.allyHPFillAmounts);
         OnEnemyHPChanged(args.enemyHPFillAmounts);
         OnCostChanged(args.currentCost, args.maxCost);
