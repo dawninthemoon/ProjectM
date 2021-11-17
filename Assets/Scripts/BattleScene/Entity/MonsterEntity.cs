@@ -48,7 +48,7 @@ public class MonsterEntity : BattleEntity {
 
     public void ChangeAnimationState(string state, bool loop = false) {
         IsAnimationEnd = false;
-        _animator.ChangeAnimation(state, loop, 1f, OnAnimationEnd);
+        _animator.ChangeAnimation(state, loop, 0.5f, OnAnimationEnd);
     }
 
     public override float GetFinalDefence() {

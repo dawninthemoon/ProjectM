@@ -159,21 +159,23 @@ public class MonsterControl : MonoBehaviour {
     }
 
     public List<MonsterEntity> GetMonsterByOrder(int targetCounts, BattleEntity ignoreEntity = null) {
-        int numOfAllies = _currentMonsters.Count;
+        int numOfMonsters = _currentMonsters.Count;
         int startIndex = 0;
         List<MonsterEntity> characterList = new List<MonsterEntity>();
         
-        for (int i = 0; i < numOfAllies; ++i) {
+        for (int i = 0; i < numOfMonsters; ++i) {
             if (ignoreEntity == _currentMonsters[i]) {
-                startIndex = (i + 1) % numOfAllies;
+                startIndex = (i + 1) % numOfMonsters;
                 break;
             }
         }
 
-        for (int i = startIndex; i < targetCounts; i = (i + 1) % numOfAllies) {
+        int count = 0;
+        for (int i = startIndex; i < targetCounts; i = (i + 1) % numOfMonsters) {
             if (_currentMonsters[i] == ignoreEntity) break;
             characterList.Add(_currentMonsters[i]);
-            
+            ++count;
+            if (count == targetCounts) break;
         }
 
         return characterList;
