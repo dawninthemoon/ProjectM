@@ -50,7 +50,10 @@ public class SpiritInfoUI : MonoBehaviour
 
     public void SetLevelText()
     {
-        levelText.text = string.Format( "Lv.{0}", userSpiritData.Lv );
+        if( userSpiritData != null )
+            levelText.text = string.Format( "Lv.{0}", userSpiritData.Lv );
+        else
+            levelText.text = string.Format( "Lv.{0}", "NULL" );
     }
 
     public void AddLevel()
