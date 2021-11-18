@@ -4,7 +4,6 @@ using UnityEngine;
 using RieslingUtils;
 
 public class MonsterControl : MonoBehaviour {
-    [SerializeField] private int[] _monsterKeys = null;
     [SerializeField] private Vector3[] _initialPosition = null;
     [SerializeField] LayerMask _layerMask;
     private List<MonsterEntity> _currentMonsters;
@@ -14,16 +13,19 @@ public class MonsterControl : MonoBehaviour {
     public void Initialize() {
         _fillAmounts = new float[5];
 
-        int monsterCounts = _monsterKeys.Length;
+        var stage = Data.BattleStageDataParser.Instance.FindStage("1");
+        int[] monsterKeys = stage.Round1_Monster;
+
+        int monsterCounts = monsterKeys.Length;
         _currentMonsters = new List<MonsterEntity>(monsterCounts);
 
         for (int i = 0; i < monsterCounts; ++i) {
-            var monsterData = Data.MonsterDataParser.Instance.GetMonster(_monsterKeys[i]);
+            var monsterData = Data.MonsterDataParser.Instance.GetMonster(monsterKeys[i]);
             var prefab = ResourceManager.GetInstance().GetEntityPrefab(MonsterPreafabPath + monsterData.MonsterPrefab);
 
             BattleEntity monster = Instantiate(prefab, _initialPosition[i], Quaternion.identity);
             _currentMonsters.Add(monster as MonsterEntity);
-            _currentMonsters[i].Initialize(_monsterKeys[i], i);
+            _currentMonsters[i].Initialize(monsterKeys[i], i);
         }
     }
 

@@ -1,0 +1,17 @@
+{
+  "BattleStageTemplate": [
+    {
+      "Key": "1",
+      "Round1_Formation": "1",
+      "Round1_Monster": "{1,2,3,3,3}",
+      "Round2_Formation": "2",
+      "Round2_Monster": "{1,2,3,3,3}",
+      "Round3_Formation": "3",
+      "Round3_Monster": "{1,2,3,3,3}",
+      "Round4_Formation": "4",
+      "Round4_Monster": "{1,2,3,3,3}",
+      "Round5_Formation": "1",
+      "Round5_Monster": "{1,2,3,3,3}"
+    }
+  ]
+}
