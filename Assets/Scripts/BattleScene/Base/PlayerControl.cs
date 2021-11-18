@@ -211,7 +211,6 @@ public class PlayerControl : MonoBehaviour {
         for (int i = 0; i < enemyCounts; ++i) {
             if (_currentCharacters[i].IsOverlapped(touchPos, _layerMask)) {
                 target = _currentCharacters[i];
-                break;
             }
         }
         return target;

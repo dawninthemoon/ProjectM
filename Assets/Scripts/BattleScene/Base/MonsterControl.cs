@@ -12,7 +12,7 @@ public class MonsterControl : MonoBehaviour {
     private static readonly string MonsterPreafabPath = "MonsterEntityPrefab/";
 
     public void Initialize() {
-        _fillAmounts = new float[3];
+        _fillAmounts = new float[5];
 
         int monsterCounts = _monsterKeys.Length;
         _currentMonsters = new List<MonsterEntity>(monsterCounts);
@@ -44,7 +44,6 @@ public class MonsterControl : MonoBehaviour {
         for (int i = 0; i < monsterCounts; ++i) {
             if (_currentMonsters[i].IsOverlapped(touchPos, _layerMask)) {
                 target = _currentMonsters[i];
-                break;
             }
         }
         return target;

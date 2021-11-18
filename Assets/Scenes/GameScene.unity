@@ -1593,11 +1593,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c05cf0742ed9ce4396872990aefd4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _monsterKeys: 010000000200000003000000
+  _monsterKeys: 0100000002000000010000000200000003000000
   _initialPosition:
-  - {x: -3.95, y: -4.66, z: 15}
-  - {x: -2.81, y: -4.66, z: 20}
-  - {x: -1.43, y: -4.66, z: 17}
+  - {x: -4.63, y: -4.66, z: 15}
+  - {x: -3.49, y: -4.66, z: 20}
+  - {x: -2.08, y: -4.66, z: 18.26}
+  - {x: -3.22, y: -4.66, z: 13.26}
+  - {x: -1.43, y: -4.66, z: 12.94}
   _layerMask:
     serializedVersion: 2
     m_Bits: 256
@@ -2810,6 +2812,8 @@ MonoBehaviour:
   _initialPosition:
   - {x: -6.41, y: -4.66, z: 17.06}
   - {x: -7.96, y: -4.66, z: 19.67}
+  - {x: -8.91, y: -4.66, z: 15}
+  - {x: -8.91, y: -4.66, z: 15}
   - {x: -8.91, y: -4.66, z: 15}
 --- !u!1 &1161494391
 GameObject:

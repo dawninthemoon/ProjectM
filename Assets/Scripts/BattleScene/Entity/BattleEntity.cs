@@ -19,7 +19,7 @@ public abstract class BattleEntity : MonoBehaviour {
         RaycastHit raycastHit;
         Ray screenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast( screenRay, out raycastHit, 100, mask)) {
+        if (Physics.Raycast(screenRay, out raycastHit, 100f, mask)) {
             isOverlapped = true;
         }
         return isOverlapped;
