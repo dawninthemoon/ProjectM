@@ -119,7 +119,6 @@ public class BattleControl : MonoBehaviour {
     }
 
     private void SetSkillTarget(Skill skill, Vector2 touchPosition) {
-        
         if (skill.IsCharacterTarget()) {
             SelectedTarget = _playerControl.GetSelectedCharacter(touchPosition);
         }
