@@ -34,7 +34,7 @@ namespace FBControl
             get{ return firebaseAuthManager; }
         }
 
-        public event System.Action OnLoadConpleteEvent;
+        public event System.Action OnLoadCompleteEvent;
 
         public void Awake()
         {
@@ -57,7 +57,7 @@ namespace FBControl
         
             yield return new WaitUntil( ()=> { return userDB.IsLoaded; } );
             Debug.Log("DB INIT 완료");
-            OnLoadConpleteEvent?.Invoke();
+            OnLoadCompleteEvent?.Invoke();
         }
     }
 }
