@@ -5,6 +5,10 @@ using UnityEngine;
 public class UserDeckData
 {
     private int charIndex;
+    public int CharIndex
+    {
+        get{ return charIndex; }
+    }
     private int[] spiritIndies;
     private int[] subSpiritIndies;
 
@@ -21,5 +25,13 @@ public class UserDeckData
     public void SetSubSpiritIndex( int index, int spirit )
     {
         subSpiritIndies[index] = spirit;
+    }
+    public int GetMainSpiritIndex( int index )
+    {
+        return spiritIndies[index]; 
+    }
+    public int GetSubSpiritIndex( int index )
+    {
+        return subSpiritIndies[index]; 
     }
 }
