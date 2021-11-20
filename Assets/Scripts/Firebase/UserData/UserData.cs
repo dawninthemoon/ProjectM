@@ -64,6 +64,12 @@ public class UserData
         get { return userGrowStoneData;  }
     }
 
+    private UserDeckData userDeckData = new UserDeckData();
+    public UserDeckData UserDeckData
+    {
+        get{ return userDeckData; }
+    }
+
     private int currentCharacter = 101;
     public int CurrentCharacter
     {
