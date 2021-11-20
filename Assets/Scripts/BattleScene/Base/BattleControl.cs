@@ -39,7 +39,7 @@ public class BattleControl : MonoBehaviour {
         _playerControl.Progress();
         _enemyControl.Progress();
 
-        if (_currentTurn == TurnInfo.ENEMY) return;
+        if (_currentTurn == TurnInfo.ENEMY || _playerControl.IsDefeated()) return;
 
         SkillState state = SkillManager.GetInstance().State;
         if (state == SkillState.NOTHING) return;

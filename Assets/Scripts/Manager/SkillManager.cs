@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RieslingUtils;
+using DG.Tweening;
 
 public enum SkillState {
     NOTHING,
@@ -16,8 +17,13 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
     private SpriteRenderer _aimRenderer;
     private ObjectPool<Skill> _skillObjectPool;
     private Transform _cardTransform;
+    private SOCameraSetting _cameraSettings;
+    private WaitForSecondsRealtime _hitStopWaitTime;
 
     public void Initialize(Camera cardCamera) {
+        _cameraSettings = Resources.Load<SOCameraSetting>("Settings/CameraSettings");
+        _hitStopWaitTime = new WaitForSecondsRealtime(_cameraSettings.hitStopSeconds);
+
         _cardTransform = GameObject.Find("[ Cards ]").transform;
         var deckUI = GameObject.Find("DeckButton");
 
@@ -71,8 +77,29 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         }
     }
 
+    public void ShakeCamera() {
+        Camera.main.transform.DOShakePosition(
+            _cameraSettings.duration,
+            _cameraSettings.strength,
+            _cameraSettings.vibrato,
+            _cameraSettings.randomness,
+            _cameraSettings.snapping,
+            _cameraSettings.fadeOut
+        );
+
+        StartCoroutine(EnableHitStop());
+    }
+
+    private IEnumerator EnableHitStop() {
+        Time.timeScale = 0f;
+
+        yield return _hitStopWaitTime;
+
+        Time.timeScale = 1f;
+    }
+
     public void SetActiveAimSprite(bool enable) {
-        _aimRenderer.gameObject.SetActive(enable);
+        _aimRenderer.enabled = enable;
     }
 
     public void SetAimPosition(Vector3 position) {

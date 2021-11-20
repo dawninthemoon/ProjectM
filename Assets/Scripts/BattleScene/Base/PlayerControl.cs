@@ -69,6 +69,8 @@ public class PlayerControl : MonoBehaviour {
         }
     }
 
+    public bool IsDefeated() => _currentCharacters.Count == 0;
+
     public void RefreshCost() {
         CurrentCost = _currentCharacters[0].CharacterStatData.MaxCost;
     }

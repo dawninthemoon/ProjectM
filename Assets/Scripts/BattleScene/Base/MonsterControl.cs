@@ -50,9 +50,7 @@ public class MonsterControl : MonoBehaviour {
         if (Physics.Raycast(screenRay, out raycastHit, 100f, _layerMask)) 
         {
             for (int i = 0; i < monsterCounts; ++i) {
-                if (_currentMonsters[i].gameObject == raycastHit.collider.gameObject ) {
-                    
-                    Debug.Log(i);
+                if (_currentMonsters[i].gameObject == raycastHit.collider.gameObject) {
                     target = _currentMonsters[i];
                 }
             }
