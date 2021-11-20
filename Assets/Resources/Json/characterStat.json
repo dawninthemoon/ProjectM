@@ -8,7 +8,9 @@
       "BaseHP": 50,
       "DefencePower": 65,
       "Critical": 1000,
-      "CriticalDamage": 15000
+      "CriticalDamage": 15000,
+      "MaxDraw": 5,
+      "MaxCost": 3
     },
     {
       "Key": 102,
@@ -18,7 +20,9 @@
       "BaseHP": 45,
       "DefencePower": 28,
       "Critical": 1000,
-      "CriticalDamage": 15000
+      "CriticalDamage": 15000,
+      "MaxDraw": 5,
+      "MaxCost": 3
     },
     {
       "Key": 103,
@@ -28,7 +32,9 @@
       "BaseHP": 43,
       "DefencePower": 23,
       "Critical": 1000,
-      "CriticalDamage": 15000
+      "CriticalDamage": 15000,
+      "MaxDraw": 5,
+      "MaxCost": 3
     },
     {
       "Key": 104,
@@ -38,7 +44,9 @@
       "BaseHP": 46,
       "DefencePower": 13,
       "Critical": 1000,
-      "CriticalDamage": 15000
+      "CriticalDamage": 15000,
+      "MaxDraw": 5,
+      "MaxCost": 3
     },
     {
       "Key": 105,
@@ -48,7 +56,9 @@
       "BaseHP": 47,
       "DefencePower": 36,
       "Critical": 1000,
-      "CriticalDamage": 15000
+      "CriticalDamage": 15000,
+      "MaxDraw": 5,
+      "MaxCost": 3
     },
     {
       "Key": 106,
@@ -58,7 +68,9 @@
       "BaseHP": 46,
       "DefencePower": 48,
       "Critical": 1000,
-      "CriticalDamage": 15000
+      "CriticalDamage": 15000,
+      "MaxDraw": 5,
+      "MaxCost": 3
     }
   ]
 }

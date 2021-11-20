@@ -7,7 +7,6 @@ using RieslingUtils;
 public class PlayerControl : MonoBehaviour {
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private int[] _characterKeys = null;
-    [SerializeField] private Mascot _mascot = null;
     [SerializeField] private Vector3[] _initialPosition = null;
     private List<CharacterEntity> _currentCharacters;
     [SerializeField] private SkillDeck _cardDeck = null;
@@ -71,17 +70,14 @@ public class PlayerControl : MonoBehaviour {
     }
 
     public void RefreshCost() {
-        CurrentCost = _mascot.GetCostAmount();
+        CurrentCost = _currentCharacters[0].CharacterStatData.MaxCost;
     }
 
     public bool CanUseSkill(int requireCost) => (CurrentCost >= requireCost);
-    public int GetMaxCost() => _mascot.GetCostAmount();
+    public int GetMaxCost() => _currentCharacters[0].CharacterStatData.MaxCost;
     
     public void DrawCard(bool turnStart = false) {
-        int amount = _mascot.GetDrawAmount();
-        if (turnStart) {
-            amount = Mathf.Min(_mascot.GetDrawAmount() + _mascot.GetStartDrawAmount(), _cardDeck.GetDeckCount());
-        }
+        int amount = Mathf.Min(_currentCharacters[0].CharacterStatData.MaxDraw - _skillsInHand.Count, _cardDeck.GetDeckCount());
 
         var cardManager = SkillManager.GetInstance();
         for (int i = 0; i < amount; ++i) {

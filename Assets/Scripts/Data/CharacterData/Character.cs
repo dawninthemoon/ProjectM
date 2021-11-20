@@ -13,6 +13,8 @@ namespace Data
         public int DefencePower;
         public int Critical;
         public int CriticalDamage;
+        public int MaxDraw;
+        public int MaxCost;
 
         public override void Parse(JSONObject jsonObject) {
             Key = (int)jsonObject.GetNumber("Key");
@@ -22,6 +24,8 @@ namespace Data
             DefencePower = (int)jsonObject.GetNumber("DefencePower");
             Critical = (int)jsonObject.GetNumber("Critical");
             CriticalDamage = (int)jsonObject.GetNumber("CriticalDamage");
+            MaxDraw = (int)jsonObject.GetNumber("MaxDraw");
+            MaxCost = (int)jsonObject.GetNumber("MaxCost");
         }
     }
 
