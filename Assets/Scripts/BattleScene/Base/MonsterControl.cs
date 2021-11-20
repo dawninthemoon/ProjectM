@@ -43,9 +43,18 @@ public class MonsterControl : MonoBehaviour {
     public MonsterEntity GetSelectedEnemy(Vector3 touchPos) {
         MonsterEntity target = null;
         int monsterCounts = _currentMonsters.Count;
-        for (int i = 0; i < monsterCounts; ++i) {
-            if (_currentMonsters[i].IsOverlapped(touchPos, _layerMask)) {
-                target = _currentMonsters[i];
+
+        RaycastHit raycastHit;
+        Ray screenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(screenRay, out raycastHit, 100f, _layerMask)) 
+        {
+            for (int i = 0; i < monsterCounts; ++i) {
+                if (_currentMonsters[i].gameObject == raycastHit.collider.gameObject ) {
+                    
+                    Debug.Log(i);
+                    target = _currentMonsters[i];
+                }
             }
         }
         return target;

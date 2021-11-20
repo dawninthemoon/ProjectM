@@ -14,13 +14,15 @@ public abstract class BattleEntity : MonoBehaviour {
     public void Progress() {
         _animator.Progress(_atlas);
     }
-    public bool IsOverlapped(Vector2 pos, LayerMask mask) {
+    public bool IsOverlapped( Vector2 pos, LayerMask mask) {
         bool isOverlapped = false;
         RaycastHit raycastHit;
         Ray screenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(screenRay, out raycastHit, 100f, mask)) {
-            isOverlapped = true;
+        if (Physics.Raycast(screenRay, out raycastHit, 100f, mask)) 
+        {
+            if( raycastHit.collider.gameObject == gameObject )
+                isOverlapped = true;
         }
         return isOverlapped;
     }
