@@ -2445,6 +2445,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: canvas_overlay
       objectReference: {fileID: 0}
+    - target: {fileID: 3905085056411676817, guid: 81d0ee39f7442604585d1b9bd229f270, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3905085056411676845, guid: 81d0ee39f7442604585d1b9bd229f270, type: 3}
       propertyPath: m_Pivot.x
       value: 0

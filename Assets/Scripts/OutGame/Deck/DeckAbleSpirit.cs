@@ -9,6 +9,6 @@ public class DeckAbleSpirit : MonoBehaviour, ICell
 
     public void SetIndex( int index )
     {
-
+        spiritIcon.SetSpirit( index );
     }
 }

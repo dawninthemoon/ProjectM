@@ -7,6 +7,9 @@ namespace OutGame
     public class DeckControl : MonoBehaviour
     {
         [SerializeField] private DeckSlot[] deckSlots;
+        [SerializeField] private DeckAbleSpiritScroll deckAbleSpiritScroll;
+
+        private int currentSlot = -1;
 
         public void Start()
         {
@@ -15,20 +18,28 @@ namespace OutGame
         
         public void Init()
         {
-            deckSlots[0].SetCharacter( FirebaseManager.Instance.UserData.UserDeckData.CharIndex );
-            deckSlots[1].SetSpirit( FirebaseManager.Instance.UserData.UserDeckData.GetMainSpiritIndex(0) );
-            deckSlots[2].SetSpirit( FirebaseManager.Instance.UserData.UserDeckData.GetMainSpiritIndex(1) );
-            deckSlots[3].SetSpirit( FirebaseManager.Instance.UserData.UserDeckData.GetMainSpiritIndex(2) );
+            deckSlots[0].InitDeckSlot( FirebaseManager.Instance.UserData.UserDeckData.CharIndex, 0 );
+            deckSlots[1].InitDeckSlot( FirebaseManager.Instance.UserData.UserDeckData.GetMainSpiritIndex(0), 1 );
+            deckSlots[2].InitDeckSlot( FirebaseManager.Instance.UserData.UserDeckData.GetMainSpiritIndex(1), 2 );
+            deckSlots[3].InitDeckSlot( FirebaseManager.Instance.UserData.UserDeckData.GetMainSpiritIndex(2), 3 );
+        }
+
+        public void OnClickSlotCallback( int index )
+        {
+            if( deckSlots[index].SlotType == DeckSlot.DeckSlotType.Spirit )
+            {
+                deckAbleSpiritScroll.gameObject.SetActive( true );
+            }
         }
 
         public void SetCharacter( int charIndex )
         {
-            deckSlots[0].SetCharacter( charIndex );
+            deckSlots[0].InitDeckSlot( charIndex, 0 );
         }
 
         public void SetSpirit( int spiritIndex, int slot )
         {
-            deckSlots[slot].SetSpirit( spiritIndex );
+            deckSlots[slot].InitDeckSlot( spiritIndex, slot );
         }
     }
 }
