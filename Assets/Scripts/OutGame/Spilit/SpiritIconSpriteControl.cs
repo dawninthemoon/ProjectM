@@ -22,7 +22,10 @@ public class SpiritIconSpriteControl : MonoBehaviour
     public Sprite GetSpiritSprite( int index )
     {
         SpiritData spiritData = SpiritDataParser.Instance.GetSpiritData( index );
-
+        
+        if( spiritData == null )
+            return null;
+            
         return spilitAtlas.GetSprite( spiritData.IconName );
     }
 }

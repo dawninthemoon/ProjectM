@@ -6,20 +6,20 @@ public class UserTestButton : MonoBehaviour
 {
     public void AddCharacter()
     {
-        for( int i = 0; i < 13; ++i )
-        {
-            UserSpiritData spilitData = new UserSpiritData();
-            spilitData.Lv = 1;
-            spilitData.Index = 21001 + i;
-            spilitData.Exp = 0;
-
-            FBControl.FirebaseManager.Instance.UserData.UserSpiritDataList.Data.Add( spilitData );
-        }
-        for( int i = 0; i < 13; ++i )
+        for( int i = 0; i < 10; ++i )
         {
             UserSpiritData spilitData = new UserSpiritData();
             spilitData.Lv = 1;
             spilitData.Index = 22001 + i;
+            spilitData.Exp = 0;
+
+            FBControl.FirebaseManager.Instance.UserData.UserSpiritDataList.Data.Add( spilitData );
+        }
+        for( int i = 0; i < 10; ++i )
+        {
+            UserSpiritData spilitData = new UserSpiritData();
+            spilitData.Lv = 1;
+            spilitData.Index = 25001 + i;
             spilitData.Exp = 0;
 
             FBControl.FirebaseManager.Instance.UserData.UserSpiritDataList.Data.Add( spilitData );

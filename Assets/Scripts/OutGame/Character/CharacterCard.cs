@@ -35,7 +35,6 @@ namespace OutGame
                 return;
 
             characterImage.sprite = ResourceManager.GetInstance().GetSprite(string.Format("Standing/Character_{0}", character.Key));
-            //characterImage.sprite = characterAtlas.GetSprite(  );
 
             if (characterImage.sprite != null)
             {
