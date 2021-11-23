@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D;
+using DG.Tweening;
 
 public abstract class BattleEntity : MonoBehaviour {
     [SerializeField] private SpriteAtlas _atlas = null;
@@ -38,6 +39,11 @@ public abstract class BattleEntity : MonoBehaviour {
 
     public float GetHPPercent() {
         return (float)_curHP / _maxHP;
+    }
+
+    public void MoveForward(float direction) {
+        float amount = 2f;
+        transform.DOLocalMoveX(direction * amount, 0.15f).SetRelative().SetLoops(2, LoopType.Yoyo);
     }
 
     public abstract float GetFinalDefence();

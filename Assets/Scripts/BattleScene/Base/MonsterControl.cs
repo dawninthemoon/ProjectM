@@ -60,6 +60,8 @@ public class MonsterControl : MonoBehaviour {
 
     public IEnumerator UseSkill(BattleControl battleControl, System.Action uiSetupCallback) {
         foreach (MonsterEntity monster in _currentMonsters) {
+            if (battleControl.PlayerCtrl.IsDefeated()) break;
+
             Data.SkillData skillData = monster.GetCurrentSkillData();
             if (skillData == null) continue;
             Data.SkillInfo skillInfo = new Data.SkillInfo(skillData, monster.Key);
@@ -67,7 +69,7 @@ public class MonsterControl : MonoBehaviour {
             int grade = (int)Data.MonsterDataParser.Instance.GetMonster(skillInfo.CharacterKey).Level;
             Data.MonsterStat stat = Data.MonsterStatDataParser.Instance.GetMonsterStat(grade);
 
-            DoAttack(battleControl, skillInfo, stat);
+            DoAttack(battleControl, skillInfo, stat, monster);
             DoHeal(battleControl, skillInfo, stat);
 
             string name = Data.MonsterDataParser.Instance.GetMonster(skillInfo.CharacterKey).Name;
@@ -84,12 +86,16 @@ public class MonsterControl : MonoBehaviour {
         }
     }
 
-    private void DoAttack(BattleControl battleControl, Data.SkillInfo skillInfo, Data.MonsterStat stat) {
+    private void DoAttack(BattleControl battleControl, Data.SkillInfo skillInfo, Data.MonsterStat stat, MonsterEntity caster) {
         var data = skillInfo.SkillData;
         float criticalDamage = MathUtils.GetPerTenThousand(stat.CriticalDamage);
         float baseDamage = stat.AttackPower * (1f + criticalDamage);
         int targetCounts = data.AttackTypeValue;
-        var selectedTarget = battleControl.PlayerCtrl.GetRandomCharacters(1)[0];
+
+        var randomCharacters = battleControl.PlayerCtrl.GetRandomCharacters(1);
+        if (randomCharacters.Count == 0) return;
+        CharacterEntity selectedTarget = randomCharacters[0];
+
         int finalDamage;
 
         switch (data.AttackType) {
@@ -117,9 +123,16 @@ public class MonsterControl : MonoBehaviour {
             break;
         case Data.AttackType.RandomAttack:
             var character = battleControl.PlayerCtrl.GetRandomCharacters(targetCounts, selectedTarget);
-            finalDamage = Mathf.FloorToInt(baseDamage / character[0].GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-            AttackTarget(character[0], finalDamage);
+            Debug.Log("a");
+            if (character.Count > 0) {
+                finalDamage = Mathf.FloorToInt(baseDamage / character[0].GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
+                AttackTarget(character[0], finalDamage);
+            }
             break;
+        }
+
+        if (data.AttackType != Data.AttackType.None) {
+            caster.MoveForward(-1f);
         }
 
         void AttackTarget(BattleEntity entity, int amount) {

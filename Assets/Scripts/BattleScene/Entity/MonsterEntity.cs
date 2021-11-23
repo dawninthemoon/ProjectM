@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RieslingUtils;
+using DG.Tweening;
 
 public class MonsterEntity : BattleEntity {
     private class SkillStatus {

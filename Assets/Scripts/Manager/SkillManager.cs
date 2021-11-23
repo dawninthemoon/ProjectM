@@ -87,10 +87,13 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
             _cameraSettings.fadeOut
         );
 
+        Camera.main.DOOrthoSize(5.5f, 0.15f).SetLoops(2, LoopType.Yoyo);
         StartCoroutine(EnableHitStop());
     }
 
     private IEnumerator EnableHitStop() {
+        yield return new WaitForSeconds(0.075f);
+
         Time.timeScale = 0f;
 
         yield return _hitStopWaitTime;

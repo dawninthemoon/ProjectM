@@ -90,6 +90,7 @@ public class BattleControl : MonoBehaviour {
         ++_turnCount;
 
         if (_currentTurn == TurnInfo.PLAYER) {
+            if (_playerControl.IsDefeated()) return;
             _playerControl.RefreshCost();
             _playerControl.DrawCard(true);
             SkillManager.GetInstance().State = SkillState.CARD_DRAG;

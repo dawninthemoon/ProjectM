@@ -69,15 +69,25 @@ public class PlayerControl : MonoBehaviour {
         }
     }
 
-    public bool IsDefeated() => _currentCharacters.Count == 0;
+    public bool IsDefeated() {
+        int characterCounts = 0;
+        foreach (var character in _currentCharacters) {
+            if (character.CurHP > 0) {
+                ++characterCounts;
+            }
+        }
+        return (characterCounts == 0);
+    }
 
     public void RefreshCost() {
         CurrentCost = _currentCharacters[0].CharacterStatData.MaxCost;
     }
 
     public bool CanUseSkill(int requireCost) => (CurrentCost >= requireCost);
-    public int GetMaxCost() => _currentCharacters[0].CharacterStatData.MaxCost;
-    
+    public int GetMaxCost()  {
+        return (_currentCharacters.Count > 0) ? _currentCharacters[0].CharacterStatData.MaxCost : 0;
+    }
+
     public void DrawCard(bool turnStart = false) {
         int amount = Mathf.Min(_currentCharacters[0].CharacterStatData.MaxDraw - _skillsInHand.Count, _cardDeck.GetDeckCount());
 
@@ -96,27 +106,29 @@ public class PlayerControl : MonoBehaviour {
         CurrentCost -= skill.GetRequireCost();
 
         Data.SkillInfo skillInfo = skill.GetSkillInfo();
-        ApplyAnimation(skillInfo);
 
-        DoAttack(battleControl, skillInfo);
-        DoHeal(battleControl, skillInfo);
-
-        _cardDeck.SkillToGrave(skill.GetSkillInfo());
-    }
-
-    private void ApplyAnimation(Data.SkillInfo skillInfo) {
-        var casterData = Data.CharacterDataParser.Instance.GetCharacter(skillInfo.CharacterKey);
         CharacterEntity caster = null;
+        var casterData = Data.CharacterDataParser.Instance.GetCharacter(skillInfo.CharacterKey);
         for (int i = 0; i < _currentCharacters.Count; ++i) {
             if (_currentCharacters[i].KeyEquals(casterData.Key)) {
                 caster = _currentCharacters[i];
                 break;
             }
         }
+
+        ApplyAnimation(skillInfo, casterData, caster);
+
+        DoAttack(battleControl, skillInfo, caster);
+        DoHeal(battleControl, skillInfo);
+
+        _cardDeck.SkillToGrave(skill.GetSkillInfo());
+    }
+
+    private void ApplyAnimation(Data.SkillInfo skillInfo, Data.Character casterData, CharacterEntity caster) {
         caster.ChangeAnimationState("Attack", false, () => caster.ChangeAnimationState("Idle", true));
     }
 
-    private void DoAttack(BattleControl battleControl, Data.SkillInfo skillInfo) {
+    private void DoAttack(BattleControl battleControl, Data.SkillInfo skillInfo, CharacterEntity caster) {
         Data.CharacterStat stat = Data.CharacterStatDataParser.Instance.GetCharacterStat(skillInfo.CharacterKey);
 
         var data = skillInfo.SkillData;
@@ -124,7 +136,7 @@ public class PlayerControl : MonoBehaviour {
         float baseDamage = stat.AttackPower * (1f + criticalDamage);
         int targetCounts = data.AttackTypeValue;
         var selectedTarget = battleControl.SelectedTarget;
-        int finalDamage;
+        int finalDamage = 0;
 
         switch (data.AttackType) {
         case Data.AttackType.SingleAttack:
@@ -154,6 +166,10 @@ public class PlayerControl : MonoBehaviour {
             finalDamage = Mathf.FloorToInt(baseDamage / enemy[0].GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
             AttackTarget(enemy[0], finalDamage);
             break;
+        }
+
+        if (data.AttackType != Data.AttackType.None) {
+            caster.MoveForward(1f);
         }
 
         void AttackTarget(BattleEntity entity, int amount) {
@@ -240,8 +256,13 @@ public class PlayerControl : MonoBehaviour {
     }
 
     public List<CharacterEntity> GetRandomCharacters(int targetCounts, BattleEntity ignoreEntity = null) {
-        int numOfAllies = _currentCharacters.Count;
         var characterList = _currentCharacters.ToList();
+        for (int i = 0; i < characterList.Count; ++i) {
+            if (characterList[i].CurHP <= 0) {
+                characterList.RemoveAt(i--);
+            }
+        }
+        int numOfAllies = characterList.Count;
 
         if (ignoreEntity) {
             characterList.Remove(ignoreEntity as CharacterEntity);
