@@ -56,6 +56,9 @@ public class MonsterEntity : BattleEntity {
         float defence = 1f + MathUtils.GetPercent(_monsterStatData.DefencePower);
         return defence;
     }
+    public void SetAnimationDelay(float amount) {
+        _animator.SetAnimationDelay(amount);
+    }
 
     private void OnAnimationEnd() {
         IsAnimationEnd = true;

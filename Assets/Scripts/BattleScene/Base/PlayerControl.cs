@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using KeyPair = System.Collections.Generic.KeyValuePair<int, int>;
 using RieslingUtils;
+using DG.Tweening;
 
 public class PlayerControl : MonoBehaviour {
     [SerializeField] private LayerMask _layerMask;
@@ -118,10 +119,11 @@ public class PlayerControl : MonoBehaviour {
 
         StartCoroutine(Act());
         IEnumerator Act() {
-            yield return new WaitForSeconds(0.3f);
-            ApplyAnimation(skillInfo, casterData, caster);
+            Camera.main.DOOrthoSize(7.4f, 0.3f).SetEase(Ease.OutCubic);
+            yield return new WaitForSeconds(0.5f);
             DoAttack(battleControl, skillInfo, caster);
             DoHeal(battleControl, skillInfo);
+            ApplyAnimation(skillInfo, casterData, caster);
         }
 
         _cardDeck.SkillToGrave(skill.GetSkillInfo());
@@ -129,6 +131,7 @@ public class PlayerControl : MonoBehaviour {
 
     private void ApplyAnimation(Data.SkillInfo skillInfo, Data.Character casterData, CharacterEntity caster) {
         caster.ChangeAnimationState("Attack", false, () => caster.ChangeAnimationState("Idle", true));
+        caster.SetAnimationDelay(1f);
     }
 
     private void DoAttack(BattleControl battleControl, Data.SkillInfo skillInfo, CharacterEntity caster) {
@@ -173,7 +176,7 @@ public class PlayerControl : MonoBehaviour {
 
         void AttackTarget(BattleEntity entity, int amount) {
             entity.DecreaseHP(amount);
-            entity.MoveForward(-0.5f);
+            entity.MoveForward(0.2f);
         }
 
         if (data.AttackType != Data.AttackType.None) {

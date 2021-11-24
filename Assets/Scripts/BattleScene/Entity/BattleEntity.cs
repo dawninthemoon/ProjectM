@@ -42,8 +42,8 @@ public abstract class BattleEntity : MonoBehaviour {
     }
 
     public void MoveForward(float direction) {
-        float amount = 3f;
-        transform.DOLocalMoveX(direction * amount, 0.2f).From(true);
+        float amount = 0.4f;
+        transform.DOLocalMoveX(direction * amount, 0.4f).From(true).SetEase(Ease.OutCirc);
     }
 
     public abstract float GetFinalDefence();

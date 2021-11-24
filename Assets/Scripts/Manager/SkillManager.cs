@@ -78,6 +78,9 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
     }
 
     public void ShakeCamera() {
+        Camera.main.orthographicSize = 8.3f;
+        Camera.main.DOOrthoSize(8f, 0.33f);
+        
         Camera.main.transform.DOShakePosition(
             _cameraSettings.duration,
             _cameraSettings.strength,
@@ -87,12 +90,10 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
             _cameraSettings.fadeOut
         );
 
-        Camera.main.DOOrthoSize(4f, 0.2f).From();
-        StartCoroutine(EnableHitStop());
     }
 
     private IEnumerator EnableHitStop() {
-        yield return new WaitForSeconds(0.075f);
+        yield return new WaitForSeconds(0.001f);
 
         Time.timeScale = 0f;
 
