@@ -87,7 +87,7 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
             _cameraSettings.fadeOut
         );
 
-        Camera.main.DOOrthoSize(5.5f, 0.15f).SetLoops(2, LoopType.Yoyo);
+        Camera.main.DOOrthoSize(4f, 0.2f).From();
         StartCoroutine(EnableHitStop());
     }
 

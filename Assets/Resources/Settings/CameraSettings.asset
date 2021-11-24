@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be5f42591658e964d970f9f4da1f2774, type: 3}
   m_Name: CameraSettings
   m_EditorClassIdentifier: 
-  duration: 0.15
-  strength: 1.2
-  vibrato: 30
-  randomness: 90
+  duration: 0.25
+  strength: 0.95
+  vibrato: 124
+  randomness: 96
   snapping: 0
   fadeOut: 1
-  hitStopSeconds: 0.02
+  hitStopSeconds: 0.18

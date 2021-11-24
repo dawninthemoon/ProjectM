@@ -116,10 +116,13 @@ public class PlayerControl : MonoBehaviour {
             }
         }
 
-        ApplyAnimation(skillInfo, casterData, caster);
-
-        DoAttack(battleControl, skillInfo, caster);
-        DoHeal(battleControl, skillInfo);
+        StartCoroutine(Act());
+        IEnumerator Act() {
+            yield return new WaitForSeconds(0.3f);
+            ApplyAnimation(skillInfo, casterData, caster);
+            DoAttack(battleControl, skillInfo, caster);
+            DoHeal(battleControl, skillInfo);
+        }
 
         _cardDeck.SkillToGrave(skill.GetSkillInfo());
     }
@@ -168,13 +171,15 @@ public class PlayerControl : MonoBehaviour {
             break;
         }
 
+        void AttackTarget(BattleEntity entity, int amount) {
+            entity.DecreaseHP(amount);
+            entity.MoveForward(-0.5f);
+        }
+
         if (data.AttackType != Data.AttackType.None) {
             caster.MoveForward(1f);
         }
 
-        void AttackTarget(BattleEntity entity, int amount) {
-            entity.DecreaseHP(amount);
-        }
     }
 
     private void DoHeal(BattleControl battleControl, Data.SkillInfo skillInfo) {

@@ -60,6 +60,7 @@ public class MonsterControl : MonoBehaviour {
 
     public IEnumerator UseSkill(BattleControl battleControl, System.Action uiSetupCallback) {
         foreach (MonsterEntity monster in _currentMonsters) {
+            yield return new WaitForSeconds(0.3f);
             if (battleControl.PlayerCtrl.IsDefeated()) break;
 
             Data.SkillData skillData = monster.GetCurrentSkillData();
@@ -131,15 +132,16 @@ public class MonsterControl : MonoBehaviour {
             break;
         }
 
-        if (data.AttackType != Data.AttackType.None) {
-            caster.MoveForward(-1f);
-        }
-
         void AttackTarget(BattleEntity entity, int amount) {
             entity.DecreaseHP(amount);
             if (entity.CurHP <= 0) {
                 battleControl.PlayerCtrl.RemoveCharacter(entity as CharacterEntity);
             }
+            entity.MoveForward(0.5f);
+        }
+
+        if (data.AttackType != Data.AttackType.None) {
+            caster.MoveForward(-1f);
         }
     }
 
