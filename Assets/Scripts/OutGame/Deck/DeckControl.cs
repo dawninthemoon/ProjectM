@@ -18,10 +18,10 @@ namespace OutGame
         
         public void Init()
         {
-            deckSlots[0].InitDeckSlot( FirebaseManager.Instance.UserData.UserDeckData.CharIndex, 0 );
-            deckSlots[1].InitDeckSlot( FirebaseManager.Instance.UserData.UserDeckData.GetMainSpiritIndex(0), 1 );
-            deckSlots[2].InitDeckSlot( FirebaseManager.Instance.UserData.UserDeckData.GetMainSpiritIndex(1), 2 );
-            deckSlots[3].InitDeckSlot( FirebaseManager.Instance.UserData.UserDeckData.GetMainSpiritIndex(2), 3 );
+            for( int i = 0; i < deckSlots.Length; ++i )
+            {
+                deckSlots[i].InitDeckSlot( FirebaseManager.Instance.UserData.UserDeckData.GetMainSpiritIndex(i), i );
+            }
         }
 
         public void OnClickSlotCallback( int index )

@@ -326,6 +326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 988161511}
   - component: {fileID: 988161510}
+  - component: {fileID: 988161512}
   m_Layer: 0
   m_Name: '[IAP_CONTROL]'
   m_TagString: Untagged
@@ -348,7 +349,7 @@ MonoBehaviour:
   packageList:
   - ProductType: 0
     ProductID: projectm_cash_100
-  recipteChecker: {fileID: 0}
+  recipteChecker: {fileID: 988161512}
 --- !u!4 &988161511
 Transform:
   m_ObjectHideFlags: 0
@@ -363,6 +364,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &988161512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988161509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d65bdb1c7b7ee44b512fe0d6bb3d7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1044384705
 GameObject:
   m_ObjectHideFlags: 0
