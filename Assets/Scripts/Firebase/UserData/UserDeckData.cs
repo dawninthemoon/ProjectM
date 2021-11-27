@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class UserDeckData
 {
-    private int charIndex;
-    public int CharIndex
+    private int[] charIndies = new int[]{ 101, 102, 103 };
+    public int[] CharIndies
     {
-        get{ return charIndex; }
+        get{ return charIndies; }
     }
-    private int[] spiritIndies;
+    private int[] spiritIndies = new int[9];
     private int[] subSpiritIndies;
 
-    public void SetCharacterIndex( int characterIndex )
+    public void SetCharacterIndex( int index, int characterIndex )
     {
-        charIndex = characterIndex;
+        charIndies[index] = characterIndex;
     }
 
     public void SetMainSpiritIndex( int index, int spirit )

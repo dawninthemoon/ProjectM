@@ -11,6 +11,8 @@ namespace OutGame
         [SerializeField] private RecyclableScrollRect recyclableScrollRect;
         private UserSpiritData[] userSpiritDatas = null;
 
+        public event System.Action<int> OnSelectEvent;
+
         public void Awake()
         {
             Init();
@@ -31,11 +33,16 @@ namespace OutGame
                 return 0;
         }
 
+        public void OnSelectCallback( int index )
+        {
+            OnSelectEvent?.Invoke( index );
+        }
+
         public void SetCell(ICell cell, int index)
         {
             DeckAbleSpirit deckElement = cell as DeckAbleSpirit;
 
-            deckElement.SetIndex( userSpiritDatas[index].Index );
+            deckElement.SetIndex( userSpiritDatas[index].Index, OnSelectCallback );
         }
     }
 }

@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/OutGameScene/CharacterList.unity
     guid: b386556630de2b64fafad4298a57e070
   - enabled: 1
+    path: Assets/Scenes/OutGameScene/CharacterDeck.unity
+    guid: f2c9794a3f28e034dad593226ba8aef1
+  - enabled: 1
     path: Assets/Scenes/OutGameScene/SpiritList.unity
     guid: 887f00cedc822c74781a89d485f1e926
   - enabled: 1

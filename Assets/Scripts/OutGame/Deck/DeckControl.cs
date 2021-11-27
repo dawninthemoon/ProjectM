@@ -13,6 +13,8 @@ namespace OutGame
 
         public void Start()
         {
+            deckAbleSpiritScroll.OnSelectEvent += SetSpirit;
+
             Init();
         }
         
@@ -20,16 +22,29 @@ namespace OutGame
         {
             for( int i = 0; i < deckSlots.Length; ++i )
             {
+                deckSlots[i].OnSelectEvent += OnClickSlotCallback;
                 deckSlots[i].InitDeckSlot( FirebaseManager.Instance.UserData.UserDeckData.GetMainSpiritIndex(i), i );
             }
         }
 
         public void OnClickSlotCallback( int index )
         {
+            currentSlot = index;
             if( deckSlots[index].SlotType == DeckSlot.DeckSlotType.Spirit )
             {
                 deckAbleSpiritScroll.gameObject.SetActive( true );
             }
+
+            for( int i = 0; i < deckSlots.Length; ++i )
+            {
+                if( currentSlot == i )
+                    deckSlots[i].Select();
+                else
+                    deckSlots[i].DisSelect();
+            }
+
+
+            Debug.Log( "CLICK SLOT "+ currentSlot );
         }
 
         public void SetCharacter( int charIndex )
@@ -37,9 +52,10 @@ namespace OutGame
             deckSlots[0].InitDeckSlot( charIndex, 0 );
         }
 
-        public void SetSpirit( int spiritIndex, int slot )
+        public void SetSpirit( int spiritIndex )
         {
-            deckSlots[slot].InitDeckSlot( spiritIndex, slot );
+            deckSlots[currentSlot].SetDeck( spiritIndex );
+            Debug.Log("SET SPRITE : " + currentSlot + "  L "+spiritIndex  );
         }
     }
 }

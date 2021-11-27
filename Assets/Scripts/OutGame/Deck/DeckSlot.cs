@@ -12,11 +12,13 @@ namespace OutGame
             Character,
             Spirit
         }
-        [SerializeField] private Image image;
+        [SerializeField] private Image selectImage;
+        [SerializeField] private Color selectColor;
+        [SerializeField] private Color disSelectColor;
+
         [SerializeField] private SpiritIcon spiritIcon;
         [SerializeField] private CharacterIcon characterIcon;
 
-        [SerializeField] private Image selectImage;
         [SerializeField] private DeckSlotType deckSlotType;
         public DeckSlotType SlotType
         {
@@ -34,10 +36,15 @@ namespace OutGame
             objectKey = key;
             this.slotIndex = slotIndex;
 
+            RestoreSlot();
+        }
+
+        public void RestoreSlot()
+        {
             if( SlotType == DeckSlotType.Character )
-                InitCharacter( key );
+                InitCharacter( objectKey );
             else
-                InitSpirit( key );
+                InitSpirit( objectKey );
         }
 
         public void InitCharacter( int index )
@@ -50,14 +57,27 @@ namespace OutGame
             spiritIcon.SetSpirit( index );
         }
 
-        public void SetDeck()
+        public void SetDeck( int deckIndex )
         {
-            FBControl.FirebaseManager.Instance.UserData.UserDeckData.SetMainSpiritIndex( slotIndex,  objectKey );
+            FBControl.FirebaseManager.Instance.UserData.UserDeckData.SetMainSpiritIndex( slotIndex,  deckIndex );
+            objectKey = deckIndex;
+            RestoreSlot();
         }
 
         public void OnClick()
         {
+            Debug.Log(gameObject.name);
             OnSelectEvent?.Invoke( slotIndex );
+        }
+
+        public void Select()
+        {
+            selectImage.color = selectColor;
+        }
+
+        public void DisSelect()
+        {
+            selectImage.color = disSelectColor;
         }
     }
 }
