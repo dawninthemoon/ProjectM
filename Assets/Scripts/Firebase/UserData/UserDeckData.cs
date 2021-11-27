@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Boomlagoon.JSON;
 
 public class UserDeckData
 {
@@ -33,5 +34,19 @@ public class UserDeckData
     public int GetSubSpiritIndex( int index )
     {
         return subSpiritIndies[index]; 
+    }
+
+    public JSONObject ToJson()
+    {
+        JSONObject saveJson = new JSONObject();
+        JSONArray arr = new JSONArray();
+
+        for( int i = 0; i < spiritIndies.Length; ++i )
+        {
+            JSONObject element = new JSONObject();
+            // arr.Add()
+        }
+
+        return saveJson;
     }
 }
