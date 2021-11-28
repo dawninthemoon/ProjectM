@@ -16,7 +16,7 @@ namespace OutGame
 
         public void OnEnable()
         {
-            SetUI(FBControl.FirebaseManager.Instance.UserData.CurrentCharacter);   
+            // SetUI(FBControl.FirebaseManager.Instance.UserData.CurrentCharacter);   
         }
 
         public void SetUI( int characterIndex )

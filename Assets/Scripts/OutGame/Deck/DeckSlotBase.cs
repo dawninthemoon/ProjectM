@@ -5,16 +5,18 @@ using UnityEngine.UI;
 
 namespace OutGame
 {
-    public class SpiritDeckSlot : MonoBehaviour
+    public class DeckSlotBase : MonoBehaviour
     {
-        [SerializeField] private Image selectImage;
-        [SerializeField] private Color selectColor;
-        [SerializeField] private Color disSelectColor;
+        [SerializeField] protected Image selectImage;
+        [SerializeField] protected Color selectColor;
+        [SerializeField] protected Color disSelectColor;
 
-        [SerializeField] private SpiritIcon spiritIcon;
+        [SerializeField] protected Button deckButton;
 
-        private int slotIndex = 0;
-        private int objectKey = 0;
+        [SerializeField] protected SpiritIcon spiritIcon;
+
+        protected int slotIndex = 0;
+        protected int objectKey = 0;
 
         public event System.Action<int> OnSelectEvent;
         public event System.Action<int> OnDisSelectEvent;
@@ -31,6 +33,7 @@ namespace OutGame
         {
             InitSpirit( objectKey );
         }
+        
         public void InitSpirit( int index )
         {
             spiritIcon.SetSpirit( index );
@@ -56,6 +59,14 @@ namespace OutGame
         public void DisSelect()
         {
             selectImage.color = disSelectColor;
+        }
+
+        public void SetActive( bool isActive )
+        {
+            deckButton.interactable = isActive;
+
+            if( !isActive )
+                Select();
         }
     }
 }

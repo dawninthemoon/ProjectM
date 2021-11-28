@@ -9,5 +9,9 @@ namespace OutGame
     {
         [SerializeField] private CharacterIcon characterIcon;
 
+        public void Init( int index, int charIndex )
+        {
+            characterIcon.SetCharacter( charIndex );
+        }
     }
 }

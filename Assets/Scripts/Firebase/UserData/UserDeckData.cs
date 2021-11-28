@@ -7,10 +7,6 @@ using CodeStage.AntiCheat.ObscuredTypes;
 public class UserDeckData
 {
     private int[] charIndies = new int[]{ 101, 102, 103 };
-    public int[] CharIndies
-    {
-        get{ return charIndies; }
-    }
     private int[] spiritIndies = new int[9];
     private int[] subSpiritIndies;
 
@@ -35,6 +31,10 @@ public class UserDeckData
     {
         subSpiritIndies[index] = spirit;
         Save();
+    }
+    public int GetCharacterIndex( int index )
+    {
+        return charIndies[index]; 
     }
     public int GetMainSpiritIndex( int index )
     {

@@ -84,6 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1303578976408026207}
+  - component: {fileID: 5358571525057012121}
   m_Layer: 5
   m_Name: emp_char
   m_TagString: Untagged
@@ -114,6 +115,19 @@ RectTransform:
   m_AnchoredPosition: {x: -415.42438, y: 1100.3688}
   m_SizeDelta: {x: 1045.9113, y: 627.345}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5358571525057012121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303578976408026204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a9b6b863f78bf34b8a7d9abbb6f34ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterIcon: {fileID: 317899184503690909}
 --- !u!1 &1303578976723984410
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +139,8 @@ GameObject:
   - component: {fileID: 1303578976723984413}
   - component: {fileID: 1303578976723984414}
   - component: {fileID: 1303578976723984415}
+  - component: {fileID: 317899184503690909}
+  - component: {fileID: 2271273347849618003}
   m_Layer: 5
   m_Name: img_illurst
   m_TagString: Untagged
@@ -189,6 +205,33 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &317899184503690909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303578976723984410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03a883e6f8a9514bb4d61080cc24ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterImage: {fileID: 2271273347849618003}
+--- !u!114 &2271273347849618003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303578976723984410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03834515e3cfaa54bb54bc995042ca0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetImage: {fileID: 1303578976723984415}
+  targetSize: 1100
 --- !u!1 &1303578976786023158
 GameObject:
   m_ObjectHideFlags: 0
