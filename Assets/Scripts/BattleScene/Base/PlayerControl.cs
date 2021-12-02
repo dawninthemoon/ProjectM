@@ -70,6 +70,12 @@ public class PlayerControl : MonoBehaviour {
         }
     }
 
+    public void LateProgress() {
+        for (int i = 0; i < _currentCharacters.Count; ++i) {
+            _currentCharacters[i].Progress();
+        }
+    }
+
     public bool IsDefeated() {
         int characterCounts = 0;
         foreach (var character in _currentCharacters) {

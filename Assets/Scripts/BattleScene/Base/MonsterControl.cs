@@ -41,6 +41,12 @@ public class MonsterControl : MonoBehaviour {
         }
     }
 
+    public void LateProgress() {
+        for (int i = 0; i < _currentMonsters.Count; ++i) {
+            _currentMonsters[i].Progress();
+        }
+    }
+
     public MonsterEntity GetSelectedEnemy(Vector3 touchPos) {
         MonsterEntity target = null;
         int monsterCounts = _currentMonsters.Count;

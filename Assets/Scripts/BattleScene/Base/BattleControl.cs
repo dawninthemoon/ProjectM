@@ -86,6 +86,11 @@ public class BattleControl : MonoBehaviour {
         }
     }
 
+    private void LateUpdate() {
+        _playerControl.LateProgress();
+        _enemyControl.LateProgress();
+    }
+
     public void StartTurn() {
         ++_turnCount;
 

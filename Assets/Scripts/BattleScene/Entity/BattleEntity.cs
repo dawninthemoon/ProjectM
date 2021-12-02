@@ -15,6 +15,11 @@ public abstract class BattleEntity : MonoBehaviour {
     public void Progress() {
         _animator.Progress(_atlas);
     }
+
+    public void LateProgress() {
+        transform.forward = Camera.main.transform.forward;
+    }
+
     public bool IsOverlapped(Vector2 pos, LayerMask mask) {
         bool isOverlapped = false;
         RaycastHit raycastHit;
