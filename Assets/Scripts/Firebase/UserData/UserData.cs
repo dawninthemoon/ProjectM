@@ -70,26 +70,6 @@ public class UserData
         get{ return userDeckData; }
     }
 
-    private int currentCharacter = 101;
-    public int CurrentCharacter
-    {
-        get
-        {
-            currentCharacter = FBControl.FirebaseManager.Instance.UserDB.GetLocalIntigerData("CurChar");
-
-            if (currentCharacter == 0)
-                currentCharacter = 101;
-
-            return currentCharacter;
-        }
-        set
-        {
-            FBControl.FirebaseManager.Instance.UserDB.SaveLocalData("CurChar", value);
-
-            currentCharacter = value;
-        }
-    }
-
     public void SetDefaultData()
     {
         nickName = "Normal";

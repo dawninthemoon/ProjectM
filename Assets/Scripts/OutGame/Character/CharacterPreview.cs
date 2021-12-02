@@ -12,7 +12,7 @@ namespace OutGame
 
         public void Start()
         {
-            SetInfo(FBControl.FirebaseManager.Instance.UserData.CurrentCharacter);
+            // SetInfo(FBControl.FirebaseManager.Instance.UserData.CurrentCharacter);
         }
 
         public void SetInfo( int characterIndex )
