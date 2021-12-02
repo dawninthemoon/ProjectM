@@ -29,6 +29,10 @@ public class CharacterEntity : BattleEntity {
         _animator.ChangeAnimation(state, loop, AnimationSpeed, callback ?? OnAnimationEnd);
     }
 
+    public void SetAnimationDelay(float amount) {
+        _animator.SetAnimationDelay(amount);
+    }
+
     private void OnAnimationEnd() {
         IsAnimationEnd = true;
     }

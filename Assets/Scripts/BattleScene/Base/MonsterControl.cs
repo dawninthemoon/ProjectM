@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RieslingUtils;
+using DG.Tweening;
 
 public class MonsterControl : MonoBehaviour {
     [SerializeField] private Vector3[] _initialPosition = null;
@@ -61,6 +62,9 @@ public class MonsterControl : MonoBehaviour {
     public IEnumerator UseSkill(BattleControl battleControl, System.Action uiSetupCallback) {
         foreach (MonsterEntity monster in _currentMonsters) {
             if (battleControl.PlayerCtrl.IsDefeated()) break;
+            
+            Camera.main.DOOrthoSize(7.4f, 0.3f).SetEase(Ease.OutCubic);
+            yield return new WaitForSeconds(0.5f);
 
             Data.SkillData skillData = monster.GetCurrentSkillData();
             if (skillData == null) continue;
@@ -83,6 +87,7 @@ public class MonsterControl : MonoBehaviour {
             }
 
             monster.ChangeAnimationState("Idle", true);
+            monster.SetAnimationDelay(1f);
         }
     }
 
@@ -131,15 +136,16 @@ public class MonsterControl : MonoBehaviour {
             break;
         }
 
-        if (data.AttackType != Data.AttackType.None) {
-            caster.MoveForward(-1f);
-        }
-
         void AttackTarget(BattleEntity entity, int amount) {
             entity.DecreaseHP(amount);
             if (entity.CurHP <= 0) {
                 battleControl.PlayerCtrl.RemoveCharacter(entity as CharacterEntity);
             }
+            entity.MoveForward(-0.2f);
+        }
+
+        if (data.AttackType != Data.AttackType.None) {
+            caster.MoveForward(-1f);
         }
     }
 

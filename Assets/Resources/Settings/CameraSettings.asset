@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: CameraSettings
   m_EditorClassIdentifier: 
   duration: 0.15
-  strength: 1.2
-  vibrato: 30
-  randomness: 90
+  strength: 0.15
+  vibrato: 200
+  randomness: 500
   snapping: 0
-  fadeOut: 1
-  hitStopSeconds: 0.02
+  fadeOut: 0
+  hitStopSeconds: 0.18
