@@ -120,9 +120,8 @@ public class Skill : MonoBehaviour {
     public bool OnTouchMoved(Vector2 touchPos, bool isCostEnough) {
         bool isSelected = false;
         if (IsOverlapped(touchPos)) {
-            Debug.Log(_skillInfo.SkillData.Name);
-            SkillManager.GetInstance().EnlargeCard(true, this);
             if (!IsTouching && isCostEnough) {
+                SkillManager.GetInstance().EnlargeCard(true, this);
                 IsTouching = true;
                 if (CanSelectTarget()) {
                     SkillManager.GetInstance().SetActiveAimSprite(true);
