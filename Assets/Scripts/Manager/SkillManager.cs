@@ -78,8 +78,8 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
     }
 
     public void ShakeCamera() {
-        Camera.main.orthographicSize = 8.3f;
-        Camera.main.DOOrthoSize(8f, 0.33f);
+        Camera.main.fieldOfView = 22f;
+        Camera.main.DOFieldOfView(25f, 0.33f);
         
         Camera.main.transform.DOShakePosition(
             _cameraSettings.duration,
