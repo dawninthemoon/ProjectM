@@ -64,6 +64,10 @@ public class MonsterEntity : BattleEntity {
         IsAnimationEnd = true;
     }
 
+    public override bool KeyEquals(int key) {
+        return _monsterData.Key == key;
+    }
+
     public Data.SkillData GetCurrentSkillData() {
         int startIndex = _skillIndex;
 

@@ -37,7 +37,7 @@ public class CharacterEntity : BattleEntity {
         IsAnimationEnd = true;
     }
 
-    public bool KeyEquals(int key) {
+    public override bool KeyEquals(int key) {
         return _characterData.Key == key;
     }
 

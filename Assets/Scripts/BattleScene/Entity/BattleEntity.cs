@@ -52,4 +52,5 @@ public abstract class BattleEntity : MonoBehaviour {
     }
 
     public abstract float GetFinalDefence();
+    public abstract bool KeyEquals(int key);
 }

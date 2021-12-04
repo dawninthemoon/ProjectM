@@ -99,45 +99,40 @@ public class MonsterControl : MonoBehaviour {
 
     private void DoAttack(BattleControl battleControl, Data.SkillInfo skillInfo, Data.MonsterStat stat, MonsterEntity caster) {
         var data = skillInfo.SkillData;
-        float criticalDamage = MathUtils.GetPerTenThousand(stat.CriticalDamage);
-        float baseDamage = stat.AttackPower * (1f + criticalDamage);
-        int targetCounts = data.AttackTypeValue;
+         float criticalDamage = (Random.Range(0f, 1f) < MathUtils.GetPerTenThousand(stat.Critical)) ? MathUtils.GetPerTenThousand(stat.CriticalDamage) : 0f;
+        float baseDamage = stat.AttackPower * (1f + criticalDamage) * MathUtils.GetPercent(data.AttackRatio);
+        int targetCounts = data.EnemyTargetCount;
 
         var randomCharacters = battleControl.PlayerCtrl.GetRandomCharacters(1);
         if (randomCharacters.Count == 0) return;
         CharacterEntity selectedTarget = randomCharacters[0];
-
         int finalDamage;
+        List<CharacterEntity> characterList;
 
-        switch (data.AttackType) {
-        case Data.AttackType.SingleAttack:
-            finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
+        switch (data.EnemyTargetType) {
+        case Data.EnemyTargetType.Single:
+            finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence());
             AttackTarget(selectedTarget, finalDamage);
             break;
-        case Data.AttackType.ComboAttack:
-            if (data.AttackType == Data.AttackType.ComboAttack) {
-                finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-                AttackTarget(selectedTarget, finalDamage);
-            }
-            var eList = battleControl.PlayerCtrl.GetCharacterByOrder(targetCounts, selectedTarget);
-            foreach (var e in eList) {
-                finalDamage = Mathf.FloorToInt(baseDamage / e.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-                AttackTarget(e, finalDamage);
+        case Data.EnemyTargetType.Combo:
+            characterList = battleControl.PlayerCtrl.GetCharacterByOrder(targetCounts, selectedTarget);
+            foreach (var enemy in characterList) {
+                finalDamage = Mathf.FloorToInt(baseDamage / enemy.GetFinalDefence());
+                AttackTarget(enemy, finalDamage);
             }
             break;
-        case Data.AttackType.MultiAttack:
-            var characters = battleControl.PlayerCtrl.GetAllCharacters();
-            foreach (var e in characters) {
-                finalDamage = Mathf.FloorToInt(baseDamage / e.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-                AttackTarget(e, finalDamage);
+        case Data.EnemyTargetType.Multi:
+            characterList = battleControl.PlayerCtrl.GetAllCharacters();
+            foreach (var enemy in characterList) {
+                finalDamage = Mathf.FloorToInt(baseDamage / enemy.GetFinalDefence());
+                AttackTarget(enemy, finalDamage);
             }
             break;
-        case Data.AttackType.RandomAttack:
-            var character = battleControl.PlayerCtrl.GetRandomCharacters(targetCounts, selectedTarget);
-            Debug.Log("a");
-            if (character.Count > 0) {
-                finalDamage = Mathf.FloorToInt(baseDamage / character[0].GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-                AttackTarget(character[0], finalDamage);
+        case Data.EnemyTargetType.Random:
+            characterList = battleControl.PlayerCtrl.GetRandomCharacters(targetCounts);
+            foreach (var enemy in characterList) {
+                finalDamage = Mathf.FloorToInt(baseDamage / enemy.GetFinalDefence());
+                AttackTarget(enemy, finalDamage);
             }
             break;
         }
@@ -150,36 +145,44 @@ public class MonsterControl : MonoBehaviour {
             entity.MoveForward(-0.2f);
         }
 
-        if (data.AttackType != Data.AttackType.None) {
+        if (data.EnemyTargetType != Data.EnemyTargetType.None) {
             caster.MoveForward(-1f);
         }
     }
 
     private void DoHeal(BattleControl battleControl, Data.SkillInfo skillInfo, Data.MonsterStat stat) {
         var data = skillInfo.SkillData;
-        int targetCounts = skillInfo.SkillData.HealTypeValue;
+        int targetCounts = skillInfo.SkillData.AllyTargetCount;
         var selectedTarget = battleControl.SelectedTarget;
         int finalHeal = (int)MathUtils.GetPerTenThousand(data.HealRatio) * stat.AttackPower;
+        List<MonsterEntity> monsterList;
 
-        switch (skillInfo.SkillData.HealType) {
-        case Data.HealType.SingleHeal:
+        switch (skillInfo.SkillData.AllyTargetType) {
+        case Data.AllyTargetType.Single:
             HealTarget(selectedTarget, finalHeal);
             break;
-        case Data.HealType.ComboHeal:
-            var mList = GetMonsterByOrder(targetCounts, selectedTarget);
-            foreach (var ch in mList) {
-                HealTarget(ch, finalHeal);
+        case Data.AllyTargetType.Combo:
+            monsterList = GetMonsterByOrder(targetCounts, selectedTarget);
+            foreach (var monster in monsterList) {
+                HealTarget(monster, finalHeal);
             }
             break;
-        case Data.HealType.MultiHeal:
-            var monsters = GetRandomMonsters(targetCounts, selectedTarget);
-            foreach (var ch in monsters) {
-                HealTarget(ch, finalHeal);
+        case Data.AllyTargetType.Multi:
+            monsterList = GetAllMonsters();
+            foreach (var monster in monsterList) {
+                HealTarget(monster, finalHeal);
             }
             break;
-        case Data.HealType.RandomHeal:
-            var allMonster = GetAllMonsters();
-            HealTarget(allMonster[0], finalHeal);
+        case Data.AllyTargetType.Random:
+            monsterList = GetRandomMonsters(targetCounts);
+            foreach (var monster in monsterList) {
+                HealTarget(monster, finalHeal);
+            }
+            break;
+        case Data.AllyTargetType.SelfAndSingle:
+            MonsterEntity self = FindMonsterByKey(skillInfo.CharacterKey);
+            HealTarget(selectedTarget, finalHeal);
+            HealTarget(self, finalHeal);
             break;
         }
 
@@ -199,40 +202,37 @@ public class MonsterControl : MonoBehaviour {
         return _fillAmounts;
     }
 
-    public List<MonsterEntity> GetMonsterByOrder(int targetCounts, BattleEntity ignoreEntity = null) {
+    public List<MonsterEntity> GetMonsterByOrder(int targetCounts, BattleEntity selectedEntity = null) {
         int numOfMonsters = _currentMonsters.Count;
         int startIndex = 0;
-        List<MonsterEntity> characterList = new List<MonsterEntity>();
+        List<MonsterEntity> monsterList = new List<MonsterEntity>();
+
+        if (selectedEntity) {
+            monsterList.Add(selectedEntity as MonsterEntity);
+        }
         
         for (int i = 0; i < numOfMonsters; ++i) {
-            if (ignoreEntity == _currentMonsters[i]) {
+            if (selectedEntity == _currentMonsters[i]) {
                 startIndex = (i + 1) % numOfMonsters;
                 break;
             }
         }
 
-        int count = 0;
-        for (int i = startIndex; i < targetCounts; i = (i + 1) % numOfMonsters) {
-            if (_currentMonsters[i] == ignoreEntity) break;
-            characterList.Add(_currentMonsters[i]);
-            ++count;
-            if (count == targetCounts) break;
+        for (int i = startIndex; monsterList.Count == targetCounts; i = (i + 1) % numOfMonsters) {
+            if (_currentMonsters[i] == selectedEntity) break;
+            monsterList.Add(_currentMonsters[i]);
         }
 
-        return characterList;
+        return monsterList;
     }
 
     public List<MonsterEntity> GetAllMonsters() {
         return _currentMonsters.ToList();
     }
 
-    public List<MonsterEntity> GetRandomMonsters(int targetCounts, BattleEntity ignoreEntity = null) {
+    public List<MonsterEntity> GetRandomMonsters(int targetCounts) {
         int numOfAllies = _currentMonsters.Count;
         var enemyList = _currentMonsters.ToList();
-        
-        if (ignoreEntity) {
-            enemyList.Remove(ignoreEntity as MonsterEntity);
-        }
 
         if (targetCounts < numOfAllies) {
             int diff = numOfAllies - targetCounts;
@@ -254,5 +254,16 @@ public class MonsterControl : MonoBehaviour {
 
         _currentMonsters.Remove(monster);
         monster.gameObject.SetActive(false);
+    }
+
+    public MonsterEntity FindMonsterByKey(int key) {
+        MonsterEntity requestedEntity = null;;
+        foreach (MonsterEntity entity in _currentMonsters) {
+            if (entity.KeyEquals(key)) {
+                requestedEntity = entity;
+                break;
+            }
+        }
+        return requestedEntity;
     }
 }

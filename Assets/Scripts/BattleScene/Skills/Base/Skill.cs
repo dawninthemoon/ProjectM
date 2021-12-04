@@ -65,9 +65,9 @@ public class Skill : MonoBehaviour {
         return (_skillInfo.SkillData.CastType != CastType.NoneCast);
     }
 
-    public bool IsCharacterTarget() {
+    public bool IsAllyTarget() {
         var data = _skillInfo.SkillData;
-        bool isCharacterTarget = (data.HealType == Data.HealType.SingleHeal) || (data.HealType == Data.HealType.ComboHeal);
+        bool isCharacterTarget = data.CastType == Data.CastType.TeamCast;
         return isCharacterTarget;
     }
 

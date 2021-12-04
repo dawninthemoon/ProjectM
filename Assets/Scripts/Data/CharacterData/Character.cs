@@ -54,7 +54,7 @@ namespace Data
         public EClassType ClassType;
         public EGenderType GenderType;
         public int Grade;
-        public string SkillCard1Key;
+        public string[] SkillCard1Key;
         public string SkillCard2Key;
         public string SpecialCardKey;
         public string TurnSkillKey;
@@ -68,11 +68,19 @@ namespace Data
             ClassType = (Character.EClassType)System.Enum.Parse(typeof(Character.EClassType), jsonObj.GetString("Class"));
             GenderType = (Character.EGenderType)System.Enum.Parse(typeof(Character.EGenderType), jsonObj.GetString("Gender"));
             Grade = (int)jsonObj.GetNumber("Grade");
-            SkillCard1Key = jsonObj.GetString("SkillCard1Key");
-            SkillCard2Key = jsonObj.GetString("SkillCard2Key");
+            SkillCard1Key = GetID(jsonObj.GetString("SkillCard1Key"));
+            //SkillCard2Key = jsonObj.GetString("SkillCard2Key");
             SpecialCardKey = jsonObj.GetString("SpecialCardKey");
             TurnSkillKey = jsonObj.GetString("TurnSkillKey");
             PassiveSkillKey = jsonObj.GetString("PassiveSkillKey");
+        }
+
+        private string[] GetID(string origin) {
+            if (origin == null) return null;
+            origin = origin.TrimStart('{');
+            origin = origin.TrimEnd('}');
+            string[] keys = origin.Split(',');
+            return keys;
         }
     }
 }

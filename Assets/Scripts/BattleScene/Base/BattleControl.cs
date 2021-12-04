@@ -125,7 +125,7 @@ public class BattleControl : MonoBehaviour {
     }
 
     private void SetSkillTarget(Skill skill, Vector2 touchPosition) {
-        if (skill.IsCharacterTarget()) {
+        if (skill.IsAllyTarget()) {
             SelectedTarget = _playerControl.GetSelectedCharacter(touchPosition);
         }
         else {

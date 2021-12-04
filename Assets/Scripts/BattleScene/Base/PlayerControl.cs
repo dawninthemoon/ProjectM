@@ -26,10 +26,7 @@ public class PlayerControl : MonoBehaviour {
             CreateCharacterEntity(i);
             var parser = Data.SkillDataParser.Instance;
 
-            string skillKey1 = _currentCharacters[i].CharacterData.SkillCard1Key;
-            skillKey1 = skillKey1.TrimStart('[');
-            skillKey1 = skillKey1.TrimEnd(']');
-            var keys = skillKey1.Split(',');
+            var keys = _currentCharacters[i].CharacterData.SkillCard1Key;
             foreach (string key in keys) {
                 AddSkillInfo(skillInfoList, key, _characterKeys[i]);
             }
@@ -144,39 +141,38 @@ public class PlayerControl : MonoBehaviour {
         Data.CharacterStat stat = Data.CharacterStatDataParser.Instance.GetCharacterStat(skillInfo.CharacterKey);
 
         var data = skillInfo.SkillData;
-        float criticalDamage = MathUtils.GetPerTenThousand(stat.CriticalDamage);
-        float baseDamage = stat.AttackPower * (1f + criticalDamage);
-        int targetCounts = data.AttackTypeValue;
+        float criticalDamage = (Random.Range(0f, 1f) < MathUtils.GetPerTenThousand(stat.Critical)) ? MathUtils.GetPerTenThousand(stat.CriticalDamage) : 0f;
+        float baseDamage = stat.AttackPower * (1f + criticalDamage) * MathUtils.GetPercent(data.AttackRatio);
+        int targetCounts = data.EnemyTargetCount;
         var selectedTarget = battleControl.SelectedTarget;
         int finalDamage = 0;
+        List<MonsterEntity> enemyList;
 
-        switch (data.AttackType) {
-        case Data.AttackType.SingleAttack:
-            finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
+        switch (data.EnemyTargetType) {
+        case Data.EnemyTargetType.Single:
+            finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence());
             AttackTarget(selectedTarget, finalDamage);
             break;
-        case Data.AttackType.ComboAttack:
-            if (data.AttackType == Data.AttackType.ComboAttack) {
-                finalDamage = Mathf.FloorToInt(baseDamage / selectedTarget.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-                AttackTarget(selectedTarget, finalDamage);
-            }
-            var eList = battleControl.EnemyCtrl.GetMonsterByOrder(targetCounts, selectedTarget);
-            foreach (var e in eList) {
-                finalDamage = Mathf.FloorToInt(baseDamage / e.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-                AttackTarget(e, finalDamage);
+        case Data.EnemyTargetType.Combo:
+            enemyList = battleControl.EnemyCtrl.GetMonsterByOrder(targetCounts, selectedTarget);
+            foreach (var enemy in enemyList) {
+                finalDamage = Mathf.FloorToInt(baseDamage / enemy.GetFinalDefence());
+                AttackTarget(enemy, finalDamage);
             }
             break;
-        case Data.AttackType.MultiAttack:
-            var enemies = battleControl.EnemyCtrl.GetAllMonsters();
-            foreach (var e in enemies) {
-                finalDamage = Mathf.FloorToInt(baseDamage / e.GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-                AttackTarget(e, finalDamage);
+        case Data.EnemyTargetType.Multi:
+            enemyList = battleControl.EnemyCtrl.GetAllMonsters();
+            foreach (var enemy in enemyList) {
+                finalDamage = Mathf.FloorToInt(baseDamage / enemy.GetFinalDefence());
+                AttackTarget(enemy, finalDamage);
             }
             break;
-        case Data.AttackType.RandomAttack:
-            var enemy = battleControl.EnemyCtrl.GetRandomMonsters(targetCounts, selectedTarget);
-            finalDamage = Mathf.FloorToInt(baseDamage / enemy[0].GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-            AttackTarget(enemy[0], finalDamage);
+        case Data.EnemyTargetType.Random:
+            enemyList = battleControl.EnemyCtrl.GetRandomMonsters(targetCounts);
+            foreach (var enemy in enemyList) {
+                finalDamage = Mathf.FloorToInt(baseDamage / enemy.GetFinalDefence());
+                AttackTarget(enemy, finalDamage);
+            }
             break;
         }
 
@@ -185,7 +181,7 @@ public class PlayerControl : MonoBehaviour {
             entity.MoveForward(0.2f);
         }
 
-        if (data.AttackType != Data.AttackType.None) {
+        if (data.EnemyTargetType != Data.EnemyTargetType.None) {
             caster.MoveForward(1f);
         }
 
@@ -195,29 +191,37 @@ public class PlayerControl : MonoBehaviour {
         Data.CharacterStat stat = Data.CharacterStatDataParser.Instance.GetCharacterStat(skillInfo.CharacterKey);
 
         var data = skillInfo.SkillData;
-        int targetCounts = skillInfo.SkillData.HealTypeValue;
+        int targetCounts = skillInfo.SkillData.AllyTargetCount;
         var selectedTarget = battleControl.SelectedTarget;
         int finalHeal = (int)MathUtils.GetPerTenThousand(data.HealRatio) * stat.AttackPower;
+        List<CharacterEntity> characterList;
 
-        switch (skillInfo.SkillData.HealType) {
-        case Data.HealType.SingleHeal:
+        switch (skillInfo.SkillData.AllyTargetType) {
+        case Data.AllyTargetType.Single:
             HealTarget(selectedTarget, finalHeal);
             break;
-        case Data.HealType.ComboHeal:
-            var cList = GetCharacterByOrder(targetCounts, selectedTarget);
-            foreach (var ch in cList) {
+        case Data.AllyTargetType.Combo:
+            characterList = GetCharacterByOrder(targetCounts, selectedTarget);
+            foreach (var ch in characterList) {
                 HealTarget(ch, finalHeal);
             }
             break;
-        case Data.HealType.MultiHeal:
-            var characters = GetRandomCharacters(targetCounts, selectedTarget);
-            foreach (var ch in characters) {
-                HealTarget(ch, finalHeal);
+        case Data.AllyTargetType.Multi:
+            characterList = GetAllCharacters();
+            foreach (var character in characterList) {
+                HealTarget(character, finalHeal);
             }
             break;
-        case Data.HealType.RandomHeal:
-            var character = GetAllCharacters();
-            HealTarget(character[0], finalHeal);
+        case Data.AllyTargetType.Random:
+            characterList = GetRandomCharacters(targetCounts);
+            foreach (var character in characterList) {
+                HealTarget(character, finalHeal);
+            }
+            break;
+        case Data.AllyTargetType.SelfAndSingle:
+            CharacterEntity self = FindCharacterByKey(skillInfo.CharacterKey);
+            HealTarget(selectedTarget, finalHeal);
+            HealTarget(self, finalHeal);
             break;
         }
 
@@ -244,22 +248,25 @@ public class PlayerControl : MonoBehaviour {
         return target;
     }
 
-    public List<CharacterEntity> GetCharacterByOrder(int targetCounts, BattleEntity ignoreEntity = null) {
+    public List<CharacterEntity> GetCharacterByOrder(int targetCounts, BattleEntity selectedEntity = null) {
         int numOfAllies = _currentCharacters.Count;
         int startIndex = 0;
         List<CharacterEntity> characterList = new List<CharacterEntity>();
-        
+
+        if (selectedEntity) {
+            characterList.Add(selectedEntity as CharacterEntity);
+        }
+
         for (int i = 0; i < numOfAllies; ++i) {
-            if (ignoreEntity == _currentCharacters[i]) {
-                startIndex = i;
+            if (selectedEntity == _currentCharacters[i]) {
+                startIndex = (i + 1) % numOfAllies;
                 break;
             }
         }
 
-        for (int i = startIndex; i < targetCounts; i = (i + 1) % numOfAllies) {
-            if (_currentCharacters[i] == ignoreEntity) break;
+        for (int i = startIndex; characterList.Count == targetCounts; i = (i + 1) % numOfAllies) {
+            if (_currentCharacters[i] == selectedEntity) break;
             characterList.Add(_currentCharacters[i]);
-            
         }
 
         return characterList;
@@ -269,7 +276,7 @@ public class PlayerControl : MonoBehaviour {
         return _currentCharacters;
     }
 
-    public List<CharacterEntity> GetRandomCharacters(int targetCounts, BattleEntity ignoreEntity = null) {
+    public List<CharacterEntity> GetRandomCharacters(int targetCounts) {
         var characterList = _currentCharacters.ToList();
         for (int i = 0; i < characterList.Count; ++i) {
             if (characterList[i].CurHP <= 0) {
@@ -277,10 +284,6 @@ public class PlayerControl : MonoBehaviour {
             }
         }
         int numOfAllies = characterList.Count;
-
-        if (ignoreEntity) {
-            characterList.Remove(ignoreEntity as CharacterEntity);
-        }
 
         if (targetCounts < numOfAllies) {
             int diff = Mathf.Max(0, numOfAllies - targetCounts);
@@ -302,5 +305,16 @@ public class PlayerControl : MonoBehaviour {
 
         _currentCharacters.Remove(character);
         character.gameObject.SetActive(false);
+    }
+
+    public CharacterEntity FindCharacterByKey(int key) {
+        CharacterEntity requestedEntity = null;;
+        foreach (CharacterEntity entity in _currentCharacters) {
+            if (entity.KeyEquals(key)) {
+                requestedEntity = entity;
+                break;
+            }
+        }
+        return requestedEntity;
     }
 }
