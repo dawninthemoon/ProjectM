@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.U2D;
 
-public class ImageAtlasAnimator : MonoBehaviour
+public class ImageAtlasAnimator
 {
     public delegate void OnAnimationEnd();
     static readonly float _defaultSpeed = 0.06f;

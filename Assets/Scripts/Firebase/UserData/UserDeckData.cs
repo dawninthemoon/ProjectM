@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Boomlagoon.JSON;
 using CodeStage.AntiCheat.ObscuredTypes;
 
@@ -8,7 +5,6 @@ public class UserDeckData
 {
     private int[] charIndies = new int[]{ 101, 102, 103 };
     private int[] spiritIndies = new int[9];
-    private int[] subSpiritIndies;
 
     public UserDeckData()
     {
@@ -27,11 +23,6 @@ public class UserDeckData
         Save();
     }
 
-    public void SetSubSpiritIndex( int index, int spirit )
-    {
-        subSpiritIndies[index] = spirit;
-        Save();
-    }
     public int GetCharacterIndex( int index )
     {
         return charIndies[index]; 
@@ -39,10 +30,6 @@ public class UserDeckData
     public int GetMainSpiritIndex( int index )
     {
         return spiritIndies[index]; 
-    }
-    public int GetSubSpiritIndex( int index )
-    {
-        return subSpiritIndies[index]; 
     }
 
     public void Save()

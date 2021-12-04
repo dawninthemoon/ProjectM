@@ -21,7 +21,7 @@ namespace OutGame
 
         public virtual void OnClick()
         {
-            OnClickEvent?.Invoke( index );
+            OnClickEvent?.Invoke( objectKey );
         }
     }
 }

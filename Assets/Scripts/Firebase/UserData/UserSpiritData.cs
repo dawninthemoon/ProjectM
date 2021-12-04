@@ -9,6 +9,9 @@ public class UserSpiritData
     public int Index;
     public int Lv;
     public int Exp;
+
+    public int Soul;
+    public byte Star;
     
     public JSONObject ToJsonObject()
     {
@@ -17,6 +20,8 @@ public class UserSpiritData
         jsonObject.Add("Index", Index);
         jsonObject.Add("Lv", Lv);
         jsonObject.Add("Exp", Exp);
+        jsonObject.Add("Soul", Soul);
+        jsonObject.Add("Star", Star);
 
         return jsonObject;
     }
@@ -31,6 +36,12 @@ public class UserSpiritData
             
         if( jsonObject.ContainsKey("Exp") )
             Exp = (int)jsonObject.GetNumber("Exp");
+
+        if( jsonObject.ContainsKey("Soul") )
+            Soul = (int)jsonObject.GetNumber("Soul");
+
+        if( jsonObject.ContainsKey("Star") )
+            Star = (byte)jsonObject.GetNumber("Star");
     }
 }
 
@@ -41,6 +52,11 @@ public class UserSpiritDataList
     public List<UserSpiritData> Data
     {
         get{ return data; }
+    }
+
+    public UserSpiritData FindData( int index )
+    {
+        return data.Find( (x) => { return x.Index == index; } );
     }
 
     public JSONArray ToJsonObject()
@@ -75,7 +91,19 @@ public class UserSpiritDataList
                 break;
             }
         }
+    }
 
+    public void SetSoul( int index, int soul )
+    {
+        int findIndex = data.FindIndex( (x) => { return x.Index == index; } );
+
+        if( findIndex < 0 )
+            return;
+
+        UserSpiritData targetData = data[findIndex];
+
+        targetData.Soul = soul;
+        FBControl.FirebaseManager.Instance.UserDB.SaveChildrenData( soul, "spiritData", findIndex.ToString(), "Soul" );
     }
 
     public void SetUserSlot( int index, int spilitIndex )

@@ -719,11 +719,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 385.23218
+      value: 275
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 337.9569
+      value: 318
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_LocalScale.x
@@ -785,6 +785,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: btn_deck
       objectReference: {fileID: 0}
+    - target: {fileID: 2422432253601092671, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 168dcd5da1496774fa2f6d987f3f7eef, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
 --- !u!224 &328345517 stripped
@@ -809,7 +813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7693b635fb54b4f97b1f86c39d5428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: StageList
+  sceneName: CharacerDeck
 --- !u!1001 &510608124
 PrefabInstance:
   m_ObjectHideFlags: 0

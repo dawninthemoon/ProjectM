@@ -20,10 +20,12 @@ namespace OutGame
         [SerializeField] protected Button endButton;
 
         protected int currentSlot = -1;
+
         public void Start()
         {
             deckScroll.OnSelectEvent += SetDeck;
-
+            
+            Debug.Log("INIT! ");
             Init();
         }
 
@@ -31,8 +33,10 @@ namespace OutGame
         {
             for( int i = 0; i < deckSlotBases.Length; ++i )
             {
+                Debug.Log( i + ": Index ");
                 deckSlotBases[i].OnSelectEvent += OnClickSlotCallback;   
             }
+            SetActiveSlot( false );
         }
         public abstract void SetDeck( int spiritIndex );
 
@@ -70,6 +74,8 @@ namespace OutGame
             endButton.onClick.RemoveListener( DisableScroll );
 
             SetActiveSlot( false );
+
+            currentSlot = -1;
         }
 
         public abstract void SetActiveSlot( bool isActive );
@@ -77,6 +83,8 @@ namespace OutGame
         public void OnClickSlotCallback( int index )
         {
             currentSlot = index;
+
+            Debug.Log( "Current Slot : " + currentSlot);
 
             for( int i = 0; i < deckSlotBases.Length; ++i )
             {

@@ -19,12 +19,35 @@ namespace Data
         }
         private Character.EClassType eClassType;
         private int grade;
+        public int Grade
+        {
+            get{ return grade; }
+        }
         private string skillCard1Key;
         private string passiveSkillKey;
         private string iconName;
         public string IconName
         {
             get{ return iconName; }
+        }
+
+        public static int GetRequestSoulToStar( int star )
+        {
+            switch( star )
+            {
+                case 0:
+                    return 20;
+                case 1:
+                    return 20;
+                case 2:
+                    return 50;
+                case 3:
+                    return 80;
+                case 4:
+                    return 100;
+            }
+
+            return 0;
         }
 
         public override void Parse(JSONObject jsonObject)

@@ -6,7 +6,7 @@ namespace OutGame
 {
     public abstract class DeckScrollBase : MonoBehaviour
     {
-        [SerializeField] private DeckScrollButtonBase[] deckScrollButtonBases;
+        [SerializeField] protected DeckScrollButtonBase[] deckScrollButtonBases;
         public event System.Action<int> OnSelectEvent;
 
         public abstract void Init();
