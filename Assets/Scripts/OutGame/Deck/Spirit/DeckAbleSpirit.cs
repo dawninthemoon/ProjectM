@@ -21,9 +21,4 @@ public class DeckAbleSpirit : MonoBehaviour, ICell
     {
         OnClcikEvent?.Invoke( spiritIndex );
     }
-
-    public void OnDisable()
-    {
-        OnClcikEvent = null;
-    }
 }

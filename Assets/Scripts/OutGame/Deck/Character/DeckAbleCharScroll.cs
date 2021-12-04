@@ -6,11 +6,7 @@ namespace OutGame
 {
     public class DeckAbleCharScroll : DeckScrollBase
     {
-        [SerializeField] private DeckAbleChar[] deckAbleChars;
-
         private Data.Character[] characters;
-
-        public event System.Action<int> OnClickEvent;
 
         public void Start()
         {
@@ -20,22 +16,16 @@ namespace OutGame
 
         public override void Init()
         {
-            for( int i = 0; i < deckAbleChars.Length; ++i )
+            for( int i = 0; i < base.deckScrollButtonBases.Length; ++i )
             {
                 if( i >= characters.Length )
-                    deckAbleChars[i].gameObject.SetActive( false );
+                    deckScrollButtonBases[i].gameObject.SetActive( false );
                 else
                 {
-                    deckAbleChars[i].gameObject.SetActive( true );
-                    deckAbleChars[i].OnClickEvent += OnClickCallback;
-                    deckAbleChars[i].Init( i, characters[i].Key );
+                    deckScrollButtonBases[i].gameObject.SetActive( true );
+                    deckScrollButtonBases[i].Init( i, characters[i].Key, OnSelectCallback );
                 }
             }
         }   
-
-        public void OnClickCallback( int index )
-        {
-            OnClickEvent?.Invoke( index );
-        }
     }
 }

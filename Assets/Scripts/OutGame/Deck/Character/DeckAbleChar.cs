@@ -4,24 +4,16 @@ using UnityEngine;
 
 namespace OutGame
 {
-    public class DeckAbleChar : MonoBehaviour
+    public class DeckAbleChar : DeckScrollButtonBase
     {
         [SerializeField] private CharacterIcon characterIcon;
         [SerializeField] private CharDeckDot charDeckDot;
-
-        private int index;
-
-        public event System.Action<int> OnClickEvent;
-
-        public void Init( int index, int charIndex )
+        
+        public override void Init( int index, int objectKey, System.Action<int> onClickCallback )
         {
-            this.index = index;
-            characterIcon.SetCharacter( charIndex );
-        }   
-
-        public void OnClick()
-        {
-            OnClickEvent?.Invoke( index );
+            base.Init( index, objectKey, onClickCallback );
+            characterIcon.SetCharacter( objectKey );
+            charDeckDot.Init( objectKey );
         }
     }
 }

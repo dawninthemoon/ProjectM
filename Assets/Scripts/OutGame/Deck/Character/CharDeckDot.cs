@@ -20,7 +20,7 @@ namespace OutGame
 
             Data.Character charData = Data.CharacterDataParser.Instance.GetCharacter( charIndex );
 
-                Debug.Log( "TRY DATA " );
+                Debug.Log( "TRY DATA : " + charIndex );
             if( charData != null)
             {
                 Debug.Log( "SET DATA " );

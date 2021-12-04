@@ -5,15 +5,13 @@ using UnityEngine.UI;
 
 namespace OutGame
 {
-    public class DeckSlotBase : MonoBehaviour
+    public abstract class DeckSlotBase : MonoBehaviour
     {
         [SerializeField] protected Image selectImage;
         [SerializeField] protected Color selectColor;
         [SerializeField] protected Color disSelectColor;
 
         [SerializeField] protected Button deckButton;
-
-        [SerializeField] protected SpiritIcon spiritIcon;
 
         protected int slotIndex = 0;
         protected int objectKey = 0;
@@ -31,23 +29,20 @@ namespace OutGame
 
         public void RestoreSlot()
         {
-            InitSpirit( objectKey );
+            Init( objectKey );
         }
         
-        public void InitSpirit( int index )
-        {
-            spiritIcon.SetSpirit( index );
-        }
+        public abstract void Init( int index );
 
-        public void SetDeck( int deckIndex )
+        public virtual void SetDeck( int deckIndex )
         {
-            FBControl.FirebaseManager.Instance.UserData.UserDeckData.SetMainSpiritIndex( slotIndex,  deckIndex );
             objectKey = deckIndex;
             RestoreSlot();
         }
 
         public void OnClick()
         {
+            Debug.Log("CLICK! ");
             OnSelectEvent?.Invoke( slotIndex );
         }
 
