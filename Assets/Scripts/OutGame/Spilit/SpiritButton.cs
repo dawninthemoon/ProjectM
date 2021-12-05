@@ -13,7 +13,6 @@ namespace OutGame
         private UserSpiritData userSpiritData;
         [SerializeField] private SpiritIcon spilitIcon;
         private SpiritInfoUI spilitInfoUI;
-        private int spritIndex = 0;
 
         [SerializeField] private Image disableDim;
 
@@ -35,13 +34,12 @@ namespace OutGame
         [SerializeField] private TextMeshProUGUI soulCountText;
         [SerializeField] private OutGame.Stars stars;
         
-        public void Init( int index, SpiritInfoUI spilitInfoUI, Data.SpiritData spiritData, UserSpiritData userSpiritData )
+        public void Init( SpiritInfoUI spilitInfoUI, Data.SpiritData spiritData, UserSpiritData userSpiritData )
         {
             this.spiritData = spiritData;
             this.userSpiritData = userSpiritData;
 
-            spritIndex = index;
-            spilitIcon.SetSpirit( index );
+            spilitIcon.SetSpirit( spiritData );
 
             this.spilitInfoUI = spilitInfoUI;
 
@@ -82,7 +80,7 @@ namespace OutGame
         public void OnClick()
         {
             spilitInfoUI.SetActive();
-            spilitInfoUI.SetInfo( Data.SpiritDataParser.Instance.GetSpiritData( spritIndex ) );
+            spilitInfoUI.SetInfo( userSpiritData, spiritData );
         }
     }
 }

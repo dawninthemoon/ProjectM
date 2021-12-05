@@ -17,6 +17,11 @@ namespace Data
         {
             get{ return name; }
         }
+        private string subName;
+        public string SubName
+        {
+            get{ return subName; }
+        }
         private Character.EClassType eClassType;
         private int grade;
         public int Grade
@@ -54,6 +59,7 @@ namespace Data
         {
             key = (int)jsonObject.GetNumber("Key");
             name = jsonObject.GetString("Name");
+            subName = jsonObject.GetString("SubName");
             eClassType = (Character.EClassType)System.Enum.Parse( typeof( Character.EClassType), jsonObject.GetString("Class"));
             grade = (int)jsonObject.GetNumber("Grade");
             skillCard1Key = jsonObject.GetString("SkillCard1Key");

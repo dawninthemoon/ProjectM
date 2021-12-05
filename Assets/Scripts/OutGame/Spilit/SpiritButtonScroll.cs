@@ -58,7 +58,7 @@ namespace OutGame
                 UserSpiritData targetUserData = userSpiritData.Find( (x)=>{ return x.Index == spiritDatas[i].Key;} );
 
                 button.gameObject.SetActive( true );
-                button.Init( spiritDatas[i].Key, spilitInfoUI, spiritDatas[i], targetUserData );
+                button.Init( spilitInfoUI, spiritDatas[i], targetUserData );
 
                 if( targetUserData != null )
                 {

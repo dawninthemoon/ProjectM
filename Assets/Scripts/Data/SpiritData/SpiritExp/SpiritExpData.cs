@@ -7,15 +7,13 @@ namespace Data
 {
     public class SpiritExpData : PublicDataBase
     {
-        private int grade;
-        private int level;
-        private int maxExp;
+        public int Level;
+        public int MaxExp;
         
         public override void Parse(JSONObject jsonObject)
         {
-            grade = (int)jsonObject.GetNumber("Grade");
-            level = (int)jsonObject.GetNumber("Level");
-            maxExp = (int)jsonObject.GetNumber("MaxExp");
+            Level = (int)jsonObject.GetNumber("Level");
+            MaxExp = (int)jsonObject.GetNumber("MaxExp");
         }
     }
 }

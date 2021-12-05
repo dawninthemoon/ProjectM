@@ -15,7 +15,7 @@ namespace OutGame
         [SerializeField] private TextMeshProUGUI levelText;
         [SerializeField] private TextMeshProUGUI nameText;
         [SerializeField] private Image icon;
-        [SerializeField] private Image expSlider;
+        [SerializeField] private SpiritExpSlider spiritExpSlider;
 
         public event System.Action OnActiveEvent;
         public event System.Action OnDisableEvent;
@@ -26,19 +26,18 @@ namespace OutGame
         private ImageAtlasAnimator spiritAnimation;
         [SerializeField] private SpriteAtlas spiritAtals;
 
-        public void SetInfo( SpiritData spiritData )
+        public void SetInfo( UserSpiritData userSpiritData, SpiritData spiritData )
         {
             this.spiritData = spiritData;
 
-            nameText.text = spiritData.Name;
+            //nameText.text = spiritData.Name;
+            nameText.text = string.Format("[{0}]\n{1}", spiritData.SubName, spiritData.Name );
             icon.sprite = SpiritIconSpriteControl.Instance.GetSpiritSprite( spiritData.Key );
 
             userSpiritData = FirebaseManager.Instance.UserData.UserSpiritDataList.Data.Find( (x) => { return x.Index == spiritData.Key; } );
 
-            SetLevelText();
-
-            expSlider.fillAmount = userSpiritData.Exp / 100f;
-
+            // SetLevelText();
+            spiritExpSlider.SetSpirit( userSpiritData, spiritData );
             string[] prefix = spiritData.IconName.Split('_');
             string prefixResult = string.Format("{0}_{1}_", prefix[0], prefix[1] );
 
@@ -67,10 +66,10 @@ namespace OutGame
 
         public void SetLevelText()
         {
-            if( userSpiritData != null )
-                levelText.text = string.Format( "Lv.{0}", userSpiritData.Lv );
-            else
-                levelText.text = string.Format( "Lv.{0}", "NULL" );
+            // if( userSpiritData != null )
+            //     levelText.text = string.Format( "Lv.{0}", userSpiritData.Lv );
+            // else
+            //     levelText.text = string.Format( "Lv.{0}", "NULL" );
         }
 
         public void AddLevel()
