@@ -1806,11 +1806,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 385.23218
+      value: 274
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 337.9569
+      value: 318
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_LocalScale.x
@@ -1872,6 +1872,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: btn_dungeon
       objectReference: {fileID: 0}
+    - target: {fileID: 2422432253601092671, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 68984399a1cf6e64db8121ca3b04dc97, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
 --- !u!224 &1378885013 stripped
@@ -2139,11 +2143,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 385.23218
+      value: 274
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 337.9569
+      value: 318
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_LocalScale.x
@@ -2205,6 +2209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: btn_rade
       objectReference: {fileID: 0}
+    - target: {fileID: 2422432253601092671, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a05d32e5f754294489d2cef5e101aee8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
 --- !u!224 &1849439200 stripped
@@ -2405,11 +2413,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 466.76
+      value: 355
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 409.47974
+      value: 413
       objectReference: {fileID: 0}
     - target: {fileID: 2422432253601092668, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
       propertyPath: m_LocalScale.x
@@ -2471,6 +2479,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: btn_quest
       objectReference: {fileID: 0}
+    - target: {fileID: 2422432253601092671, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 757f1851802b2d44592186ec8e31359c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad5f13e280ed3fd4c8be0a05a4112628, type: 3}
 --- !u!1 &2422432253976970110 stripped
@@ -2682,5 +2694,51 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5366380939125743467, guid: 81d0ee39f7442604585d1b9bd229f270, type: 3}
+      propertyPath: sceneName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366380939154049364, guid: 81d0ee39f7442604585d1b9bd229f270, type: 3}
+      propertyPath: sceneName
+      value: SpiritList
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366380939928097577, guid: 81d0ee39f7442604585d1b9bd229f270, type: 3}
+      propertyPath: sceneName
+      value: CharacterDeck
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366380940124913242, guid: 81d0ee39f7442604585d1b9bd229f270, type: 3}
+      propertyPath: sceneName
+      value: Lobby
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81d0ee39f7442604585d1b9bd229f270, type: 3}
+--- !u!1 &3905085057017092880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3905085056855292045, guid: 81d0ee39f7442604585d1b9bd229f270, type: 3}
+  m_PrefabInstance: {fileID: 3905085057017092879}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3905085057017092881 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3905085056855292042, guid: 81d0ee39f7442604585d1b9bd229f270, type: 3}
+  m_PrefabInstance: {fileID: 3905085057017092879}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3905085057017092880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3905085057017092882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3905085057017092880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84aff1d7d5095436e851fe3af5457964, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetButton: {fileID: 3905085057017092881}
+  sceneName: Gacha
