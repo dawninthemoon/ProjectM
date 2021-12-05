@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using KeyPair = System.Collections.Generic.KeyValuePair<int, int>;
 using RieslingUtils;
+using DG.Tweening;
 
 public class PlayerControl : MonoBehaviour {
     [SerializeField] private LayerMask _layerMask;
@@ -69,13 +70,31 @@ public class PlayerControl : MonoBehaviour {
         }
     }
 
+    public void LateProgress() {
+        for (int i = 0; i < _currentCharacters.Count; ++i) {
+            _currentCharacters[i].Progress();
+        }
+    }
+
+    public bool IsDefeated() {
+        int characterCounts = 0;
+        foreach (var character in _currentCharacters) {
+            if (character.CurHP > 0) {
+                ++characterCounts;
+            }
+        }
+        return (characterCounts == 0);
+    }
+
     public void RefreshCost() {
         CurrentCost = _currentCharacters[0].CharacterStatData.MaxCost;
     }
 
     public bool CanUseSkill(int requireCost) => (CurrentCost >= requireCost);
-    public int GetMaxCost() => _currentCharacters[0].CharacterStatData.MaxCost;
-    
+    public int GetMaxCost()  {
+        return (_currentCharacters.Count > 0) ? _currentCharacters[0].CharacterStatData.MaxCost : 0;
+    }
+
     public void DrawCard(bool turnStart = false) {
         int amount = Mathf.Min(_currentCharacters[0].CharacterStatData.MaxDraw - _skillsInHand.Count, _cardDeck.GetDeckCount());
 
@@ -94,27 +113,34 @@ public class PlayerControl : MonoBehaviour {
         CurrentCost -= skill.GetRequireCost();
 
         Data.SkillInfo skillInfo = skill.GetSkillInfo();
-        ApplyAnimation(skillInfo);
 
-        DoAttack(battleControl, skillInfo);
-        DoHeal(battleControl, skillInfo);
-
-        _cardDeck.SkillToGrave(skill.GetSkillInfo());
-    }
-
-    private void ApplyAnimation(Data.SkillInfo skillInfo) {
-        var casterData = Data.CharacterDataParser.Instance.GetCharacter(skillInfo.CharacterKey);
         CharacterEntity caster = null;
+        var casterData = Data.CharacterDataParser.Instance.GetCharacter(skillInfo.CharacterKey);
         for (int i = 0; i < _currentCharacters.Count; ++i) {
             if (_currentCharacters[i].KeyEquals(casterData.Key)) {
                 caster = _currentCharacters[i];
                 break;
             }
         }
-        caster.ChangeAnimationState("Attack", false, () => caster.ChangeAnimationState("Idle", true));
+
+        StartCoroutine(Act());
+        IEnumerator Act() {
+            Camera.main.DOOrthoSize(7.4f, 0.3f).SetEase(Ease.OutCubic);
+            yield return new WaitForSeconds(0.5f);
+            DoAttack(battleControl, skillInfo, caster);
+            DoHeal(battleControl, skillInfo);
+            ApplyAnimation(skillInfo, casterData, caster);
+        }
+
+        _cardDeck.SkillToGrave(skill.GetSkillInfo());
     }
 
-    private void DoAttack(BattleControl battleControl, Data.SkillInfo skillInfo) {
+    private void ApplyAnimation(Data.SkillInfo skillInfo, Data.Character casterData, CharacterEntity caster) {
+        caster.ChangeAnimationState("Attack", false, () => caster.ChangeAnimationState("Idle", true));
+        caster.SetAnimationDelay(1f);
+    }
+
+    private void DoAttack(BattleControl battleControl, Data.SkillInfo skillInfo, CharacterEntity caster) {
         Data.CharacterStat stat = Data.CharacterStatDataParser.Instance.GetCharacterStat(skillInfo.CharacterKey);
 
         var data = skillInfo.SkillData;
@@ -122,7 +148,7 @@ public class PlayerControl : MonoBehaviour {
         float baseDamage = stat.AttackPower * (1f + criticalDamage);
         int targetCounts = data.AttackTypeValue;
         var selectedTarget = battleControl.SelectedTarget;
-        int finalDamage;
+        int finalDamage = 0;
 
         switch (data.AttackType) {
         case Data.AttackType.SingleAttack:
@@ -156,7 +182,13 @@ public class PlayerControl : MonoBehaviour {
 
         void AttackTarget(BattleEntity entity, int amount) {
             entity.DecreaseHP(amount);
+            entity.MoveForward(0.2f);
         }
+
+        if (data.AttackType != Data.AttackType.None) {
+            caster.MoveForward(1f);
+        }
+
     }
 
     private void DoHeal(BattleControl battleControl, Data.SkillInfo skillInfo) {
@@ -238,8 +270,13 @@ public class PlayerControl : MonoBehaviour {
     }
 
     public List<CharacterEntity> GetRandomCharacters(int targetCounts, BattleEntity ignoreEntity = null) {
-        int numOfAllies = _currentCharacters.Count;
         var characterList = _currentCharacters.ToList();
+        for (int i = 0; i < characterList.Count; ++i) {
+            if (characterList[i].CurHP <= 0) {
+                characterList.RemoveAt(i--);
+            }
+        }
+        int numOfAllies = characterList.Count;
 
         if (ignoreEntity) {
             characterList.Remove(ignoreEntity as CharacterEntity);

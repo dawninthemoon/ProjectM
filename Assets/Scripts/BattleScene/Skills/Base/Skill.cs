@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 using DG.Tweening;
 using Data;
-using RieslingUtils;
 
 public class Skill : MonoBehaviour {
     [SerializeField] SpriteRenderer _renderer = null;
@@ -121,9 +120,8 @@ public class Skill : MonoBehaviour {
     public bool OnTouchMoved(Vector2 touchPos, bool isCostEnough) {
         bool isSelected = false;
         if (IsOverlapped(touchPos)) {
-            Debug.Log(_skillInfo.SkillData.Name);
-            SkillManager.GetInstance().EnlargeCard(true, this);
             if (!IsTouching && isCostEnough) {
+                SkillManager.GetInstance().EnlargeCard(true, this);
                 IsTouching = true;
                 if (CanSelectTarget()) {
                     SkillManager.GetInstance().SetActiveAimSprite(true);

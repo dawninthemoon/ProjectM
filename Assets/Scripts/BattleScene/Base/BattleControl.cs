@@ -39,7 +39,7 @@ public class BattleControl : MonoBehaviour {
         _playerControl.Progress();
         _enemyControl.Progress();
 
-        if (_currentTurn == TurnInfo.ENEMY) return;
+        if (_currentTurn == TurnInfo.ENEMY || _playerControl.IsDefeated()) return;
 
         SkillState state = SkillManager.GetInstance().State;
         if (state == SkillState.NOTHING) return;
@@ -86,10 +86,16 @@ public class BattleControl : MonoBehaviour {
         }
     }
 
+    private void LateUpdate() {
+        _playerControl.LateProgress();
+        _enemyControl.LateProgress();
+    }
+
     public void StartTurn() {
         ++_turnCount;
 
         if (_currentTurn == TurnInfo.PLAYER) {
+            if (_playerControl.IsDefeated()) return;
             _playerControl.RefreshCost();
             _playerControl.DrawCard(true);
             SkillManager.GetInstance().State = SkillState.CARD_DRAG;

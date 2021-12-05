@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RieslingUtils;
+using DG.Tweening;
 
 public enum SkillState {
     NOTHING,
@@ -16,8 +17,13 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
     private SpriteRenderer _aimRenderer;
     private ObjectPool<Skill> _skillObjectPool;
     private Transform _cardTransform;
+    private SOCameraSetting _cameraSettings;
+    private WaitForSecondsRealtime _hitStopWaitTime;
 
     public void Initialize(Camera cardCamera) {
+        _cameraSettings = Resources.Load<SOCameraSetting>("Settings/CameraSettings");
+        _hitStopWaitTime = new WaitForSecondsRealtime(_cameraSettings.hitStopSeconds);
+
         _cardTransform = GameObject.Find("[ Cards ]").transform;
         var deckUI = GameObject.Find("DeckButton");
 
@@ -71,8 +77,33 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         }
     }
 
+    public void ShakeCamera() {
+        Camera.main.fieldOfView = 22f;
+        Camera.main.DOFieldOfView(25f, 0.33f);
+        
+        Camera.main.transform.DOShakePosition(
+            _cameraSettings.duration,
+            _cameraSettings.strength,
+            _cameraSettings.vibrato,
+            _cameraSettings.randomness,
+            _cameraSettings.snapping,
+            _cameraSettings.fadeOut
+        );
+
+    }
+
+    private IEnumerator EnableHitStop() {
+        yield return new WaitForSeconds(0.001f);
+
+        Time.timeScale = 0f;
+
+        yield return _hitStopWaitTime;
+
+        Time.timeScale = 1f;
+    }
+
     public void SetActiveAimSprite(bool enable) {
-        _aimRenderer.gameObject.SetActive(enable);
+        _aimRenderer.enabled = enable;
     }
 
     public void SetAimPosition(Vector3 position) {

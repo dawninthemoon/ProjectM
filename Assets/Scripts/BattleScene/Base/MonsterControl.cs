@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RieslingUtils;
+using DG.Tweening;
 
 public class MonsterControl : MonoBehaviour {
     [SerializeField] private Vector3[] _initialPosition = null;
@@ -40,6 +41,12 @@ public class MonsterControl : MonoBehaviour {
         }
     }
 
+    public void LateProgress() {
+        for (int i = 0; i < _currentMonsters.Count; ++i) {
+            _currentMonsters[i].Progress();
+        }
+    }
+
     public MonsterEntity GetSelectedEnemy(Vector3 touchPos) {
         MonsterEntity target = null;
         int monsterCounts = _currentMonsters.Count;
@@ -50,9 +57,7 @@ public class MonsterControl : MonoBehaviour {
         if (Physics.Raycast(screenRay, out raycastHit, 100f, _layerMask)) 
         {
             for (int i = 0; i < monsterCounts; ++i) {
-                if (_currentMonsters[i].gameObject == raycastHit.collider.gameObject ) {
-                    
-                    Debug.Log(i);
+                if (_currentMonsters[i].gameObject == raycastHit.collider.gameObject) {
                     target = _currentMonsters[i];
                 }
             }
@@ -62,6 +67,11 @@ public class MonsterControl : MonoBehaviour {
 
     public IEnumerator UseSkill(BattleControl battleControl, System.Action uiSetupCallback) {
         foreach (MonsterEntity monster in _currentMonsters) {
+            if (battleControl.PlayerCtrl.IsDefeated()) break;
+            
+            Camera.main.DOOrthoSize(7.4f, 0.3f).SetEase(Ease.OutCubic);
+            yield return new WaitForSeconds(0.5f);
+
             Data.SkillData skillData = monster.GetCurrentSkillData();
             if (skillData == null) continue;
             Data.SkillInfo skillInfo = new Data.SkillInfo(skillData, monster.Key);
@@ -69,7 +79,7 @@ public class MonsterControl : MonoBehaviour {
             int grade = (int)Data.MonsterDataParser.Instance.GetMonster(skillInfo.CharacterKey).Level;
             Data.MonsterStat stat = Data.MonsterStatDataParser.Instance.GetMonsterStat(grade);
 
-            DoAttack(battleControl, skillInfo, stat);
+            DoAttack(battleControl, skillInfo, stat, monster);
             DoHeal(battleControl, skillInfo, stat);
 
             string name = Data.MonsterDataParser.Instance.GetMonster(skillInfo.CharacterKey).Name;
@@ -83,15 +93,20 @@ public class MonsterControl : MonoBehaviour {
             }
 
             monster.ChangeAnimationState("Idle", true);
+            monster.SetAnimationDelay(1f);
         }
     }
 
-    private void DoAttack(BattleControl battleControl, Data.SkillInfo skillInfo, Data.MonsterStat stat) {
+    private void DoAttack(BattleControl battleControl, Data.SkillInfo skillInfo, Data.MonsterStat stat, MonsterEntity caster) {
         var data = skillInfo.SkillData;
         float criticalDamage = MathUtils.GetPerTenThousand(stat.CriticalDamage);
         float baseDamage = stat.AttackPower * (1f + criticalDamage);
         int targetCounts = data.AttackTypeValue;
-        var selectedTarget = battleControl.PlayerCtrl.GetRandomCharacters(1)[0];
+
+        var randomCharacters = battleControl.PlayerCtrl.GetRandomCharacters(1);
+        if (randomCharacters.Count == 0) return;
+        CharacterEntity selectedTarget = randomCharacters[0];
+
         int finalDamage;
 
         switch (data.AttackType) {
@@ -119,8 +134,11 @@ public class MonsterControl : MonoBehaviour {
             break;
         case Data.AttackType.RandomAttack:
             var character = battleControl.PlayerCtrl.GetRandomCharacters(targetCounts, selectedTarget);
-            finalDamage = Mathf.FloorToInt(baseDamage / character[0].GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
-            AttackTarget(character[0], finalDamage);
+            Debug.Log("a");
+            if (character.Count > 0) {
+                finalDamage = Mathf.FloorToInt(baseDamage / character[0].GetFinalDefence() * MathUtils.GetPerTenThousand(data.AttackRatio));
+                AttackTarget(character[0], finalDamage);
+            }
             break;
         }
 
@@ -129,6 +147,11 @@ public class MonsterControl : MonoBehaviour {
             if (entity.CurHP <= 0) {
                 battleControl.PlayerCtrl.RemoveCharacter(entity as CharacterEntity);
             }
+            entity.MoveForward(-0.2f);
+        }
+
+        if (data.AttackType != Data.AttackType.None) {
+            caster.MoveForward(-1f);
         }
     }
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using RieslingUtils;
+using DG.Tweening;
 
 public class MonsterEntity : BattleEntity {
     private class SkillStatus {
@@ -54,6 +55,9 @@ public class MonsterEntity : BattleEntity {
     public override float GetFinalDefence() {
         float defence = 1f + MathUtils.GetPercent(_monsterStatData.DefencePower);
         return defence;
+    }
+    public void SetAnimationDelay(float amount) {
+        _animator.SetAnimationDelay(amount);
     }
 
     private void OnAnimationEnd() {
