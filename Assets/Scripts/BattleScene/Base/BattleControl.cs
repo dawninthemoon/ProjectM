@@ -76,6 +76,7 @@ public class BattleControl : MonoBehaviour {
                 SetSkillTarget(hand[usedSkillIndex], touchPosition);
                 if (!SelectedTarget) return;
             }
+            Debug.Log("aaaa");
             _playerControl.UseSkill(hand[usedSkillIndex], this);
 
             SetupUI();
