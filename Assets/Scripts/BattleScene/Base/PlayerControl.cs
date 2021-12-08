@@ -69,7 +69,7 @@ public class PlayerControl : MonoBehaviour {
 
     public void LateProgress() {
         for (int i = 0; i < _currentCharacters.Count; ++i) {
-            _currentCharacters[i].Progress();
+            _currentCharacters[i].LateProgress();
         }
     }
 
