@@ -11,6 +11,8 @@ public abstract class BattleEntity : MonoBehaviour {
     public int CurHP { get { return _curHP; } }
     public bool CanRemoveEntity { get; set; }
     protected SpriteAtlasAnimator _animator;
+    public bool IsAnimationEnd { get; protected set; }
+    private static readonly float AnimationSpeed = 0.5f;
 
     public void Progress() {
         _animator.Progress(_atlas);
@@ -33,6 +35,10 @@ public abstract class BattleEntity : MonoBehaviour {
         return isOverlapped;
     }
 
+    public void ChangeAnimationState(string state, bool loop = false, SpriteAtlasAnimator.OnAnimationEnd callback = null) {
+        _animator.ChangeAnimation(state, loop, AnimationSpeed, callback ?? OnAnimationEnd);
+    }
+
     public virtual void DecreaseHP(int value) {
         SkillManager.GetInstance().ShakeCamera();
         _curHP = Mathf.Max(0, _curHP - value);
@@ -49,6 +55,10 @@ public abstract class BattleEntity : MonoBehaviour {
     public void MoveForward(float direction) {
         float amount = 0.4f;
         transform.DOLocalMoveX(direction * amount, 0.4f).From(true).SetEase(Ease.OutCirc);
+    }
+
+    private void OnAnimationEnd() {
+        IsAnimationEnd = true;
     }
 
     public abstract float GetFinalDefence();

@@ -4093,15 +4093,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c05cf0742ed9ce4396872990aefd4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 256
   _initialPosition:
   - {x: -4, y: 0, z: 12.5}
   - {x: -3.5, y: 0, z: 8}
   - {x: -0.5, y: 0, z: 11}
   - {x: -1.5, y: 0, z: 18}
   - {x: 0.5, y: 0, z: 17}
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!43 &623580981
 Mesh:
   m_ObjectHideFlags: 0
@@ -7625,12 +7625,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _layerMask:
     serializedVersion: 2
-    m_Bits: 0
-  _characterKeys: 650000006700000068000000
+    m_Bits: 128
   _initialPosition:
   - {x: -9.45, y: 0, z: 10.59}
   - {x: -7.15, y: 0, z: 14.4}
   - {x: -8.86, y: 0, z: 18.37}
+  _characterKeys: 650000006700000068000000
 --- !u!43 &1159663880
 Mesh:
   m_ObjectHideFlags: 0

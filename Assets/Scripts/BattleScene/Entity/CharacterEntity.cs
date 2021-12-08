@@ -9,7 +9,6 @@ public class CharacterEntity : BattleEntity {
     private Data.CharacterStat _characterStatData;
     public Data.CharacterStat CharacterStatData { get { return _characterStatData; } }
     private static readonly float AnimationSpeed = 0.5f;
-    public bool IsAnimationEnd { get; private set; }
 
     public void Initialize(Data.Character characterData, Data.CharacterStat characterStatData) {
         _characterData = characterData;
@@ -23,10 +22,6 @@ public class CharacterEntity : BattleEntity {
     public override float GetFinalDefence() {
         float defence = 1f + MathUtils.GetPercent(_characterStatData.DefencePower);
         return defence;
-    }
-
-    public void ChangeAnimationState(string state, bool loop = false, SpriteAtlasAnimator.OnAnimationEnd callback = null) {
-        _animator.ChangeAnimation(state, loop, AnimationSpeed, callback ?? OnAnimationEnd);
     }
 
     public void SetAnimationDelay(float amount) {

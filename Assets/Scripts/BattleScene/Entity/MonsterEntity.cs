@@ -26,7 +26,6 @@ public class MonsterEntity : BattleEntity {
     public int Order { get; private set; }
     public int Key { get; private set; }
     private int _skillIndex = 0;
-    public bool IsAnimationEnd { get; private set; }
 
     public void Initialize(int key, int order) {
         Key = key;
@@ -45,11 +44,6 @@ public class MonsterEntity : BattleEntity {
         }
 
         Order = order;
-    }
-
-    public void ChangeAnimationState(string state, bool loop = false, SpriteAtlasAnimator.OnAnimationEnd callback = null) {
-        IsAnimationEnd = false;
-        _animator.ChangeAnimation(state, loop, 0.5f, callback ?? OnAnimationEnd);
     }
 
     public override float GetFinalDefence() {

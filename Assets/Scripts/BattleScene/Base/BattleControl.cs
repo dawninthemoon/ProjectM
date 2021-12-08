@@ -76,7 +76,6 @@ public class BattleControl : MonoBehaviour {
                 SetSkillTarget(hand[usedSkillIndex], touchPosition);
                 if (!SelectedTarget) return;
             }
-            Debug.Log("aaaa");
             _playerControl.UseSkill(hand[usedSkillIndex], this);
 
             SetupUI();
@@ -97,6 +96,7 @@ public class BattleControl : MonoBehaviour {
 
         if (_currentTurn == TurnInfo.PLAYER) {
             if (_playerControl.IsDefeated()) return;
+            
             _playerControl.RefreshCost();
             _playerControl.DrawCard(true);
             SkillManager.GetInstance().State = SkillState.CARD_DRAG;
@@ -126,12 +126,8 @@ public class BattleControl : MonoBehaviour {
     }
 
     private void SetSkillTarget(Skill skill, Vector2 touchPosition) {
-        if (skill.IsAllyTarget()) {
-            SelectedTarget = _playerControl.GetSelectedCharacter(touchPosition);
-        }
-        else {
-            SelectedTarget = _enemyControl.GetSelectedEnemy(touchPosition);
-        }
+        EntityControl entityControl = skill.IsAllyTarget() ? (_playerControl as EntityControl) : (_enemyControl as EntityControl);
+        SelectedTarget = entityControl.GetSelectedEntity(touchPosition);
     }
 
     private bool ListenTouchMoveInput(Vector2 curTouchPos, Skill skill, bool isCostEnough) {
