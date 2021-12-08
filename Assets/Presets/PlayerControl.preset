@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerControl
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 85af829071bfb7449aa26ca1278be5b6, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _layerMask.m_Bits
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _characterKeys.Array.size
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _characterKeys.Array.data[0]
+    value: 101
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _characterKeys.Array.data[1]
+    value: 103
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _characterKeys.Array.data[2]
+    value: 104
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _initialPosition.Array.size
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _initialPosition.Array.data[0].x
+    value: -9.45
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _initialPosition.Array.data[0].y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _initialPosition.Array.data[0].z
+    value: 10.59
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _initialPosition.Array.data[1].x
+    value: -7.15
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _initialPosition.Array.data[1].y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _initialPosition.Array.data[1].z
+    value: 14.4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _initialPosition.Array.data[2].x
+    value: -8.86
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _initialPosition.Array.data[2].y
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: _initialPosition.Array.data[2].z
+    value: 18.37
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []
