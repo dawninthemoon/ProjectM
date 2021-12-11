@@ -3,6 +3,7 @@ using RieslingUtils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utills;
 
 public enum SkillState
 {
@@ -11,7 +12,7 @@ public enum SkillState
     CARD_DRAG,
 }
 
-public class SkillManager : SingletonWithMonoBehaviour<SkillManager>
+public class SkillManager : SingletonBehaviour<SkillManager>
 {
     public SkillState State { get; set; } = SkillState.NOTHING;
     private static readonly string SortingLayerName = "Cards";
@@ -22,6 +23,9 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager>
     private Transform _cardTransform;
     private SOCameraSetting _cameraSettings;
     private WaitForSecondsRealtime _hitStopWaitTime;
+
+    protected override void OnAwake()
+    { }
 
     public void Initialize(Camera cardCamera)
     {

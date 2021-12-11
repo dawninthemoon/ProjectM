@@ -102,7 +102,7 @@ public class PlayerControl : EntityControl
         CharacterEntity character = _currentEntities[0] as CharacterEntity;
         int amount = Mathf.Min(character.CharacterStatData.MaxDraw - _skillsInHand.Count, _cardDeck.GetDeckCount());
 
-        var cardManager = SkillManager.GetInstance();
+        var cardManager = SkillManager.Instance;
         for (int i = 0; i < amount; ++i)
         {
             Data.SkillInfo skillData = _cardDeck.DrawCard();
@@ -110,8 +110,8 @@ public class PlayerControl : EntityControl
             _skillsInHand.Add(cardObj);
         }
 
-        SkillManager.GetInstance().AlignCard(_skillsInHand);
-        SkillManager.GetInstance().SetOrder(_skillsInHand);
+        SkillManager.Instance.AlignCard(_skillsInHand);
+        SkillManager.Instance.SetOrder(_skillsInHand);
     }
 
     public void UseSkill(Skill skill, BattleControl battleControl)

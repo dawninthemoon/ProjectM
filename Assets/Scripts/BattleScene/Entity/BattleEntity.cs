@@ -49,7 +49,7 @@ public abstract class BattleEntity : MonoBehaviour
 
     public virtual void DecreaseHP(int value)
     {
-        SkillManager.GetInstance().ShakeCamera();
+        SkillManager.Instance.ShakeCamera();
         _curHP = Mathf.Max(0, _curHP - value);
     }
 

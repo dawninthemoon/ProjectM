@@ -30,7 +30,7 @@ public class BattleControl : MonoBehaviour
 
     private void Start()
     {
-        SkillManager.GetInstance().Initialize(_cardCamera);
+        SkillManager.Instance.Initialize(_cardCamera);
 
         _currentTurn = TurnInfo.PLAYER;
         _playerControl.Initialize();
@@ -50,7 +50,7 @@ public class BattleControl : MonoBehaviour
 
         if (_currentTurn == TurnInfo.ENEMY || _playerControl.IsDefeated()) return;
 
-        SkillState state = SkillManager.GetInstance().State;
+        SkillState state = SkillManager.Instance.State;
         if (state == SkillState.NOTHING) return;
 
         Vector2 touchPosition = Utility.GetTouchPosition(_cardCamera);
@@ -96,9 +96,9 @@ public class BattleControl : MonoBehaviour
 
             SetupUI();
 
-            SkillManager.GetInstance().ReturnCard(hand[usedSkillIndex]);
+            SkillManager.Instance.ReturnCard(hand[usedSkillIndex]);
             hand.RemoveAt(usedSkillIndex);
-            SkillManager.GetInstance().AlignCard(hand);
+            SkillManager.Instance.AlignCard(hand);
         }
     }
 
@@ -118,7 +118,7 @@ public class BattleControl : MonoBehaviour
 
             _playerControl.RefreshCost();
             _playerControl.DrawCard(true);
-            SkillManager.GetInstance().State = SkillState.CARD_DRAG;
+            SkillManager.Instance.State = SkillState.CARD_DRAG;
         }
         else
         {
@@ -143,7 +143,7 @@ public class BattleControl : MonoBehaviour
         int curTurn = (int)_currentTurn;
         int nextTurn = (curTurn + 1) % 2;
         _currentTurn = (TurnInfo)nextTurn;
-        SkillManager.GetInstance().State = SkillState.CARD_OVER;
+        SkillManager.Instance.State = SkillState.CARD_OVER;
 
         StartTurn();
     }
@@ -207,7 +207,7 @@ public class BattleControl : MonoBehaviour
         for (int i = 0; i < handCounts; ++i)
         {
             if (i == ignoreIndex) continue;
-            SkillManager.GetInstance().EnlargeCard(false, _playerControl.SkillsInHand[i]);
+            SkillManager.Instance.EnlargeCard(false, _playerControl.SkillsInHand[i]);
         }
     }
 }

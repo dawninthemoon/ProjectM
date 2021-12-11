@@ -1,14 +1,13 @@
 using UnityEngine;
+using Utills;
 
-public class EntityManager : SingletonWithMonoBehaviour<EntityManager>
+public class EntityManager : SingletonBehaviour<EntityManager>
 {
     private BattleEntity[] _friendlyEntities;
     private BattleEntity[] _enemyEntities;
 
-    protected override void Awake()
+    protected override void OnAwake()
     {
-        base.Awake();
-
         _friendlyEntities = GameObject.Find("FriendlyUnits").GetComponentsInChildren<BattleEntity>();
         _enemyEntities = GameObject.Find("EnemyUnits").GetComponentsInChildren<BattleEntity>();
     }

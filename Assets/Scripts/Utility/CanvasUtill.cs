@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Utills
@@ -21,6 +22,12 @@ namespace Utills
                 graphic.color = graphic.color.ChangeAlpha(visible ? 1f : 0f);
                 graphic.raycastTarget = visible;
             }
+        }
+
+        public static void SetButtonListener(this Button button, UnityAction call)
+        {
+            button.onClick.RemoveAllListeners();
+            button.onClick.AddListener(call);
         }
     }
 }

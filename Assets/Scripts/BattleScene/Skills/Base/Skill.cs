@@ -43,11 +43,11 @@ public class Skill : MonoBehaviour
 
     public void Progress(Vector3 touchPosition)
     {
-        SkillState state = SkillManager.GetInstance().State;
+        SkillState state = SkillManager.Instance.State;
 
         if (IsTouching && CanSelectTarget())
         {
-            SkillManager.GetInstance().SetAimPosition(touchPosition);
+            SkillManager.Instance.SetAimPosition(touchPosition);
         }
 
         if (IsTouching && (state == SkillState.CARD_DRAG))
@@ -138,18 +138,18 @@ public class Skill : MonoBehaviour
         {
             if (!IsTouching && isCostEnough)
             {
-                SkillManager.GetInstance().EnlargeCard(true, this);
+                SkillManager.Instance.EnlargeCard(true, this);
                 IsTouching = true;
                 if (CanSelectTarget())
                 {
-                    SkillManager.GetInstance().SetActiveAimSprite(true);
+                    SkillManager.Instance.SetActiveAimSprite(true);
                 }
                 isSelected = true;
             }
         }
         else
         {
-            SkillManager.GetInstance().EnlargeCard(false, this);
+            SkillManager.Instance.EnlargeCard(false, this);
         }
         return isSelected;
     }
@@ -174,8 +174,8 @@ public class Skill : MonoBehaviour
     {
         if (CanSelectTarget())
         {
-            SkillManager.GetInstance().SetActiveAimSprite(false);
+            SkillManager.Instance.SetActiveAimSprite(false);
         }
-        SkillManager.GetInstance().EnlargeCard(false, this);
+        SkillManager.Instance.EnlargeCard(false, this);
     }
 }
