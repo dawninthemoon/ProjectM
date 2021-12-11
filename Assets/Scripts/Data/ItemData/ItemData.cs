@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Boomlagoon.JSON;
 
 namespace Data
@@ -9,6 +6,7 @@ namespace Data
     {
         Soul
     }
+
     public class ItemData : PublicDataBase
     {
         public int Key;
@@ -19,20 +17,20 @@ namespace Data
         public bool Rarity;
         public string ItemIcon;
         public string BackgroundIcon;
-    
-        public override void Parse( JSONObject jsonObject )
+
+        public override void Parse(JSONObject jsonObject)
         {
-            Key = (int)jsonObject.GetNumber( "Key" );
-            Name = jsonObject.GetString( "Name" );
-            Description = jsonObject.GetString( "Description" );
+            Key = (int)jsonObject.GetNumber("Key");
+            Name = jsonObject.GetString("Name");
+            Description = jsonObject.GetString("Description");
 
-            Name = jsonObject.GetString( "Name" );
+            Name = jsonObject.GetString("Name");
 
-            Grade = (int)jsonObject.GetNumber( "Grade" );
-            Rarity = jsonObject.GetBoolean( "Rarity" );
+            Grade = (int)jsonObject.GetNumber("Grade");
+            Rarity = jsonObject.GetBoolean("Rarity");
 
-            ItemIcon = jsonObject.GetString( "ItemIcon" );
-            BackgroundIcon = jsonObject.GetString( "BackgroundIcon" );
+            ItemIcon = jsonObject.GetString("ItemIcon");
+            BackgroundIcon = jsonObject.GetString("BackgroundIcon");
         }
     }
 }

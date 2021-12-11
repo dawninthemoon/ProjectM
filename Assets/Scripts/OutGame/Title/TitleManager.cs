@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using FBControl;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Title
@@ -20,7 +18,7 @@ namespace Title
 
         public void OnClickAnonymousLogin()
         {
-            loginPopup.gameObject.SetActive( true );
+            loginPopup.gameObject.SetActive(true);
             FirebaseManager.Instance.FirebaseAuthManager.LoginedAnonymous();
         }
 

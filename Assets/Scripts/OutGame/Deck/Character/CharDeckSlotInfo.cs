@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 namespace OutGame
 {
@@ -9,9 +6,9 @@ namespace OutGame
     {
         [SerializeField] private CharacterIcon characterIcon;
 
-        public void Init( int index, int charIndex )
+        public void Init(int index, int charIndex)
         {
-            characterIcon.SetCharacter( charIndex );
+            characterIcon.SetCharacter(charIndex);
         }
     }
 }

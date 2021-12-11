@@ -1,15 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Boomlagoon.JSON;
+using UnityEngine;
 
 namespace Data
 {
-    public struct SkillInfo {
+    public struct SkillInfo
+    {
         public SkillData SkillData;
         public int CharacterKey;
 
-        public SkillInfo(SkillData skillData, int characterKey) {
+        public SkillInfo(SkillData skillData, int characterKey)
+        {
             SkillData = skillData;
             CharacterKey = characterKey;
         }
@@ -38,6 +38,7 @@ namespace Data
         Combo, // 대상과 대상보다 순서가 1 많거나 적은 몬스터(CastType이 0이어야 함)
         Random
     }
+
     public enum AllyTargetType
     {
         None,
@@ -72,15 +73,15 @@ namespace Data
         public bool Disposable;
         public int[] AddCard;
         public int[] Shuffle_Deck;
-    
-        public override void Parse( JSONObject jsonObject )
+
+        public override void Parse(JSONObject jsonObject)
         {
             Key = (int)jsonObject.GetNumber("Key");
             Name = jsonObject.GetString("Name");
             IconKey = jsonObject.GetString("IconKey");
             SkillType = (SkillType)(int)jsonObject.GetNumber("SkillType");//(SkillType)System.Enum.Parse( typeof( SkillType ), jsonObject.GetString( "SkillType" ) );
             CastType = (CastType)(int)jsonObject.GetNumber("CastType");
-            Cost = (int)jsonObject.GetNumber( "Cost" );
+            Cost = (int)jsonObject.GetNumber("Cost");
             EnemyTargetType = (EnemyTargetType)(int)jsonObject.GetNumber("EnemyTargetType");
             EnemyTargetCount = (int)jsonObject.GetNumber("EnemyTargetCount");
             AllyTargetType = (AllyTargetType)(int)jsonObject.GetNumber("AllyTargetType");
@@ -99,13 +100,15 @@ namespace Data
             Shuffle_Deck = GetID(jsonObject.GetString("Shuffle_Deck"));
         }
 
-        private int[] GetID(string origin) {
+        private int[] GetID(string origin)
+        {
             if (origin == null) return null;
             origin = origin.TrimStart('{');
             origin = origin.TrimEnd('}');
             string[] keys = origin.Split(',');
             int[] nKeys = new int[keys.Length];
-            for (int i = 0; i < keys.Length; ++i) {
+            for (int i = 0; i < keys.Length; ++i)
+            {
                 nKeys[i] = int.Parse(keys[i]);
             }
             return nKeys;

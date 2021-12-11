@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Firebase.Auth;
+﻿using Firebase.Auth;
 using UnityEngine;
+
 // using GooglePlayGames;
 // using GooglePlayGames.BasicApi;
 //using AppleAuth.Interfaces;
-using System.Text;
 // using UnityEngine.SignInWithApple;
 //using AppleAuth.Extensions;
 
@@ -16,15 +14,17 @@ namespace FBControl
         private FirebaseAuth auth;
 
         private FirebaseUser user;
+
         public FirebaseUser User
         {
             get { return user; }
         }
 
         private bool isInit = false;
+
         public bool IsInit
         {
-            get{return isInit;}
+            get { return isInit; }
         }
 
         public void Init()
@@ -38,7 +38,7 @@ namespace FBControl
             isInit = true;
         }
 
-        #if UNITY_ANDROID
+#if UNITY_ANDROID
         public void GoogleLogined()
         {
             Debug.Log("FirebaseAuthManager GoogleLogined 여기서 안지나간다고?");
@@ -47,14 +47,12 @@ namespace FBControl
 
         public void TryGoogleLogout()
             {
-
                 if (Social.localUser.authenticated) // 로그인 되어 있다면
                 {
                     // PlayGamesPlatform.Instance.SignOut(); // Google 로그아웃
                     auth.SignOut(); // Firebase 로그아웃
                 }
             }
-
 
         // IEnumerator TryFirebaseLogin()
         //     {
@@ -87,8 +85,7 @@ namespace FBControl
         //             isInit = true;
         //         });
         //     }
-        #endif
-
+#endif
 
         // public void AppleLogined(UserInfo userInfo, string rawNonce)
         // {
@@ -111,19 +108,14 @@ namespace FBControl
 
         //         Debug.Log("Firebase Login 성공!!");
 
-
         //         user = task.Result;
         //         isInit = true;
 
         //     });
         // }
 
-
-
-
         public void LoginedAnonymous()
         {
-            
             auth.SignInAnonymouslyAsync().ContinueWith(task =>
             {
                 if (task.IsCanceled)
@@ -147,13 +139,12 @@ namespace FBControl
         {
             FirebaseUser user = auth.CurrentUser;
             return user.IsAnonymous;
-
         }
 
         public bool CheckLoginState()
         {
             FirebaseUser user = auth.CurrentUser;
-            
+
             if (user != null)
                 return true;
 
@@ -163,8 +154,6 @@ namespace FBControl
         public void FirebaseSignOut()
         {
             isInit = false;
-
-
 
             auth.SignOut();
         }

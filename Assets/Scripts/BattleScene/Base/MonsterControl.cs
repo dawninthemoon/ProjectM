@@ -1,11 +1,13 @@
+using DG.Tweening;
+using RieslingUtils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using RieslingUtils;
-using DG.Tweening;
 
-public class MonsterControl : EntityControl {
-    public override void Initialize() {
+public class MonsterControl : EntityControl
+{
+    public override void Initialize()
+    {
         _entityPrefabPath = "MonsterEntityPrefab/";
         _fillAmounts = new float[5];
 
@@ -15,7 +17,8 @@ public class MonsterControl : EntityControl {
         int monsterCounts = monsterKeys.Length;
         _currentEntities = new List<BattleEntity>(monsterCounts);
 
-        for (int i = 0; i < monsterCounts; ++i) {
+        for (int i = 0; i < monsterCounts; ++i)
+        {
             var monsterData = Data.MonsterDataParser.Instance.GetMonster(monsterKeys[i]);
             var prefab = ResourceManager.GetInstance().GetEntityPrefab(StringUtils.MergeStrings(_entityPrefabPath, monsterData.MonsterPrefab));
 
@@ -25,10 +28,12 @@ public class MonsterControl : EntityControl {
         }
     }
 
-    public IEnumerator UseSkill(BattleControl battleControl, System.Action uiSetupCallback) {
-        foreach (MonsterEntity monster in _currentEntities) {
+    public IEnumerator UseSkill(BattleControl battleControl, System.Action uiSetupCallback)
+    {
+        foreach (MonsterEntity monster in _currentEntities)
+        {
             if (battleControl.PlayerCtrl.IsDefeated()) break;
-            
+
             Camera.main.DOOrthoSize(7.4f, 0.3f).SetEase(Ease.OutCubic);
             yield return new WaitForSeconds(0.5f);
 
@@ -48,7 +53,8 @@ public class MonsterControl : EntityControl {
 
             uiSetupCallback.Invoke();
 
-            while (!monster.IsAnimationEnd) {
+            while (!monster.IsAnimationEnd)
+            {
                 yield return null;
             }
 

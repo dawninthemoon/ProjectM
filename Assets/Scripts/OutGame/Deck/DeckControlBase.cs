@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
 
 namespace OutGame
 {
@@ -15,6 +13,7 @@ namespace OutGame
 
         [Header("DeckParents")]
         [SerializeField] protected Transform deckListObject;
+
         [SerializeField] protected Transform deckParent;
         [SerializeField] protected Image dim;
         [SerializeField] protected Button endButton;
@@ -24,76 +23,77 @@ namespace OutGame
         public void Start()
         {
             deckScroll.OnSelectEvent += SetDeck;
-            
+
             Debug.Log("INIT! ");
             Init();
         }
 
         public virtual void Init()
         {
-            for( int i = 0; i < deckSlotBases.Length; ++i )
+            for (int i = 0; i < deckSlotBases.Length; ++i)
             {
-                Debug.Log( i + ": Index ");
-                deckSlotBases[i].OnSelectEvent += OnClickSlotCallback;   
+                Debug.Log(i + ": Index ");
+                deckSlotBases[i].OnSelectEvent += OnClickSlotCallback;
             }
-            SetActiveSlot( false );
+            SetActiveSlot(false);
         }
-        public abstract void SetDeck( int spiritIndex );
+
+        public abstract void SetDeck(int spiritIndex);
 
         public virtual void ActiveScroll()
         {
-            dim.gameObject.SetActive( true );
+            dim.gameObject.SetActive(true);
             dim.color = Color.clear;
 
-            dim.DOColor( new Color( 0, 0, 0, 200f/255f ), .4f );
+            dim.DOColor(new Color(0, 0, 0, 200f / 255f), .4f);
 
             deckListObject.transform.parent = dim.transform;
 
-            deckScroll.gameObject.SetActive( true );
+            deckScroll.gameObject.SetActive(true);
             deckScroll.transform.position = scrollDisableTransform.position;
-            deckScroll.transform.DOMove( scrollActiveTransform.position, .4f );
+            deckScroll.transform.DOMove(scrollActiveTransform.position, .4f);
 
-            endButton.gameObject.SetActive( true );
-            endButton.onClick.AddListener( DisableScroll );
-            
-            SetActiveSlot( true );
+            endButton.gameObject.SetActive(true);
+            endButton.onClick.AddListener(DisableScroll);
+
+            SetActiveSlot(true);
         }
 
         public virtual void DisableScroll()
         {
-            dim.DOColor( Color.clear, .4f ).OnComplete( () => {
-                dim.gameObject.SetActive( false );
+            dim.DOColor(Color.clear, .4f).OnComplete(() =>
+            {
+                dim.gameObject.SetActive(false);
                 deckListObject.transform.parent = deckParent;
-                deckScroll.gameObject.SetActive( false );
+                deckScroll.gameObject.SetActive(false);
             });
-            
+
             deckScroll.transform.position = scrollActiveTransform.position;
-            deckScroll.transform.DOMove( scrollDisableTransform.position, .4f );
+            deckScroll.transform.DOMove(scrollDisableTransform.position, .4f);
 
-            endButton.gameObject.SetActive( false );
-            endButton.onClick.RemoveListener( DisableScroll );
+            endButton.gameObject.SetActive(false);
+            endButton.onClick.RemoveListener(DisableScroll);
 
-            SetActiveSlot( false );
+            SetActiveSlot(false);
 
             currentSlot = -1;
         }
 
-        public abstract void SetActiveSlot( bool isActive );
+        public abstract void SetActiveSlot(bool isActive);
 
-        public void OnClickSlotCallback( int index )
+        public void OnClickSlotCallback(int index)
         {
             currentSlot = index;
 
-            Debug.Log( "Current Slot : " + currentSlot);
+            Debug.Log("Current Slot : " + currentSlot);
 
-            for( int i = 0; i < deckSlotBases.Length; ++i )
+            for (int i = 0; i < deckSlotBases.Length; ++i)
             {
-                if( currentSlot == i )
+                if (currentSlot == i)
                     deckSlotBases[i].Select();
                 else
                     deckSlotBases[i].DisSelect();
             }
         }
-
     }
 }

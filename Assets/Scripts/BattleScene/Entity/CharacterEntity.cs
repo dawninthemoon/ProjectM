@@ -1,16 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using RieslingUtils;
+using UnityEngine;
 
-public class CharacterEntity : BattleEntity {
+public class CharacterEntity : BattleEntity
+{
     private Data.Character _characterData;
-    public Data.Character CharacterData { get { return _characterData; } }
+
+    public Data.Character CharacterData
+    { get { return _characterData; } }
+
     private Data.CharacterStat _characterStatData;
-    public Data.CharacterStat CharacterStatData { get { return _characterStatData; } }
+
+    public Data.CharacterStat CharacterStatData
+    { get { return _characterStatData; } }
+
     private static readonly float AnimationSpeed = 0.5f;
 
-    public void Initialize(Data.Character characterData, Data.CharacterStat characterStatData) {
+    public void Initialize(Data.Character characterData, Data.CharacterStat characterStatData)
+    {
         _characterData = characterData;
         _characterStatData = characterStatData;
 
@@ -19,30 +25,37 @@ public class CharacterEntity : BattleEntity {
         _curHP = _maxHP;
     }
 
-    public override float GetFinalDefence() {
+    public override float GetFinalDefence()
+    {
         float defence = 1f + MathUtils.GetPercent(_characterStatData.DefencePower);
         return defence;
     }
 
-    public void SetAnimationDelay(float amount) {
+    public void SetAnimationDelay(float amount)
+    {
         _animator.SetAnimationDelay(amount);
     }
 
-    private void OnAnimationEnd() {
+    private void OnAnimationEnd()
+    {
         IsAnimationEnd = true;
     }
 
-    public override bool KeyEquals(int key) {
+    public override bool KeyEquals(int key)
+    {
         return _characterData.Key == key;
     }
 
-    public override void DecreaseHP(int value) {
+    public override void DecreaseHP(int value)
+    {
         base.DecreaseHP(value);
         ChangeAnimationState("Hit", false, ChangeToIdle);
     }
 
-    public void ChangeToIdle() {
-        if (_curHP <= 0) {
+    public void ChangeToIdle()
+    {
+        if (_curHP <= 0)
+        {
             CanRemoveEntity = true;
         }
         ChangeAnimationState("Idle", true);

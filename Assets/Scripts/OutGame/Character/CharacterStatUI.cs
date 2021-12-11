@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 namespace OutGame
 {
@@ -16,10 +14,10 @@ namespace OutGame
 
         public void OnEnable()
         {
-            // SetUI(FBControl.FirebaseManager.Instance.UserData.CurrentCharacter);   
+            // SetUI(FBControl.FirebaseManager.Instance.UserData.CurrentCharacter);
         }
 
-        public void SetUI( int characterIndex )
+        public void SetUI(int characterIndex)
         {
             targetStat = Data.CharacterStatDataParser.Instance.GetCharacterStat(characterIndex);
 

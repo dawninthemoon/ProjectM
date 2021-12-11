@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace Data
 {
     public class SpiritExpParser : PublicDataParseBase<SpiritExpParser, SpiritExpData>
@@ -14,23 +10,23 @@ namespace Data
 
         public static int MaxLevel
         {
-            get{ return 60; }
+            get { return 60; }
         }
 
-        public int GetSpiritExpToLV( int lv )
+        public int GetSpiritExpToLV(int lv)
         {
-            if( data[ lv - 1 ].Level != lv )
+            if (data[lv - 1].Level != lv)
             {
-                SpiritExpData returnData = System.Array.Find( data, (x) => { return x.Level == lv; } );
-                
-                if( returnData == null )
+                SpiritExpData returnData = System.Array.Find(data, (x) => { return x.Level == lv; });
+
+                if (returnData == null)
                     return 999999999;
 
                 return returnData.MaxExp;
             }
             else
             {
-                return data[ lv - 1 ].MaxExp;
+                return data[lv - 1].MaxExp;
             }
         }
     }

@@ -1,20 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Boomlagoon.JSON;
+using UnityEngine;
 
 namespace Data
 {
-    public class PublicDataParseBase<T,D> where T : PublicDataParseBase<T,D>, new() where D : PublicDataBase, new()
+    public class PublicDataParseBase<T, D> where T : PublicDataParseBase<T, D>, new() where D : PublicDataBase, new()
     {
         protected string assetPath = null;
         protected string templateName = null;
         private static T instnace;
-        public static T Instance  
-        {  
+
+        public static T Instance
+        {
             get
             {
-                if(instnace == null)
+                if (instnace == null)
                 {
                     instnace = new T();
                     instnace.Init();
@@ -22,12 +21,13 @@ namespace Data
 
                 return instnace;
             }
-        }  
+        }
 
         protected D[] data;
+
         public D[] Data
         {
-            get{ return data; }
+            get { return data; }
         }
 
         private void Init()
@@ -38,7 +38,8 @@ namespace Data
             JSONArray jsonArray = jsonObject.GetArray(templateName);
 
             data = new D[jsonArray.Length];
-            for(int i = 0; i < jsonArray.Length; ++i) {
+            for (int i = 0; i < jsonArray.Length; ++i)
+            {
                 data[i] = new D();
                 data[i].Parse(jsonArray[i].Obj);
             }

@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
-using DG.Tweening;
 using Data;
+using DG.Tweening;
+using TMPro;
+using UnityEngine;
 
-public class Skill : MonoBehaviour {
-    [SerializeField] SpriteRenderer _renderer = null;
-    [SerializeField] SpriteRenderer _iconRenderer = null;
-    [SerializeField] SpriteRenderer _characterIconRenderer = null;
-    [SerializeField] Transform _leftTransform = null;
+public class Skill : MonoBehaviour
+{
+    [SerializeField] private SpriteRenderer _renderer = null;
+    [SerializeField] private SpriteRenderer _iconRenderer = null;
+    [SerializeField] private SpriteRenderer _characterIconRenderer = null;
+    [SerializeField] private Transform _leftTransform = null;
     private MeshRenderer _costTextRenderer;
     [SerializeField] private TMP_Text _costText = null;
     [SerializeField] private LayerMask _cardMask;
@@ -24,7 +23,8 @@ public class Skill : MonoBehaviour {
     private bool _isInCancelArea;
     private float _touchTimeAgo;
 
-    public void Initialize(SkillInfo info) {
+    public void Initialize(SkillInfo info)
+    {
         _skillInfo = info;
         _detectCollider = GetComponent<Collider2D>();
         _costTextRenderer = GetComponentInChildren<MeshRenderer>();
@@ -38,22 +38,27 @@ public class Skill : MonoBehaviour {
     }
 
     public SkillInfo GetSkillInfo() => _skillInfo;
+
     public int GetRequireCost() => _skillInfo.SkillData.Cost;
 
-    public void Progress(Vector3 touchPosition) {
+    public void Progress(Vector3 touchPosition)
+    {
         SkillState state = SkillManager.GetInstance().State;
 
-        if (IsTouching && CanSelectTarget()) {
+        if (IsTouching && CanSelectTarget())
+        {
             SkillManager.GetInstance().SetAimPosition(touchPosition);
         }
 
-        if (IsTouching && (state == SkillState.CARD_DRAG)) {
+        if (IsTouching && (state == SkillState.CARD_DRAG))
+        {
             _touchTimeAgo += Time.deltaTime;
-            if (_touchTimeAgo > LongTouchTime) {
-                
+            if (_touchTimeAgo > LongTouchTime)
+            {
             }
 
-            if (_skillInfo.SkillData.CastType == CastType.NoneCast) {
+            if (_skillInfo.SkillData.CastType == CastType.NoneCast)
+            {
                 Vector3 scale = transform.localScale;
                 MoveTransform(new PRS(touchPosition, Quaternion.identity, scale), false);
             }
@@ -61,36 +66,42 @@ public class Skill : MonoBehaviour {
         }
     }
 
-    public bool CanSelectTarget() {
+    public bool CanSelectTarget()
+    {
         return (_skillInfo.SkillData.CastType != CastType.NoneCast);
     }
 
-    public bool IsAllyTarget() {
+    public bool IsAllyTarget()
+    {
         var data = _skillInfo.SkillData;
         bool isCharacterTarget = data.CastType == Data.CastType.TeamCast;
         return isCharacterTarget;
     }
 
-    public void MoveTransform(PRS prs, bool useTweening, float duration = 0f) {
-        if (useTweening) {
+    public void MoveTransform(PRS prs, bool useTweening, float duration = 0f)
+    {
+        if (useTweening)
+        {
             transform.DOMoveX(prs.pos.x, duration);
             transform.DOMoveY(prs.pos.y, duration);
             transform.DORotateQuaternion(prs.rot, duration);
             transform.DOScale(prs.scale, duration);
         }
-        else {
+        else
+        {
             prs.pos.z = transform.position.z;
             transform.position = prs.pos;
             transform.rotation = prs.rot;
             transform.localScale = prs.scale;
         }
     }
-    
-    public void SetOrder(string sortingLayerName, int order) {
+
+    public void SetOrder(string sortingLayerName, int order)
+    {
         _originOrder = order;
 
         _renderer.sortingLayerName = sortingLayerName;
-        _iconRenderer.sortingLayerName = _characterIconRenderer.sortingLayerName =  sortingLayerName;
+        _iconRenderer.sortingLayerName = _characterIconRenderer.sortingLayerName = sortingLayerName;
 
         _renderer.sortingOrder = order;
         _iconRenderer.sortingOrder = _characterIconRenderer.sortingOrder = order + 1;
@@ -98,58 +109,71 @@ public class Skill : MonoBehaviour {
         _costTextRenderer.sortingOrder = order + 2;
     }
 
-    public void SetMostFrontOrder(bool isEnlarge) {
+    public void SetMostFrontOrder(bool isEnlarge)
+    {
         _renderer.sortingOrder = isEnlarge ? 100 : _originOrder;
         _iconRenderer.sortingOrder = _characterIconRenderer.sortingOrder = isEnlarge ? 101 : _originOrder + 1;
         _costTextRenderer.sortingOrder = isEnlarge ? 102 : _originOrder + 2;
     }
 
-    public void DetectCardArea(Vector2 touchPosition) {
+    public void DetectCardArea(Vector2 touchPosition)
+    {
         RaycastHit2D[] hits = Physics2D.RaycastAll(touchPosition, Vector3.forward);
         int layer = LayerMask.NameToLayer(CancelAreaName);
         _isInCancelArea = System.Array.Exists(hits, x => x.collider.gameObject.layer.Equals(layer));
     }
 
-    public bool IsOverlapped(Vector2 pos) {
+    public bool IsOverlapped(Vector2 pos)
+    {
         bool isOverlapped = false;
 
         isOverlapped = (Physics2D.OverlapPoint(pos, _cardMask) == _detectCollider);
         return isOverlapped;
     }
 
-    public bool OnTouchMoved(Vector2 touchPos, bool isCostEnough) {
+    public bool OnTouchMoved(Vector2 touchPos, bool isCostEnough)
+    {
         bool isSelected = false;
-        if (IsOverlapped(touchPos)) {
-            if (!IsTouching && isCostEnough) {
+        if (IsOverlapped(touchPos))
+        {
+            if (!IsTouching && isCostEnough)
+            {
                 SkillManager.GetInstance().EnlargeCard(true, this);
                 IsTouching = true;
-                if (CanSelectTarget()) {
+                if (CanSelectTarget())
+                {
                     SkillManager.GetInstance().SetActiveAimSprite(true);
                 }
                 isSelected = true;
             }
         }
-        else {
+        else
+        {
             SkillManager.GetInstance().EnlargeCard(false, this);
         }
         return isSelected;
     }
 
-    public bool OnTouchUp() {
+    public bool OnTouchUp()
+    {
         bool isSkillUsed = false;
-        if (IsTouching) {
+        if (IsTouching)
+        {
             IsTouching = false;
             DeSelectCard();
 
-            if (!_isInCancelArea) {
+            if (!_isInCancelArea)
+            {
                 isSkillUsed = true;
             }
         }
         return isSkillUsed;
     }
 
-    public void DeSelectCard() {
-        if (CanSelectTarget()) {
+    public void DeSelectCard()
+    {
+        if (CanSelectTarget())
+        {
             SkillManager.GetInstance().SetActiveAimSprite(false);
         }
         SkillManager.GetInstance().EnlargeCard(false, this);

@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Firebase.Database;
 
 namespace FBControl
@@ -10,20 +7,19 @@ namespace FBControl
         private FirebaseDatabase userFirebaseDatabase = null;
 
         private bool isInit = false;
+
         public bool IsInit
         {
-            get{ return isInit; }
+            get { return isInit; }
         }
+
         public void Init()
         {
-
             userFirebaseDatabase = FirebaseDatabase.GetInstance("https://prrojectm-default-rtdb.firebaseio.com/");
-            userFirebaseDatabase.SetPersistenceEnabled( false );
-        
-        
+            userFirebaseDatabase.SetPersistenceEnabled(false);
         }
 
-        public void ReadAll( out UserData userData )
+        public void ReadAll(out UserData userData)
         {
             userData = null;
 

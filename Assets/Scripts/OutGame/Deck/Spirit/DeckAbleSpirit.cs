@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using PolyAndCode.UI;
+using UnityEngine;
 
 public class DeckAbleSpirit : MonoBehaviour, ICell
 {
@@ -10,15 +8,15 @@ public class DeckAbleSpirit : MonoBehaviour, ICell
 
     public event System.Action<int> OnClcikEvent;
 
-    public void SetIndex( int index, System.Action<int> OnClickAction )
+    public void SetIndex(int index, System.Action<int> OnClickAction)
     {
         spiritIndex = index;
-        spiritIcon.SetSpirit( index );
+        spiritIcon.SetSpirit(index);
         OnClcikEvent += OnClickAction;
     }
 
     public void OnClick()
     {
-        OnClcikEvent?.Invoke( spiritIndex );
+        OnClcikEvent?.Invoke(spiritIndex);
     }
 }

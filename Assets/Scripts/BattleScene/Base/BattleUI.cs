@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+using RieslingUtils;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using RieslingUtils;
 
 public struct BattleUIArgs
 {

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace OutGame
 {
@@ -11,7 +8,7 @@ namespace OutGame
 
         private GrowStoneArray growStoneArray;
 
-        public void Init( GrowStoneArray growStoneArray, int index )
+        public void Init(GrowStoneArray growStoneArray, int index)
         {
             this.growStoneArray = growStoneArray;
             this.index = index;
@@ -19,7 +16,7 @@ namespace OutGame
 
         public void OnClick()
         {
-            growStoneArray.AddStone( index, 1 );
+            growStoneArray.AddStone(index, 1);
         }
     }
 }

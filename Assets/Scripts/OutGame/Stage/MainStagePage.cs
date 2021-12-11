@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using Data;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Data;
 
 public class MainStagePage : MonoBehaviour
 {
@@ -21,10 +19,10 @@ public class MainStagePage : MonoBehaviour
         TopUIBackButton.Instance.PopCallback();
     }
 
-    public void OpenSubStagePage( int stage )
+    public void OpenSubStagePage(int stage)
     {
         gameObject.SetActive(false);
-        subStagePage.SetActive( ()=> { gameObject.SetActive(true); } );
+        subStagePage.SetActive(() => { gameObject.SetActive(true); });
         subStagePage.SetStage(stage);
     }
 
@@ -32,7 +30,7 @@ public class MainStagePage : MonoBehaviour
     {
         int lastIndex = 0;
 
-        for ( ; lastIndex < mainStageButtons.Length; ++lastIndex)
+        for (; lastIndex < mainStageButtons.Length; ++lastIndex)
         {
             StageData stageData = StageDataParser.Instance.FindStage(lastIndex + 1);
             if (stageData != null)
@@ -44,7 +42,7 @@ public class MainStagePage : MonoBehaviour
                 break;
         }
 
-        for(; lastIndex < mainStageButtons.Length; ++lastIndex )
+        for (; lastIndex < mainStageButtons.Length; ++lastIndex)
         {
             mainStageButtons[lastIndex].gameObject.SetActive(false);
         }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,9 +15,10 @@ namespace OutGame
         protected int objectKey = 0;
 
         public event System.Action<int> OnSelectEvent;
+
         public event System.Action<int> OnDisSelectEvent;
 
-        public void InitDeckSlot( int key, int slotIndex )
+        public void InitDeckSlot(int key, int slotIndex)
         {
             objectKey = key;
             this.slotIndex = slotIndex;
@@ -29,12 +28,12 @@ namespace OutGame
 
         public void RestoreSlot()
         {
-            Init( objectKey );
+            Init(objectKey);
         }
-        
-        public abstract void Init( int index );
 
-        public virtual void SetDeck( int deckIndex )
+        public abstract void Init(int index);
+
+        public virtual void SetDeck(int deckIndex)
         {
             objectKey = deckIndex;
             RestoreSlot();
@@ -43,7 +42,7 @@ namespace OutGame
         public void OnClick()
         {
             Debug.Log("CLICK! ");
-            OnSelectEvent?.Invoke( slotIndex );
+            OnSelectEvent?.Invoke(slotIndex);
         }
 
         public void Select()
@@ -56,11 +55,11 @@ namespace OutGame
             selectImage.color = disSelectColor;
         }
 
-        public void SetActive( bool isActive )
+        public void SetActive(bool isActive)
         {
             deckButton.interactable = isActive;
 
-            if( !isActive )
+            if (!isActive)
                 Select();
         }
     }

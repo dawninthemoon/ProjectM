@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
+using Data;
 using UnityEngine;
 using UnityEngine.U2D;
-using Data;
 
 public class SpiritIconSpriteControl : MonoBehaviour
 {
     private static SpiritIconSpriteControl instance;
+
     public static SpiritIconSpriteControl Instance
     {
-        get{ return instance; }
+        get { return instance; }
     }
 
     [SerializeField] private SpriteAtlas spilitAtlas;
@@ -19,13 +18,13 @@ public class SpiritIconSpriteControl : MonoBehaviour
         instance = this;
     }
 
-    public Sprite GetSpiritSprite( int index )
+    public Sprite GetSpiritSprite(int index)
     {
-        SpiritData spiritData = SpiritDataParser.Instance.GetSpiritData( index );
-        
-        if( spiritData == null )
+        SpiritData spiritData = SpiritDataParser.Instance.GetSpiritData(index);
+
+        if (spiritData == null)
             return null;
-            
-        return spilitAtlas.GetSprite( spiritData.IconName );
+
+        return spilitAtlas.GetSprite(spiritData.IconName);
     }
 }

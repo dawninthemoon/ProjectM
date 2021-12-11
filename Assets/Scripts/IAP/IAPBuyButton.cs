@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Purchasing;
 using FBControl;
+using UnityEngine;
+using UnityEngine.Purchasing;
 
 public class IAPBuyButton : MonoBehaviour
 {
     [SerializeField] private string productId;
+
     public void OnClick()
     {
-        IAPControl.Instance.BuyProduct( productId, SuccessCallback, FailCallback );
+        IAPControl.Instance.BuyProduct(productId, SuccessCallback, FailCallback);
     }
 
-    public void SuccessCallback( PurchaseEventArgs args )
+    public void SuccessCallback(PurchaseEventArgs args)
     {
         FirebaseManager.Instance.UserData.UserCurrenyData.FCash += 1000;
     }

@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.U2D;
+using UnityEngine.UI;
 
 namespace OutGame
 {
@@ -14,17 +12,17 @@ namespace OutGame
 
         private bool isInit = false;
 
-        public void Init( int charIndex )
+        public void Init(int charIndex)
         {
             isInit = true;
 
-            Data.Character charData = Data.CharacterDataParser.Instance.GetCharacter( charIndex );
+            Data.Character charData = Data.CharacterDataParser.Instance.GetCharacter(charIndex);
 
-                Debug.Log( "TRY DATA : " + charIndex );
-            if( charData != null)
+            Debug.Log("TRY DATA : " + charIndex);
+            if (charData != null)
             {
-                Debug.Log( "SET DATA " );
-                imageAtlasAnimator = new ImageAtlasAnimator( standImage, charData.SubName + "_", "Idle", true, 0.2f);
+                Debug.Log("SET DATA ");
+                imageAtlasAnimator = new ImageAtlasAnimator(standImage, charData.SubName + "_", "Idle", true, 0.2f);
             }
             else
                 imageAtlasAnimator = null;
@@ -32,7 +30,7 @@ namespace OutGame
 
         public void Update()
         {
-            imageAtlasAnimator?.Progress( charDotAtlas );
+            imageAtlasAnimator?.Progress(charDotAtlas);
         }
     }
 }

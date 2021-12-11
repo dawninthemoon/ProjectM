@@ -1,10 +1,7 @@
-using System.Collections;
+using Data;
+using FBControl;
 using System.Collections.Generic;
 using UnityEngine;
-using PolyAndCode.UI;
-using FBControl;
-using UnityEngine.UI;
-using Data;
 
 namespace OutGame
 {
@@ -33,12 +30,12 @@ namespace OutGame
 
         public void SetActive()
         {
-            gameObject.SetActive( true );
+            gameObject.SetActive(true);
         }
 
         public void SetDisable()
         {
-            gameObject.SetActive( false );
+            gameObject.SetActive(false);
         }
 
         public void Init()
@@ -46,25 +43,25 @@ namespace OutGame
             SpiritData[] spiritDatas = SpiritDataParser.Instance.Data;
             List<UserSpiritData> userSpiritData = FirebaseManager.Instance.UserData.UserSpiritDataList.Data;
 
-            System.Array.Sort( spiritDatas, (x,y) => { return y.Grade.CompareTo( x.Grade ); } );
+            System.Array.Sort(spiritDatas, (x, y) => { return y.Grade.CompareTo(x.Grade); });
 
-            for( int i =0; i < spiritDatas.Length; ++i )
+            for (int i = 0; i < spiritDatas.Length; ++i)
             {
                 SpiritButton button = Pool();
 
-                if( button == null )
+                if (button == null)
                     return;
 
-                UserSpiritData targetUserData = userSpiritData.Find( (x)=>{ return x.Index == spiritDatas[i].Key;} );
+                UserSpiritData targetUserData = userSpiritData.Find((x) => { return x.Index == spiritDatas[i].Key; });
 
-                button.gameObject.SetActive( true );
-                button.Init( spilitInfoUI, spiritDatas[i], targetUserData );
+                button.gameObject.SetActive(true);
+                button.Init(spilitInfoUI, spiritDatas[i], targetUserData);
 
-                if( targetUserData != null )
+                if (targetUserData != null)
                 {
                     button.transform.parent = haveTransform;
                     button.ActiveButton();
-                }   
+                }
                 else
                 {
                     button.transform.parent = lockTransform;
@@ -75,9 +72,9 @@ namespace OutGame
 
         public SpiritButton Pool()
         {
-            for( int i =0 ; i <spiritButtonPool.Length; ++i )
+            for (int i = 0; i < spiritButtonPool.Length; ++i)
             {
-                if( !spiritButtonPool[i].gameObject.activeSelf )
+                if (!spiritButtonPool[i].gameObject.activeSelf)
                 {
                     return spiritButtonPool[i];
                 }

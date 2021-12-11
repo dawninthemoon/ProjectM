@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,9 +13,9 @@ namespace OutGame
             // SetInfo(FBControl.FirebaseManager.Instance.UserData.CurrentCharacter);
         }
 
-        public void SetInfo( int characterIndex )
+        public void SetInfo(int characterIndex)
         {
-            characterImage.sprite 
+            characterImage.sprite
                 = ResourceManager.GetInstance().GetSprite(string.Format("Standing/Character_{0}", characterIndex));
 
             nativeSizeImage.SetNativeSize();

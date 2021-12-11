@@ -1,15 +1,15 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Purchasing;
 using UnityEngine.Events;
+using UnityEngine.Purchasing;
 
- [System.Serializable]
+[System.Serializable]
 public class SOItem
 {
     public ProductType ProductType;
     public string ProductID;
 }
+
 [System.Serializable]
 public class ShopInfo
 {
@@ -21,43 +21,44 @@ public class IAPControl : MonoBehaviour, IStoreListener
 {
     public static IAPControl Instance;
 
-        [SerializeField] 
-        private List<SOItem> packageList;
-        
-        
-        private UnityAction<PurchaseEventArgs> actionSuccess = (args) => { };
-        private UnityAction actionFail = () => { };
+    [SerializeField]
+    private List<SOItem> packageList;
 
-        private string lastBuyProductId;
-        private PurchaseEventArgs lastArgs;
-          private static IStoreController m_StoreController; // The Unity Purchasing system.
-        private static IExtensionProvider m_StoreExtensionProvider; // The store-specific Purchasing subsystems.
+    private UnityAction<PurchaseEventArgs> actionSuccess = (args) => { };
+    private UnityAction actionFail = () => { };
 
-        // Product identifiers for all products capable of being purchased: 
-        // "convenience" general identifiers for use with Purchasing, and their store-specific identifier 
-        // counterparts for use with and outside of Unity Purchasing. Define store-specific identifiers 
-        // also on each platform's publisher dashboard (iTunes Connect, Google Play Developer Console, etc.)
+    private string lastBuyProductId;
+    private PurchaseEventArgs lastArgs;
+    private static IStoreController m_StoreController; // The Unity Purchasing system.
+    private static IExtensionProvider m_StoreExtensionProvider; // The store-specific Purchasing subsystems.
 
-        // General product identifiers for the consumable, non-consumable, and subscription products.
-        // Use these handles in the code to reference which product to purchase. Also use these values 
-        // when defining the Product Identifiers on the store. Except, for illustration purposes, the 
-        // kProductIDSubscription - it has custom Apple and Google identifiers. We declare their store-
-        // specific mapping to Unity Purchasing's AddProduct, below.
+    // Product identifiers for all products capable of being purchased:
+    // "convenience" general identifiers for use with Purchasing, and their store-specific identifier
+    // counterparts for use with and outside of Unity Purchasing. Define store-specific identifiers
+    // also on each platform's publisher dashboard (iTunes Connect, Google Play Developer Console, etc.)
 
-        // Apple App Store-specific product identifier for the subscription product.
-        private static string kProductNameAppleSubscription = "com.unity3d.subscription.new";
+    // General product identifiers for the consumable, non-consumable, and subscription products.
+    // Use these handles in the code to reference which product to purchase. Also use these values
+    // when defining the Product Identifiers on the store. Except, for illustration purposes, the
+    // kProductIDSubscription - it has custom Apple and Google identifiers. We declare their store-
+    // specific mapping to Unity Purchasing's AddProduct, below.
 
-        // Google Play Store-specific product identifier subscription product.
-        private static string kProductNameGooglePlaySubscription = "com.unity3d.subscription.original";
+    // Apple App Store-specific product identifier for the subscription product.
+    private static string kProductNameAppleSubscription = "com.unity3d.subscription.new";
 
-        [SerializeField] private RecipteChecker recipteChecker;
+    // Google Play Store-specific product identifier subscription product.
+    private static string kProductNameGooglePlaySubscription = "com.unity3d.subscription.original";
+
+    [SerializeField] private RecipteChecker recipteChecker;
+
     public void Awake()
     {
         Instance = this;
 
-        DontDestroyOnLoad( this.gameObject );
+        DontDestroyOnLoad(this.gameObject);
     }
-    void Start()
+
+    private void Start()
     {
         // If we haven't set up the Unity Purchasing reference
         if (m_StoreController == null)
@@ -82,12 +83,13 @@ public class IAPControl : MonoBehaviour, IStoreListener
         foreach (SOItem soProduct in packageList)
             builder.AddProduct(soProduct.ProductID, soProduct.ProductType);
 
-        // Kick off the remainder of the set-up with an asynchrounous call, passing the configuration 
+        // Kick off the remainder of the set-up with an asynchrounous call, passing the configuration
         // and this class' instance. Expect a response either in OnInitialized or OnInitializeFailed.
         UnityPurchasing.Initialize(this, builder);
     }
 
     #region 외부 호출 함수.
+
     public Product GetProduct(string _productId)
     {
         return m_StoreController.products.WithID(_productId);
@@ -99,28 +101,27 @@ public class IAPControl : MonoBehaviour, IStoreListener
         // Only say we are initialized if both the Purchasing references are set.
         return m_StoreController != null && m_StoreExtensionProvider != null;
     }
-    
+
     public void BuyProduct(ShopInfo _shopInfo, UnityAction<PurchaseEventArgs> _actionSucess, UnityAction _actionFail)
     {
         SOItem item = GetSOItem(_shopInfo.ProductID);
-        
+
         if (item == null)
         {
-        
             _actionFail?.Invoke();
             return;
         }
-        
+
         Debug.Log("BuyProduct : " + item.ProductID);
 
         lastBuyProductId = _shopInfo.ProductID;
 
         BuyProduct(item.ProductID, _actionSucess, _actionFail);
     }
-    
+
     public void BuyProduct(string productID, UnityAction<PurchaseEventArgs> _actionSucess, UnityAction _actionFail)
     {
-        // Buy the consumable product using its general identifier. Expect a response either 
+        // Buy the consumable product using its general identifier. Expect a response either
         // through ProcessPurchase or OnPurchaseFailed asynchronously.
         actionSuccess = _actionSucess;
         actionFail = _actionFail;
@@ -129,38 +130,38 @@ public class IAPControl : MonoBehaviour, IStoreListener
 
     public SOItem GetSOItem(string _productId)
     {
-        SOItem SOItem = packageList.Find(each => { return each.ProductID.Equals( _productId ); });
+        SOItem SOItem = packageList.Find(each => { return each.ProductID.Equals(_productId); });
 
         return SOItem;
     }
-    #endregion
 
-    void BuyProductID(string productId)
+    #endregion 외부 호출 함수.
+
+    private void BuyProductID(string productId)
     {
         // If Purchasing has been initialized ...
         if (IsInitialized())
         {
             //중복 클릭 작업.
             {
-                
             }
-            
-            // ... look up the Product reference with the general product identifier and the Purchasing 
+
+            // ... look up the Product reference with the general product identifier and the Purchasing
             // system's products collection.
             Product product = m_StoreController.products.WithID(productId);
 
-            // If the look up found a product for this device's store and that product is ready to be sold ... 
+            // If the look up found a product for this device's store and that product is ready to be sold ...
             if (product != null && product.availableToPurchase)
             {
                 Debug.Log(string.Format("Purchasing product asychronously: '{0}'", product.definition.id));
-                // ... buy the product. Expect a response either through ProcessPurchase or OnPurchaseFailed 
+                // ... buy the product. Expect a response either through ProcessPurchase or OnPurchaseFailed
                 // asynchronously.
                 m_StoreController.InitiatePurchase(product);
             }
             // Otherwise ...
             else
             {
-                // ... report the product look-up failure situation  
+                // ... report the product look-up failure situation
                 Debug.Log(
                     "BuyProductID: FAIL. Not purchasing product, either is not found or is not available for purchase");
             }
@@ -168,14 +169,13 @@ public class IAPControl : MonoBehaviour, IStoreListener
         // Otherwise ...
         else
         {
-            // ... report the fact Purchasing has not succeeded initializing yet. Consider waiting longer or 
+            // ... report the fact Purchasing has not succeeded initializing yet. Consider waiting longer or
             // retrying initiailization.
             Debug.Log("BuyProductID FAIL. Not initialized.");
         }
     }
 
-
-    // Restore purchases previously made by this customer. Some platforms automatically restore purchases, like Google. 
+    // Restore purchases previously made by this customer. Some platforms automatically restore purchases, like Google.
     // Apple currently requires explicit purchase restoration for IAP, conditionally displaying a password prompt.
     public void RestorePurchases()
     {
@@ -187,7 +187,7 @@ public class IAPControl : MonoBehaviour, IStoreListener
             return;
         }
 
-        // If we are running on an Apple device ... 
+        // If we are running on an Apple device ...
         if (Application.platform == RuntimePlatform.IPhonePlayer ||
             Application.platform == RuntimePlatform.OSXPlayer)
         {
@@ -196,11 +196,11 @@ public class IAPControl : MonoBehaviour, IStoreListener
 
             // Fetch the Apple store-specific subsystem.
             var apple = m_StoreExtensionProvider.GetExtension<IAppleExtensions>();
-            // Begin the asynchronous process of restoring purchases. Expect a confirmation response in 
+            // Begin the asynchronous process of restoring purchases. Expect a confirmation response in
             // the Action<bool> below, and ProcessPurchase if there are previously purchased products to restore.
             apple.RestoreTransactions((result) =>
             {
-                // The first phase of restoration. If no more responses are received on ProcessPurchase then 
+                // The first phase of restoration. If no more responses are received on ProcessPurchase then
                 // no purchases are available to be restored.
                 Debug.Log("RestorePurchases continuing: " + result +
                             ". If no further messages, no purchases available to restore.");
@@ -214,8 +214,7 @@ public class IAPControl : MonoBehaviour, IStoreListener
         }
     }
 
-
-    //  
+    //
     // --- IStoreListener
     //
 
@@ -230,14 +229,12 @@ public class IAPControl : MonoBehaviour, IStoreListener
         m_StoreExtensionProvider = extensions;
     }
 
-
     public void OnInitializeFailed(InitializationFailureReason error)
     {
         // Purchasing set-up has not succeeded. Check error for reason. Consider sharing this reason with the user.
         Debug.Log("OnInitializeFailed InitializationFailureReason:" + error);
-        OnRecipteCheckEnd( false );
+        OnRecipteCheckEnd(false);
     }
-
 
     public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs args)
     {
@@ -245,36 +242,34 @@ public class IAPControl : MonoBehaviour, IStoreListener
 
         //recipteChecker.CheckRecipte( args, lastBuyProductId, OnRecipteCheckEnd );
 
-        OnRecipteCheckEnd( true );
-        
+        OnRecipteCheckEnd(true);
+
         return PurchaseProcessingResult.Complete;
     }
 
-    public void OnRecipteCheckEnd( bool isSuccess )
+    public void OnRecipteCheckEnd(bool isSuccess)
     {
-        if( isSuccess )
+        if (isSuccess)
         {
-            actionSuccess?.Invoke( lastArgs );
+            actionSuccess?.Invoke(lastArgs);
         }
         else
-        {            
+        {
             actionFail?.Invoke();
             actionFail = null;
         }
     }
-
 
     //결제 실패
     public void OnPurchaseFailed(Product product, PurchaseFailureReason failureReason)
     {
         //중복 클릭 제거
         {
-            
         }
-        
+
         actionFail?.Invoke();
         actionFail = null;
-        // A product purchase attempt did not succeed. Check failureReason for more detail. Consider sharing 
+        // A product purchase attempt did not succeed. Check failureReason for more detail. Consider sharing
         // this reason with the user to guide their troubleshooting actions.
         Debug.Log(string.Format("OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}",
             product.definition.storeSpecificId, failureReason));

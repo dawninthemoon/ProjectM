@@ -1,7 +1,6 @@
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Data_HasOrder<T>
 {
@@ -14,23 +13,28 @@ public class Data_HasOrder<T>
         this.iSortOrder = iSortOrder;
     }
 
-    static public int Compare_Data_HasOrder(Data_HasOrder<T> x, Data_HasOrder<T> y)
+    public static int Compare_Data_HasOrder(Data_HasOrder<T> x, Data_HasOrder<T> y)
     {
         return x.iSortOrder.CompareTo(y.iSortOrder);
     }
 }
 
 /// <summary>
-/// 
+///
 /// </summary>
 public class ObserverSubject_ChainData<TChainData>
 {
     public delegate void OnChainData(TChainData pValue_Origin, ref TChainData pValue_Current);
 
     [NonSerialized]
-    private TChainData _LastChainData_Origin; public TChainData GetLastChainData_Origin() { return _LastChainData_Origin; }
+    private TChainData _LastChainData_Origin; public TChainData GetLastChainData_Origin()
+
+    { return _LastChainData_Origin; }
+
     [NonSerialized]
-    private TChainData _LastChainData_Current; public TChainData GetLasChainData_Current() { return _LastChainData_Current; }
+    private TChainData _LastChainData_Current; public TChainData GetLasChainData_Current()
+
+    { return _LastChainData_Current; }
 
     protected Dictionary<OnChainData, Data_HasOrder<OnChainData>> _mapDelegate_And_HasOrderInstance = new Dictionary<OnChainData, Data_HasOrder<OnChainData>>();
     protected List<Data_HasOrder<OnChainData>> _listListener = new List<Data_HasOrder<OnChainData>>();
@@ -105,19 +109,26 @@ public class ObserverSubject_ChainData<TChainData>
 }
 
 /// <summary>
-/// 
+///
 /// </summary>
 public class ObserverSubject_ChainData<Args, TChainData>
 {
     public delegate void OnChainData(Args arg1, TChainData pValue_Origin, ref TChainData pValue_Current);
 
     [NonSerialized]
-    private Args _LastArg; public Args GetLastArg() { return _LastArg; }
+    private Args _LastArg; public Args GetLastArg()
+
+    { return _LastArg; }
 
     [NonSerialized]
-    private TChainData _LastChainData_Origin; public TChainData GetLastChainData_Origin() { return _LastChainData_Origin; }
+    private TChainData _LastChainData_Origin; public TChainData GetLastChainData_Origin()
+
+    { return _LastChainData_Origin; }
+
     [NonSerialized]
-    private TChainData _LastChainData_Current; public TChainData GetLasChainData_Current() { return _LastChainData_Current; }
+    private TChainData _LastChainData_Current; public TChainData GetLasChainData_Current()
+
+    { return _LastChainData_Current; }
 
     protected Dictionary<OnChainData, Data_HasOrder<OnChainData>> _mapDelegate_And_HasOrderInstance = new Dictionary<OnChainData, Data_HasOrder<OnChainData>>();
     protected List<Data_HasOrder<OnChainData>> _listListener = new List<Data_HasOrder<OnChainData>>();

@@ -1,16 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Data;
+using UnityEngine;
 
 public class SubStagePage : MonoBehaviour
 {
     [SerializeField] private SubStageButton[] subStageButtons;
 
-    public void SetActive( System.Action backButtonCallback )
+    public void SetActive(System.Action backButtonCallback)
     {
         gameObject.SetActive(true);
-        TopUIBackButton.Instance.AddCallback( () => { SetDiable(); backButtonCallback?.Invoke(); } );
+        TopUIBackButton.Instance.AddCallback(() => { SetDiable(); backButtonCallback?.Invoke(); });
     }
 
     public void SetDiable()
@@ -19,13 +17,13 @@ public class SubStagePage : MonoBehaviour
         TopUIBackButton.Instance.PopCallback();
     }
 
-    public void SetStage( int stage )
+    public void SetStage(int stage)
     {
         StageData[] stageDatas = StageDataParser.Instance.FindAllStage(stage);
 
-        for( int i = 0; i < subStageButtons.Length; ++i )
+        for (int i = 0; i < subStageButtons.Length; ++i)
         {
-            if( stageDatas.Length > i)
+            if (stageDatas.Length > i)
             {
                 subStageButtons[i].gameObject.SetActive(true);
                 subStageButtons[i].SetStageData(stageDatas[i]);

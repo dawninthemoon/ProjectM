@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using FBControl;
 using Data;
+using UnityEngine;
 
 public class NormalGacha : MonoBehaviour
 {
@@ -22,37 +19,37 @@ public class NormalGacha : MonoBehaviour
 
     public void Init()
     {
-        gachaData = GachaDataParser.Instance.GetGachaData( gachaIndex );
+        gachaData = GachaDataParser.Instance.GetGachaData(gachaIndex);
     }
 
     public void OneceGacha()
     {
         //FirebaseManager.Instance.UserData.UserCurrenyData.PCash -= gachaData.CashValue;
-        RandomBoxData randomBoxData = gachaLogic.Gacha( gachaIndex );
+        RandomBoxData randomBoxData = gachaLogic.Gacha(gachaIndex);
 
-        OpenResultUI( new RandomBoxData[]{ randomBoxData } );
+        OpenResultUI(new RandomBoxData[] { randomBoxData });
     }
 
     public void TenGacha()
     {
         RandomBoxData[] randomBoxData;
 
-        randomBoxData = gachaLogic.Gacha( gachaData, 10 );
+        randomBoxData = gachaLogic.Gacha(gachaData, 10);
 
-        OpenResultUI( randomBoxData );
+        OpenResultUI(randomBoxData);
     }
 
-    public void OpenResultUI( RandomBoxData[] result )
+    public void OpenResultUI(RandomBoxData[] result)
     {
         string s = "";
-        for( int i =0; i <result.Length; ++i )
+        for (int i = 0; i < result.Length; ++i)
             s += result[i].RewardKey + "/";
 
         Debug.Log(s);
 
-        canvas.gameObject.SetActive( true );
-        gachaResultUI.gameObject.SetActive( true );
+        canvas.gameObject.SetActive(true);
+        gachaResultUI.gameObject.SetActive(true);
 
-        gachaResultUI.SetUI( result );
+        gachaResultUI.SetUI(result);
     }
 }

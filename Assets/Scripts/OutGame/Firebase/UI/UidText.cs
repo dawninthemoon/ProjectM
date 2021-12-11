@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class UidText : MonoBehaviour
 {
@@ -10,5 +8,5 @@ public class UidText : MonoBehaviour
     public void Start()
     {
         uidText.text = FBControl.FirebaseManager.Instance.FirebaseAuthManager.User.UserId;
-    }   
+    }
 }

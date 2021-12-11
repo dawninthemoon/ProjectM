@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using FBControl;
+using UnityEngine;
 
 public class CharacterSpiritSlotControl : MonoBehaviour
 {
@@ -12,44 +9,44 @@ public class CharacterSpiritSlotControl : MonoBehaviour
 
     public void Awake()
     {
-        for( int i = 0; i < spilitSlots.Length; ++i )
+        for (int i = 0; i < spilitSlots.Length; ++i)
         {
-            spilitSlots[i].Init( i );
+            spilitSlots[i].Init(i);
         }
 
-        for( int i = 0; i < spilitSlots.Length; ++i )
+        for (int i = 0; i < spilitSlots.Length; ++i)
         {
-            int index = FirebaseManager.Instance.UserData.UserSpiritDataList.GetUserSlot( i );
+            int index = FirebaseManager.Instance.UserData.UserSpiritDataList.GetUserSlot(i);
 
-            Data.SpiritData data = Data.SpiritDataParser.Instance.GetSpiritData( index );
+            Data.SpiritData data = Data.SpiritDataParser.Instance.GetSpiritData(index);
 
-            if( data != null)
-                spilitSlots[i].SetSpritData( data );
+            if (data != null)
+                spilitSlots[i].SetSpritData(data);
             else
                 spilitSlots[i].SetNull();
         }
     }
 
-    public void ActiveButtons( Data.SpiritData spiritData )
+    public void ActiveButtons(Data.SpiritData spiritData)
     {
         readySpiritData = spiritData;
 
-        for( int i = 0; i <spilitSlots.Length; ++i )
+        for (int i = 0; i < spilitSlots.Length; ++i)
             spilitSlots[i].ActiveButton();
     }
 
-    public void SetSpirit( int index )
+    public void SetSpirit(int index)
     {
-        spilitSlots[index].SetSpritData( readySpiritData );
-        
+        spilitSlots[index].SetSpritData(readySpiritData);
+
         DisableButtons();
 
-        FirebaseManager.Instance.UserData.UserSpiritDataList.SetUserSlot( index, readySpiritData.Key );
+        FirebaseManager.Instance.UserData.UserSpiritDataList.SetUserSlot(index, readySpiritData.Key);
     }
 
     public void DisableButtons()
     {
-        for( int i = 0; i <spilitSlots.Length; ++i )
+        for (int i = 0; i < spilitSlots.Length; ++i)
             spilitSlots[i].DisableButton();
     }
 }

@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using FBControl;
+using UnityEngine;
 
 public class CurrencyText : TweenText
 {
@@ -14,7 +12,7 @@ public class CurrencyText : TweenText
     {
         FirebaseManager.Instance.UserData.UserCurrenyData.OnChangeCurrenyEvent += SetCurrencyText;
 
-        SetCurrencyText( currencyType );
+        SetCurrencyText(currencyType);
     }
 
     public void OnDestroy()
@@ -22,45 +20,49 @@ public class CurrencyText : TweenText
         FirebaseManager.Instance.UserData.UserCurrenyData.OnChangeCurrenyEvent -= SetCurrencyText;
     }
 
-    public void SetCurrencyText( CurrencyType currencyType )
+    public void SetCurrencyText(CurrencyType currencyType)
     {
-        if( this.currencyType != currencyType )
+        if (this.currencyType != currencyType)
             return;
 
-        if( isTween )
+        if (isTween)
         {
-            switch( currencyType )
+            switch (currencyType)
             {
                 case CurrencyType.Gold:
-                    base.SetNum( beforeCurrency, FirebaseManager.Instance.UserData.UserCurrenyData.Gold );
+                    base.SetNum(beforeCurrency, FirebaseManager.Instance.UserData.UserCurrenyData.Gold);
                     beforeCurrency = FirebaseManager.Instance.UserData.UserCurrenyData.Gold;
-                break;
+                    break;
+
                 case CurrencyType.FreeCash:
-                    base.SetNum( beforeCurrency, FirebaseManager.Instance.UserData.UserCurrenyData.FCash ); 
+                    base.SetNum(beforeCurrency, FirebaseManager.Instance.UserData.UserCurrenyData.FCash);
                     beforeCurrency = FirebaseManager.Instance.UserData.UserCurrenyData.FCash;
-                break;
+                    break;
+
                 case CurrencyType.PaidCash:
-                    base.SetNum( beforeCurrency, FirebaseManager.Instance.UserData.UserCurrenyData.PCash );
+                    base.SetNum(beforeCurrency, FirebaseManager.Instance.UserData.UserCurrenyData.PCash);
                     beforeCurrency = FirebaseManager.Instance.UserData.UserCurrenyData.PCash;
-                break;
-            }  
+                    break;
+            }
         }
         else
         {
-            switch( currencyType )
+            switch (currencyType)
             {
                 case CurrencyType.Gold:
                     beforeCurrency = FirebaseManager.Instance.UserData.UserCurrenyData.Gold;
                     base.text.text = beforeCurrency.ToString();
-                break;
-                case CurrencyType.FreeCash: 
+                    break;
+
+                case CurrencyType.FreeCash:
                     beforeCurrency = FirebaseManager.Instance.UserData.UserCurrenyData.FCash;
                     base.text.text = beforeCurrency.ToString();
-                break;
+                    break;
+
                 case CurrencyType.PaidCash:
                     beforeCurrency = FirebaseManager.Instance.UserData.UserCurrenyData.PCash;
                     base.text.text = beforeCurrency.ToString();
-                break;
+                    break;
             }
         }
     }

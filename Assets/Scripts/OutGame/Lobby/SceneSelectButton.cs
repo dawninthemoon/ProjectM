@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace OutGame
 {
@@ -23,16 +21,16 @@ namespace OutGame
             SceneManager.sceneLoaded -= LoadSceneCallback;
         }
 
-        public void LoadSceneCallback( Scene scene, LoadSceneMode load )
+        public void LoadSceneCallback(Scene scene, LoadSceneMode load)
         {
-            if( scene.name.Equals( sceneName ) )
+            if (scene.name.Equals(sceneName))
             {
                 targetButton.interactable = interactable;
             }
             else
             {
-                targetButton.interactable = !interactable;   
+                targetButton.interactable = !interactable;
             }
         }
-    }       
+    }
 }

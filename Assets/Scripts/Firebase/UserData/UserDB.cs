@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Firebase;
+﻿using Boomlagoon.JSON;
 using Firebase.Database;
-using Boomlagoon.JSON;
+
 //using CodeStage.AntiCheat.ObscuredTypes;
 using System;
+using System.Collections;
+using UnityEngine;
 
 namespace FBControl
 {
@@ -14,25 +13,26 @@ namespace FBControl
         public UserData userData;
         private DatabaseReference databaseReference;
         private bool isLoaded = false;
+
         public bool IsLoaded
         {
-            get{ return isLoaded; }
+            get { return isLoaded; }
         }
 
-        bool isChecked = false;
+        private bool isChecked = false;
         private string userID;
 
         //샤딩한 경우 여기서 분리시키기
-        public void Init( ) 
+        public void Init()
         {
             userData = new UserData();
 
             FirebaseDatabase database = FirebaseDatabase.DefaultInstance;
-            database.SetPersistenceEnabled( false );
-            this.databaseReference = database.GetReference("/user/"+ FirebaseManager.Instance.FirebaseAuthManager.User.UserId);
-            
+            database.SetPersistenceEnabled(false);
+            this.databaseReference = database.GetReference("/user/" + FirebaseManager.Instance.FirebaseAuthManager.User.UserId);
+
             //userID =;
-            StartCoroutine( LoadDataRoutine() );
+            StartCoroutine(LoadDataRoutine());
         }
 
         public IEnumerator LoadDataRoutine()
@@ -48,7 +48,7 @@ namespace FBControl
             //databaseReference = databaseReference.Child(userId);
 
             Debug.Log("TRY");
-            
+
             databaseReference.GetValueAsync().ContinueWith(task =>
             {
                 if (task.IsFaulted)
@@ -60,20 +60,20 @@ namespace FBControl
                     if (task.Result.Exists)
                     {
                         DataSnapshot snapshot = task.Result;
-                        userData.SetJsonFile( JSONObject.Parse( snapshot.GetRawJsonValue() ) );
+                        userData.SetJsonFile(JSONObject.Parse(snapshot.GetRawJsonValue()));
                         Debug.Log("BTYPE");
 
-                        isFound = true;  
+                        isFound = true;
                     }
                 }
 
-                isChecked= true;
+                isChecked = true;
             });
 
-            yield return new WaitUntil( ()=>{ return isChecked; } );
+            yield return new WaitUntil(() => { return isChecked; });
             Debug.Log("TRYb");
 
-            if( !isFound )
+            if (!isFound)
             {
                 userData.SetDefaultData();
                 SaveUserData();
@@ -82,17 +82,15 @@ namespace FBControl
             isLoaded = true;
         }
 
-
         public void EnterHandleValueChanged()
         {
-            Debug.Log("EnterHandleValueChanged 등록 등록" );
+            Debug.Log("EnterHandleValueChanged 등록 등록");
             databaseReference.Child("lastLoginTime")
         .ValueChanged += HandleLastJoinValueChanged;
         }
 
-        void HandleLastJoinValueChanged(object sender, ValueChangedEventArgs args)
+        private void HandleLastJoinValueChanged(object sender, ValueChangedEventArgs args)
         {
-        
             DateTime changeTime;
             string changeTimeStr = args.Snapshot.GetRawJsonValue();
             if (changeTimeStr == null)
@@ -101,18 +99,15 @@ namespace FBControl
             {
                 changeTimeStr = args.Snapshot.GetRawJsonValue().Substring(1, args.Snapshot.GetRawJsonValue().Length - 2);
             }
-            
 
             if (!DateTime.TryParse(changeTimeStr, out changeTime))
             {
                 return;
             }
-            
 
-            DateTime _newTime = DateTime.Parse( args.Snapshot.GetRawJsonValue().Substring(1, args.Snapshot.GetRawJsonValue().Length - 2));
+            DateTime _newTime = DateTime.Parse(args.Snapshot.GetRawJsonValue().Substring(1, args.Snapshot.GetRawJsonValue().Length - 2));
 
             // TimeSpan gap = _newTime - User.Instance.userLoginTime;
-
 
             // if (User.Instance.userLoginTime == null)
             //     return;
@@ -126,18 +121,17 @@ namespace FBControl
         public void SetCharacter()
         {
             DatabaseReference propertyReference = databaseReference.Child("charData");
-            propertyReference.SetRawJsonValueAsync( userData.GetCharJsonArray().ToString() );
+            propertyReference.SetRawJsonValueAsync(userData.GetCharJsonArray().ToString());
         }
 
         public void SetSpilitData()
         {
             DatabaseReference propertyReference = databaseReference.Child("spiritData");
-            propertyReference.SetRawJsonValueAsync( userData.UserSpiritDataList.ToJsonObject().ToString() );
+            propertyReference.SetRawJsonValueAsync(userData.UserSpiritDataList.ToJsonObject().ToString());
         }
-      
-      
+
         ///<summary> 유저 데이터의 하위 프로퍼티 찾아서 조정 </summary>
-        public void SaveChildrenData( object index, params string[] parents )
+        public void SaveChildrenData(object index, params string[] parents)
         {
             DatabaseReference propertyReference = databaseReference;//Child(propertyName);
 
@@ -148,8 +142,8 @@ namespace FBControl
 
             propertyReference.SetValueAsync(index);
         }
-        
-        public void SaveChildrenJsonData( string index, params string[] parents )
+
+        public void SaveChildrenJsonData(string index, params string[] parents)
         {
             DatabaseReference propertyReference = databaseReference;//Child(propertyName);
 
@@ -172,10 +166,9 @@ namespace FBControl
         public void SaveUserData()
         {
             string json = userData.GetJsonFile().ToString();//JsonUtility.ToJson(User.Instance.userData);
-            
+
             databaseReference.SetRawJsonValueAsync(json);
         }
-
 
         ///<summary> 유저 데이터의 하위 프로퍼티만 받음 </summary>
         public string LoadChildrenDataString(string propertyName)
@@ -207,6 +200,7 @@ namespace FBControl
             PlayerPrefs.SetInt(propertyName, index);
             PlayerPrefs.Save();
         }
+
         public void SaveLocalData(string propertyName, string index)
         {
             PlayerPrefs.SetString(propertyName, index);
@@ -218,10 +212,10 @@ namespace FBControl
         {
             return PlayerPrefs.GetInt(propertyName, 0);
         }
+
         public string GetLocalStringData(string propertyName)
         {
             return PlayerPrefs.GetString(propertyName, "");
         }
-
     }
 }

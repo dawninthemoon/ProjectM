@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using TMPro;
 
 public class SubStageButton : MonoBehaviour
 {
@@ -12,7 +9,7 @@ public class SubStageButton : MonoBehaviour
 
     private Data.StageData currentStageData;
 
-    public void SetStageData( Data.StageData stageData )
+    public void SetStageData(Data.StageData stageData)
     {
         mainStageText.text = stageData.Name;
         subStageText.text = stageData.SubName;

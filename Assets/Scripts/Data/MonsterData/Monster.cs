@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Boomlagoon.JSON;
 
-namespace Data {
-    public class MonsterStat : PublicDataBase {
+namespace Data
+{
+    public class MonsterStat : PublicDataBase
+    {
         public int Grade;
         public int Level;
         public int AttackPower;
@@ -14,7 +13,8 @@ namespace Data {
         public int CriticalDamage;
         public int Shield;
 
-        public override void Parse(JSONObject jsonObj) {
+        public override void Parse(JSONObject jsonObj)
+        {
             Grade = (int)jsonObj.GetNumber("Grade");
             Level = (int)jsonObj.GetNumber("Level");
             AttackPower = (int)jsonObj.GetNumber("AttackPower");
@@ -26,8 +26,10 @@ namespace Data {
         }
     }
 
-    public class Monster : PublicDataBase{
-        public enum EGradeType {
+    public class Monster : PublicDataBase
+    {
+        public enum EGradeType
+        {
             Normal,
             Elite,
             Boss
@@ -41,7 +43,8 @@ namespace Data {
         public string[] Skill;
         public string StatOverrideID;
 
-        public override void Parse(JSONObject jsonObj) {
+        public override void Parse(JSONObject jsonObj)
+        {
             Key = (int)jsonObj.GetNumber("Key");
             Name = jsonObj.GetString("Name");
             MonsterGrade = (EGradeType)(int)jsonObj.GetNumber("MonsterGrade"); //(EGradeType)System.Enum.Parse(typeof(EGradeType), jsonObj.GetString("MonsterGrade"));

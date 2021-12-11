@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Boomlagoon.JSON;
 
 namespace Data
@@ -22,29 +19,29 @@ namespace Data
         public int FreeGachaType;
         public int FreeGachaValue;
 
-        public override void Parse( JSONObject jsonObj )
+        public override void Parse(JSONObject jsonObj)
         {
             Key = (int)jsonObj.GetNumber("Key");
             Name = jsonObj.GetString("Name");
             Sequnce = (int)jsonObj.GetNumber("Sequence");
             CashType = (CurrencyType)System.Enum.Parse(typeof(CurrencyType), jsonObj.GetString("CashType"));
-        
+
             CashValue = (int)jsonObj.GetNumber("CashValue");
             CouponKey = jsonObj.GetString("CouponKey");
-            
+
             CouponMileageStack = (int)jsonObj.GetNumber("CouponMileageStack");
             RandomBoxKey = (int)jsonObj.GetNumber("RandomBoxKey");
-            if( jsonObj.ContainsKey("AdvantageRandomBoxKey") )
+            if (jsonObj.ContainsKey("AdvantageRandomBoxKey"))
                 AdvantageRandomBoxKey = (int)jsonObj.GetNumber("AdvantageRandomBoxKey");
-            if( jsonObj.ContainsKey("MileageKey") )
+            if (jsonObj.ContainsKey("MileageKey"))
                 MileageKey = (int)jsonObj.GetNumber("MileageKey");
-            if( jsonObj.ContainsKey("MileageValue") )
+            if (jsonObj.ContainsKey("MileageValue"))
                 MileageValue = (int)jsonObj.GetNumber("MileageValue");
-            if( jsonObj.ContainsKey("AdvantageMileageValue") )
+            if (jsonObj.ContainsKey("AdvantageMileageValue"))
                 AdvantageMileageValue = (int)jsonObj.GetNumber("AdvantageMileageValue");
-            if( jsonObj.ContainsKey("FreeGachaType") )
+            if (jsonObj.ContainsKey("FreeGachaType"))
                 FreeGachaType = (int)jsonObj.GetNumber("FreeGachaType");
-            if( jsonObj.ContainsKey("FreeGachaValue") )
+            if (jsonObj.ContainsKey("FreeGachaValue"))
                 FreeGachaValue = (int)jsonObj.GetNumber("FreeGachaValue");
         }
     }

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public interface ISkillEffect {
+public interface ISkillEffect
+{
     void ExecuteSkill(Data.SkillData info, BattleControl battleControl);
 }

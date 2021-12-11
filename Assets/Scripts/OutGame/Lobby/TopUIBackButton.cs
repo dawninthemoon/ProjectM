@@ -1,13 +1,13 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TopUIBackButton : MonoBehaviour
 {
     private static TopUIBackButton instance;
+
     public static TopUIBackButton Instance
     {
-        get{ return instance; }
+        get { return instance; }
     }
 
     private Stack<System.Action> OnClickCallbackStack = new Stack<System.Action>();
@@ -31,25 +31,25 @@ public class TopUIBackButton : MonoBehaviour
 
     public void OnDestroy()
     {
-        if( instance == this)
+        if (instance == this)
             instance = null;
     }
 
-    public void AddCallback( System.Action action )
+    public void AddCallback(System.Action action)
     {
-        OnClickCallbackStack.Push( action );
+        OnClickCallbackStack.Push(action);
         //Debug.Log( "Push: "+OnClickCallback.Count );
-        
-        gameObject.SetActive( true );
+
+        gameObject.SetActive(true);
     }
 
     public void PopCallback()
     {
         OnClickCallbackStack.Pop();
         //Debug.Log( "POP: "+OnClickCallback.Count );
-        
-        if( OnClickCallbackStack.Count == 0 )
-            gameObject.SetActive( false );
+
+        if (OnClickCallbackStack.Count == 0)
+            gameObject.SetActive(false);
     }
 
     public void OnClick()

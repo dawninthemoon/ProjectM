@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TagButtonList : MonoBehaviour
@@ -10,33 +8,33 @@ public class TagButtonList : MonoBehaviour
 
     public void Awake()
     {
-        for( int i = 0; i < tagButtons.Length; ++i )
+        for (int i = 0; i < tagButtons.Length; ++i)
         {
-            tagButtons[i].Init( i, OnClickCallback );
+            tagButtons[i].Init(i, OnClickCallback);
         }
     }
 
-    public void OnClickCallback( int index )
+    public void OnClickCallback(int index)
     {
-        for( int i = 0;  i < tagButtons.Length; ++i )
+        for (int i = 0; i < tagButtons.Length; ++i)
         {
-            if( i != index )
+            if (i != index)
                 tagButtons[i].DisSelect();
         }
 
-        OnButtonClickEvent?.Invoke( index );
+        OnButtonClickEvent?.Invoke(index);
     }
 
-    public void SetIndex( int index )
+    public void SetIndex(int index)
     {
-        for( int i = 0;  i < tagButtons.Length; ++i )
+        for (int i = 0; i < tagButtons.Length; ++i)
         {
-            if( i != index )
+            if (i != index)
                 tagButtons[i].DisSelect();
             else
                 tagButtons[i].SetSelect();
         }
-        
-        OnButtonClickEvent?.Invoke( index );
+
+        OnButtonClickEvent?.Invoke(index);
     }
 }

@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using FBControl;
 using PolyAndCode.UI;
+using UnityEngine;
 
 namespace OutGame
 {
@@ -11,7 +9,6 @@ namespace OutGame
         [SerializeField] private RecyclableScrollRect recyclableScrollRect;
         private UserSpiritData[] userSpiritDatas = null;
 
-
         public void Awake()
         {
             Init();
@@ -19,15 +16,15 @@ namespace OutGame
 
         public override void Init()
         {
-            userSpiritDatas = FirebaseManager.Instance.UserData.UserSpiritDataList.Data.ToArray(); 
-            recyclableScrollRect.Initialize( this );
-        
-            Debug.Log( userSpiritDatas.Length  + "ELLEG");
+            userSpiritDatas = FirebaseManager.Instance.UserData.UserSpiritDataList.Data.ToArray();
+            recyclableScrollRect.Initialize(this);
+
+            Debug.Log(userSpiritDatas.Length + "ELLEG");
         }
-        
+
         public int GetItemCount()
         {
-            if( userSpiritDatas != null)
+            if (userSpiritDatas != null)
                 return userSpiritDatas.Length;
             else
                 return 0;
@@ -37,7 +34,7 @@ namespace OutGame
         {
             DeckAbleSpirit deckElement = cell as DeckAbleSpirit;
 
-            deckElement.SetIndex( userSpiritDatas[index].Index, OnSelectCallback );
+            deckElement.SetIndex(userSpiritDatas[index].Index, OnSelectCallback);
         }
     }
 }

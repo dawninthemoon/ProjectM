@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace OutGame
@@ -19,18 +17,18 @@ namespace OutGame
 
         public void OnEnable()
         {
-            SetScroll( 1 );
-            tagButtonList.SetIndex( 1 );
+            SetScroll(1);
+            tagButtonList.SetIndex(1);
 
             tagButtonList.OnButtonClickEvent += SetScroll;
         }
 
-        public void SetScroll( int index )
+        public void SetScroll(int index)
         {
             SSListElementType ssListElementType = (SSListElementType)index;
 
-            characterButtonScroll.gameObject.SetActive( ssListElementType == SSListElementType.Character );
-            spiritButtonScroll.gameObject.SetActive( ssListElementType == SSListElementType.Spirit );
+            characterButtonScroll.gameObject.SetActive(ssListElementType == SSListElementType.Character);
+            spiritButtonScroll.gameObject.SetActive(ssListElementType == SSListElementType.Spirit);
         }
     }
 }

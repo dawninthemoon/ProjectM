@@ -32,7 +32,6 @@ namespace Utills
             return newQuaternion;
         }
 
-
         public static Vector3 ChangeX(this Vector3 position, float value)
         {
             var newPosition = new Vector3(value,
@@ -59,7 +58,6 @@ namespace Utills
 
             return newPosition;
         }
-
 
         public static Vector2 ChangeX(this Vector2 position, float value)
         {

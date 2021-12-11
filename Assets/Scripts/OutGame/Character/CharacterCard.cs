@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 using UnityEngine.U2D;
+using UnityEngine.UI;
 
 namespace OutGame
 {
@@ -20,18 +18,17 @@ namespace OutGame
         [SerializeField] private Transform characterCenter;
 
         [SerializeField] private TextMeshProUGUI nameText;
-        
 
         private SpriteAtlas characterAtlas;
 
-        public void Init( SpriteAtlas characterAtlas )
+        public void Init(SpriteAtlas characterAtlas)
         {
             this.characterAtlas = characterAtlas;
         }
 
-        public void SetCard( Data.Character character )
+        public void SetCard(Data.Character character)
         {
-            if( character == null )
+            if (character == null)
                 return;
 
             characterImage.sprite = ResourceManager.GetInstance().GetSprite(string.Format("Standing/Character_{0}", character.Key));
@@ -39,7 +36,7 @@ namespace OutGame
             if (characterImage.sprite != null)
             {
                 Sprite targetSprite = characterImage.sprite;
-                characterImage.rectTransform.pivot = new Vector2( (float)targetSprite.pivot.x / targetSprite.texture.width , (float)targetSprite.pivot.y / targetSprite.texture.height);
+                characterImage.rectTransform.pivot = new Vector2((float)targetSprite.pivot.x / targetSprite.texture.width, (float)targetSprite.pivot.y / targetSprite.texture.height);
             }
 
             characterImage.transform.localPosition = Vector3.zero;
@@ -48,8 +45,7 @@ namespace OutGame
             //characterImage.rectTransform.position = characterCenter.position;
 
             nameText.text = character.Name;
-            stars.SetStar( character.Grade );
-
+            stars.SetStar(character.Grade);
         }
     }
 }

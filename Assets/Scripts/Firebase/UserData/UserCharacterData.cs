@@ -19,9 +19,9 @@ public class UserCharacterData
 
     public UserCharacterData()
     {
-        
     }
-    public UserCharacterData( int index )
+
+    public UserCharacterData(int index)
     {
         Index = index;
         Lv = 1;
@@ -43,7 +43,7 @@ public class UserCharacterData
         // jsonObject.Add("Spirit2", Spirit2);
         // jsonObject.Add("Spirit3", Spirit3);
         // jsonObject.Add("Spirit4", Spirit4);
-        
+
         // jsonObject.Add("Rigging1", Rigging1);
         // jsonObject.Add("Rigging2", Rigging2);
         // jsonObject.Add("Rigging3", Rigging3);
@@ -54,18 +54,18 @@ public class UserCharacterData
         return jsonObject;
     }
 
-    public void SetJsonObject( JSONObject jsonObject )
+    public void SetJsonObject(JSONObject jsonObject)
     {
-        if( jsonObject.ContainsKey("Index") )
+        if (jsonObject.ContainsKey("Index"))
             Index = (int)jsonObject.GetNumber("Index");
-            
-        if( jsonObject.ContainsKey("Lv") )
+
+        if (jsonObject.ContainsKey("Lv"))
             Lv = (int)jsonObject.GetNumber("Lv");
-            
-        if( jsonObject.ContainsKey("BreakLv") )
+
+        if (jsonObject.ContainsKey("BreakLv"))
             BreakLv = (int)jsonObject.GetNumber("BreakLv");
-            
-        if( jsonObject.ContainsKey("AwakeLv") )
+
+        if (jsonObject.ContainsKey("AwakeLv"))
             AwakeLv = (int)jsonObject.GetNumber("AwakeLv");
 
         // if( jsonObject.ContainsKey("Spirit1") ) Spirit1 = (int)jsonObject.GetNumber("Spirit1");

@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+using Data;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using Data;
 
 namespace OutGame
 {
@@ -16,15 +14,15 @@ namespace OutGame
 
         [SerializeField] private Stars stars;
 
-        public void SetCharacter( Character characterData )
+        public void SetCharacter(Character characterData)
         {
-            characterImage.sprite = ResourceManager.GetInstance().GetSprite( string.Format("Standing/Character_{0}", characterData.Key ) );
+            characterImage.sprite = ResourceManager.GetInstance().GetSprite(string.Format("Standing/Character_{0}", characterData.Key));
             characterNativeSizeImage.SetNativeSize();
 
             nameText.text = characterData.Name;
             subTitleText.text = characterData.SubName;
 
-            stars.SetStar( characterData.Grade );
+            stars.SetStar(characterData.Grade);
         }
     }
 }

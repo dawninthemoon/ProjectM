@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 namespace OutGame
 {
@@ -11,14 +9,14 @@ namespace OutGame
         [SerializeField] private Image icon;
         [SerializeField] private TextMeshProUGUI countText;
 
-        public void SetIcon( Sprite sprite )
+        public void SetIcon(Sprite sprite)
         {
             icon.sprite = sprite;
         }
 
-        public void SetCountText( int count )
+        public void SetCountText(int count)
         {
-            countText.text = string.Format( "{0}", count );
+            countText.text = string.Format("{0}", count);
         }
     }
 }

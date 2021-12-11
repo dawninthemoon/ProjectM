@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Data
+﻿namespace Data
 {
     public class TextDataContainer : PublicDataParseBase<TextDataContainer, TextData>
     {
@@ -12,28 +10,28 @@ namespace Data
 
         public string GetKorean(string key)
         {
-            for(int i = 0; i < data.Length; ++i )
+            for (int i = 0; i < data.Length; ++i)
             {
-                if( data[i].key.Equals(key) )
+                if (data[i].key.Equals(key))
                 {
                     return data[i].korean;
                 }
             }
 
-            return string.Format("{0}_NOT_FOUND",key);
+            return string.Format("{0}_NOT_FOUND", key);
         }
 
-        public string GetEnglish( string key )
+        public string GetEnglish(string key)
         {
-            for( int i = 0; i < data.Length; ++i )
+            for (int i = 0; i < data.Length; ++i)
             {
-                if( data[i].key.Equals(key))
+                if (data[i].key.Equals(key))
                 {
                     return data[i].english;
                 }
             }
 
-            return string.Format("{0}_NOT_FOUND",key);
+            return string.Format("{0}_NOT_FOUND", key);
         }
 
         // public string GetPortugal(string key)
@@ -52,9 +50,9 @@ namespace Data
         {
             // switch(Application.systemLanguage)
             // {
-                // case SystemLanguage.Korean:
-                    return GetKorean(key);
-                
+            // case SystemLanguage.Korean:
+            return GetKorean(key);
+
             //     case SystemLanguage.English:
             //         return GetEnglish(key);
             // }

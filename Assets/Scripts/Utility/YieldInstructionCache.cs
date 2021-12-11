@@ -1,14 +1,15 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public static class YieldInstructionCache
 {
-    class FloatComparer : IEqualityComparer<float>
+    private class FloatComparer : IEqualityComparer<float>
     {
         bool IEqualityComparer<float>.Equals(float x, float y)
         {
             return x == y;
         }
+
         int IEqualityComparer<float>.GetHashCode(float obj)
         {
             return obj.GetHashCode();

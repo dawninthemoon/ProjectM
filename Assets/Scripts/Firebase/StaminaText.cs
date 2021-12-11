@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
 using FBControl;
+using TMPro;
+using UnityEngine;
 
 public class StaminaText : MonoBehaviour
 {

@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Boomlagoon.JSON;
 
 namespace Data
 {
-    public class CharacterStat : PublicDataBase {
+    public class CharacterStat : PublicDataBase
+    {
         public int Key;
         public int Grade;
         public int AttackPower;
@@ -16,7 +14,8 @@ namespace Data
         public int MaxDraw;
         public int MaxCost;
 
-        public override void Parse(JSONObject jsonObject) {
+        public override void Parse(JSONObject jsonObject)
+        {
             Key = (int)jsonObject.GetNumber("Key");
             Grade = (int)jsonObject.GetNumber("Grade");
             AttackPower = (int)jsonObject.GetNumber("AttackPower");
@@ -60,7 +59,7 @@ namespace Data
         public string TurnSkillKey;
         public string PassiveSkillKey;
 
-        public override void Parse( JSONObject jsonObj  )
+        public override void Parse(JSONObject jsonObj)
         {
             Key = (int)jsonObj.GetNumber("Key");
             Name = jsonObj.GetString("Name");
@@ -75,7 +74,8 @@ namespace Data
             PassiveSkillKey = jsonObj.GetString("PassiveSkillKey");
         }
 
-        private string[] GetID(string origin) {
+        private string[] GetID(string origin)
+        {
             if (origin == null) return null;
             origin = origin.TrimStart('{');
             origin = origin.TrimEnd('}');

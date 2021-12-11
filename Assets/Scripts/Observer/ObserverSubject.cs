@@ -1,10 +1,8 @@
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 
 /// <summary>
-/// 
+///
 /// </summary>
 [System.Serializable]
 public class ObserverSubject
@@ -20,7 +18,7 @@ public class ObserverSubject
         }
 
         remove
-        {   
+        {
             DoRemove_Listener(value);
         }
     }
@@ -72,12 +70,14 @@ public class ObserverSubject
 }
 
 /// <summary>
-/// 
+///
 /// </summary>
 public class ObserverSubject<Args>
 {
     [NonSerialized]
-    private Args _LastArg_1; public Args GetLastArg_1() { return _LastArg_1; }
+    private Args _LastArg_1; public Args GetLastArg_1()
+
+    { return _LastArg_1; }
 
     protected HashSet<System.Action<Args>> _setListener = new HashSet<System.Action<Args>>();
     protected List<System.Action<Args>> _listListener = new List<System.Action<Args>>();
@@ -93,7 +93,6 @@ public class ObserverSubject<Args>
         add { DoRegist_Listener(value, true); }
         remove { DoRemove_Listener(value); }
     }
-
 
     public void DoNotify(Args arg)
     {

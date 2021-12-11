@@ -1,15 +1,18 @@
+using DG.Tweening;
+using RieslingUtils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using RieslingUtils;
-using DG.Tweening;
 
-public enum SkillState {
+public enum SkillState
+{
     NOTHING,
     CARD_OVER,
     CARD_DRAG,
 }
-public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
+
+public class SkillManager : SingletonWithMonoBehaviour<SkillManager>
+{
     public SkillState State { get; set; } = SkillState.NOTHING;
     private static readonly string SortingLayerName = "Cards";
     private Vector2 _middlePosition;
@@ -20,7 +23,8 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
     private SOCameraSetting _cameraSettings;
     private WaitForSecondsRealtime _hitStopWaitTime;
 
-    public void Initialize(Camera cardCamera) {
+    public void Initialize(Camera cardCamera)
+    {
         _cameraSettings = Resources.Load<SOCameraSetting>("Settings/CameraSettings");
         _hitStopWaitTime = new WaitForSecondsRealtime(_cameraSettings.hitStopSeconds);
 
@@ -46,7 +50,8 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         );
     }
 
-    private Skill CreateCard() {
+    private Skill CreateCard()
+    {
         var prefab = ResourceManager.GetInstance().GetSkillPrefab();
         var card = Instantiate(prefab, _createPosition, Quaternion.identity);
         card.transform.SetParent(_cardTransform);
@@ -54,22 +59,26 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         return card;
     }
 
-    public Skill CreateCard(Data.SkillInfo skillData) {
+    public Skill CreateCard(Data.SkillInfo skillData)
+    {
         Skill card = _skillObjectPool.GetObject();
         card.transform.position = _createPosition;
         card.Initialize(skillData);
         return card;
     }
 
-    public void ReturnCard(Skill card) {
+    public void ReturnCard(Skill card)
+    {
         _skillObjectPool.ReturnObject(card);
     }
 
-    public void SetOrder(List<Skill> cards) {
+    public void SetOrder(List<Skill> cards)
+    {
         int curOrder = 0;
         float defaultZ = 100f;
         int cardCounts = cards.Count;
-        for (int i = 0; i < cardCounts; ++i) {
+        for (int i = 0; i < cardCounts; ++i)
+        {
             cards[i].SetOrder(SortingLayerName, curOrder);
             curOrder += 3;
             var t = cards[i].transform;
@@ -77,10 +86,11 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         }
     }
 
-    public void ShakeCamera() {
+    public void ShakeCamera()
+    {
         Camera.main.fieldOfView = 22f;
         Camera.main.DOFieldOfView(25f, 0.33f);
-        
+
         Camera.main.transform.DOShakePosition(
             _cameraSettings.duration,
             _cameraSettings.strength,
@@ -89,10 +99,10 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
             _cameraSettings.snapping,
             _cameraSettings.fadeOut
         );
-
     }
 
-    private IEnumerator EnableHitStop() {
+    private IEnumerator EnableHitStop()
+    {
         yield return new WaitForSeconds(0.001f);
 
         Time.timeScale = 0f;
@@ -102,41 +112,50 @@ public class SkillManager : SingletonWithMonoBehaviour<SkillManager> {
         Time.timeScale = 1f;
     }
 
-    public void SetActiveAimSprite(bool enable) {
+    public void SetActiveAimSprite(bool enable)
+    {
         _aimRenderer.enabled = enable;
     }
 
-    public void SetAimPosition(Vector3 position) {
+    public void SetAimPosition(Vector3 position)
+    {
         _aimRenderer.transform.position = position;
     }
 
-    public void AlignCard(List<Skill> cards) {
+    public void AlignCard(List<Skill> cards)
+    {
         int cardCounts = cards.Count;
         if (cardCounts == 0) return;
-        
+
         float padding = 1.5f;
         Vector3 cardOrigin = _middlePosition;
-        if (cardCounts % 2 == 0) {
+        if (cardCounts % 2 == 0)
+        {
             cardOrigin.x += cards[0].CardWidth;
             cardOrigin.x -= cards[0].CardWidth * padding * (cardCounts / 2);
         }
-        else {
+        else
+        {
             cardOrigin.x -= cards[0].CardWidth * padding * (cardCounts / 2);
         }
 
-        for (int i = 0; i < cardCounts; ++i) {
+        for (int i = 0; i < cardCounts; ++i)
+        {
             cards[i].OriginPRS = new PRS(cardOrigin, Quaternion.identity, Vector3.one);
             cards[i].MoveTransform(cards[i].OriginPRS, true, 0.7f);
             cardOrigin.x += cards[i].CardWidth * padding;
         }
     }
 
-    public void EnlargeCard(bool isEnlarge, Skill card) {
-        if (isEnlarge) {
+    public void EnlargeCard(bool isEnlarge, Skill card)
+    {
+        if (isEnlarge)
+        {
             Vector3 enLargePos = new Vector3(card.OriginPRS.pos.x, card.OriginPRS.pos.y + 1f, -10f);
             card.MoveTransform(new PRS(enLargePos, Quaternion.identity, Vector3.one * 1.3f), false);
         }
-        else {
+        else
+        {
             card.MoveTransform(card.OriginPRS, false);
         }
         card.SetMostFrontOrder(isEnlarge);

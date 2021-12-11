@@ -1,14 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using RieslingUtils;
-using DG.Tweening;
+using UnityEngine;
 
-public class MonsterEntity : BattleEntity {
-    private class SkillStatus {
+public class MonsterEntity : BattleEntity
+{
+    private class SkillStatus
+    {
         public Data.SkillData skillData;
         public int remainTurnCount;
-        public SkillStatus(Data.SkillData skillData, int remainTurnCount) {
+
+        public SkillStatus(Data.SkillData skillData, int remainTurnCount)
+        {
             this.skillData = skillData;
             this.remainTurnCount = remainTurnCount;
         }
@@ -19,15 +20,21 @@ public class MonsterEntity : BattleEntity {
     private SkillStatus[] _skillStatus;
 
     private Data.Monster _monsterData;
-    public Data.Monster MonsterData { get { return _monsterData; } }
+
+    public Data.Monster MonsterData
+    { get { return _monsterData; } }
 
     private Data.MonsterStat _monsterStatData;
-    public Data.MonsterStat MonsterStatData { get { return _monsterStatData; } }
+
+    public Data.MonsterStat MonsterStatData
+    { get { return _monsterStatData; } }
+
     public int Order { get; private set; }
     public int Key { get; private set; }
     private int _skillIndex = 0;
 
-    public void Initialize(int key, int order) {
+    public void Initialize(int key, int order)
+    {
         Key = key;
         _monsterData = Data.MonsterDataParser.Instance.GetMonster(key);
         _monsterStatData = Data.MonsterStatDataParser.Instance.GetMonsterStat(_monsterData.Level);
@@ -38,7 +45,8 @@ public class MonsterEntity : BattleEntity {
 
         int numOfSkills = _skillKeys.Length;
         _skillStatus = new SkillStatus[numOfSkills];
-        for (int i = 0; i < numOfSkills; ++i) {
+        for (int i = 0; i < numOfSkills; ++i)
+        {
             var skillData = Data.SkillDataParser.Instance.GetSkillData(_skillKeys[i]);
             _skillStatus[i] = new SkillStatus(skillData, 0);
         }
@@ -46,30 +54,39 @@ public class MonsterEntity : BattleEntity {
         Order = order;
     }
 
-    public override float GetFinalDefence() {
+    public override float GetFinalDefence()
+    {
         float defence = 1f + MathUtils.GetPercent(_monsterStatData.DefencePower);
         return defence;
     }
-    public void SetAnimationDelay(float amount) {
+
+    public void SetAnimationDelay(float amount)
+    {
         _animator.SetAnimationDelay(amount);
     }
 
-    private void OnAnimationEnd() {
+    private void OnAnimationEnd()
+    {
         IsAnimationEnd = true;
     }
 
-    public override bool KeyEquals(int key) {
+    public override bool KeyEquals(int key)
+    {
         return _monsterData.Key == key;
     }
 
-    public Data.SkillData GetCurrentSkillData() {
+    public Data.SkillData GetCurrentSkillData()
+    {
         int startIndex = _skillIndex;
 
-        while (true) {
-            if (_skillStatus[_skillIndex].remainTurnCount > 0) {
+        while (true)
+        {
+            if (_skillStatus[_skillIndex].remainTurnCount > 0)
+            {
                 ++_skillIndex;
             }
-            else {
+            else
+            {
                 break;
             }
 
@@ -79,13 +96,16 @@ public class MonsterEntity : BattleEntity {
         return _skillStatus[_skillIndex++].skillData;
     }
 
-    public override void DecreaseHP(int value) {
+    public override void DecreaseHP(int value)
+    {
         base.DecreaseHP(value);
         ChangeAnimationState("Hit", false, ChangeToIdle);
     }
 
-    private void ChangeToIdle() {
-        if (_curHP <= 0) {
+    private void ChangeToIdle()
+    {
+        if (_curHP <= 0)
+        {
             CanRemoveEntity = true;
         }
         ChangeAnimationState("Idle", true);

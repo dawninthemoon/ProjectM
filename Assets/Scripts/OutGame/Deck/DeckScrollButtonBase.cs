@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace OutGame
@@ -11,7 +9,7 @@ namespace OutGame
 
         public event System.Action<int> OnClickEvent;
 
-        public virtual void Init( int index, int objectKey, System.Action<int> onClickCallback )
+        public virtual void Init(int index, int objectKey, System.Action<int> onClickCallback)
         {
             this.objectKey = objectKey;
             this.index = index;
@@ -21,7 +19,7 @@ namespace OutGame
 
         public virtual void OnClick()
         {
-            OnClickEvent?.Invoke( objectKey );
+            OnClickEvent?.Invoke(objectKey);
         }
     }
 }
