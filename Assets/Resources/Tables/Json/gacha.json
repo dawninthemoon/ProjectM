@@ -1,0 +1,34 @@
+{
+	"gacha": [
+		{
+			"key": 1,
+			"name": "통상 가챠",
+			"sequence": 301,
+			"cashType": "Cash",
+			"cashValue": 300,
+			"couponKey": "test",
+			"couponMileageStack": 0,
+			"randomBoxKey": 10,
+			"mileageKey": 0,
+			"mileageValue": 0,
+			"advantageMileageValue": 0,
+			"freeGachaType": 0,
+			"freeGachaValue": 0
+		},
+		{
+			"key": 1,
+			"name": "프랜드 가챠",
+			"sequence": 302,
+			"cashType": "Cash",
+			"cashValue": 100,
+			"couponKey": "test",
+			"couponMileageStack": 0,
+			"randomBoxKey": 20,
+			"mileageKey": 0,
+			"mileageValue": 0,
+			"advantageMileageValue": 0,
+			"freeGachaType": 0,
+			"freeGachaValue": 0
+		}
+	]
+}

@@ -1,0 +1,459 @@
+{
+	"randomBox": [
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 23001,
+			"count": 1,
+			"probility": 77778
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 23002,
+			"count": 1,
+			"probility": 77778
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 23003,
+			"count": 1,
+			"probility": 77778
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 23004,
+			"count": 1,
+			"probility": 77778
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 23005,
+			"count": 1,
+			"probility": 77778
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 23006,
+			"count": 1,
+			"probility": 77778
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 23007,
+			"count": 1,
+			"probility": 77778
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 23008,
+			"count": 1,
+			"probility": 77778
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 23009,
+			"count": 1,
+			"probility": 77778
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 24001,
+			"count": 1,
+			"probility": 22728
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 24002,
+			"count": 1,
+			"probility": 22728
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 24003,
+			"count": 1,
+			"probility": 22728
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 24004,
+			"count": 1,
+			"probility": 22728
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 24005,
+			"count": 1,
+			"probility": 22728
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 24006,
+			"count": 1,
+			"probility": 22728
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 24007,
+			"count": 1,
+			"probility": 22728
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 24008,
+			"count": 1,
+			"probility": 22728
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 24009,
+			"count": 1,
+			"probility": 22728
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 24010,
+			"count": 1,
+			"probility": 22728
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 24011,
+			"count": 1,
+			"probility": 22728
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 25001,
+			"count": 1,
+			"probility": 3847
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 25002,
+			"count": 1,
+			"probility": 3847
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 25003,
+			"count": 1,
+			"probility": 3847
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 25004,
+			"count": 1,
+			"probility": 3847
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 25005,
+			"count": 1,
+			"probility": 3847
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 25006,
+			"count": 1,
+			"probility": 3847
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 25007,
+			"count": 1,
+			"probility": 3847
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 25008,
+			"count": 1,
+			"probility": 3847
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 25009,
+			"count": 1,
+			"probility": 3847
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 25010,
+			"count": 1,
+			"probility": 3847
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 25011,
+			"count": 1,
+			"probility": 3847
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 25012,
+			"count": 1,
+			"probility": 3847
+		},
+		{
+			"key": 10,
+			"rewardType": "Item",
+			"rewardKey": 25013,
+			"count": 1,
+			"probility": 3847
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 22001,
+			"count": 1,
+			"probility": 63637
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 22002,
+			"count": 1,
+			"probility": 63637
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 22003,
+			"count": 1,
+			"probility": 63637
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 22004,
+			"count": 1,
+			"probility": 63637
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 22005,
+			"count": 1,
+			"probility": 63637
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 22006,
+			"count": 1,
+			"probility": 63637
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 22007,
+			"count": 1,
+			"probility": 63637
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 22008,
+			"count": 1,
+			"probility": 63637
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 22009,
+			"count": 1,
+			"probility": 63637
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 22010,
+			"count": 1,
+			"probility": 63637
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 22011,
+			"count": 1,
+			"probility": 63637
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 23001,
+			"count": 1,
+			"probility": 27778
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 23002,
+			"count": 1,
+			"probility": 27778
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 23003,
+			"count": 1,
+			"probility": 27778
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 23004,
+			"count": 1,
+			"probility": 27778
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 23005,
+			"count": 1,
+			"probility": 27778
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 23006,
+			"count": 1,
+			"probility": 27778
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 23007,
+			"count": 1,
+			"probility": 27778
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 23008,
+			"count": 1,
+			"probility": 27778
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 23009,
+			"count": 1,
+			"probility": 27778
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 24001,
+			"count": 1,
+			"probility": 4546
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 24002,
+			"count": 1,
+			"probility": 4546
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 24003,
+			"count": 1,
+			"probility": 4546
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 24004,
+			"count": 1,
+			"probility": 4546
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 24005,
+			"count": 1,
+			"probility": 4546
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 24006,
+			"count": 1,
+			"probility": 4546
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 24007,
+			"count": 1,
+			"probility": 4546
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 24008,
+			"count": 1,
+			"probility": 4546
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 24009,
+			"count": 1,
+			"probility": 4546
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 24010,
+			"count": 1,
+			"probility": 4546
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 24011,
+			"count": 1,
+			"probility": 4546
+		},
+		{
+			"key": 20,
+			"rewardType": "Item",
+			"rewardKey": 21001,
+			"count": 1,
+			"probility": 2500
+		}
+	]
+}

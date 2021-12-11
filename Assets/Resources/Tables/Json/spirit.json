@@ -1,0 +1,386 @@
+{
+	"spirit": [
+		{
+			"key": 25001,
+			"name": "아가사",
+			"subName": "전투수녀",
+			"grade": 5,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SSR_Agatha_Idle1"
+		},
+		{
+			"key": 25002,
+			"name": "아냐",
+			"subName": "호랑이소녀",
+			"grade": 5,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SSR_Annya_Idle1"
+		},
+		{
+			"key": 25003,
+			"name": "뷰테인",
+			"subName": "화룡",
+			"grade": 5,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SSR_Butane_Idle1"
+		},
+		{
+			"key": 25004,
+			"name": "하르크스",
+			"subName": "상어기사",
+			"grade": 5,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SSR_Harks_Idle1"
+		},
+		{
+			"key": 25005,
+			"name": "헤레시아",
+			"subName": "창백의 사제",
+			"grade": 5,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SSR_Heresia_Idle1"
+		},
+		{
+			"key": 25006,
+			"name": "카부토",
+			"subName": "사도류",
+			"grade": 5,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SSR_Kabuto_Idle1"
+		},
+		{
+			"key": 25007,
+			"name": "칼리브르",
+			"subName": "교수",
+			"grade": 5,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SSR_Kalibr_Idle1"
+		},
+		{
+			"key": 25008,
+			"name": "골드피쉬",
+			"subName": "킹",
+			"grade": 5,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SSR_KingGoldfish_Idle1"
+		},
+		{
+			"key": 25009,
+			"name": "벤더 경",
+			"subName": "골렘기사",
+			"grade": 5,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SSR_KnightBender_Idle1"
+		},
+		{
+			"key": 25010,
+			"name": "리자",
+			"subName": "구멍뚫는",
+			"grade": 5,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SSR_Lizar_Idle1"
+		},
+		{
+			"key": 25011,
+			"name": "릴리스",
+			"subName": "하피퀸",
+			"grade": 5,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SSR_Rilit_Idle1"
+		},
+		{
+			"key": 25012,
+			"name": "백설",
+			"subName": "제설의 마녀",
+			"grade": 5,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SSR_Snowwhite_Idle1"
+		},
+		{
+			"key": 25013,
+			"name": "티스푼",
+			"subName": "종기사",
+			"grade": 5,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SSR_Teaspoon_Idle1"
+		},
+		{
+			"key": 24001,
+			"name": "그로드낙",
+			"subName": "꼬리자르는",
+			"grade": 4,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SR_Grodnak_Idle1"
+		},
+		{
+			"key": 24002,
+			"name": "해럴드",
+			"subName": "경비대장",
+			"grade": 4,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SR_Harold_Idle1"
+		},
+		{
+			"key": 24003,
+			"name": "버섯소녀",
+			"grade": 4,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SR_MushroomGirl_Idle1"
+		},
+		{
+			"key": 24004,
+			"name": "낸시 오 랜턴",
+			"grade": 4,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SR_Nancy_Idle1"
+		},
+		{
+			"key": 24005,
+			"name": "리퍼",
+			"grade": 4,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SR_Reaper_Idle1"
+		},
+		{
+			"key": 24006,
+			"name": "스칼렛",
+			"subName": "허수아비 마녀",
+			"grade": 4,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SR_Scallet_Idle1"
+		},
+		{
+			"key": 24007,
+			"name": "해마기사",
+			"grade": 4,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SR_SeaKnight_Idle1"
+		},
+		{
+			"key": 24008,
+			"name": "셀린",
+			"subName": "의무병",
+			"grade": 4,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SR_Sellin_Idle1"
+		},
+		{
+			"key": 24009,
+			"name": "싸리",
+			"subName": "나무소녀",
+			"grade": 4,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SR_Ssari_Idle1"
+		},
+		{
+			"key": 24010,
+			"name": "탑골렘",
+			"grade": 4,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SR_TowerGolem_Idle1"
+		},
+		{
+			"key": 24011,
+			"name": "비올레타",
+			"subName": "골목대장",
+			"grade": 4,
+			"class": "None",
+			"gender": 0,
+			"iconName": "SR_Violleta_Idle1"
+		},
+		{
+			"key": 23001,
+			"name": "촛농소녀",
+			"grade": 3,
+			"class": "None",
+			"gender": 0,
+			"iconName": "R_CandleGirl_Idle1"
+		},
+		{
+			"key": 23002,
+			"name": "녹구렁이",
+			"grade": 3,
+			"class": "None",
+			"gender": 0,
+			"iconName": "R_FairySnake_Idle1"
+		},
+		{
+			"key": 23003,
+			"name": "개굴",
+			"subName": "견습 마법사다",
+			"grade": 3,
+			"class": "None",
+			"gender": 0,
+			"iconName": "R_FrogNovice_Idle1"
+		},
+		{
+			"key": 23004,
+			"name": "먹구르미",
+			"grade": 3,
+			"class": "None",
+			"gender": 0,
+			"iconName": "R_LambStorm_Idle1"
+		},
+		{
+			"key": 23005,
+			"name": "뽀무",
+			"grade": 3,
+			"class": "None",
+			"gender": 0,
+			"iconName": "R_Pomu_Idle1"
+		},
+		{
+			"key": 23006,
+			"name": "퀴드",
+			"grade": 3,
+			"class": "None",
+			"gender": 0,
+			"iconName": "R_Quid_Idle1"
+		},
+		{
+			"key": 23007,
+			"name": "지팡이 슬라임",
+			"grade": 3,
+			"class": "None",
+			"gender": 0,
+			"iconName": "R_StaffSlime_Idle1"
+		},
+		{
+			"key": 23008,
+			"name": "검 슬라임",
+			"grade": 3,
+			"class": "None",
+			"gender": 0,
+			"iconName": "R_SwordSlime_Idle1"
+		},
+		{
+			"key": 23009,
+			"name": "트레드밀",
+			"subName": "교수",
+			"grade": 3,
+			"class": "None",
+			"gender": 0,
+			"iconName": "R_Treadmill_Idle1"
+		},
+		{
+			"key": 22001,
+			"name": "페어리",
+			"grade": 2,
+			"class": "None",
+			"gender": 0,
+			"iconName": "UC_Fairy_Idle1"
+		},
+		{
+			"key": 22002,
+			"name": "보자기 유령",
+			"grade": 2,
+			"class": "None",
+			"gender": 0,
+			"iconName": "UC_Ghost_Idle1"
+		},
+		{
+			"key": 22003,
+			"name": "하피 새끼",
+			"grade": 2,
+			"class": "None",
+			"gender": 0,
+			"iconName": "UC_HarpyChick_Idle1"
+		},
+		{
+			"key": 22004,
+			"name": "소악마",
+			"grade": 2,
+			"class": "None",
+			"gender": 0,
+			"iconName": "UC_LittleDevil_Idle1"
+		},
+		{
+			"key": 22005,
+			"name": "버섯돌이",
+			"grade": 2,
+			"class": "None",
+			"gender": 0,
+			"iconName": "UC_Mushsh_Idle1"
+		},
+		{
+			"key": 22006,
+			"name": "밤고양이",
+			"grade": 2,
+			"class": "None",
+			"gender": 0,
+			"iconName": "UC_NightWatch_Idle1"
+		},
+		{
+			"key": 22007,
+			"name": "슬라임",
+			"grade": 2,
+			"class": "None",
+			"gender": 0,
+			"iconName": "UC_Slime_Idle1"
+		},
+		{
+			"key": 22008,
+			"name": "눈병아리",
+			"grade": 2,
+			"class": "None",
+			"gender": 0,
+			"iconName": "UC_Snowbird_Idle1"
+		},
+		{
+			"key": 22009,
+			"name": "떠돌이 쥐",
+			"grade": 2,
+			"class": "None",
+			"gender": 0,
+			"iconName": "UC_WanderingMouse_Idle1"
+		},
+		{
+			"key": 22010,
+			"name": "녹뎅이",
+			"grade": 2,
+			"class": "None",
+			"gender": 0,
+			"iconName": "UC_WindBeetle_Idle1"
+		},
+		{
+			"key": 22011,
+			"name": "위습",
+			"grade": 2,
+			"class": "None",
+			"gender": 0,
+			"iconName": "UC_Wisp_Idle1"
+		},
+		{
+			"key": 21001,
+			"name": "골디",
+			"subName": "금붕어",
+			"grade": 1,
+			"class": "None",
+			"gender": 0,
+			"iconName": "C_Goldie_Idle1"
+		}
+	]
+}

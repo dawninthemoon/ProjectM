@@ -1,0 +1,967 @@
+{
+	"item": [
+		{
+			"key": 2101001,
+			"name": "고블린 마법사 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "pinky",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2101002,
+			"name": "변절한 마법사 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "wichi",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2102001,
+			"name": "고블린 마녀 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "pigeon",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2102002,
+			"name": "사체업자 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "mijery",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2103001,
+			"name": "고블린 불랭배 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "gusty",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2103002,
+			"name": "암흑가문 귀족 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "pinky",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2104001,
+			"name": "고블린 갱스터 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "wichi",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2104002,
+			"name": "블랙기업 공학자 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "pigeon",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2105001,
+			"name": "좀비 마법소녀 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "mijery",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2105002,
+			"name": "오염된 마법소녀 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "gusty",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2201001,
+			"name": "2성 마법사 A 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "pinky",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2201002,
+			"name": "2성 마법사 B 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "wichi",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2202001,
+			"name": "2성 마녀 A 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "pigeon",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2202002,
+			"name": "2성 마녀 B 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "mijery",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2203001,
+			"name": "2성 마전사 A 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "gusty",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2203002,
+			"name": "2성 마전사 B 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "pinky",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2204001,
+			"name": "2성 마법공학자 A 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "wichi",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2204002,
+			"name": "2성 마법공학자 B 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "pigeon",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2205001,
+			"name": "2성 마법 소녀 A 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "mijery",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2205002,
+			"name": "2성 마법 소녀 B 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "gusty",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2301001,
+			"name": "3성 마법사 A 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "pinky",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2301002,
+			"name": "3성 마법사 B 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "wichi",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2302001,
+			"name": "3성 마녀 A 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "pigeon",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2302002,
+			"name": "3성 마녀 B 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "mijery",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2303001,
+			"name": "3성 마전사 A 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "gusty",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2303002,
+			"name": "3성 마전사 B 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "pinky",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2304001,
+			"name": "3성 마법공학자 A 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "wichi",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2304002,
+			"name": "3성 마법공학자 B 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "pigeon",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2305001,
+			"name": "3성 마법 소녀 A 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "mijery",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2305002,
+			"name": "3성 마법 소녀 B 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "gusty",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2401001,
+			"name": "구스티 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "pinky",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2401002,
+			"name": "4성 마법사 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "wichi",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2402001,
+			"name": "마호 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "pigeon",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2402002,
+			"name": "4성 마녀 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "mijery",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2403001,
+			"name": "미제리 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "gusty",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2403002,
+			"name": "4성 마전사 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "pinky",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2404001,
+			"name": "피존 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "wichi",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2404002,
+			"name": "4성 마법공학자 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "pigeon",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2405001,
+			"name": "핑키 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "mijery",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2405002,
+			"name": "4성 마법소녀 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "gusty",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2411001,
+			"name": "최고 마법사 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "pinky",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2412001,
+			"name": "최고 마녀 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "wichi",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2413001,
+			"name": "최고 마전사 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "pigeon",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2414001,
+			"name": "카샤 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "mijery",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2415001,
+			"name": "최고 마법소녀 영혼석",
+			"description": "영혼석이다.",
+			"itemType": "Soul",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "gusty",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21001,
+			"name": "BirdSlime",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_BirdSlime",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21002,
+			"name": "BlueMush",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_BlueMush",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21003,
+			"name": "Charko",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_Charko",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21004,
+			"name": "Fairy",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_Fairy",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21005,
+			"name": "GhostA",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_GhostA",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21006,
+			"name": "GhostB",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_GhostB",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21007,
+			"name": "GhostC",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_GhostC",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21008,
+			"name": "GoldfishGirl",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_GoldfishGirl",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21009,
+			"name": "GreenMush",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_GreenMush",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21010,
+			"name": "Koakuma",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_Koakuma",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21011,
+			"name": "NightWatch",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_NightWatch",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21012,
+			"name": "Octopus",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_Octopus",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21013,
+			"name": "RedMush",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_RedMush",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21014,
+			"name": "RockBeetle",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_RockBeetle",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21015,
+			"name": "SeaKnight",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_SeaKnight",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21016,
+			"name": "Slime",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_Slime",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21017,
+			"name": "SnowBeetle",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_SnowBeetle",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21018,
+			"name": "Snowbird",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_Snowbird",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21019,
+			"name": "WanderingMouse",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_WanderingMouse",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21020,
+			"name": "WindBeetle",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_WindBeetle",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 21021,
+			"name": "Wisp",
+			"itemType": "Spirit",
+			"grade": 1,
+			"rarity": false,
+			"itemIcon": "Spirits_Normal_Wisp",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22001,
+			"name": "CandleGirl",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_CandleGirl",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22002,
+			"name": "FrogNovice",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_FrogNovice",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22003,
+			"name": "HamsterWizard",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_HamsterWizard",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22004,
+			"name": "HarpyDelivery",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_HarpyDelivery",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22005,
+			"name": "LizardMan",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_LizardMan",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22006,
+			"name": "MushroomGirl",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_MushroomGirl",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22007,
+			"name": "NightClock",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_NightClock",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22008,
+			"name": "PotionWorm",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_PotionWorm",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22009,
+			"name": "Reaper",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_Reaper",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22010,
+			"name": "Scarecrow",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_Scarecrow",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22011,
+			"name": "SlimePrincess",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_SlimePrincess",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22012,
+			"name": "SmokingWisp",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_SmokingWisp",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22013,
+			"name": "Squidrok",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_Squidrok",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22014,
+			"name": "StaffSlime",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_StaffSlime",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22015,
+			"name": "SwordSlime",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_SwordSlime",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22016,
+			"name": "WatchDog",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_WatchDog",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 22017,
+			"name": "WoodenGirl",
+			"itemType": "Spirit",
+			"grade": 2,
+			"rarity": false,
+			"itemIcon": "Spirits_Rare_WoodenGirl",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 23001,
+			"name": "Catssassin",
+			"itemType": "Spirit",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "Spirits_Epic_Catssassin",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 23002,
+			"name": "DeciduousWitch",
+			"itemType": "Spirit",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "Spirits_Epic_DeciduousWitch",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 23003,
+			"name": "FishKing",
+			"itemType": "Spirit",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "Spirits_Epic_FishKing",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 23004,
+			"name": "GoblinMage",
+			"itemType": "Spirit",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "Spirits_Epic_GoblinMage",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 23005,
+			"name": "HarpyStrike",
+			"itemType": "Spirit",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "Spirits_Epic_HarpyStrike",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 23006,
+			"name": "LambStorm",
+			"itemType": "Spirit",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "Spirits_Epic_LambStorm",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 23007,
+			"name": "Shakkk",
+			"itemType": "Spirit",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "Spirits_Epic_Shakkk",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 23008,
+			"name": "SlimeKnight",
+			"itemType": "Spirit",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "Spirits_Epic_SlimeKnight",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 23009,
+			"name": "SlimeMage",
+			"itemType": "Spirit",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "Spirits_Epic_SlimeMage",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 23010,
+			"name": "TeatimeKnight",
+			"itemType": "Spirit",
+			"grade": 3,
+			"rarity": false,
+			"itemIcon": "Spirits_Epic_TeatimeKnight",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 24001,
+			"name": "HarpyQueen",
+			"itemType": "Spirit",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "Spirits_Legendary_HarpyQueen",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 24002,
+			"name": "Salamander",
+			"itemType": "Spirit",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "Spirits_Legendary_Salamander",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 24003,
+			"name": "SisterAgatha",
+			"itemType": "Spirit",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "Spirits_Legendary_SisterAgatha",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 24004,
+			"name": "TheLich",
+			"itemType": "Spirit",
+			"grade": 4,
+			"rarity": false,
+			"itemIcon": "Spirits_Legendary_TheLich",
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 1,
+			"name": "최하급 성장석",
+			"description": "경험치 1,000 증가",
+			"itemType": "Grow",
+			"grade": 1,
+			"rarity": false,
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 2,
+			"name": "하급 성장석",
+			"description": "경험치 4,000 증가",
+			"itemType": "Grow",
+			"grade": 2,
+			"rarity": false,
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 3,
+			"name": "중급 성장석",
+			"description": "경험치 16,000 증가",
+			"itemType": "Grow",
+			"grade": 3,
+			"rarity": false,
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 4,
+			"name": "상급 성장석",
+			"description": "경험치 64,000 증가",
+			"itemType": "Grow",
+			"grade": 4,
+			"rarity": false,
+			"backgroundIcon": "null"
+		},
+		{
+			"key": 5,
+			"name": "최상급 성장석",
+			"description": "경험치 256,000 증가",
+			"itemType": "Grow",
+			"grade": 5,
+			"rarity": false,
+			"backgroundIcon": "null"
+		}
+	]
+}

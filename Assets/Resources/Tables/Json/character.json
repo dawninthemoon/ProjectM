@@ -1,0 +1,1318 @@
+{
+	"character": [
+		{
+			"Key": 101,
+			"Name": "미제리",
+			"SubName": "Guardian_Misery_Basic",
+			"Grade": 1,
+			"Class": "Guardian",
+			"Gender": "Female",
+			"SkillCard1Key": "[23000050,23000060,23000070]"
+		},
+		{
+			"Key": 102,
+			"Name": "피존",
+			"SubName": "Shooter_Pigeon_Basic",
+			"Grade": 1,
+			"Class": "Shooter",
+			"Gender": "Female",
+			"SkillCard1Key": "[24000010,24000020,23000010]"
+		},
+		{
+			"Key": 103,
+			"Name": "구스티",
+			"SubName": "Mage_Goosty_Basic",
+			"Grade": 1,
+			"Class": "Mage",
+			"Gender": "Female",
+			"SkillCard1Key": "[23000020,23000030,23000040]"
+		},
+		{
+			"Key": 104,
+			"Name": "핑키",
+			"SubName": "MagicalGirl_Pinky_Basic",
+			"Grade": 1,
+			"Class": "MagicGirl",
+			"Gender": "Female",
+			"SkillCard1Key": "[23000050,23000060,23000070]"
+		},
+		{
+			"Key": 105,
+			"Name": "카샤",
+			"SubName": "Shooter_Kasha_Basic",
+			"Grade": 1,
+			"Class": "Shooter",
+			"Gender": "Female",
+			"SkillCard1Key": "[24000010,24000020,23000010]"
+		},
+		{
+			"Key": 106,
+			"Name": "다래",
+			"SubName": "Mage_Darae_Basic",
+			"Grade": 1,
+			"Class": "Mage",
+			"Gender": "Female",
+			"SkillCard1Key": "[23000020,23000030,23000040]"
+		}
+	],
+	"characterStat": [
+		{
+			"Key": 101,
+			"Grade": 1,
+			"Level": 1,
+			"AttackPower": 14,
+			"BaseHP": 50,
+			"DefencePower": 65,
+			"Critical": 1000,
+			"CriticalDamage": 15000,
+			"MaxDraw": 5,
+			"MaxCost": 3
+		},
+		{
+			"Key": 102,
+			"Grade": 1,
+			"Level": 1,
+			"AttackPower": 14,
+			"BaseHP": 45,
+			"DefencePower": 28,
+			"Critical": 1000,
+			"CriticalDamage": 15000,
+			"MaxDraw": 5,
+			"MaxCost": 3
+		},
+		{
+			"Key": 103,
+			"Grade": 1,
+			"Level": 1,
+			"AttackPower": 18,
+			"BaseHP": 43,
+			"DefencePower": 23,
+			"Critical": 1000,
+			"CriticalDamage": 15000,
+			"MaxDraw": 5,
+			"MaxCost": 3
+		},
+		{
+			"Key": 104,
+			"Grade": 1,
+			"Level": 1,
+			"AttackPower": 16,
+			"BaseHP": 46,
+			"DefencePower": 13,
+			"Critical": 1000,
+			"CriticalDamage": 15000,
+			"MaxDraw": 5,
+			"MaxCost": 3
+		},
+		{
+			"Key": 105,
+			"Grade": 1,
+			"Level": 1,
+			"AttackPower": 15,
+			"BaseHP": 47,
+			"DefencePower": 36,
+			"Critical": 1000,
+			"CriticalDamage": 15000,
+			"MaxDraw": 5,
+			"MaxCost": 3
+		},
+		{
+			"Key": 106,
+			"Grade": 1,
+			"Level": 1,
+			"AttackPower": 16,
+			"BaseHP": 46,
+			"DefencePower": 48,
+			"Critical": 1000,
+			"CriticalDamage": 15000,
+			"MaxDraw": 5,
+			"MaxCost": 3
+		}
+	],
+	"spirit": [
+		{
+			"Key": 25001,
+			"Name": "아가사",
+			"SubName": "전투수녀",
+			"Grade": 5,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SSR_Agatha_Idle1"
+		},
+		{
+			"Key": 25002,
+			"Name": "아냐",
+			"SubName": "호랑이소녀",
+			"Grade": 5,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SSR_Annya_Idle1"
+		},
+		{
+			"Key": 25003,
+			"Name": "뷰테인",
+			"SubName": "화룡",
+			"Grade": 5,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SSR_Butane_Idle1"
+		},
+		{
+			"Key": 25004,
+			"Name": "하르크스",
+			"SubName": "상어기사",
+			"Grade": 5,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SSR_Harks_Idle1"
+		},
+		{
+			"Key": 25005,
+			"Name": "헤레시아",
+			"SubName": "창백의 사제",
+			"Grade": 5,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SSR_Heresia_Idle1"
+		},
+		{
+			"Key": 25006,
+			"Name": "카부토",
+			"SubName": "사도류",
+			"Grade": 5,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SSR_Kabuto_Idle1"
+		},
+		{
+			"Key": 25007,
+			"Name": "칼리브르",
+			"SubName": "교수",
+			"Grade": 5,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SSR_Kalibr_Idle1"
+		},
+		{
+			"Key": 25008,
+			"Name": "골드피쉬",
+			"SubName": "킹",
+			"Grade": 5,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SSR_KingGoldfish_Idle1"
+		},
+		{
+			"Key": 25009,
+			"Name": "벤더 경",
+			"SubName": "골렘기사",
+			"Grade": 5,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SSR_KnightBender_Idle1"
+		},
+		{
+			"Key": 25010,
+			"Name": "리자",
+			"SubName": "구멍뚫는",
+			"Grade": 5,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SSR_Lizar_Idle1"
+		},
+		{
+			"Key": 25011,
+			"Name": "릴리스",
+			"SubName": "하피퀸",
+			"Grade": 5,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SSR_Rilit_Idle1"
+		},
+		{
+			"Key": 25012,
+			"Name": "백설",
+			"SubName": "제설의 마녀",
+			"Grade": 5,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SSR_Snowwhite_Idle1"
+		},
+		{
+			"Key": 25013,
+			"Name": "티스푼",
+			"SubName": "종기사",
+			"Grade": 5,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SSR_Teaspoon_Idle1"
+		},
+		{
+			"Key": 24001,
+			"Name": "그로드낙",
+			"SubName": "꼬리자르는",
+			"Grade": 4,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SR_Grodnak_Idle1"
+		},
+		{
+			"Key": 24002,
+			"Name": "해럴드",
+			"SubName": "경비대장",
+			"Grade": 4,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SR_Harold_Idle1"
+		},
+		{
+			"Key": 24003,
+			"Name": "버섯소녀",
+			"Grade": 4,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SR_MushroomGirl_Idle1"
+		},
+		{
+			"Key": 24004,
+			"Name": "낸시 오 랜턴",
+			"Grade": 4,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SR_Nancy_Idle1"
+		},
+		{
+			"Key": 24005,
+			"Name": "리퍼",
+			"Grade": 4,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SR_Reaper_Idle1"
+		},
+		{
+			"Key": 24006,
+			"Name": "스칼렛",
+			"SubName": "허수아비 마녀",
+			"Grade": 4,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SR_Scallet_Idle1"
+		},
+		{
+			"Key": 24007,
+			"Name": "해마기사",
+			"Grade": 4,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SR_SeaKnight_Idle1"
+		},
+		{
+			"Key": 24008,
+			"Name": "셀린",
+			"SubName": "의무병",
+			"Grade": 4,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SR_Sellin_Idle1"
+		},
+		{
+			"Key": 24009,
+			"Name": "싸리",
+			"SubName": "나무소녀",
+			"Grade": 4,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SR_Ssari_Idle1"
+		},
+		{
+			"Key": 24010,
+			"Name": "탑골렘",
+			"Grade": 4,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SR_TowerGolem_Idle1"
+		},
+		{
+			"Key": 24011,
+			"Name": "비올레타",
+			"SubName": "골목대장",
+			"Grade": 4,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "SR_Violleta_Idle1"
+		},
+		{
+			"Key": 23001,
+			"Name": "촛농소녀",
+			"Grade": 3,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "R_CandleGirl_Idle1"
+		},
+		{
+			"Key": 23002,
+			"Name": "녹구렁이",
+			"Grade": 3,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "R_FairySnake_Idle1"
+		},
+		{
+			"Key": 23003,
+			"Name": "개굴",
+			"SubName": "견습 마법사다",
+			"Grade": 3,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "R_FrogNovice_Idle1"
+		},
+		{
+			"Key": 23004,
+			"Name": "먹구르미",
+			"Grade": 3,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "R_LambStorm_Idle1"
+		},
+		{
+			"Key": 23005,
+			"Name": "뽀무",
+			"Grade": 3,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "R_Pomu_Idle1"
+		},
+		{
+			"Key": 23006,
+			"Name": "퀴드",
+			"Grade": 3,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "R_Quid_Idle1"
+		},
+		{
+			"Key": 23007,
+			"Name": "지팡이 슬라임",
+			"Grade": 3,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "R_StaffSlime_Idle1"
+		},
+		{
+			"Key": 23008,
+			"Name": "검 슬라임",
+			"Grade": 3,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "R_SwordSlime_Idle1"
+		},
+		{
+			"Key": 23009,
+			"Name": "트레드밀",
+			"SubName": "교수",
+			"Grade": 3,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "R_Treadmill_Idle1"
+		},
+		{
+			"Key": 22001,
+			"Name": "페어리",
+			"Grade": 2,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "UC_Fairy_Idle1"
+		},
+		{
+			"Key": 22002,
+			"Name": "보자기 유령",
+			"Grade": 2,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "UC_Ghost_Idle1"
+		},
+		{
+			"Key": 22003,
+			"Name": "하피 새끼",
+			"Grade": 2,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "UC_HarpyChick_Idle1"
+		},
+		{
+			"Key": 22004,
+			"Name": "소악마",
+			"Grade": 2,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "UC_LittleDevil_Idle1"
+		},
+		{
+			"Key": 22005,
+			"Name": "버섯돌이",
+			"Grade": 2,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "UC_Mushsh_Idle1"
+		},
+		{
+			"Key": 22006,
+			"Name": "밤고양이",
+			"Grade": 2,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "UC_NightWatch_Idle1"
+		},
+		{
+			"Key": 22007,
+			"Name": "슬라임",
+			"Grade": 2,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "UC_Slime_Idle1"
+		},
+		{
+			"Key": 22008,
+			"Name": "눈병아리",
+			"Grade": 2,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "UC_Snowbird_Idle1"
+		},
+		{
+			"Key": 22009,
+			"Name": "떠돌이 쥐",
+			"Grade": 2,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "UC_WanderingMouse_Idle1"
+		},
+		{
+			"Key": 22010,
+			"Name": "녹뎅이",
+			"Grade": 2,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "UC_WindBeetle_Idle1"
+		},
+		{
+			"Key": 22011,
+			"Name": "위습",
+			"Grade": 2,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "UC_Wisp_Idle1"
+		},
+		{
+			"Key": 21001,
+			"Name": "골디",
+			"SubName": "금붕어",
+			"Grade": 1,
+			"Class": "None",
+			"Gender": 0,
+			"IconName": "C_Goldie_Idle1"
+		}
+	],
+	"spiritExp": [
+		{
+			"Grade": 1,
+			"Level": 1,
+			"MaxExp": 200
+		},
+		{
+			"Grade": 1,
+			"Level": 2,
+			"MaxExp": 300
+		},
+		{
+			"Grade": 1,
+			"Level": 3,
+			"MaxExp": 450
+		},
+		{
+			"Grade": 1,
+			"Level": 4,
+			"MaxExp": 650
+		},
+		{
+			"Grade": 1,
+			"Level": 5,
+			"MaxExp": 900
+		},
+		{
+			"Grade": 1,
+			"Level": 6,
+			"MaxExp": 1200
+		},
+		{
+			"Grade": 1,
+			"Level": 7,
+			"MaxExp": 1550
+		},
+		{
+			"Grade": 1,
+			"Level": 8,
+			"MaxExp": 1950
+		},
+		{
+			"Grade": 1,
+			"Level": 9,
+			"MaxExp": 2400
+		},
+		{
+			"Grade": 1,
+			"Level": 10,
+			"MaxExp": 2900
+		},
+		{
+			"Grade": 1,
+			"Level": 11,
+			"MaxExp": 3450
+		},
+		{
+			"Grade": 1,
+			"Level": 12,
+			"MaxExp": 4050
+		},
+		{
+			"Grade": 1,
+			"Level": 13,
+			"MaxExp": 4700
+		},
+		{
+			"Grade": 1,
+			"Level": 14,
+			"MaxExp": 5400
+		},
+		{
+			"Grade": 1,
+			"Level": 15,
+			"MaxExp": 6150
+		},
+		{
+			"Grade": 1,
+			"Level": 16,
+			"MaxExp": 6950
+		},
+		{
+			"Grade": 1,
+			"Level": 17,
+			"MaxExp": 7800
+		},
+		{
+			"Grade": 1,
+			"Level": 18,
+			"MaxExp": 8700
+		},
+		{
+			"Grade": 1,
+			"Level": 19,
+			"MaxExp": 9650
+		},
+		{
+			"Grade": 1,
+			"Level": 20,
+			"MaxExp": 10650
+		},
+		{
+			"Grade": 1,
+			"Level": 21,
+			"MaxExp": 11700
+		},
+		{
+			"Grade": 1,
+			"Level": 22,
+			"MaxExp": 12800
+		},
+		{
+			"Grade": 1,
+			"Level": 23,
+			"MaxExp": 13950
+		},
+		{
+			"Grade": 1,
+			"Level": 24,
+			"MaxExp": 15150
+		},
+		{
+			"Grade": 1,
+			"Level": 25,
+			"MaxExp": 16400
+		},
+		{
+			"Grade": 1,
+			"Level": 26,
+			"MaxExp": 17700
+		},
+		{
+			"Grade": 1,
+			"Level": 27,
+			"MaxExp": 19050
+		},
+		{
+			"Grade": 1,
+			"Level": 28,
+			"MaxExp": 20450
+		},
+		{
+			"Grade": 1,
+			"Level": 29,
+			"MaxExp": 21900
+		},
+		{
+			"Grade": 1,
+			"Level": 30,
+			"MaxExp": 23400
+		},
+		{
+			"Grade": 1,
+			"Level": 31,
+			"MaxExp": 24950
+		},
+		{
+			"Grade": 1,
+			"Level": 32,
+			"MaxExp": 26550
+		},
+		{
+			"Grade": 1,
+			"Level": 33,
+			"MaxExp": 28200
+		},
+		{
+			"Grade": 1,
+			"Level": 34,
+			"MaxExp": 29900
+		},
+		{
+			"Grade": 1,
+			"Level": 35,
+			"MaxExp": 31650
+		},
+		{
+			"Grade": 1,
+			"Level": 36,
+			"MaxExp": 33450
+		},
+		{
+			"Grade": 1,
+			"Level": 37,
+			"MaxExp": 35300
+		},
+		{
+			"Grade": 1,
+			"Level": 38,
+			"MaxExp": 37200
+		},
+		{
+			"Grade": 1,
+			"Level": 39,
+			"MaxExp": 39150
+		},
+		{
+			"Grade": 1,
+			"Level": 40,
+			"MaxExp": 41150
+		},
+		{
+			"Grade": 1,
+			"Level": 41,
+			"MaxExp": 43200
+		},
+		{
+			"Grade": 1,
+			"Level": 42,
+			"MaxExp": 45300
+		},
+		{
+			"Grade": 1,
+			"Level": 43,
+			"MaxExp": 47450
+		},
+		{
+			"Grade": 1,
+			"Level": 44,
+			"MaxExp": 49650
+		},
+		{
+			"Grade": 1,
+			"Level": 45,
+			"MaxExp": 51900
+		},
+		{
+			"Grade": 1,
+			"Level": 46,
+			"MaxExp": 54200
+		},
+		{
+			"Grade": 1,
+			"Level": 47,
+			"MaxExp": 56550
+		},
+		{
+			"Grade": 1,
+			"Level": 48,
+			"MaxExp": 58950
+		},
+		{
+			"Grade": 1,
+			"Level": 49,
+			"MaxExp": 61400
+		},
+		{
+			"Grade": 1,
+			"Level": 50,
+			"MaxExp": 63900
+		},
+		{
+			"Grade": 1,
+			"Level": 51,
+			"MaxExp": 66450
+		},
+		{
+			"Grade": 1,
+			"Level": 52,
+			"MaxExp": 69050
+		},
+		{
+			"Grade": 1,
+			"Level": 53,
+			"MaxExp": 71700
+		},
+		{
+			"Grade": 1,
+			"Level": 54,
+			"MaxExp": 74400
+		},
+		{
+			"Grade": 1,
+			"Level": 55,
+			"MaxExp": 77150
+		},
+		{
+			"Grade": 1,
+			"Level": 56,
+			"MaxExp": 79950
+		},
+		{
+			"Grade": 1,
+			"Level": 57,
+			"MaxExp": 82800
+		},
+		{
+			"Grade": 1,
+			"Level": 58,
+			"MaxExp": 85700
+		},
+		{
+			"Grade": 1,
+			"Level": 59,
+			"MaxExp": 88650
+		},
+		{
+			"Grade": 1,
+			"Level": 60,
+			"MaxExp": 91650
+		}
+	],
+	"skill": [
+		{
+			"Key": 1,
+			"Name": "스킬 1",
+			"IconKey": "RedDragon",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 2,
+			"Name": "스킬 2",
+			"IconKey": "TheLich",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 3,
+			"Name": "스킬 3",
+			"IconKey": "Catssassin",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 4,
+			"Name": "스킬 4",
+			"IconKey": "FishKing",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 5,
+			"Name": "스킬 5",
+			"IconKey": "GoblinMage",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 6,
+			"Name": "스킬 6",
+			"IconKey": "HarpyStrike",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 7,
+			"Name": "스킬 7",
+			"IconKey": "NightClock",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 8,
+			"Name": "스킬 8",
+			"IconKey": "SlimeKnight",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 9,
+			"Name": "스킬 9",
+			"IconKey": "SlimeMage",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 10,
+			"Name": "스킬 10",
+			"IconKey": "SlimePrincess",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 11,
+			"Name": "스킬 11",
+			"IconKey": "TeaSpoonKnight",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 12,
+			"Name": "스킬 12",
+			"IconKey": "WanderingRabbit",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 13,
+			"Name": "스킬 13",
+			"IconKey": "SheepHug",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 14,
+			"Name": "스킬 14",
+			"IconKey": "SmokingWisp",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 15,
+			"Name": "스킬 15",
+			"IconKey": "SnowBeetle",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 101,
+			"Name": "고블린 총격",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 102,
+			"Name": "고블린 더블샷",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 201,
+			"Name": "고블린 타격",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 202,
+			"Name": "고블린 강타",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 301,
+			"Name": "고블린 마법 공격",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		},
+		{
+			"Key": 302,
+			"Name": "고블린 광역 공격",
+			"SkillType": 0,
+			"Cost": 0,
+			"CastType": 0,
+			"EnemyTargetType": 0,
+			"EnemyTargetCount": 0,
+			"AllyTargetType": 0,
+			"AllyTargetCount": 0,
+			"AttackRatio": 0,
+			"HealRatio": 0,
+			"Shield": 0,
+			"Shield_ValueType": 0,
+			"Draw": 1,
+			"Draw_DeckType": 0,
+			"Draw_TargetType": 0,
+			"GainCost": 0,
+			"Excluded": 0,
+			"Disposable": 0,
+			"AddCard": "null",
+			"Shuffle_Deck": "null"
+		}
+	]
+}

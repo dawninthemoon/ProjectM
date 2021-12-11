@@ -1,0 +1,76 @@
+{
+	"characterStat": [
+		{
+			"key": 101,
+			"grade": 1,
+			"level": 1,
+			"attackPower": 14,
+			"baseHP": 50,
+			"defencePower": 65,
+			"critical": 1000,
+			"criticalDamage": 15000,
+			"maxDraw": 5,
+			"maxCost": 3
+		},
+		{
+			"key": 102,
+			"grade": 1,
+			"level": 1,
+			"attackPower": 14,
+			"baseHP": 45,
+			"defencePower": 28,
+			"critical": 1000,
+			"criticalDamage": 15000,
+			"maxDraw": 5,
+			"maxCost": 3
+		},
+		{
+			"key": 103,
+			"grade": 1,
+			"level": 1,
+			"attackPower": 18,
+			"baseHP": 43,
+			"defencePower": 23,
+			"critical": 1000,
+			"criticalDamage": 15000,
+			"maxDraw": 5,
+			"maxCost": 3
+		},
+		{
+			"key": 104,
+			"grade": 1,
+			"level": 1,
+			"attackPower": 16,
+			"baseHP": 46,
+			"defencePower": 13,
+			"critical": 1000,
+			"criticalDamage": 15000,
+			"maxDraw": 5,
+			"maxCost": 3
+		},
+		{
+			"key": 105,
+			"grade": 1,
+			"level": 1,
+			"attackPower": 15,
+			"baseHP": 47,
+			"defencePower": 36,
+			"critical": 1000,
+			"criticalDamage": 15000,
+			"maxDraw": 5,
+			"maxCost": 3
+		},
+		{
+			"key": 106,
+			"grade": 1,
+			"level": 1,
+			"attackPower": 16,
+			"baseHP": 46,
+			"defencePower": 48,
+			"critical": 1000,
+			"criticalDamage": 15000,
+			"maxDraw": 5,
+			"maxCost": 3
+		}
+	]
+}
