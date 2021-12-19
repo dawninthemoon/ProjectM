@@ -6,7 +6,6 @@ namespace FBControl
     public class FirebaseManager : MonoBehaviour
     {
         private static FirebaseManager instance;
-
         public static FirebaseManager Instance
         {
             get { return instance; }
@@ -31,8 +30,7 @@ namespace FBControl
             get { return userDB.userData; }
         }
 
-        private FirebaseAuthManager firebaseAuthManager = new FirebaseAuthManager();
-
+        [SerializeField] private FirebaseAuthManager firebaseAuthManager;
         public FirebaseAuthManager FirebaseAuthManager
         {
             get { return firebaseAuthManager; }

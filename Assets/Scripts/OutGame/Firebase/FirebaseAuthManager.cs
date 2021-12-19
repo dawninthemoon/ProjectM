@@ -1,15 +1,17 @@
 ﻿using Firebase.Auth;
 using UnityEngine;
+using System.Collections;
 
-// using GooglePlayGames;
-// using GooglePlayGames.BasicApi;
+using GooglePlayGames;
+using GooglePlayGames.BasicApi;
+using System.Security.Cryptography;
 //using AppleAuth.Interfaces;
 // using UnityEngine.SignInWithApple;
 //using AppleAuth.Extensions;
 
 namespace FBControl
 {
-    public class FirebaseAuthManager
+    public class FirebaseAuthManager : MonoBehaviour
     {
         private FirebaseAuth auth;
 
@@ -30,6 +32,7 @@ namespace FBControl
         public void Init()
         {
             auth = FirebaseAuth.DefaultInstance;
+            LoginProvider.InitLoginProvider();
         }
 
         public void LoginedLogin()
@@ -39,52 +42,61 @@ namespace FBControl
         }
 
 #if UNITY_ANDROID
-        public void GoogleLogined()
+        public void GoogleLogin()
         {
-            Debug.Log("FirebaseAuthManager GoogleLogined 여기서 안지나간다고?");
-        // StartCoroutine(TryFirebaseLogin());
+            Debug.Log("Try GoogleLogin");
+            PlayServiceLogin();
         }
 
         public void TryGoogleLogout()
+        {
+            if (Social.localUser.authenticated) // 로그인 되어 있다면
             {
-                if (Social.localUser.authenticated) // 로그인 되어 있다면
-                {
-                    // PlayGamesPlatform.Instance.SignOut(); // Google 로그아웃
-                    auth.SignOut(); // Firebase 로그아웃
-                }
+                // PlayGamesPlatform.Instance.SignOut(); // Google 로그아웃
+                auth.SignOut(); // Firebase 로그아웃
             }
+        }
 
-        // IEnumerator TryFirebaseLogin()
-        //     {
-        //         Debug.Log(" FirebaseAuthManager TryFirebaseLogin 여기서 안지나간다고?");
-        //         while (string.IsNullOrEmpty(((PlayGamesLocalUser)Social.localUser).GetIdToken()))
-        //             yield return null;
-        //         //yield return null;
-        //         string idToken = ((PlayGamesLocalUser)Social.localUser).GetIdToken();
+        public void PlayServiceLogin()
+        {
+            LoginProvider.LoginGoogle(result => {
+                if ( result )
+                {
+                    StartCoroutine(TryFirebaseGoogleLogin());
+                }
+            });
+        }
 
-        //         Debug.Log(" FirebaseAuthManager TryFirebaseLogin idToken : " + idToken);
+        private IEnumerator TryFirebaseGoogleLogin()
+        {
+            while (string.IsNullOrEmpty(((PlayGamesLocalUser)Social.localUser).GetIdToken()))
+                yield return null;
+            //yield return null;
+            string idToken = ((PlayGamesLocalUser)Social.localUser).GetIdToken();
 
-        //         Credential credential = GoogleAuthProvider.GetCredential(idToken, null);
-        //         auth.SignInWithCredentialAsync(credential).ContinueWith(task =>
-        //         {
-        //             if (task.IsCanceled)
-        //             {
-        //                 Debug.LogError("SignInWithCredentialAsync was canceled.");
-        //                 return;
-        //             }
-        //             if (task.IsFaulted)
-        //             {
-        //                 Debug.LogError("SignInWithCredentialAsync encountered an error: " + task.Exception);
-        //                 return;
-        //             }
+            Debug.Log(" FirebaseAuthManager TryFirebaseLogin idToken : " + idToken);
 
-        //             Debug.Log(" auth.CurrentUser.Email " + auth.CurrentUser.Email);
-        //             Debug.Log("Success!");
+            Credential credential = GoogleAuthProvider.GetCredential(idToken, null);
+            auth.SignInWithCredentialAsync(credential).ContinueWith(task =>
+            {
+                if (task.IsCanceled)
+                {
+                    Debug.LogError("SignInWithCredentialAsync was canceled.");
+                    return;
+                }
+                if (task.IsFaulted)
+                {
+                    Debug.LogError("SignInWithCredentialAsync encountered an error: " + task.Exception);
+                    return;
+                }
 
-        //             user = auth.CurrentUser;
-        //             isInit = true;
-        //         });
-        //     }
+                Debug.Log(" auth.CurrentUser.Email " + auth.CurrentUser.Email);
+                Debug.Log("Success!");
+
+                user = auth.CurrentUser;
+                isInit = true;
+            });
+        }
 #endif
 
         // public void AppleLogined(UserInfo userInfo, string rawNonce)

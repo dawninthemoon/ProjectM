@@ -21,6 +21,11 @@ namespace Title
             loginPopup.gameObject.SetActive(true);
             FirebaseManager.Instance.FirebaseAuthManager.LoginedAnonymous();
         }
+        public void OnClickGoogleLogin()
+        {
+            loginPopup.gameObject.SetActive(true);
+            FirebaseManager.Instance.FirebaseAuthManager.GoogleLogin();
+        }
 
         public void ToLobby()
         {

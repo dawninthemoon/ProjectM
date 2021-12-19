@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
-using Dataset;
+//using Dataset;
 
 namespace Table
 {
@@ -24,7 +24,7 @@ namespace Table
 
         public static readonly List<(Type, string)> ClientDataFiles = new List<(Type, string)>
         {
-            (typeof(ItemInfoGameData), "itemInfo"),
+            //(typeof(ItemInfoGameData), "itemInfo"),
         };
 
         private void LoadAllData()
