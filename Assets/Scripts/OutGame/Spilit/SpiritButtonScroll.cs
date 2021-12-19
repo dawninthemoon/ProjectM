@@ -1,7 +1,9 @@
 using Data;
 using FBControl;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace OutGame
 {
@@ -14,12 +16,21 @@ namespace OutGame
 
         [SerializeField] private SpiritButton[] spiritButtonPool;
 
+        [SerializeField] private RectTransform contentRectTransform;
+
         public void Start()
         {
-            Init();
-
             spilitInfoUI.OnDisableEvent += SetActive;
             spilitInfoUI.OnActiveEvent += SetDisable;
+
+            StartCoroutine(InitRoutine());
+        }
+
+        public IEnumerator InitRoutine()
+        {
+            Init();
+            yield return null;
+            LayoutRebuilder.ForceRebuildLayoutImmediate(contentRectTransform);
         }
 
         public void OnDestroy()

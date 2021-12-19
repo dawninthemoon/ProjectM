@@ -8,13 +8,11 @@ public class SubStagePage : MonoBehaviour
     public void SetActive(System.Action backButtonCallback)
     {
         gameObject.SetActive(true);
-        TopUIBackButton.Instance.AddCallback(() => { SetDiable(); backButtonCallback?.Invoke(); });
     }
 
     public void SetDiable()
     {
         gameObject.SetActive(false);
-        TopUIBackButton.Instance.PopCallback();
     }
 
     public void SetStage(int stage)
