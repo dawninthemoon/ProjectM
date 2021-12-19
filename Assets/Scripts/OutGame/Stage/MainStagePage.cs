@@ -10,13 +10,7 @@ public class MainStagePage : MonoBehaviour
 
     public void Start()
     {
-        TopUIBackButton.Instance.AddCallback(() => { SceneManager.LoadScene("Lobby"); });
         Init();
-    }
-
-    public void OnDestroy()
-    {
-        TopUIBackButton.Instance.PopCallback();
     }
 
     public void OpenSubStagePage(int stage)
