@@ -2,7 +2,7 @@
 	"skill": [
 		{
 			"key": 1,
-			"name": "스킬 1",
+			"nameKey": "스킬 1",
 			"iconKey": "RedDragon",
 			"skillType": 0,
 			"cost": 0,
@@ -26,7 +26,7 @@
 		},
 		{
 			"key": 2,
-			"name": "스킬 2",
+			"nameKey": "스킬 2",
 			"iconKey": "TheLich",
 			"skillType": 0,
 			"cost": 0,
@@ -50,7 +50,7 @@
 		},
 		{
 			"key": 3,
-			"name": "스킬 3",
+			"nameKey": "스킬 3",
 			"iconKey": "Catssassin",
 			"skillType": 0,
 			"cost": 0,
@@ -74,7 +74,7 @@
 		},
 		{
 			"key": 4,
-			"name": "스킬 4",
+			"nameKey": "스킬 4",
 			"iconKey": "FishKing",
 			"skillType": 0,
 			"cost": 0,
@@ -98,7 +98,7 @@
 		},
 		{
 			"key": 5,
-			"name": "스킬 5",
+			"nameKey": "스킬 5",
 			"iconKey": "GoblinMage",
 			"skillType": 0,
 			"cost": 0,
@@ -122,7 +122,7 @@
 		},
 		{
 			"key": 6,
-			"name": "스킬 6",
+			"nameKey": "스킬 6",
 			"iconKey": "HarpyStrike",
 			"skillType": 0,
 			"cost": 0,
@@ -146,7 +146,7 @@
 		},
 		{
 			"key": 7,
-			"name": "스킬 7",
+			"nameKey": "스킬 7",
 			"iconKey": "NightClock",
 			"skillType": 0,
 			"cost": 0,
@@ -170,7 +170,7 @@
 		},
 		{
 			"key": 8,
-			"name": "스킬 8",
+			"nameKey": "스킬 8",
 			"iconKey": "SlimeKnight",
 			"skillType": 0,
 			"cost": 0,
@@ -194,7 +194,7 @@
 		},
 		{
 			"key": 9,
-			"name": "스킬 9",
+			"nameKey": "스킬 9",
 			"iconKey": "SlimeMage",
 			"skillType": 0,
 			"cost": 0,
@@ -218,7 +218,7 @@
 		},
 		{
 			"key": 10,
-			"name": "스킬 10",
+			"nameKey": "스킬 10",
 			"iconKey": "SlimePrincess",
 			"skillType": 0,
 			"cost": 0,
@@ -242,7 +242,7 @@
 		},
 		{
 			"key": 11,
-			"name": "스킬 11",
+			"nameKey": "스킬 11",
 			"iconKey": "TeaSpoonKnight",
 			"skillType": 0,
 			"cost": 0,
@@ -266,7 +266,7 @@
 		},
 		{
 			"key": 12,
-			"name": "스킬 12",
+			"nameKey": "스킬 12",
 			"iconKey": "WanderingRabbit",
 			"skillType": 0,
 			"cost": 0,
@@ -290,7 +290,7 @@
 		},
 		{
 			"key": 13,
-			"name": "스킬 13",
+			"nameKey": "스킬 13",
 			"iconKey": "SheepHug",
 			"skillType": 0,
 			"cost": 0,
@@ -314,7 +314,7 @@
 		},
 		{
 			"key": 14,
-			"name": "스킬 14",
+			"nameKey": "스킬 14",
 			"iconKey": "SmokingWisp",
 			"skillType": 0,
 			"cost": 0,
@@ -338,7 +338,7 @@
 		},
 		{
 			"key": 15,
-			"name": "스킬 15",
+			"nameKey": "스킬 15",
 			"iconKey": "SnowBeetle",
 			"skillType": 0,
 			"cost": 0,
@@ -362,7 +362,7 @@
 		},
 		{
 			"key": 101,
-			"name": "고블린 총격",
+			"nameKey": "고블린 총격",
 			"skillType": 0,
 			"cost": 0,
 			"castType": 0,
@@ -385,7 +385,7 @@
 		},
 		{
 			"key": 102,
-			"name": "고블린 더블샷",
+			"nameKey": "고블린 더블샷",
 			"skillType": 0,
 			"cost": 0,
 			"castType": 0,
@@ -408,7 +408,7 @@
 		},
 		{
 			"key": 201,
-			"name": "고블린 타격",
+			"nameKey": "고블린 타격",
 			"skillType": 0,
 			"cost": 0,
 			"castType": 0,
@@ -431,7 +431,7 @@
 		},
 		{
 			"key": 202,
-			"name": "고블린 강타",
+			"nameKey": "고블린 강타",
 			"skillType": 0,
 			"cost": 0,
 			"castType": 0,
@@ -454,7 +454,7 @@
 		},
 		{
 			"key": 301,
-			"name": "고블린 마법 공격",
+			"nameKey": "고블린 마법 공격",
 			"skillType": 0,
 			"cost": 0,
 			"castType": 0,
@@ -477,7 +477,7 @@
 		},
 		{
 			"key": 302,
-			"name": "고블린 광역 공격",
+			"nameKey": "고블린 광역 공격",
 			"skillType": 0,
 			"cost": 0,
 			"castType": 0,
