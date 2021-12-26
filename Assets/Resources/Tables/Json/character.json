@@ -7,7 +7,11 @@
 			"grade": 1,
 			"classType": "Guardian",
 			"gender": "Female",
-			"skillCard1Key": "[23000050,23000060,23000070]"
+			"skillCard1Key": [
+				23000050,
+				23000060,
+				23000070
+			]
 		},
 		{
 			"key": 102,
@@ -16,7 +20,11 @@
 			"grade": 1,
 			"classType": "Shooter",
 			"gender": "Female",
-			"skillCard1Key": "[24000010,24000020,23000010]"
+			"skillCard1Key": [
+				24000010,
+				24000020,
+				23000010
+			]
 		},
 		{
 			"key": 103,
@@ -25,7 +33,11 @@
 			"grade": 1,
 			"classType": "Mage",
 			"gender": "Female",
-			"skillCard1Key": "[23000020,23000030,23000040]"
+			"skillCard1Key": [
+				23000020,
+				23000030,
+				23000040
+			]
 		},
 		{
 			"key": 104,
@@ -34,7 +46,11 @@
 			"grade": 1,
 			"classType": "MagicGirl",
 			"gender": "Female",
-			"skillCard1Key": "[23000050,23000060,23000070]"
+			"skillCard1Key": [
+				23000050,
+				23000060,
+				23000070
+			]
 		},
 		{
 			"key": 105,
@@ -43,7 +59,11 @@
 			"grade": 1,
 			"classType": "Shooter",
 			"gender": "Female",
-			"skillCard1Key": "[24000010,24000020,23000010]"
+			"skillCard1Key": [
+				24000010,
+				24000020,
+				23000010
+			]
 		},
 		{
 			"key": 106,
@@ -52,7 +72,11 @@
 			"grade": 1,
 			"classType": "Mage",
 			"gender": "Female",
-			"skillCard1Key": "[23000020,23000030,23000040]"
+			"skillCard1Key": [
+				23000020,
+				23000030,
+				23000040
+			]
 		}
 	]
 }

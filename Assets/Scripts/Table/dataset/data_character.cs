@@ -29,7 +29,7 @@ namespace Data
 
         public int GetKey()
         {
-            return grade;
+            return key;
         }
     }
 }

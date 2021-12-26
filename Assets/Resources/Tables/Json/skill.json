@@ -21,8 +21,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 2,
@@ -45,8 +49,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 3,
@@ -69,8 +77,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 4,
@@ -93,8 +105,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 5,
@@ -117,8 +133,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 6,
@@ -141,8 +161,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 7,
@@ -165,8 +189,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 8,
@@ -189,8 +217,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 9,
@@ -213,8 +245,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 10,
@@ -237,8 +273,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 11,
@@ -261,8 +301,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 12,
@@ -285,8 +329,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 13,
@@ -309,8 +357,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 14,
@@ -333,8 +385,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 15,
@@ -357,8 +413,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 101,
@@ -380,8 +440,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 102,
@@ -403,8 +467,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 201,
@@ -426,8 +494,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 202,
@@ -449,8 +521,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 301,
@@ -472,8 +548,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		},
 		{
 			"key": 302,
@@ -495,8 +575,12 @@
 			"gainCost": 0,
 			"excluded": 0,
 			"disposable": 0,
-			"addCard": "null",
-			"shuffle_Deck": "null"
+			"addCard": [
+				0
+			],
+			"shuffle_Deck": [
+				0
+			]
 		}
 	]
 }
