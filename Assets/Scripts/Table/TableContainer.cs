@@ -24,7 +24,15 @@ namespace Table
 
         public static readonly List<(Type, string)> ClientDataFiles = new List<(Type, string)>
         {
-            //(typeof(ItemInfoGameData), "itemInfo"),
+            (typeof(CharacterGameData), "character"),
+            (typeof(CharacterStatGameData), "characterStat"),
+            (typeof(GachaGameData), "gacha"),
+            (typeof(ItemInfoGameData), "itemInfo"),
+            (typeof(MonsterGameData), "monster"),
+            (typeof(RandomBoxGameData), "randomBox"),
+            (typeof(SkillGameData), "skill"),
+            (typeof(SpiritGameData), "spirit"),
+            (typeof(SpiritExpGameData), "spiritExp"),
         };
 
         private void LoadAllData()

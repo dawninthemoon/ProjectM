@@ -11,12 +11,11 @@ public class ClientDataLoader
     public static T[] Load<T>(string fileName)
     {
         return LoadJson<T>(fileName);
-
     }
 
     public static T[] LoadJson<T>(string fileName)
     {
-        TextAsset textAsset = Resources.Load<TextAsset>($"Tables/json/{fileName}");
+        TextAsset textAsset = Resources.Load<TextAsset>($"Tables/Json/{fileName}");
         string jsonString = textAsset.text;
 
         using (var reader = new JsonTextReader(new StringReader(jsonString)))
