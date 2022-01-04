@@ -6,7 +6,6 @@ namespace OutGame
     public class CharacterPreview : MonoBehaviour
     {
         [SerializeField] private Image characterImage;
-        [SerializeField] private NativeSizeImage nativeSizeImage;
 
         public void Start()
         {
@@ -17,8 +16,6 @@ namespace OutGame
         {
             characterImage.sprite
                 = ResourceManager.GetInstance().GetSprite(string.Format("Standing/Character_{0}", characterIndex));
-
-            nativeSizeImage.SetNativeSize();
         }
     }
 }

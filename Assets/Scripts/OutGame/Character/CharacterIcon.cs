@@ -1,14 +1,15 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace OutGame
 {
     public class CharacterIcon : MonoBehaviour
     {
-        [SerializeField] private NativeSizeImage characterImage;
+        [SerializeField] private Image characterImage;
 
         public void SetCharacter(int character)
         {
-            characterImage.SetSprite(ResourceManager.GetInstance().GetSprite(string.Format("Standing/Character_{0}", character)));
+            characterImage.sprite = ResourceManager.GetInstance().GetSprite(string.Format("Standing/Character_{0}", character));
         }
     }
 }

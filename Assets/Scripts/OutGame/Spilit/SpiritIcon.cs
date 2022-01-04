@@ -4,7 +4,6 @@ using UnityEngine.UI;
 public class SpiritIcon : MonoBehaviour
 {
     [SerializeField] private Image spritIcon;
-    [SerializeField] private NativeSizeImage nativeSizeImage;
 
     public void SetSpirit(int index)
     {
@@ -14,8 +13,6 @@ public class SpiritIcon : MonoBehaviour
             spritIcon.color = Color.clear;
         else
             spritIcon.color = Color.white;
-
-        nativeSizeImage?.SetNativeSize();
     }
 
     public void SetNull()
@@ -32,6 +29,5 @@ public class SpiritIcon : MonoBehaviour
             spritIcon.color = Color.clear;
         else
             spritIcon.color = Color.white;
-        nativeSizeImage?.SetNativeSize();
     }
 }

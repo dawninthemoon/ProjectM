@@ -8,7 +8,6 @@ namespace OutGame
     public class CharacterCard : MonoBehaviour
     {
         [SerializeField] private Image cardImage;
-        [SerializeField] private NativeSizeImage nativeSizeImage;
 
         [SerializeField] private Sprite[] cardSprites;
 
@@ -40,7 +39,6 @@ namespace OutGame
             }
 
             characterImage.transform.localPosition = Vector3.zero;
-            nativeSizeImage.SetNativeSize();
 
             //characterImage.rectTransform.position = characterCenter.position;
 
