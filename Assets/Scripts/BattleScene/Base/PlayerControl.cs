@@ -8,9 +8,10 @@ public class PlayerControl : EntityControl
 {
     [SerializeField] private int[] _characterKeys = null;
     [SerializeField] private SkillDeck _cardDeck = null;
-    private List<Skill> _skillsInHand;
+    [SerializeField] private UISkillCardControl uiSkillCardControl;
+    private List<Data.SkillInfo> _skillsInHand;
 
-    public List<Skill> SkillsInHand
+    public List<Data.SkillInfo> SkillsInHand
     { get { return _skillsInHand; } }
 
     public int CurrentCost { get; set; }
@@ -18,7 +19,7 @@ public class PlayerControl : EntityControl
     public override void Initialize()
     {
         _fillAmounts = new float[3];
-        _skillsInHand = new List<Skill>();
+        _skillsInHand = new List<Data.SkillInfo>();
 
         _entityPrefabPath = "CharacterEntityPrefab";
         _currentEntities = new List<BattleEntity>();
@@ -102,16 +103,13 @@ public class PlayerControl : EntityControl
         CharacterEntity character = _currentEntities[0] as CharacterEntity;
         int amount = Mathf.Min(character.CharacterStatData.MaxDraw - _skillsInHand.Count, _cardDeck.GetDeckCount());
 
-        var cardManager = SkillManager.Instance;
         for (int i = 0; i < amount; ++i)
         {
             Data.SkillInfo skillData = _cardDeck.DrawCard();
-            Skill cardObj = cardManager.CreateCard(skillData);
-            _skillsInHand.Add(cardObj);
+            _skillsInHand.Add(skillData);
         }
 
-        SkillManager.Instance.AlignCard(_skillsInHand);
-        SkillManager.Instance.SetOrder(_skillsInHand);
+        uiSkillCardControl.SetSkillCard(_skillsInHand.ToArray());
     }
 
     public void UseSkill(Skill skill, BattleControl battleControl)
