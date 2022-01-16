@@ -29,5 +29,20 @@ namespace Utills
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(call);
         }
+
+        public static void SetStars(this RectTransform parent, int count)
+        {
+            int index = 0;
+
+            foreach (Transform child in parent)
+            {
+                if (index >= count)
+                    child.gameObject.SetActive(false);
+                else
+                    child.gameObject.SetActive(true);
+
+                index++;
+            }
+        }
     }
 }
