@@ -17,7 +17,6 @@ namespace OutGame
 
                 return;
             }
-
             int requestSoul = SpiritData.GetRequestSoulToStar(userSpiritData.Star);
             View.SoulCountFill.Comp.fillAmount = userSpiritData.Soul / (float)requestSoul;
             View.SoulCount.Comp.text = string.Format("{0}/{1}", userSpiritData.Soul, requestSoul);

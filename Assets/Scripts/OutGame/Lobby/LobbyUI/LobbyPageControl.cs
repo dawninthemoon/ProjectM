@@ -8,6 +8,12 @@ namespace OutGame
     {
         [SerializeField] private LobbyPage[] lobbyPages;
 
+        public void Start()
+        {
+            UISpiritListView.Instance.Show<UISpiritListViewPresenter>();
+            
+        }
+
         public void SetElement(string key)
         {
             int elementIndex = System.Array.FindIndex(lobbyPages, (x) => { return x.Key.Contains(key); });
