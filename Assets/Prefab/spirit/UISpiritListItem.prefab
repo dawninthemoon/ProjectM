@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 544475991813405037}
   - component: {fileID: 7692557743828119899}
   - component: {fileID: 2487451387618355639}
+  - component: {fileID: 8991658001384119625}
   m_Layer: 5
-  m_Name: img_disable_dim
+  m_Name: disableDim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,6 +76,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8991658001384119625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772401288387490347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec6a8bc2e144e549b3c3d3a607bbeb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 
 --- !u!1 &1023516495100821579
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,8 +100,9 @@ GameObject:
   - component: {fileID: 4370936667778901297}
   - component: {fileID: 1638802638558365269}
   - component: {fileID: 5841751083876548566}
+  - component: {fileID: 747221526476674669}
   m_Layer: 5
-  m_Name: img_soul_count_fill
+  m_Name: soulCountFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,11 +161,24 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.51
+  m_FillAmount: 0.548
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &747221526476674669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023516495100821579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec6a8bc2e144e549b3c3d3a607bbeb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 
 --- !u!1 &1181479472516690994
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,8 +190,9 @@ GameObject:
   - component: {fileID: 1181479472516690989}
   - component: {fileID: 1181479472516690991}
   - component: {fileID: 1181479472516690988}
+  - component: {fileID: 7698293323011874119}
   m_Layer: 5
-  m_Name: img_icon
+  m_Name: icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,6 +255,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7698293323011874119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181479472516690994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec6a8bc2e144e549b3c3d3a607bbeb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 
 --- !u!1 &1181479474225576999
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,10 +280,9 @@ GameObject:
   - component: {fileID: 1181479474225576992}
   - component: {fileID: 1181479474225576993}
   - component: {fileID: 6281082575045864096}
-  - component: {fileID: 8474423023482899614}
-  - component: {fileID: 3245504543266078911}
+  - component: {fileID: 5562799876219971202}
   m_Layer: 5
-  m_Name: buton_spilit
+  m_Name: UISpiritListItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -355,7 +396,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8474423023482899614}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SpiritButton, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
@@ -367,7 +408,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8474423023482899614
+--- !u!114 &5562799876219971202
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -376,29 +417,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1181479474225576999}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4efd7cdb6742a244fbd29b6aa99057c4, type: 3}
+  m_Script: {fileID: 11500000, guid: a97e3f5693e6b4948a4ae7b9148f3461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spilitIcon: {fileID: 3245504543266078911}
-  disableDim: {fileID: 2487451387618355639}
-  backImage: {fileID: 3703515832020294603}
-  lvText: {fileID: 1131817231930817132}
-  soulFillSlider: {fileID: 5841751083876548566}
-  soulCountText: {fileID: 3583653783459947778}
-  stars: {fileID: 8884875389567802566}
---- !u!114 &3245504543266078911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181479474225576999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d750acad3256c64f9add580f787ec59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spritIcon: {fileID: 1181479472516690988}
 --- !u!1 &5444720484871771674
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +507,7 @@ GameObject:
   - component: {fileID: 8050190856809624652}
   - component: {fileID: 2966578456872460021}
   m_Layer: 5
-  m_Name: img_soul_count
+  m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -560,8 +581,9 @@ GameObject:
   - component: {fileID: 4919815789613945189}
   - component: {fileID: 5767543554063818210}
   - component: {fileID: 1131817231930817132}
+  - component: {fileID: 4329327274054188296}
   m_Layer: 5
-  m_Name: tmp_lv
+  m_Name: level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -685,6 +707,32 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4329327274054188296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6701096359452478514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec6a8bc2e144e549b3c3d3a607bbeb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 
+--- !u!114 &1890933368208803189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7502776739684993472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec6a8bc2e144e549b3c3d3a607bbeb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 
 --- !u!114 &7433890405449172030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,8 +770,9 @@ GameObject:
   - component: {fileID: 3239453180532397915}
   - component: {fileID: 8319417911811333120}
   - component: {fileID: 3583653783459947778}
+  - component: {fileID: 7801740867907905990}
   m_Layer: 5
-  m_Name: tmp_soul_count
+  m_Name: soulCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -845,6 +894,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7801740867907905990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8047934686453642520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec6a8bc2e144e549b3c3d3a607bbeb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 
 --- !u!1001 &6228665148854123350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1026,7 +1088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4498988562488947350, guid: cda594f54746d7442b4a13924677dd42, type: 3}
       propertyPath: m_Name
-      value: emp_stars
+      value: parentStar
       objectReference: {fileID: 0}
     - target: {fileID: 4716491324524006362, guid: cda594f54746d7442b4a13924677dd42, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1172,14 +1234,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3862333022921054972, guid: cda594f54746d7442b4a13924677dd42, type: 3}
   m_PrefabInstance: {fileID: 6228665148854123350}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8884875389567802566 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3259975989970773904, guid: cda594f54746d7442b4a13924677dd42, type: 3}
-  m_PrefabInstance: {fileID: 6228665148854123350}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7502776739684993472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b344dc3f17b6c224e966e1b5f7e6a8f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
