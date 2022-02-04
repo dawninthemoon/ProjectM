@@ -16,7 +16,7 @@ namespace OutGame
         public UIElem<RectTransform> ParentStar { get; } = new UIElem<RectTransform>();
         public UIElem<RectTransform> DisableDim { get; } = new UIElem<RectTransform>();
 
-        //public UIElem<Button> BtnSelect { get; } = new UIElem<Button>();
+        public UIElem<Button> BtnSelect { get; } = new UIElem<Button>();
 
         public void ActiveButton()
         {
