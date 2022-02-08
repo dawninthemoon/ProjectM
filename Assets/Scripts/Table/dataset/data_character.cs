@@ -26,6 +26,7 @@ namespace Data
         public string turnSkillKey { get; set; }
 
         public string passiveSkillKey { get; set; }
+        public string iconName { get; set; }
 
         public int GetKey()
         {

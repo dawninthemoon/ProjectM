@@ -9,9 +9,6 @@ namespace OutGame
     {
         [SerializeField] private UISpiritListItem spiritItem;
 
-        public UIElem<RectTransform> ParentHave { get; } = new UIElem<RectTransform>();
-        public UIElem<RectTransform> ParentLock { get; } = new UIElem<RectTransform>();
-
         public UIElem<RectTransform> ParentSpirit { get; } = new UIElem<RectTransform>();
 
         public UIItemPool SpiritPool { get; private set; }

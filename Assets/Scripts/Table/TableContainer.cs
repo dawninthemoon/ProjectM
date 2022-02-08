@@ -27,7 +27,7 @@ namespace Table
             (typeof(CharacterGameData), "character"),
             (typeof(CharacterStatGameData), "characterStat"),
             (typeof(GachaGameData), "gacha"),
-            (typeof(ItemInfoGameData), "itemInfo"),
+            //(typeof(ItemInfoGameData), "itemInfo"),
             (typeof(MonsterGameData), "monster"),
             (typeof(RandomBoxGameData), "randomBox"),
             (typeof(SkillGameData), "skill"),

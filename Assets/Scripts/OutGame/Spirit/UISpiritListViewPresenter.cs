@@ -8,25 +8,19 @@ namespace OutGame
     {
         protected override void Bind()
         {
-            foreach (var data in SpiritGameData.All)
+            UserSpiritData[] userSpiritDatas = FBControl.FirebaseManager.Instance.UserData.UserSpiritDataList.Data.ToArray();
+
+            System.Array.Sort(userSpiritDatas, (x, y) => { return x.Star.CompareTo(y.Star); });
+               
+            foreach(var spritElement in userSpiritDatas)
             {
-                var spiritList = FBControl.FirebaseManager.Instance.UserData.UserSpiritDataList.Data;
-                UserSpiritData userData = spiritList.Find((x) => { return x.Index == data.key; });
-
+                SpiritGameData spiritGameData = SpiritGameData.Get(spritElement.Index);
                 var presenter = View.SpiritPool.Add<UISpiritListItemPresenter>();
-                presenter.SetArgs((data, userData));
-
-                if (userData != null)
-                {
-                    presenter.transform.parent = View.ParentHave.Comp;
-                    presenter.View.ActiveButton();
-                }
-                else
-                {
-                    presenter.transform.parent = View.ParentLock.Comp;
-                    presenter.View.DisableButton();
-                }
+                presenter.SetArgs((spiritGameData, spritElement));
+                presenter.View.ActiveButton();
             }
+//                UserSpiritData userData = spiritList.Find((x) => { return x.Index == data.key; });
+
         }
     }
 }

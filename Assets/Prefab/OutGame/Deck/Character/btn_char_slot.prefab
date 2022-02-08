@@ -205,7 +205,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005778161046037411}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -235,6 +235,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1005778160977988157}
     m_Modifications:
+    - target: {fileID: 4351909354344790030, guid: 7a3bd381ae59f03489784d784336aaf6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 57cbbf41f6103874dbc31fc0b430caef, type: 3}
     - target: {fileID: 4351909354344790030, guid: 7a3bd381ae59f03489784d784336aaf6, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
