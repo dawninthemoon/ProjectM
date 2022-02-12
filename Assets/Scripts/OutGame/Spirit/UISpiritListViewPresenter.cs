@@ -19,8 +19,6 @@ namespace OutGame
                 presenter.SetArgs((spiritGameData, spritElement));
                 presenter.View.ActiveButton();
             }
-//                UserSpiritData userData = spiritList.Find((x) => { return x.Index == data.key; });
-
         }
     }
 }

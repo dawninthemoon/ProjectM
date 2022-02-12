@@ -1,16 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UI;
-using TMPro;
+using Data;
 
 namespace OutGame
 {
-    public class UISpiritListView : UIRoot<UISpiritListView>
+    public class UIPromotionSpiritList : UIBehaviour
     {
         [SerializeField] private UISpiritListItem spiritItem;
 
         public UIElem<RectTransform> ParentSpirit { get; } = new UIElem<RectTransform>();
-        public UIElem<Button> PromotionButton { get; } = new UIElem<Button>();
 
         public UIItemPool SpiritPool { get; private set; }
 
@@ -19,8 +19,10 @@ namespace OutGame
             base.Awake();
 
             SpiritPool = new UIItemPool(spiritItem.gameObject, ParentSpirit.Comp, 20);
+        }
 
-            PromotionButton.Comp.onClick.AddListener(()=> { UIPromotionView.Instance.Show<UIPromotionPresenter>(); });
+        public void SetList()
+        {
         }
     }
 }
