@@ -9,18 +9,19 @@ namespace OutGame
     public class UIPromotionSpiritListPresenter : MonoBehaviour
     {
         [SerializeField] private UIPromotionSpiritList View;
-        private System.Action<int> onClickItemCallback;
+        private System.Action<UserSpiritData> onClickItemCallback;
 
-        public void SetItemClickCallback(System.Action<int> onClickItemCallback)
+        public void SetItemClickCallback(System.Action<UserSpiritData> onClickItemCallback)
         {
             this.onClickItemCallback = onClickItemCallback;
         }
 
         public void ViewAllSpirit()
         {
+            View.SpiritPool.Clear();
             UserSpiritData[] userSpiritDatas = FBControl.FirebaseManager.Instance.UserData.UserSpiritDataList.Data.ToArray();
 
-            System.Array.Sort(userSpiritDatas, (x, y) => { return x.Star.CompareTo(y.Star); });
+            System.Array.Sort(userSpiritDatas, (x, y) => { return x.Grade.CompareTo(y.Grade); });
 
             foreach (var spritElement in userSpiritDatas)
             {
@@ -31,23 +32,23 @@ namespace OutGame
             }
         }
 
-        public void ViewSameGradeSpirit(SpiritData targetSpirit)
+        public void ViewSameGradeSpirit(int grade)
         {
-            int targetGrade = targetSpirit.Grade;
+            View.SpiritPool.Clear();
+            int targetGrade = grade;
 
             UserSpiritData[] userSpiritDatas = FBControl.FirebaseManager.Instance.UserData.UserSpiritDataList.Data.ToArray();
-            System.Array.Sort(userSpiritDatas, (x, y) => { return x.Star.CompareTo(y.Star); });
+            System.Array.Sort(userSpiritDatas, (x, y) => { return x.Grade.CompareTo(y.Grade); });
 
-            foreach (var spritElement in userSpiritDatas)
+            UserSpiritData[] datas = System.Array.FindAll(userSpiritDatas, (x) => { return x.Grade == grade; });
+
+            foreach (var spritElement in datas)
             {
                 SpiritGameData spiritGameData = SpiritGameData.Get(spritElement.Index);
                 
-                if (spiritGameData.grade == targetGrade)
-                {
-                    var presenter = View.SpiritPool.Add<UIPromotionItemPresenter>();
-                    presenter.SetArgs((spiritGameData, spritElement, onClickItemCallback));
-                    presenter.View.UISpiritListItem.ActiveButton();
-                }
+                var presenter = View.SpiritPool.Add<UIPromotionItemPresenter>();
+                presenter.SetArgs((spiritGameData, spritElement, onClickItemCallback));
+                presenter.View.UISpiritListItem.ActiveButton();
             }
         }
     }

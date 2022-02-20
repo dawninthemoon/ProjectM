@@ -69,10 +69,9 @@ namespace OutGame
                 return;
             }
 
-            int requestSoul = Data.SpiritData.GetRequestSoulToStar(userSpiritData.Star);
-            soulFillSlider.fillAmount = userSpiritData.Soul / (float)requestSoul;
-            soulCountText.text = string.Format("{0}/{1}", userSpiritData.Soul, requestSoul);
-            stars.SetStar(userSpiritData.Star);
+            int requestSoul = Data.SpiritData.GetRequestSoulToStar(userSpiritData.Grade);
+            soulFillSlider.fillAmount = 0;
+            stars.SetStar(userSpiritData.Grade);
 
             lvText.text = string.Format("LV\n{0}", userSpiritData.Lv);
         }

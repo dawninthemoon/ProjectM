@@ -1,15 +1,15 @@
 using Boomlagoon.JSON;
 using FBControl;
 using System.Collections.Generic;
+using Data;
 
 public class UserSpiritData
 {
-    public int Index;
+    public int Index = 0;
     public int Lv;
     public int Exp;
 
-    public int Soul;
-    public byte Star;
+    public int Grade = 0;
 
     public JSONObject ToJsonObject()
     {
@@ -18,8 +18,7 @@ public class UserSpiritData
         jsonObject.Add("Index", Index);
         jsonObject.Add("Lv", Lv);
         jsonObject.Add("Exp", Exp);
-        jsonObject.Add("Soul", Soul);
-        jsonObject.Add("Star", Star);
+        jsonObject.Add("Grade", Grade);
 
         return jsonObject;
     }
@@ -35,11 +34,18 @@ public class UserSpiritData
         if (jsonObject.ContainsKey("Exp"))
             Exp = (int)jsonObject.GetNumber("Exp");
 
-        if (jsonObject.ContainsKey("Soul"))
-            Soul = (int)jsonObject.GetNumber("Soul");
+        if (jsonObject.ContainsKey("Grade"))
+            Grade = (int)jsonObject.GetNumber("Grade");
+        
+        if(Grade == 0)
+        {
+            SpiritGameData spiritGameData = System.Array.Find(SpiritGameData.All, x => { return x.key == Index; });
 
-        if (jsonObject.ContainsKey("Star"))
-            Star = (byte)jsonObject.GetNumber("Star");
+            if (spiritGameData != null)
+            {
+                Grade = (int)spiritGameData.startGrade;
+            }
+        }
     }
 }
 
@@ -92,17 +98,10 @@ public class UserSpiritDataList
         }
     }
 
-    public void SetSoul(int index, int soul)
+    public void SetGrade(int arrayIndex, int grade)
     {
-        int findIndex = data.FindIndex((x) => { return x.Index == index; });
-
-        if (findIndex < 0)
-            return;
-
-        UserSpiritData targetData = data[findIndex];
-
-        targetData.Soul = soul;
-        FBControl.FirebaseManager.Instance.UserDB.SaveChildrenData(soul, "spiritData", findIndex.ToString(), "Soul");
+        data[arrayIndex].Grade = grade;
+        FBControl.FirebaseManager.Instance.UserDB.SaveChildrenData(grade, "spiritData", arrayIndex.ToString(), "Grade");
     }
 
     public void SetUserSlot(int index, int spilitIndex)

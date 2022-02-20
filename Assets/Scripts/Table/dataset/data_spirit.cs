@@ -14,6 +14,7 @@ namespace Data
         public string subName => Translator.Get(subNameKey);
 
         public int grade;
+        public SpiritStartGradeType startGrade;
 
         public Character.EClassType classType;
 

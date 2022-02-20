@@ -32,6 +32,7 @@ namespace Data
         {
             get { return grade; }
         }
+        public SpiritStartGradeType startGrade;
 
         private string skillCard1Key;
         private string passiveSkillKey;

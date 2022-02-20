@@ -10,7 +10,7 @@ namespace OutGame
         {
             UserSpiritData[] userSpiritDatas = FBControl.FirebaseManager.Instance.UserData.UserSpiritDataList.Data.ToArray();
 
-            System.Array.Sort(userSpiritDatas, (x, y) => { return x.Star.CompareTo(y.Star); });
+            System.Array.Sort(userSpiritDatas, (x, y) => { return x.Grade.CompareTo(y.Grade); });
                
             foreach(var spritElement in userSpiritDatas)
             {

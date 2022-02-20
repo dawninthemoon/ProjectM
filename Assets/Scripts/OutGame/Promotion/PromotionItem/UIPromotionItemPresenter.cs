@@ -6,11 +6,11 @@ using Utills;
 
 namespace OutGame
 {
-    public class UIPromotionItemPresenter : UIPresenterWithArgs<UIPromotionItem, (SpiritGameData, UserSpiritData, System.Action<int>)>
+    public class UIPromotionItemPresenter : UIPresenterWithArgs<UIPromotionItem, (SpiritGameData, UserSpiritData, System.Action<UserSpiritData>)>
     {
-        private int spiritKey = 0;
-        private System.Action<int> onClickCallback;
-        protected override void Bind((SpiritGameData, UserSpiritData, System.Action<int>) tuple)
+        private UserSpiritData userSpiritData;
+        private System.Action<UserSpiritData> onClickCallback;
+        protected override void Bind((SpiritGameData, UserSpiritData, System.Action<UserSpiritData>) tuple)
         {
             var (spiritData, userSpiritData, onClick) = tuple;
             onClickCallback = onClick;
@@ -20,11 +20,11 @@ namespace OutGame
 
                 return;
             }
-            int requestSoul = SpiritData.GetRequestSoulToStar(userSpiritData.Star);
-            View.UISpiritListItem.SetInfo(userSpiritData.Lv, spiritData.key);
+            int requestSoul = SpiritData.GetRequestSoulToStar(userSpiritData.Grade);
+            View.UISpiritListItem.SetInfo(userSpiritData);
             View.Button.Comp.onClick.AddListener(OnClick);
 
-            spiritKey = spiritData.key;
+            this.userSpiritData = userSpiritData;
 
             // TODO : 나중에 Spirit Info UI 확정되면 수정하기( hyeonDo )
             //View.BtnSelect.Comp.SetButtonListener
@@ -32,7 +32,7 @@ namespace OutGame
 
         public void OnClick()
         {
-            onClickCallback?.Invoke(spiritKey);
+            onClickCallback?.Invoke(userSpiritData);
         }
     }
 }

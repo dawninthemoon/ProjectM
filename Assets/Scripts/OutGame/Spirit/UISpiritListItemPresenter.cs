@@ -17,7 +17,7 @@ namespace OutGame
 
                 return;
             }
-            int requestSoul = SpiritData.GetRequestSoulToStar(userSpiritData.Star);
+            int requestSoul = SpiritData.GetRequestSoulToStar(userSpiritData.Grade);
             View.Level.Comp.text = string.Format("LV\n{0}", userSpiritData.Lv);
             View.Icon.Comp.sprite = SpiritIconSpriteControl.Instance.GetSpiritSprite(spiritData.key);
 
