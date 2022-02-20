@@ -15,5 +15,10 @@ namespace OutGame
 
             view.SetRequset(promotionMaterial);
         }
+
+        public void SetMaterial(UserSpiritData userSpiritData)
+        {
+            view.SetSpiritData(userSpiritData);
+        }
     }
 }

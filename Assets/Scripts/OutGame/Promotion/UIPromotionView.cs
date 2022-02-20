@@ -19,6 +19,7 @@ namespace OutGame
         public UIElem<UIPromotionMaterialPresenter> Material2 = new UIElem<UIPromotionMaterialPresenter>();
 
         public UIElem<Button> ReleaseButton = new UIElem<Button>();
+        public UIElem<Button> PromotionButton = new UIElem<Button>();
 
         public void SetSpirit(int key)
         {

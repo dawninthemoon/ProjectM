@@ -14,5 +14,10 @@ namespace OutGame
         {
             FrameImage.color = PromotionInfo.GetGradeColor(promotionMaterial.RequestGrade);
         }
+
+        public void SetSpiritData(UserSpiritData userSpiritData)
+        {
+            SpiritImage.sprite = SpiritIconSpriteControl.Instance.GetSpiritSprite(userSpiritData.Index);
+        }
     }
 }

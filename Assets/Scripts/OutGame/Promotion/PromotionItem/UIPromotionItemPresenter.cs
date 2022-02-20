@@ -22,6 +22,7 @@ namespace OutGame
             }
             int requestSoul = SpiritData.GetRequestSoulToStar(userSpiritData.Grade);
             View.UISpiritListItem.SetInfo(userSpiritData);
+            View.Button.Comp.onClick.RemoveAllListeners();
             View.Button.Comp.onClick.AddListener(OnClick);
 
             this.userSpiritData = userSpiritData;
