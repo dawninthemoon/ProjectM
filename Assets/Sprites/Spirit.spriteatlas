@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Spilit
+  m_Name: Spirit
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -466,5 +466,5 @@ SpriteAtlas:
   - R_LambStorm_Idle3
   - SR_Grodnak_Idle1
   m_RenderDataMap: {}
-  m_Tag: Spilit
+  m_Tag: Spirit
   m_IsVariant: 0

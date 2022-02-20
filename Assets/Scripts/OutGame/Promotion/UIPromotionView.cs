@@ -13,11 +13,11 @@ namespace OutGame
         public UIElem<Image> SpiritPreviewImage { get; } = new UIElem<Image>();
 
         public UIElem<UIPromotionSpiritList> PromotionSpiritList = new UIElem<UIPromotionSpiritList>();
-        public UIElem<UIPromotionSpiritListPresenter> UIPromotionSpiritListPresenter = new UIElem<UIPromotionSpiritListPresenter>();
+        public UIElem<UIPromotionSpiritListPresenter> PromotionSpiritListPrecenter = new UIElem<UIPromotionSpiritListPresenter>();
 
-        public void Start()
+        public void SetSpirit(int key)
         {
-            UIPromotionSpiritListPresenter.Comp.ViewAllSpirit();
+            SpiritPreviewImage.Comp.sprite = SpiritIconSpriteControl.Instance.GetSpiritSprite(key);
         }
     }
 }

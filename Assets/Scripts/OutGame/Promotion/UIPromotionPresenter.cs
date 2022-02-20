@@ -10,7 +10,13 @@ namespace OutGame
     {
         protected override void Bind()
         {
+            View.PromotionSpiritListPrecenter.Comp.SetItemClickCallback(SetTargetSpirit);
+            View.PromotionSpiritListPrecenter.Comp.ViewAllSpirit();
+        }
 
+        public void SetTargetSpirit(int key)
+        {
+            View.SetSpirit(key);
         }
     }
 }

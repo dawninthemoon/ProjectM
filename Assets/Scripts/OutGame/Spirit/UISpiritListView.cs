@@ -14,13 +14,21 @@ namespace OutGame
 
         public UIItemPool SpiritPool { get; private set; }
 
+        private UIPromotionPresenter uiPromotionPresenter;
+
         protected override void Awake()
         {
             base.Awake();
 
             SpiritPool = new UIItemPool(spiritItem.gameObject, ParentSpirit.Comp, 20);
 
-            PromotionButton.Comp.onClick.AddListener(()=> { UIPromotionView.Instance.Show<UIPromotionPresenter>(); });
+            PromotionButton.Comp.onClick.AddListener(()=> { ShowPromotionView(); });
+        }
+
+        public void ShowPromotionView()
+        {
+            uiPromotionPresenter = UIPromotionView.Instance.Show<UIPromotionPresenter>();
+            uiPromotionPresenter.View.PromotionSpiritListPrecenter.Comp.ViewAllSpirit();
         }
     }
 }

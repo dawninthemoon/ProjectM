@@ -6,11 +6,14 @@ using Data;
 
 namespace OutGame
 {
-    public class UIPromotionSpiritListPresenter : UIPresenterWithoutArgs<UIPromotionSpiritList>
+    public class UIPromotionSpiritListPresenter : MonoBehaviour
     {
-        protected override void Bind()
+        [SerializeField] private UIPromotionSpiritList View;
+        private System.Action<int> onClickItemCallback;
+
+        public void SetItemClickCallback(System.Action<int> onClickItemCallback)
         {
-            ViewAllSpirit();
+            this.onClickItemCallback = onClickItemCallback;
         }
 
         public void ViewAllSpirit()
@@ -22,9 +25,9 @@ namespace OutGame
             foreach (var spritElement in userSpiritDatas)
             {
                 SpiritGameData spiritGameData = SpiritGameData.Get(spritElement.Index);
-                var presenter = View.SpiritPool.Add<UISpiritListItemPresenter>();
-                presenter.SetArgs((spiritGameData, spritElement));
-                presenter.View.ActiveButton();
+                var presenter = View.SpiritPool.Add<UIPromotionItemPresenter>();
+                presenter.SetArgs((spiritGameData, spritElement, onClickItemCallback));
+                presenter.View.UISpiritListItem.ActiveButton();
             }
         }
 
@@ -41,9 +44,9 @@ namespace OutGame
                 
                 if (spiritGameData.grade == targetGrade)
                 {
-                    var presenter = View.SpiritPool.Add<UISpiritListItemPresenter>();
-                    presenter.SetArgs((spiritGameData, spritElement));
-                    presenter.View.ActiveButton();
+                    var presenter = View.SpiritPool.Add<UIPromotionItemPresenter>();
+                    presenter.SetArgs((spiritGameData, spritElement, onClickItemCallback));
+                    presenter.View.UISpiritListItem.ActiveButton();
                 }
             }
         }

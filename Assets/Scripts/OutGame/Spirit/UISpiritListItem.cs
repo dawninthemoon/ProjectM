@@ -20,5 +20,11 @@ namespace OutGame
         {
             Level.Comp.gameObject.SetActive(false);
         }
+
+        public void SetInfo(int lv, int key)
+        {
+            Level.Comp.text = string.Format("LV\n{0}", lv);
+            Icon.Comp.sprite = SpiritIconSpriteControl.Instance.GetSpiritSprite(key);
+        }
     }
 }
