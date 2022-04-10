@@ -19,7 +19,6 @@ public class BattleControl : MonoBehaviour
     public MonsterControl EnemyCtrl
     { get { return _enemyControl; } }
 
-    [SerializeField] private Camera _cardCamera = null;
     public BattleEntity SelectedTarget { get; private set; }
     private TurnInfo _currentTurn;
     private int _turnCount = 0;
@@ -30,8 +29,6 @@ public class BattleControl : MonoBehaviour
 
     private void Start()
     {
-        SkillManager.Instance.Initialize(_cardCamera);
-
         _currentTurn = TurnInfo.PLAYER;
         _playerControl.Initialize();
         _enemyControl.Initialize();
@@ -50,56 +47,9 @@ public class BattleControl : MonoBehaviour
 
         if (_currentTurn == TurnInfo.ENEMY || _playerControl.IsDefeated()) return;
 
-        SkillState state = SkillManager.Instance.State;
-        if (state == SkillState.NOTHING) return;
-
-        Vector2 touchPosition = Utility.GetTouchPosition(_cardCamera);
         var hand = _playerControl.SkillsInHand;
         int handCounts = hand.Count;
-        bool canSelectTarget = false;
-        int usedSkillIndex = -1;
 
-        if (_selectedSkillIndex == -1)
-        {
-            for (int i = 0; i < handCounts; ++i)
-            {
-                bool isCostEnough = _playerControl.CanUseSkill(hand[i].GetRequireCost());
-
-                if (ListenTouchMoveInput(touchPosition, hand[i], isCostEnough))
-                {
-                    //DeSelectAllSkills(handCounts, i);
-                    _selectedSkillIndex = i;
-                    break;
-                }
-            }
-        }
-        else
-        {
-            Skill skill = hand[_selectedSkillIndex];
-            skill.Progress(touchPosition);
-            canSelectTarget = skill.CanSelectTarget();
-            bool isCostEnough = _playerControl.CanUseSkill(skill.GetRequireCost());
-            if (isCostEnough)
-            {
-                usedSkillIndex = ListenTouchUpInput(touchPosition, skill);
-            }
-        }
-
-        if (usedSkillIndex != -1)
-        {
-            if (canSelectTarget)
-            {
-                SetSkillTarget(hand[usedSkillIndex], touchPosition);
-                if (!SelectedTarget) return;
-            }
-            _playerControl.UseSkill(hand[usedSkillIndex], this);
-
-            SetupUI();
-
-            SkillManager.Instance.ReturnCard(hand[usedSkillIndex]);
-            hand.RemoveAt(usedSkillIndex);
-            SkillManager.Instance.AlignCard(hand);
-        }
     }
 
     private void LateUpdate()
@@ -118,7 +68,6 @@ public class BattleControl : MonoBehaviour
 
             _playerControl.RefreshCost();
             _playerControl.DrawCard(true);
-            SkillManager.Instance.State = SkillState.CARD_DRAG;
         }
         else
         {
@@ -200,14 +149,5 @@ public class BattleControl : MonoBehaviour
         int curCost = _playerControl.CurrentCost;
         int maxCost = _playerControl.GetMaxCost();
         _onSkillUsedEvent.DoNotify(new BattleUIArgs(ally01, enemy01, curCost, maxCost));
-    }
-
-    private void DeSelectAllSkills(int handCounts, int ignoreIndex)
-    {
-        for (int i = 0; i < handCounts; ++i)
-        {
-            if (i == ignoreIndex) continue;
-            SkillManager.Instance.EnlargeCard(false, _playerControl.SkillsInHand[i]);
-        }
     }
 }
