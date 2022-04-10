@@ -11,7 +11,7 @@ namespace Title
 
         public void Start()
         {
-            FirebaseManager.Instance.OnLoadCompleteEvent += ToLobby;
+            FirebaseManager.Instance.OnLoadCompleteEvent += ToLoading;
 
             FirebaseManager.Instance.Init();
         }
@@ -21,15 +21,16 @@ namespace Title
             loginPopup.gameObject.SetActive(true);
             FirebaseManager.Instance.FirebaseAuthManager.LoginedAnonymous();
         }
+
         public void OnClickGoogleLogin()
         {
-            loginPopup.gameObject.SetActive(true);
-            FirebaseManager.Instance.FirebaseAuthManager.GoogleLogin();
+            //loginPopup.gameObject.SetActive(true);
+            //FirebaseManager.Instance.FirebaseAuthManager.GoogleLogin();
         }
 
-        public void ToLobby()
+        public void ToLoading()
         {
-            SceneManager.LoadScene("Lobby");
+            SceneManager.LoadScene("Loading");
         }
     }
 }

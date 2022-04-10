@@ -334,7 +334,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardImage: {fileID: 7925942687160180077}
-  nativeSizeImage: {fileID: 4084537509752236826}
   cardSprites:
   - {fileID: 21300000, guid: f873469e21956444faa8db3b9c3ebfca, type: 3}
   - {fileID: 21300000, guid: e6d6563ae0201a748b0e52b96d880360, type: 3}
@@ -355,7 +354,6 @@ GameObject:
   - component: {fileID: 7925942687416255727}
   - component: {fileID: 7925942687416255725}
   - component: {fileID: 7925942687416255724}
-  - component: {fileID: 4084537509752236826}
   m_Layer: 5
   m_Name: img_char
   m_TagString: Untagged
@@ -420,20 +418,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4084537509752236826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7925942687416255726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03834515e3cfaa54bb54bc995042ca0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetImage: {fileID: 7925942687416255724}
-  targetSize: 250
 --- !u!1 &7925942687425329092
 GameObject:
   m_ObjectHideFlags: 0

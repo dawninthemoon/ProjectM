@@ -2,12 +2,6 @@ using Boomlagoon.JSON;
 
 namespace Data
 {
-    public enum RewardType
-    {
-        Character,
-        Item
-    }
-
     public class RandomBoxData : PublicDataBase
     {
         public int Key;

@@ -2,11 +2,6 @@ using Boomlagoon.JSON;
 
 namespace Data
 {
-    public enum ItemType
-    {
-        Soul
-    }
-
     public class ItemData : PublicDataBase
     {
         public int Key;
